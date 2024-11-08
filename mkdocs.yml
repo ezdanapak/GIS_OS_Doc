@@ -35,6 +35,10 @@ extra:
     - icon: simple/linkedin
       link: https://linkedin.com/in/willettjames
 
+# Repository
+repo_name: GIS_OS_Doc
+repo_url: https://github.com/ezdanapak/GIS_OS_Doc
+
 copyright: Copyright &copy; 2024 Giorgi Kapanadze
 
 markdown_extensions:
