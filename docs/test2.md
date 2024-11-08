@@ -1,9 +1,5 @@
 სატესტო გარემო
 
-!!! note "Title of the callout"
-
-სატესტო გარემო 2
-
 
 ```py title="add_numbers.py" linenums="1"
 
