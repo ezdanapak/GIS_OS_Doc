@@ -1,4 +1,8 @@
-სატესტო გარემო
+!!!სატესტო გარემო
+
+დასაბილდად mkdocs build
+github publish
+domain define
 
 !!! note "Title of the callout"
 
