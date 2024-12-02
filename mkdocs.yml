@@ -95,8 +95,8 @@ nav:
   - მთავარი: index.md
   - შესახებ: about.md
   - გაფრთხილება: warning.md
-  - EPSG იდენტიფიკატორი: EPSG.md
   - შეიპ-ფაილი: shapefile.md
+  - საკოორდინატო სისტემები: Coordinate_systems.md
   - code: code-examples.md
   - content: content-tabs.md
   - admonitions: admonitions.md

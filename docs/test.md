@@ -1,8 +1,16 @@
 !!!სატესტო გარემო
 
-დასაბილდად mkdocs build
+დასაბილდად 
+
+mkdocs serve
+
+mkdocs build
+
 github publish
+
 domain define
+
+    
 
 !!! note "Title of the callout"
 
