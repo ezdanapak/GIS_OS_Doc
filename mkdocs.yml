@@ -5,6 +5,19 @@ theme:
   name: material
   features:
     - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    #- navigation.tabs
+    #- navigation.tabs.sticky
+    #- navigation.sections
+    #- navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.share
+    #- toc.integrate
   font:
     text: Merriweather Sans
     code: Red Hat Mono
@@ -46,9 +59,9 @@ theme:
 extra:
   social:
     - icon: simple/youtube
-      link: https://youtube.com/@james-willett
+      link: https://www.youtube.com/@GISGEORGIA
     - icon: simple/linkedin
-      link: https://linkedin.com/in/willettjames
+      link: https://www.linkedin.com/company/gisgeorgia/
 
 # Repository
 repo_name: GIS_OS_Doc
@@ -89,18 +102,39 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - toc:
+        permalink: True
+        separator: "_"
 
+extra_css:
+  - stylesheets/extra.css
 
 nav:
-  - მთავარი: index.md
-  - შესახებ: about.md
-  - გაფრთხილება: warning.md
-  - შეიპ-ფაილი: shapefile.md
-  - საკოორდინატო სისტემები: Coordinate_systems.md
-  - code: code-examples.md
-  - content: content-tabs.md
-  - admonitions: admonitions.md
-  - diagrams: diagram-examples.md
-  - test: test.md
-  - test2: test2.md
+  - მთავარი: 'index.md'
+  - შესახებ: 'about.md'
+  - გაფრთხილება: 'warning.md'
+  - შეიპ-ფაილი: 'shapefile.md'
+  - საკოორდინატო სისტემები: 'Coordinate_systems.md'
+  - content: 'content-tabs.md'
+  - admonitions: 'admonitions.md'
+  - diagrams: 'diagram-examples.md'
+  - test: 'test.md'
+  - test2: '/section1/test2.md'
+  - 'QGIS':
+    - 'გეორეფერენცირება': './QGIS/Georeferencing.md'
+    - 'დიგიტალიზაცია': './QGIS/Digitalization.md'
+  - 'PyQGIS':
+    - 'რესურსები': './QGIS/PyQGIS/PyQGIS_resources.md'
+    - 'test4': 'diagram-examples.md'
+    - 'test5': 'test.md'
+    - 'test6': '/section1/test2.md'
+    - 'test1': '/base/code-examples.md'
+    - 'test2': 'content-tabs.md'
+    - 'test3': 'admonitions.md'
+    - 'test4': 'diagram-examples.md'
+    - 'test5': 'test.md'
+    - 'test6': '/section1/test2.md'
 
+
+# plugins:
+#   - offline
