@@ -1,5 +1,12 @@
 სატესტო გარემო
 
+https://www.mkdocs.org/
+https://www.yamllint.com/
+https://github.com/danielfrg/mkdocs-jupyter
+https://leafmap.org/
+https://pythongis.org/
+https://squidfunk.github.io/mkdocs-material/
+
 
 ```py title="add_numbers.py" linenums="1"
 

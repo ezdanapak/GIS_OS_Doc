@@ -96,12 +96,7 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   
-  
 
-markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
   - toc:
         permalink: True
         separator: "_"
@@ -119,22 +114,44 @@ nav:
   - admonitions: 'admonitions.md'
   - diagrams: 'diagram-examples.md'
   - test: 'test.md'
-  - test2: '/section1/test2.md'
+  - test2: './section1/test2.md'
   - 'QGIS':
     - 'გეორეფერენცირება': './QGIS/Georeferencing.md'
     - 'დიგიტალიზაცია': './QGIS/Digitalization.md'
   - 'PyQGIS':
-    - 'რესურსები': './QGIS/PyQGIS/PyQGIS_resources.md'
-    - 'test4': 'diagram-examples.md'
-    - 'test5': 'test.md'
-    - 'test6': '/section1/test2.md'
-    - 'test1': '/base/code-examples.md'
-    - 'test2': 'content-tabs.md'
-    - 'test3': 'admonitions.md'
-    - 'test4': 'diagram-examples.md'
-    - 'test5': 'test.md'
-    - 'test6': '/section1/test2.md'
+    - 'რესურსები': './PyQGIS/PyQGIS_resources.md'
+    - 'თემა 2': './PyQGIS/PyQGIS_topic2.md'
+    - 'განმარტებები':
+        - 'დახრილი ხაზი': './PyQGIS/explanations/PyQGIS_slashes.md'
+        - 'QVariant': './PyQGIS/explanations/QVariant.md'
+    #- Notebook page: ./notebooks/notebook.ipynb
+      
+    #- 'ნოუთბუქი': './notebooks/test.ipynb'
+    # - 'test4': 'diagram-examples.md'
+    # - 'test5': 'test.md'
+    # - 'test6': '/section1/test2.md'
+    # - 'test1': '/base/code-examples.md'
+    # - 'test2': 'content-tabs.md'
+    # - 'test3': 'admonitions.md'
+    # - 'test4': 'diagram-examples.md'
+    # - 'test5': 'test.md'
+    # - 'test6': '/section1/test2.md'
 
 
 # plugins:
-#   - offline
+#     - search
+#     - mkdocs-jupyter
+#       execute: true
+#           allow_errors: false
+#  - offline
+
+plugins:
+    - mkdocs-jupyter:
+          #execute: true
+          allow_errors: false
+          include_source: True
+          #no_input: True
+          kernel_name: python3
+          remove_tag_config:
+              remove_input_tags:
+                  - hide_code
