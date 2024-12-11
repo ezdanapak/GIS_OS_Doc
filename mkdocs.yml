@@ -145,13 +145,13 @@ nav:
 #           allow_errors: false
 #  - offline
 
-plugins:
-    - mkdocs-jupyter:
-          #execute: true
-          allow_errors: false
-          include_source: True
-          #no_input: True
-          kernel_name: python3
-          remove_tag_config:
-              remove_input_tags:
-                  - hide_code
+# plugins:
+#     - mkdocs-jupyter:
+#           #execute: true
+#           allow_errors: false
+#           include_source: True
+#           #no_input: True
+#           kernel_name: python3
+#           remove_tag_config:
+#               remove_input_tags:
+#                   - hide_code
