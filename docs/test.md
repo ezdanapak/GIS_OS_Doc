@@ -1,14 +1,6 @@
 !!!სატესტო გარემო
 
-დასაბილდად 
 
-mkdocs serve
-
-mkdocs build
-
-github publish
-
-domain define
 
     
 

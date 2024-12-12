@@ -6,7 +6,22 @@ https://github.com/danielfrg/mkdocs-jupyter
 https://leafmap.org/
 https://pythongis.org/
 https://squidfunk.github.io/mkdocs-material/
+https://animately.co/app/presets
 
+https://ezgif.com/maker
+
+1069x609
+24
+
+დასაბილდად 
+
+mkdocs serve
+
+mkdocs build
+
+github publish
+
+domain define
 
 ```py title="add_numbers.py" linenums="1"
 
