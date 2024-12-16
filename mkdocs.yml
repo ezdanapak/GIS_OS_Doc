@@ -124,6 +124,9 @@ nav:
     - 'განმარტებები':
         - 'დახრილი ხაზი': './PyQGIS/explanations/PyQGIS_slashes.md'
         - 'QVariant': './PyQGIS/explanations/QVariant.md'
+  - 'Google Earth':
+    - 'GEE Engine': './GoogleEarth/GE.md'
+
     #- Notebook page: ./notebooks/notebook.ipynb
       
     #- 'ნოუთბუქი': './notebooks/test.ipynb'
