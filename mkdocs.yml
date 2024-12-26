@@ -121,6 +121,7 @@ nav:
   - 'PyQGIS':
     - 'რესურსები': './PyQGIS/PyQGIS_resources.md'
     - 'განმარტებები':
+      - 'OGR ბიბლიოთეკა': './PyQGIS/explanations/ogr_library.md'
       - 'დახრილი ხაზი': './PyQGIS/explanations/PyQGIS_slashes.md'
       - 'QVariant': './PyQGIS/explanations/QVariant.md'
     - 'თემები':
