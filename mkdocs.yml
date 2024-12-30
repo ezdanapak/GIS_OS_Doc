@@ -136,6 +136,8 @@ nav:
       - 'თემა 10': './PyQGIS/PyQGIS_topics/PyQGIS_topic10.md'
       - 'თემა 11': './PyQGIS/PyQGIS_topics/PyQGIS_topic11.md'
       - 'თემა 12': './PyQGIS/PyQGIS_topics/PyQGIS_topic12.md'
+      - 'ტემპერატურების კონვერტაცია': './PyQGIS/PyQGIS_topics/PyQGIS_temperatures.md'
+      - 'კოორდინატების კონვერტაცია': './PyQGIS/PyQGIS_topics/PyQGIS_coordinates.md'
 
     
   - 'Google Earth':
