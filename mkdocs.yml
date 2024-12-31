@@ -108,14 +108,14 @@ nav:
   - მთავარი: 'index.md'
   - შესახებ: 'about.md'
   - გაფრთხილება: 'warning.md'
-  - შეიპ-ფაილი: 'shapefile.md'
-  - საკოორდინატო სისტემები: 'Coordinate_systems.md'
   #- content: 'content-tabs.md'
   #- admonitions: 'admonitions.md'
   #- diagrams: 'diagram-examples.md'
   #- test: 'test.md'
   #- test2: './section1/test2.md'
   - 'QGIS':
+    - შეიპ-ფაილი: './QGIS/shapefile.md'
+    - საკოორდინატო სისტემები: './QGIS/Coordinate_systems.md'
     - 'გეორეფერენცირება': './QGIS/Georeferencing.md'
     - 'დიგიტალიზაცია': './QGIS/Digitalization.md'
   - 'PyQGIS':
