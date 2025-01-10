@@ -116,6 +116,7 @@ nav:
   - 'QGIS':
     - შეიპ-ფაილი: './QGIS/shapefile.md'
     - საკოორდინატო სისტემები: './QGIS/Coordinate_systems.md'
+    - 'დატუმი': './QGIS/Datum.md'
     - 'გეორეფერენცირება': './QGIS/Georeferencing.md'
     - 'დიგიტალიზაცია': './QGIS/Digitalization.md'
   - 'PyQGIS':
