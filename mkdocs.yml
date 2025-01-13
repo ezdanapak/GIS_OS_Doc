@@ -120,30 +120,32 @@ nav:
     - 'გეორეფერენცირება': './QGIS/Georeferencing.md'
     - 'დიგიტალიზაცია': './QGIS/Digitalization.md'
   - 'პროგრამირება':
+    - 'სივრცული პითონი':
+        - 'რესურსები': './Programming/Spatial_python/resources.md'
     - 'PyQGIS':
-      - 'რესურსები': './PyQGIS/PyQGIS_resources.md'
+      - 'რესურსები': './Programming/PyQGIS/PyQGIS_resources.md'
       - 'განმარტებები':
-        - 'OGR ბიბლიოთეკა': './PyQGIS/explanations/ogr_library.md'
-        - 'დახრილი ხაზი': './PyQGIS/explanations/PyQGIS_slashes.md'
-        - 'QVariant': './PyQGIS/explanations/QVariant.md'
+        - 'OGR ბიბლიოთეკა': './Programming/PyQGIS/explanations/ogr_library.md'
+        - 'დახრილი ხაზი': './Programming/PyQGIS/explanations/PyQGIS_slashes.md'
+        - 'QVariant': './Programming/PyQGIS/explanations/QVariant.md'
       - 'თემები':
-        - 'თემა 2': './PyQGIS/PyQGIS_topics/PyQGIS_topic2.md'
-        - 'თემა 3': './PyQGIS/PyQGIS_topics/PyQGIS_topic3.md'
-        - 'თემა 4': './PyQGIS/PyQGIS_topics/PyQGIS_topic4.md'
-        - 'თემა 5': './PyQGIS/PyQGIS_topics/PyQGIS_topic5.md'
-        - 'თემა 6': './PyQGIS/PyQGIS_topics/PyQGIS_topic6.md'
-        - 'თემა 7': './PyQGIS/PyQGIS_topics/PyQGIS_topic7.md'
-        - 'თემა 8': './PyQGIS/PyQGIS_topics/PyQGIS_topic8.md'
-        - 'თემა 9': './PyQGIS/PyQGIS_topics/PyQGIS_topic9.md'
-        - 'თემა 10': './PyQGIS/PyQGIS_topics/PyQGIS_topic10.md'
-        - 'თემა 11': './PyQGIS/PyQGIS_topics/PyQGIS_topic11.md'
-        - 'თემა 12': './PyQGIS/PyQGIS_topics/PyQGIS_topic12.md'
-        - 'ტემპერატურების კონვერტაცია': './PyQGIS/PyQGIS_topics/PyQGIS_temperatures.md'
-        - 'კოორდინატების კონვერტაცია': './PyQGIS/PyQGIS_topics/PyQGIS_coordinates.md'
-
+        - 'თემა 2': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic2.md'
+        - 'თემა 3': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic3.md'
+        - 'თემა 4': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic4.md'
+        - 'თემა 5': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic5.md'
+        - 'თემა 6': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic6.md'
+        - 'თემა 7': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic7.md'
+        - 'თემა 8': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic8.md'
+        - 'თემა 9': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic9.md'
+        - 'თემა 10': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic10.md'
+        - 'თემა 11': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic11.md'
+        - 'თემა 12': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic12.md'
+        - 'ტემპერატურების კონვერტაცია': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_temperatures.md'
+        - 'კოორდინატების კონვერტაცია': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_coordinates.md'
+    
   - 'Google Earth':
     - 'GEE Engine': './GoogleEarth/GE.md'
-
+  
     #- Notebook page: ./notebooks/notebook.ipynb
       
     #- 'ნოუთბუქი': './notebooks/test.ipynb'
