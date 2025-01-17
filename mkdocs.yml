@@ -18,6 +18,7 @@ theme:
     - search.highlight
     - search.share
     #- toc.integrate
+    - content.code.copy
   font:
     text: Merriweather Sans
     code: Red Hat Mono
@@ -87,8 +88,6 @@ markdown_extensions:
       alternate_style: true 
   - admonition
   - pymdownx.details
-  
-
 
   - pymdownx.superfences:
       custom_fences:
@@ -147,20 +146,21 @@ nav:
         - 'კოორდინატების კონვერტაცია': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_coordinates.md'
     - 'პითონი გეოგრაფებისთვის':
       - 'შესავალი': './Programming/Python_for_geographers/intro.md'
-      - 'რვეულები': './Programming/Python_for_geographers/notebooks/notebook.ipynb'
-      - 'ცვლადები': './Programming/Python_for_geographers/notebooks/01_variables.ipynb'
+      - 'რვეულები': './Programming/Python_for_geographers/notebooks/01_variables.md' #გადუბლირებულია
+      - 'ცვლადები': './Programming/Python_for_geographers/notebooks/01_variables.md'
   - 'Google Earth':
     - 'GEE Engine': './GoogleEarth/GE.md'
   
 
 
 plugins:
-    - mkdocs-jupyter:
-          #execute: true
-          allow_errors: false
-          include_source: True
-          #no_input: True
-          kernel_name: python3
-          remove_tag_config:
-              remove_input_tags:
-                  - hide_code
+    - search
+    # - mkdocs-jupyter:
+    #       execute: true
+    #       allow_errors: false
+    #       include_source: True
+    #       #no_input: True
+    #       kernel_name: python3
+    #       remove_tag_config:
+    #           remove_input_tags:
+    #               - hide_code
