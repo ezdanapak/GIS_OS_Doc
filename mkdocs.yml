@@ -108,6 +108,7 @@ nav:
   - მთავარი: 'index.md'
   - შესახებ: 'about.md'
   - გაფრთხილება: 'warning.md'
+
   #- content: 'content-tabs.md'
   #- admonitions: 'admonitions.md'
   #- diagrams: 'diagram-examples.md'
@@ -116,12 +117,14 @@ nav:
   - 'QGIS':
     - შეიპ-ფაილი: './QGIS/shapefile.md'
     - საკოორდინატო სისტემები: './QGIS/Coordinate_systems.md'
-    - 'დატუმი': './QGIS/Datum.md'
+    - დატუმი: './QGIS/Datum.md'
     - 'გეორეფერენცირება': './QGIS/Georeferencing.md'
     - 'დიგიტალიზაცია': './QGIS/Digitalization.md'
   - 'პროგრამირება':
+    
     - 'სივრცული პითონი':
         - 'რესურსები': './Programming/Spatial_python/resources.md'
+        
     - 'PyQGIS':
       - 'რესურსები': './Programming/PyQGIS/PyQGIS_resources.md'
       - 'განმარტებები':
@@ -142,38 +145,22 @@ nav:
         - 'თემა 12': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic12.md'
         - 'ტემპერატურების კონვერტაცია': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_temperatures.md'
         - 'კოორდინატების კონვერტაცია': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_coordinates.md'
-    
+    - 'პითონი გეოგრაფებისთვის':
+      - 'შესავალი': './Programming/Python_for_geographers/intro.md'
+      - 'რვეულები': './Programming/Python_for_geographers/notebooks/notebook.ipynb'
+      - 'ცვლადები': './Programming/Python_for_geographers/notebooks/01_variables.ipynb'
   - 'Google Earth':
     - 'GEE Engine': './GoogleEarth/GE.md'
   
-    #- Notebook page: ./notebooks/notebook.ipynb
-      
-    #- 'ნოუთბუქი': './notebooks/test.ipynb'
-    # - 'test4': 'diagram-examples.md'
-    # - 'test5': 'test.md'
-    # - 'test6': '/section1/test2.md'
-    # - 'test1': '/base/code-examples.md'
-    # - 'test2': 'content-tabs.md'
-    # - 'test3': 'admonitions.md'
-    # - 'test4': 'diagram-examples.md'
-    # - 'test5': 'test.md'
-    # - 'test6': '/section1/test2.md'
 
 
-# plugins:
-#     - search
-#     - mkdocs-jupyter
-#       execute: true
-#           allow_errors: false
-#  - offline
-
-# plugins:
-#     - mkdocs-jupyter:
-#           #execute: true
-#           allow_errors: false
-#           include_source: True
-#           #no_input: True
-#           kernel_name: python3
-#           remove_tag_config:
-#               remove_input_tags:
-#                   - hide_code
+plugins:
+    - mkdocs-jupyter:
+          #execute: true
+          allow_errors: false
+          include_source: True
+          #no_input: True
+          kernel_name: python3
+          remove_tag_config:
+              remove_input_tags:
+                  - hide_code
