@@ -1,6 +1,6 @@
 ## რესურსები
 
-Customizing QGIS with [Python](https://courses.spatialthoughts.com/pyqgis-in-a-day.html#calculating-distance-using-pyqgis)
+PyQGIS Masterclass - Customizing QGIS [Python](https://courses.spatialthoughts.com/pyqgis-masterclass.html)
 
 PyQGIS Developer [Cookbook](https://docs.qgis.org/3.34/en/docs/pyqgis_developer_cookbook/index.html)
 

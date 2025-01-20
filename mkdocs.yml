@@ -19,6 +19,10 @@ theme:
     - search.share
     #- toc.integrate
     - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tooltips
+
   font:
     text: Merriweather Sans
     code: Red Hat Mono
@@ -58,6 +62,9 @@ theme:
       quote: octicons/quote-16
 
 extra:
+  status:
+      new: Recently added
+      deprecated: Deprecated
   social:
     - icon: simple/youtube
       link: https://www.youtube.com/@GISGEORGIA
@@ -84,6 +91,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.highlight
   - pymdownx.tabbed:
       alternate_style: true 
   - admonition
@@ -100,19 +108,19 @@ markdown_extensions:
         permalink: True
         separator: "_"
 
-extra_css:
-  - stylesheets/extra.css
+# extra_javascript:
+#   - js/toggle-lines.js
+
+# extra_css:
+#   - stylesheets/styles.css
+#   - stylesheets/extra.css
+
+
 
 nav:
   - მთავარი: 'index.md'
   - შესახებ: 'about.md'
   - გაფრთხილება: 'warning.md'
-
-  #- content: 'content-tabs.md'
-  #- admonitions: 'admonitions.md'
-  #- diagrams: 'diagram-examples.md'
-  #- test: 'test.md'
-  #- test2: './section1/test2.md'
   - 'QGIS':
     - შეიპ-ფაილი: './QGIS/shapefile.md'
     - საკოორდინატო სისტემები: './QGIS/Coordinate_systems.md'

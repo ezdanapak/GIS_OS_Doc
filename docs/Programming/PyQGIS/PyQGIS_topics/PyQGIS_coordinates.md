@@ -10,7 +10,7 @@ Kotia Cave, Chiatura-Perevisa-Sveri-Tvalueti-Gezruli, Georgia. <br>
 კოორდინატები [Google Earth - იდან](https://www.google.com/maps/place/42%C2%B012'47.8%22N+43%C2%B019'27.7%22E/@42.2058273,43.2713168,21099m/data=!3m1!1e3!4m4!3m3!8m2!3d42.213286!4d43.324367?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D) <br>
 42°12'47.83"N 43°19'27.72"E > 42.213286° 43.324367° 
 
-```py title="DMS_DD.py" linenums="1"
+```py title="DMS_DD.py" linenums="1" hl_lines="7 8"
 
 def transformation(deg, min, sec):
 
@@ -27,7 +27,7 @@ print(transformation(43, 19, 27.72))
 ### მეათედი გრადუსებიდან > გრადუსები მინუტები სეკუნდებზე
 Decimal Degrees > Degrees, Minutes, Seconds
 
-```py title="DD_DMS.py" linenums="1"
+```py title="DD_DMS.py" linenums="1" hl_lines""
 def reverse_transform(decimal_deg):
 
     degrees = int(decimal_deg)
