@@ -157,7 +157,7 @@ nav:
       - 'რვეულები': './Programming/Python_for_geographers/notebooks/01_variables.md' #გადუბლირებულია
       - 'ცვლადები': './Programming/Python_for_geographers/notebooks/01_variables.md'
   - 'Google Earth':
-    - 'GEE Engine': './GoogleEarth/GE.md'
+    - 'GEE md': './GoogleEarth/GE.md'
     - 'რესურსები': './GoogleEarth/resources.md'
   
 
