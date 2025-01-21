@@ -56,9 +56,9 @@ theme:
       quote: octicons/quote-16
 
 extra:
-  status:
-      new: Recently added
-      deprecated: Deprecated
+  # status:
+  #     new: Recently added
+  #     deprecated: Deprecated
   social:
     - icon: simple/youtube
       link: https://www.youtube.com/@GISGEORGIA
@@ -157,16 +157,6 @@ nav:
 
 
 plugins:
-    - search
-    #
-    # - mkdocs-jupyter:
-    #       execute: true
-    #       allow_errors: false
-    #       include_source: True
-    #       #no_input: True
-    #       kernel_name: python3
-    #       remove_tag_config:
-    #           remove_input_tags:
-    #               - hide_code
+    - search:
 
 
