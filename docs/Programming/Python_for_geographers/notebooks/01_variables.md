@@ -2,23 +2,22 @@
 
 # Key Features
 
-You can try out this python codes by using the cloud-computing platforms below without having to install anything on your computer:
-
+წარმოდგენილი პითონის კოდები შეგიძლია გამოსცადო ღრუბლოვან-გამოთვლით პლატფორმებზე, ყოველგვარი ინსტალაციის გარეშე კომპიუტერზე.
 
 [![image](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ezdanapak/GIS_OS_Doc/blob/master/docs/Programming/Python_for_geographers/notebooks/01_variables.ipynb)
 
 
-## Strings
+## ტექსტური ტიპის მონაცემები - Strings 
 
 A string is a sequence of letters, numbers, and punctuation marks - or commonly known as **text**
 
 In Python you can create a string by typing letters between single or double quotation marks.
 
 
-```python
-city = 'San Francisco'
-state = 'California'
-print(city, state)
+```py title="strings" linenums="1"
+city = 'Chiatura'
+region = 'Imereti'
+print(city, region)
 ```
 
     San Francisco California
