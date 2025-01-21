@@ -19,7 +19,7 @@ theme:
     - search.share
     #- toc.integrate
     - content.code.copy
-    - content.code.select
+    #- content.code.select
     - content.code.annotate
     - content.tooltips
 
