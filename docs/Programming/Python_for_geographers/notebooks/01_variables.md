@@ -6,8 +6,12 @@
 
 [![image](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ezdanapak/GIS_OS_Doc/blob/master/docs/Programming/Python_for_geographers/notebooks/01_variables.ipynb)
 
+{{ read_csv('./data/Excell/Georgia_Regions.csv') }}
+
 
 ## ტექსტური ტიპის მონაცემები - Strings 
+
+
 
 A string is a sequence of letters, numbers, and punctuation marks - or commonly known as **text**
 
@@ -27,14 +31,6 @@ print(city, region)
 ```python
 print(city +' '+state)
 ```
-
-
-    Failed to start the Kernel. 
-    
-
-    View Jupyter <a href='command:jupyter.viewOutput'>log</a> for further details.
-
-
 
 ```python
 print(city + ',' + state)

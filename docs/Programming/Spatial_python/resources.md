@@ -7,4 +7,5 @@
     * OpenCourseWare for [GIS](https://courses.gisopencourseware.org//) IHE DELFT
     * Python Foundation for Spatial [Analysis](https://courses.spatialthoughts.com/python-foundation.html) by Ujaval Gandhi
     * Mapping and Data Visualization with [Python](https://courses.spatialthoughts.com/python-dataviz.html) by Ujaval Gandhi
-    *test1231233216432541456
+    * Welcome to Geo-Python [2024!](https://geo-python-site.readthedocs.io/en/latest/)
+    
