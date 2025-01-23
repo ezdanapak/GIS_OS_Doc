@@ -159,7 +159,7 @@ nav:
 
 
 plugins:
-    - search:
+    - search
     - table-reader
 
 
