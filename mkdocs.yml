@@ -160,6 +160,6 @@ nav:
 
 plugins:
     - search:
-    - table-reader:
+    - table-reader
 
 
