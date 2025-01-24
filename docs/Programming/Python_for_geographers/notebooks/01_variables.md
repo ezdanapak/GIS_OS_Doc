@@ -1,3 +1,7 @@
+---
+icon: material/emoticon-happy 
+---
+
 # ცვლადები
 
 # Key Features
@@ -6,7 +10,23 @@
 
 [![image](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ezdanapak/GIS_OS_Doc/blob/master/docs/Programming/Python_for_geographers/notebooks/01_variables.ipynb)
 
-{{ read_csv('./data/Excell/Georgia_Regions.csv') }}
+<!-- {{ read_csv('./data/Excell/Georgia_Regions.csv') }} -->
+
+| HCODE |   NAMN1                   |          NAMA1         | NAML1
+|-------|---------------------------|------------------------|--------------|
+|GE-TB  |თბილისი	               |Tbilisi	               |tbilisi
+|GE-SZ	|სამეგრელო-ზემო სვანეთი	   |Samegrelo-Zemo Svaneti	|samegrelo-zemo svaneti
+|GE-MM	|მცხეთა-მთიანეთი	         |Mtskheta-Mtianeti	     | mtskheta-mtianeti
+|GE-KA	|კახეთი	                     |Kakheti	             | k'akheti
+|GE-GU	|გურია	                     |Guria	                 | guria
+|GE-RL	|რაჭა-ლეჩხუმი-ქვემო სვანეთი	 |Racha-Lechkhumi-Kvemo  | Svaneti	rach'a-lechkhumi-kvemo svaneti
+|GE-KK	|ქვემო ქართლი	             |Kvemo Kartli	          | kvemo kartli
+|GE-SJ	|სამცხე-ჯავახეთი	          |Samtskhe-Javakheti	   |  samtskhe-javakheti
+|GE-AJ	|აჭარა	                      |Adjara	               |  ach'ara
+|GE-IM	|იმერეთი	                 |Imereti	              | imereti
+|GE-SK	|შიდა ქართლი	            |Shida Kartli	         |shida kartli
+|GE-AB	|აფხაზეთი	                 |Apkhazeti	              | apkhazeti
+
 
 
 ## ტექსტური ტიპის მონაცემები - Strings 
