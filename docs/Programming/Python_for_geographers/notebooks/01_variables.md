@@ -4,13 +4,10 @@ icon: material/emoticon-happy
 
 # ცვლადები
 
-# Key Features
-
 წარმოდგენილი პითონის კოდები შეგიძლია გამოსცადო ღრუბლოვან-გამოთვლით პლატფორმებზე, ყოველგვარი ინსტალაციის გარეშე კომპიუტერზე.
 
 [![image](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ezdanapak/GIS_OS_Doc/blob/master/docs/Programming/Python_for_geographers/notebooks/01_variables.ipynb)
 
-<!-- {{ read_csv('./data/Excell/Georgia_Regions.csv') }} -->
 
 | **HCODE** | **NAMN1**                  | **NAMA1**                     | **NAML1**                      |
 |:---------:|:--------------------------:|:-----------------------------:|:------------------------------:|
@@ -86,7 +83,6 @@ density = population / area_sqkm
 print(density)
 
 #პრინტ ფუნქცია დაბეჭდავს მოსახლეობის სიმჭიდროვეს 221.08256880733944
-
 ```
 
 ## Exercise

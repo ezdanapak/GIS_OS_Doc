@@ -150,7 +150,7 @@ nav:
         - 'კოორდინატების კონვერტაცია': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_coordinates.md'
     - 'პითონი გეოგრაფებისთვის':
       - 'შესავალი': './Programming/Python_for_geographers/intro.md'
-      - 'რვეულები': './Programming/Python_for_geographers/notebooks/01_variables.md' #გადუბლირებულია
+      #- 'რვეულები': './Programming/Python_for_geographers/notebooks/01_variables.md' #გადუბლირებულია
       - 'ცვლადები': './Programming/Python_for_geographers/notebooks/01_variables.md'
   - 'Google Earth':
     - 'GEE md': './GoogleEarth/GE.md'
