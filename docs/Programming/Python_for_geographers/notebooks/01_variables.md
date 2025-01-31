@@ -33,83 +33,61 @@ icon: material/emoticon-happy
 ## ტექსტური ტიპის მონაცემები - Strings 
 
 
+ტექსტი ეს არის მიმდევრობა ასოების, რიცხვების და პუნქტუაციის ნიშნების  - **text_123**
 
-A string is a sequence of letters, numbers, and punctuation marks - or commonly known as **text**
 
-In Python you can create a string by typing letters between single or double quotation marks.
+პითონში შესაძლებელია ტექსტური ტიპის ინფორმაციის შექმნა ერთ ან ორმაგ ბრჭყალებში
+
 
 
 ```py title="strings" linenums="1"
 city = 'Chiatura'
 region = 'Imereti'
 print(city, region)
+
+#პრინტ ფუნქცია დაბეჭდავს >  Chiatura Imereti
 ```
 
-    San Francisco California
+```python title="strings" linenums="1"
+print(city +' '+region)
+
+#პრინტ ფუნქცია დაბეჭდავს და შუაში დამატებით სივრცე ექნება >  Chiatura Imereti 
+```
+
+```python title="strings" linenums="1"
+print(city + ',' + region)
+
+#პრინტ ფუნქცია დაბეჭდავს შუაში მძიმით  >  Chiatura,Imereti 
+```
     
 
+## რიცხვითი ტიპის მონაცემები - Numbers
 
-```python
-print(city +' '+state)
-```
+პითონი მუშაობს სხვადასხვა ტიპის რიცხვებთან, მათგან ყველაზე გავრცელებულია:
 
-```python
-print(city + ',' + state)
-```
-
-    San Francisco,California
-    
-
-## Numbers
-
-Python can handle several types of numbers, but the two most common are:
-
-- **int**, which represents integer values like 100, and
-- **float**, which represents numbers that have a fraction part, like 0.5
+- **int**, მთელი რიცხვები, მაგალითად 100,
+- **float**,  ასევე ათწილადი,  0.5
 
 
+```python title="Numbers" linenums="1"
+population = 12049
+latitude =  42.289449
+longitude =  43.284585
 
-```python
-population = 881549
-latitude = 37.7739
-longitude = -121.5687
-```
-
-
-```python
 print(type(latitude))
+
+#პრინტ ფუნქცია დაბეჭდავს latitude ცვლადში არსებულ მონაცემის ტიპს 
+#42.289449, ანუ ათწილადი <class 'float'>
 ```
 
-    <class 'float'>
-    
-
-
 ```python
-print(type(latitude))
-```
-
-    <class 'float'>
-    
-
-
-```python
-elevation_feet = 934
-elevation_meters = elevation_feet * 0.3048
-print(elevation_meters)
-```
-
-    284.6832
-    
-
-
-```python
-area_sqmi = 46.89
-density = population / area_sqmi
+area_sqkm = 54.5
+density = population / area_sqkm
 print(density)
-```
 
-    18800.362550650458
-    
+#პრინტ ფუნქცია დაბეჭდავს მოსახლეობის სიმჭიდროვეს 221.08256880733944
+
+```
 
 ## Exercise
 
