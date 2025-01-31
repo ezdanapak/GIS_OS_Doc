@@ -70,3 +70,14 @@ print("Transliteration complete.")
 
 ```
 
+## ტრანსლიტერის ფლაგინი
+
+QGIS რეპოზიტორიაზე მოძებნეთ Transliterator
+
+Author: Giorgi Kapanadze <br>
+Author's email: g.kapanadze1908@gmail.com <br>
+Maintainer: kapanadze <br>
+Plugin home [page](https://ezdanapak.github.io/transliterator/) <br>
+Tracker: Browse and report [bugs](https://github.com/ezdanapak/transliterator/issues) <br>
+Code [repository](https://github.com/ezdanapak/transliterator) <br>
+
