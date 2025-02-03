@@ -85,23 +85,3 @@ print(density)
 #პრინტ ფუნქცია დაბეჭდავს მოსახლეობის სიმჭიდროვეს 221.08256880733944
 ```
 
-## Exercise
-
-We have a variable named `distance_km` below with the value `4135` - indicating the straight-line distance between San Francisco and New York in Kilometers. Create another variable called `distance_mi` and store the distance value in miles.
-
-- Hint1: 1 mile = 1.60934 kilometers
-
-Add the code in the cell below and run it. The output should be 2569.37
-
-
-```python
-distance_km = 4135
-distance_mi = distance_km / 1.60934
-print(distance_mi)
-# Remove this line and add code here
-```
-
-    2569.376266046951
-    
-
-----
