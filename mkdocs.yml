@@ -152,6 +152,7 @@ nav:
       - 'შესავალი': './Programming/Python_for_geographers/intro.md'
       #- 'რვეულები': './Programming/Python_for_geographers/notebooks/01_variables.md' #გადუბლირებულია
       - 'ცვლადები': './Programming/Python_for_geographers/notebooks/md/01_variables.md'
+      - 'მონ.სტრუქტურები': './Programming/Python_for_geographers/notebooks/md/02_data_structures.md'
   - 'Google Earth':
     - 'GEE md': './GoogleEarth/GE.md'
     - 'რესურსები': './GoogleEarth/resources.md'
