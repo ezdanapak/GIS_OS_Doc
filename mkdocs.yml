@@ -118,7 +118,13 @@ nav:
   - შესახებ: 'about.md'
   - გაფრთხილება: 'warning.md'
   - 'QGIS':
-    - GTU GIS: './QGIS/GTU_GIS/info.md'
+    - 'GTU GIS': 
+      - info: './QGIS/GTU_GIS/info.md'
+      - Software: './QGIS/GTU_GIS/software.md'
+      - Topics:
+        - Topic 1: './QGIS/GTU_GIS/topic_1.md'
+        - Topic 2: './QGIS/GTU_GIS/topic_1.md'
+
     - შეიპ-ფაილი: './QGIS/shapefile.md'
     - საკოორდინატო სისტემები: './QGIS/Coordinate_systems.md'
     - დატუმი: './QGIS/Datum.md'
