@@ -123,7 +123,7 @@ nav:
       - Software: './QGIS/GTU_GIS/software.md'
       - Topics:
         - Topic 1: './QGIS/GTU_GIS/topic_1.md'
-        - Topic 2: './QGIS/GTU_GIS/topic_1.md'
+        - Topic 2: './QGIS/GTU_GIS/topic_2.md'
 
     - შეიპ-ფაილი: './QGIS/shapefile.md'
     - საკოორდინატო სისტემები: './QGIS/Coordinate_systems.md'
