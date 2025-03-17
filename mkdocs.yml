@@ -118,6 +118,7 @@ nav:
   - შესახებ: 'about.md'
   - გაფრთხილება: 'warning.md'
   - 'QGIS':
+    - GTU GIS: './QGIS/GTU_GIS/info.md'
     - შეიპ-ფაილი: './QGIS/shapefile.md'
     - საკოორდინატო სისტემები: './QGIS/Coordinate_systems.md'
     - დატუმი: './QGIS/Datum.md'

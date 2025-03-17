@@ -45,3 +45,5 @@ print(cities)
 
 #პრინტ ფუნქცია დაბეჭდავს > ['Chiatura', 'Zestafoni', 'Kutaisi', 'Samtredia']
 ```
+
+შესაძლებელია 
