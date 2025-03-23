@@ -188,6 +188,8 @@ layer = iface.addVectorLayer(fn, '', 'ogr')
 
 
 layer.selectByExpression('"Area"  =  1268097314')
+ან
+layer.selectByExpression("Area  =  1268097314")
 
 
 
