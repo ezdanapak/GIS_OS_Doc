@@ -45,16 +45,21 @@
 
 #დაამატებს შრეს პროგრამაში დირექტორიიდან
 
+```py title="add_shapefile_from_directory" linenums="1"
+
 fn = r'C:\Users\Public\Documents\GIS\shp\Georgia_municipalities.shp'
 
 layer = iface.addVectorLayer(fn, '', 'ogr')
 
-
+```
 
 ## მონიშნული ობიექტების ფერის შეცვლა <br>
 
+```py title="change_selection_color" linenums="1"
 
 iface.mapCanvas().setSelectionColor(QColor('red'))
+
+```
 
 ## ფუნქცია რომ ყველა ელემენტი მონიშნოს
 
@@ -62,29 +67,26 @@ layer.selectAll()
 
 
 ## მოვნიშნოთ შრეში ონის მუნიციპალიტეტი
-
 SQL  - ში DISTR_ENG = 'Oni'
 
 
+```py title="select_object_with_selectbyattribute_tool" linenums="1"
+
 fn = r'C:\Users\Public\Documents\GIS\shp\Georgia_municipalities.shp'
-
-
 
 layer = iface.addVectorLayer(fn, '', 'ogr')
 
-
-
 processing.run("qgis:selectbyattribute", {'INPUT':fn,'FIELD':'DISTR_ENG','OPERATOR':0,'VALUE':'Oni','METHOD':0})
 
+```
 
 ## მოვნიშნოთ შრეში ყველა მუნიციპალიტეტი, გარდა ფოთისა.
 
 SQL  - ში DISTR_ENG = 'Oni'
 
+```py title="select_object_with_selectbyattribute_tool" linenums="1"
 
 fn = r'C:\Users\Public\Documents\GIS\shp\Georgia_municipalities.shp'
-
-
 
 layer = iface.addVectorLayer(fn, '', 'ogr')
 
@@ -92,14 +94,7 @@ layer = iface.addVectorLayer(fn, '', 'ogr')
 
 processing.run("qgis:selectbyattribute", {'INPUT':fn,'FIELD':'DISTR_ENG','OPERATOR':1,'VALUE':'Poti','METHOD':0})
 
-
-
-
-
-
-
-
-
+```
 
 
 ## ობიექტის გამოხატვით შერჩევა - Select By Expression
@@ -109,18 +104,14 @@ processing.run("qgis:selectbyattribute", {'INPUT':fn,'FIELD':'DISTR_ENG','OPERAT
 
 SQL  - ში  DISTR_ENG  =  'Gardabani'
 
-
+```py title="select_object_with_selectbyattribute_tool" linenums="1"
 
 fn = r'C:\Users\Public\Documents\GIS\shp\Georgia_municipalities.shp'
 
-
-
 layer = iface.addVectorLayer(fn, '', 'ogr')
 
-
-
 layer.selectByExpression('"DISTR_ENG"  =  \'Gardabani\'')
-
+```
 
 
 ## ობიექტის სივრცითი შერჩევა - Select By Location
