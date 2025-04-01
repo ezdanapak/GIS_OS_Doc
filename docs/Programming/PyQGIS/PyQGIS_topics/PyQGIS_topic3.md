@@ -121,6 +121,8 @@ layer = iface.addVectorLayer(fn, '', 'ogr')
 
 
 layer.selectByExpression('"DISTR_ENG"  =  \'Gardabani\'')
+ან
+layer.selectByExpression("DISTR_ENG = 'Gardabani'")
 
 
 
@@ -186,6 +188,8 @@ layer = iface.addVectorLayer(fn, '', 'ogr')
 
 
 layer.selectByExpression('"Area"  =  1268097314')
+ან
+layer.selectByExpression("Area  =  1268097314")
 
 
 
@@ -199,7 +203,8 @@ layer = layers[0]
 
 
 layer.selectByExpression('"Area"  =  1268097314')
-
+ან
+layer.selectByExpression("Area  =  1268097314")
 
 
 შერჩეული ელემენტისგან ცალკე ახალი შრის შექმნა
@@ -214,7 +219,10 @@ layers = QgsProject.instance().mapLayersByName('Georgia_municipalities')
 layer = layers[0]
 
 layer.selectByExpression('"Area"  =  1268097314')
+ან
+layer.selectByExpression("Area  =  1268097314")
 
+######## გამარტივებული ვარიანტი
 
 
 #ახალი შრის განსაზღვრა და გადაცემა writer - ისთვის ჩასაწერად
