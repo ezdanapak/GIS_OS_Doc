@@ -1,7 +1,5 @@
 
-მონიშვნები
-
-მონიშვნის ოპერატორები
+## მონიშვნის ოპერატორები
 
 'OPERATOR':0
 
@@ -29,7 +27,7 @@
 10 — does not contain
 
 
-ინტერაქტიული მონიშვნის მეთოდები
+## ინტერაქტიული მონიშვნის მეთოდები
 
 'METHOD':0
 
@@ -43,7 +41,7 @@
 3 — selecting within current selection
 
 
-შრეში ყველა ობიექტის მონიშვნა - Select all
+## შრეში ყველა ობიექტის მონიშვნა - Select all
 
 #დაამატებს შრეს პროგრამაში დირექტორიიდან
 
@@ -53,16 +51,17 @@ layer = iface.addVectorLayer(fn, '', 'ogr')
 
 
 
-#მონიშნული ობიექტების ფერის შეცვლა, რაც არაა სტანდარტულად სავალდებულო, რომ კოდში იყოს
+## მონიშნული ობიექტების ფერის შეცვლა <br>
+
 
 iface.mapCanvas().setSelectionColor(QColor('red'))
 
-#ფუნქცია რომ ყველა ელემენტი მონიშნოს
+## ფუნქცია რომ ყველა ელემენტი მონიშნოს
 
 layer.selectAll()
 
 
-მოვნიშნოთ შრეში ონის მუნიციპალიტეტი
+## მოვნიშნოთ შრეში ონის მუნიციპალიტეტი
 
 SQL  - ში DISTR_ENG = 'Oni'
 
@@ -78,7 +77,7 @@ layer = iface.addVectorLayer(fn, '', 'ogr')
 processing.run("qgis:selectbyattribute", {'INPUT':fn,'FIELD':'DISTR_ENG','OPERATOR':0,'VALUE':'Oni','METHOD':0})
 
 
-მოვნიშნოთ შრეში ყველა მუნიციპალიტეტი, გარდა ფოთისა.
+## მოვნიშნოთ შრეში ყველა მუნიციპალიტეტი, გარდა ფოთისა.
 
 SQL  - ში DISTR_ENG = 'Oni'
 
@@ -103,7 +102,7 @@ processing.run("qgis:selectbyattribute", {'INPUT':fn,'FIELD':'DISTR_ENG','OPERAT
 
 
 
-ობიექტის გამოხატვით შერჩევა - Select By Expression
+## ობიექტის გამოხატვით შერჩევა - Select By Expression
 
 
 ტექსტური ტიპის მონაცემები
@@ -124,7 +123,7 @@ layer.selectByExpression('"DISTR_ENG"  =  \'Gardabani\'')
 
 
 
-ობიექტის სივრცითი შერჩევა - Select By Location
+## ობიექტის სივრცითი შერჩევა - Select By Location
 #დასამუშავებელია - 
 
 fn = r’D:\Location\Municipalitys.shp’
@@ -169,7 +168,7 @@ layer = iface.addVectorLayer(fn1, '', 'ogr')
 
 
 
-რიცხვითი ტიპის მონაცემები
+## რიცხვითი ტიპის მონაცემები
 
 SQL  - ში  Area = 1268097314
 
@@ -189,7 +188,7 @@ layer.selectByExpression('"Area"  =  1268097314')
 
 
 
-პროექტში არსებული შრის შერჩევა გამოხატვით
+## პროექტში არსებული შრის შერჩევა გამოხატვით
 
 
 layers = QgsProject.instance().mapLayersByName('Georgia_municipalities')
@@ -202,10 +201,10 @@ layer.selectByExpression('"Area"  =  1268097314')
 
 
 
-შერჩეული ელემენტისგან ცალკე ახალი შრის შექმნა
+## შერჩეული ელემენტისგან ცალკე ახალი შრის შექმნა
 
 
-#პროექტში არსებული შრის შერჩევა გამოხატვით
+## პროექტში არსებული შრის შერჩევა გამოხატვით
 
 
 
@@ -217,7 +216,7 @@ layer.selectByExpression('"Area"  =  1268097314')
 
 
 
-#ახალი შრის განსაზღვრა და გადაცემა writer - ისთვის ჩასაწერად
+ახალი შრის განსაზღვრა და გადაცემა writer - ისთვის ჩასაწერად
 
 
 
@@ -237,7 +236,7 @@ writer = QgsVectorFileWriter.writeAsVectorFormat(layer, fn2, \
 
 
 
-#დაამატოს ახალი შექმნილი შრე პროექტში
+დაამატოს ახალი შექმნილი შრე პროექტში
 
 
 
