@@ -63,6 +63,39 @@ A spatial reference identifier [(SRID)](https://desktop.arcgis.com/en/arcmap/lat
 
 სხვა EPSG კოდების არქივი შეგიძლია [ნახო აქ](https://epsg.io/)
 
+WGS84 (World Geodetic System 1984) and Pulkovo 1942 are both geodetic coordinate systems, but they are based on different reference ellipsoids and datum definitions, leading to several key differences:
+
+Datum and Reference Ellipsoid:
+
+WGS84 is based on a global datum that is designed to best fit the Earth's shape for global positioning. It uses the WGS84 ellipsoid, which is aligned with the Earth's center of mass and is designed for GPS systems. The WGS84 ellipsoid has a semi-major axis of 6,378,137 meters and a flattening of 1/298.257223563.
+
+Pulkovo 1942 is a regional geodetic datum used primarily in Russia and surrounding areas. It uses the Krassovsky 1940 ellipsoid, which is optimized for the area around Russia and has a semi-major axis of 6,378,245 meters and a flattening of 1/298.3. This ellipsoid is slightly different from the WGS84 ellipsoid.
+
+Geographical Coverage:
+
+WGS84 is a global datum, meaning it’s used worldwide and forms the basis for most modern GPS systems.
+
+Pulkovo 1942 is a regional datum, and its usage is mostly limited to the former Soviet Union and Eastern Europe, particularly Russia, where the system was developed to fit the specific regional geography better.
+
+Coordinate System Alignment:
+
+WGS84 is aligned with the Earth's center of mass (mean sea level), and the system is designed to represent the Earth's shape as accurately as possible on a global scale.
+
+Pulkovo 1942 is oriented based on local measurements, so its coordinates are not aligned with the global Earth center, which can lead to differences in positioning when compared to WGS84.
+
+Transformations:
+
+If you need to convert coordinates between the two systems (WGS84 and Pulkovo 1942), transformation parameters must be used. Typically, these transformations involve translations, rotations, and scaling between the two coordinate systems.
+
+The differences can be quite significant, with shifts of several meters, particularly over long distances, due to the different definitions of the reference ellipsoid and the origin of the coordinate systems.
+
+Usage in Modern Systems:
+
+WGS84 is the standard for GPS and modern mapping systems, making it much more widespread and used globally.
+
+Pulkovo 1942 was more commonly used for mapping and surveying in the Soviet era and in the Russian Federation but is less commonly used in modern global applications.
+
+In summary, the main differences lie in their reference ellipsoids, geographic relevance (global vs. regional), and the fact that WGS84 is aligned with the Earth's center of mass for global use, while Pulkovo 1942 is more regionally focused and was designed to fit specific areas in Eastern Europe and Russia.
 
 !!!bug
     დოკუმენტაციის ზოგიერთი ნაწილი შექმნილია ხელოვნური ინტელექტის მიერ, შესაძლებელია იყოს დაშვებული შეცდომები.
