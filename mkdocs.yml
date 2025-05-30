@@ -1,4 +1,5 @@
 site_name: GIS OS Docs
+site_url: https://osdoc.qgis.ge/
 
 
 theme:
@@ -130,6 +131,14 @@ nav:
     - დატუმი: './QGIS/Datum.md'
     - 'გეორეფერენცირება': './QGIS/Georeferencing.md'
     - 'დიგიტალიზაცია': './QGIS/Digitalization.md'
+  - 'პერს.მონ. დაცვა':
+    - 'პერსონალური მონაცემების დაცვა': './Personal_data_protection/PDP_GIS.md'
+    - 'GDPR': './Personal_data_protection/GDPR.md'
+    - 'პერსონალური მონაცემების დაცვა GIS-ში': './Personal_data_protection/Personal_data_protection_in_GIS.md'
+    - 'პერსონალური მონაცემების დაცვა': './Personal_data_protection/Personal_data_protection.md'
+    - 'GDPR': './Personal_data_protection/GDPR.md'
+    - 'პერსონალური მონაცემების დაცვა GIS-ში': './Personal_data_protection/Personal_data_protection_in_GIS.md'
+  
   - 'პროგრამირება':
     
     - 'სივრცული პითონი':
@@ -153,6 +162,8 @@ nav:
         - 'თემა 10': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic10.md'
         - 'თემა 11': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic11.md'
         - 'თემა 12': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic12.md'
+        - 'შრის შექმნა': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_Create_layer.md'
+        - 'მონიშვნები': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_SQL_Spatial_Selection.md'
         - 'ტემპერატურების კონვერტაცია': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_temperatures.md'
         - 'კოორდინატების კონვერტაცია': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_coordinates.md'
     - 'პითონი გეოგრაფებისთვის':
