@@ -132,6 +132,9 @@ nav:
     - 'გეორეფერენცირება': './QGIS/Georeferencing.md'
     - 'დიგიტალიზაცია': './QGIS/Digitalization.md'
   - 'პერს.მონ. დაცვა':
+    - 'პერსონალური მონაცემების დაცვა': './Personal_data_protection/PDP_GIS.md'
+    - 'GDPR': './Personal_data_protection/GDPR.md'
+    - 'პერსონალური მონაცემების დაცვა GIS-ში': './Personal_data_protection/Personal_data_protection_in_GIS.md'
     - 'პერსონალური მონაცემების დაცვა': './Personal_data_protection/Personal_data_protection.md'
     - 'GDPR': './Personal_data_protection/GDPR.md'
     - 'პერსონალური მონაცემების დაცვა GIS-ში': './Personal_data_protection/Personal_data_protection_in_GIS.md'
