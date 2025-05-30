@@ -1,4 +1,5 @@
 site_name: GIS OS Docs
+site_url: https://osdoc.qgis.ge/
 
 
 theme:
