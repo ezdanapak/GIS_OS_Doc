@@ -6,7 +6,7 @@ theme:
 
 nav:
   - მთავარი: index.md
-  - კითხვები და პასუხები: სხვა_faqs.md
+  
 
 markdown_extensions:
   - toc:
