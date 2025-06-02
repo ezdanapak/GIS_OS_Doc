@@ -1,17 +1,190 @@
-site_name: GIS დოკუმენტაცია
-site_url: https://osdoc.qgis.ge
+site_name: GIS OS Docs
+site_url: https://osdoc.qgis.ge/
+
+
 theme:
   name: material
   language: ka
+  features:
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tooltips
 
-nav:
-  - მთავარი: index.md
-  
+  font:
+    text: Merriweather Sans
+    code: Red Hat Mono
+
+  logo: assets/Q_white.svg
+  favicon: assets/favicon.ico
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+      primary: green
+      accent: orange
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+      primary: green
+      accent: deep orange
+
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+
+# extra:
+#   status:
+#       new: Recently added
+#       deprecated: Deprecated
+#   social:
+#     - icon: simple/youtube
+#       link: https://www.youtube.com/@GISGEORGIA
+#     - icon: simple/linkedin
+#       link: https://www.linkedin.com/company/gisgeorgia/
+
+# Repository
+repo_name: GIS_OS_Doc
+repo_url: https://github.com/ezdanapak/GIS_OS_Doc
+
+copyright: Copyright &copy; 2024 Giorgi Kapanadze
 
 markdown_extensions:
+  
+  
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - admonition
+  - pymdownx.details
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  
+  #- tables
   - toc:
-      permalink: true
+        permalink: True
+        separator: "_"
   - admonition
   - codehilite
   - footnotes
   - tables
+
+#extra_javascript:
+  #- js/toggle-lines.js
+  # - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  # - javascripts/tablesort.js
+
+# extra_css:
+#   - stylesheets/styles.css
+#   - stylesheets/extra.css
+
+
+
+nav:
+  - მთავარი: 'index.md'
+  - შესახებ: 'about.md'
+  - გაფრთხილება: 'warning.md'
+  - 'QGIS':
+    - 'GTU GIS': 
+      - info: './QGIS/GTU_GIS/info.md'
+      - Software: './QGIS/GTU_GIS/software.md'
+      - Topics:
+        - Topic 1: './QGIS/GTU_GIS/topic_1.md'
+        - Topic 2: './QGIS/GTU_GIS/topic_2.md'
+
+    - შეიპ-ფაილი: './QGIS/shapefile.md'
+    - საკოორდინატო სისტემები: './QGIS/Coordinate_systems.md'
+    - დატუმი: './QGIS/Datum.md'
+    - 'გეორეფერენცირება': './QGIS/Georeferencing.md'
+    - 'დიგიტალიზაცია': './QGIS/Digitalization.md'
+  - 'პერს.მონ. დაცვა':
+    - 'პერსონალური მონაცემების დაცვა': './Personal_data_protection/PDP_GIS.md'
+    - 'GDPR': './Personal_data_protection/GDPR.md'
+    - 'პერსონალური მონაცემების დაცვა GIS-ში': './Personal_data_protection/Personal_data_protection_in_GIS.md'
+    - 'პერსონალური მონაცემების დაცვა': './Personal_data_protection/Personal_data_protection.md'
+    - 'GDPR': './Personal_data_protection/GDPR.md'
+    - 'პერსონალური მონაცემების დაცვა GIS-ში': './Personal_data_protection/Personal_data_protection_in_GIS.md'
+  
+  - 'პროგრამირება':
+    
+    - 'სივრცული პითონი':
+        - 'რესურსები': './Programming/Spatial_python/resources.md'
+        
+    - 'PyQGIS':
+      - 'რესურსები': './Programming/PyQGIS/PyQGIS_resources.md'
+      - 'განმარტებები':
+        - 'OGR ბიბლიოთეკა': './Programming/PyQGIS/explanations/ogr_library.md'
+        - 'დახრილი ხაზი': './Programming/PyQGIS/explanations/PyQGIS_slashes.md'
+        - 'QVariant': './Programming/PyQGIS/explanations/QVariant.md'
+      - 'თემები':
+        - 'თემა 2': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic2.md'
+        - 'თემა 3': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic3.md'
+        - 'თემა 4': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic4.md'
+        - 'თემა 5': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic5.md'
+        - 'თემა 6': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic6.md'
+        - 'თემა 7': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic7.md'
+        - 'თემა 8': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic8.md'
+        - 'თემა 9': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic9.md'
+        - 'თემა 10': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic10.md'
+        - 'თემა 11': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic11.md'
+        - 'თემა 12': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic12.md'
+        - 'შრის შექმნა': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_Create_layer.md'
+        - 'მონიშვნები': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_SQL_Spatial_Selection.md'
+        - 'ტემპერატურების კონვერტაცია': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_temperatures.md'
+        - 'კოორდინატების კონვერტაცია': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_coordinates.md'
+    - 'პითონი გეოგრაფებისთვის':
+      - 'შესავალი': './Programming/Python_for_geographers/intro.md'
+      #- 'რვეულები': './Programming/Python_for_geographers/notebooks/01_variables.md' #გადუბლირებულია
+      - 'ცვლადები': './Programming/Python_for_geographers/notebooks/md/01_variables.md'
+      - 'მონ.სტრუქტურები': './Programming/Python_for_geographers/notebooks/md/02_data_structures.md'
+  - 'Google Earth':
+    - 'GEE md': './GoogleEarth/GE.md'
+    - 'რესურსები': './GoogleEarth/resources.md'
+  
+
+
+plugins:
+    #- table-reader
+    - search
+    
+
+
