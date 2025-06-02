@@ -1,0 +1,442 @@
+
+<!doctype html>
+<html lang="ka" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://osdoc.qgis.ge/QGIS/Coordinate_systems/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+    
+    
+      
+        <title>Coordinate systems - GIS დოკუმენტაცია</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prj-wkt-proj4-srid-epsg" class="md-skip">
+          კონტენტზე გადასვლა
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="GIS დოკუმენტაცია" class="md-header__button md-logo" aria-label="GIS დოკუმენტაცია" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GIS დოკუმენტაცია
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Coordinate systems
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="ძებნა" placeholder="ძებნა" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="გასუფთავება" aria-label="გასუფთავება" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ნავიგაცია" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GIS დოკუმენტაცია" class="md-nav__button md-logo" aria-label="GIS დოკუმენტაცია" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    GIS დოკუმენტაცია
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    მთავარი
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="სარჩევი">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      სარჩევი
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prj-wkt-proj4-srid-epsg" class="md-nav__link">
+    <span class="md-ellipsis">
+      .PRJ .WKT .PROJ4 .SRID .EPSG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prj" class="md-nav__link">
+    <span class="md-ellipsis">
+      PRJ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wkt" class="md-nav__link">
+    <span class="md-ellipsis">
+      WKT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proj4" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROJ4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#srid" class="md-nav__link">
+    <span class="md-ellipsis">
+      SRID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epsg" class="md-nav__link">
+    <span class="md-ellipsis">
+      EPSG
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Coordinate systems</h1>
+
+<h2 id="prj-wkt-proj4-srid-epsg">.PRJ .WKT .PROJ4 .SRID .EPSG<a class="headerlink" href="#prj-wkt-proj4-srid-epsg" title="Permanent link">&para;</a></h2>
+<p>წარმოდგენილი ფაილ ფორმატები გვაძლევს საშუალებას საკოორდინატო სისტემებთან სხვადასხვა გარემოში სწრაფ წვდომას და ინფორმაციის მიღებას.</p>
+<h2 id="prj">PRJ<a class="headerlink" href="#prj" title="Permanent link">&para;</a></h2>
+<p>.prj (Projection File) არის ტექსტური ფაილი, რომელიც თან ახლავს შეიპ-ფაილებს.იგი განსაზღვრავს საკოორდინატო სისტემასა და პროექციის ინფორმაციას, იყენებს Well-Known Text (WKT) ფორმატს CRS-ის განსასაზღვრად. <br></p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>PROJCS["WGS_1984_UTM_Zone_38N",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984", <br>SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],<br>UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],<br>PARAMETER["False_Easting",500000.0],PARAMETER["False_Northing",0.0],<br>PARAMETER["Central_Meridian",45.0],PARAMETER["Scale_Factor",0.9996],<br>PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]</p>
+</div>
+<h2 id="wkt">WKT<a class="headerlink" href="#wkt" title="Permanent link">&para;</a></h2>
+<p>.wkt Well-known text <a href="https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry">WKT</a> არის (ტექსტური მარკირების ენა) რომელსაც შეუძლია ვექტორული გეომეტრიული ობიექტების გამოსახვა.  <br><br></p>
+<div class="codehilite"><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="n">WKT</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">represent</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">distinct</span><span class="w"> </span><span class="n">geometric</span><span class="w"> </span><span class="nl">objects:</span>
+
+<span class="w">    </span><span class="mf">1.</span><span class="w"> </span><span class="n">Point</span><span class="p">,</span><span class="w"> </span><span class="n">MultiPoint</span>
+<span class="w">    </span><span class="mf">2.</span><span class="w"> </span><span class="n">LineString</span><span class="p">,</span><span class="w"> </span><span class="n">MultiLineString</span>
+<span class="w">    </span><span class="mf">3.</span><span class="w"> </span><span class="n">Polygon</span><span class="p">,</span><span class="w"> </span><span class="n">MultiPolygon</span><span class="p">,</span><span class="w"> </span><span class="n">Triangle</span>
+<span class="w">    </span><span class="mf">4.</span><span class="w"> </span><span class="n">PolyhedralSurface</span>
+<span class="w">    </span><span class="mf">5.</span><span class="w"> </span><span class="n">TIN</span><span class="w"> </span><span class="p">(</span><span class="n">Triangulated</span><span class="w"> </span><span class="n">irregular</span><span class="w"> </span><span class="n">network</span><span class="p">)</span>
+<span class="w">    </span><span class="mf">6.</span><span class="w"> </span><span class="n">GeometryCollection</span>
+</code></pre></div>
+
+<p>ამავე ინფორმაციის მონაცემთა ბაზაში შესანახ ფორმატად გამოიყენება ორმაგი ექვივალენტის ფორმატი WKB (Well-Known Binary), ასევე მონაცემთა გადატანისთვის და ის უფრო მოსახერხებელია კომპიუტერული დამუშავებისთვის. <br><br></p>
+<h2 id="proj4">PROJ4<a class="headerlink" href="#proj4" title="Permanent link">&para;</a></h2>
+<p>.proj4 არის <a href="https://en.wikipedia.org/wiki/PROJ">ბიბლიოთეკა</a> რომელიც 1 პროექციიდან მეორეში ბრძანებებით გადაყვანის საშუალებას იძლევა. </p>
+<h2 id="srid">SRID<a class="headerlink" href="#srid" title="Permanent link">&para;</a></h2>
+<p>A spatial reference identifier <a href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/using-sql-with-gdbs/what-is-an-srid.htm">(SRID)</a> უნიკალური მაიდენტიფიცირებელი რომელიც დაკავშირებულია განსაზღვრულ საკოორდინატო სისტემას.</p>
+<h2 id="epsg">EPSG<a class="headerlink" href="#epsg" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>EPSG კოდი უნიკალური მაიდენტიფიცირებელი საშუალებაა, რომელიც მინიჭებულია კონკრეტულ კოორდინატულ სარეფერენციო სისტემას (CRS) ან კოორდინატების ტრანსფორმაციას, რომელიც გამოიყენება რუკების შექმნასა და სივრცულ მონაცემებში. </p>
+</li>
+<li>
+<p>EPSG აღნიშნავს ევროპის ნავთობის კვლევის ჯგუფს (European Petroleum Survey Group), რომელმაც შექმნა საკოორდინატო სისტემების, პროექციების და ტრანსფორმაციების კომპლექსური რეესტრი, რომელიც გამოიყენება მთელ მსოფლიოში. დღეს ეს რეესტრი იმართება ნავთობისა და გაზის მწარმოებელთა საერთაშორისო ასოციაციის (IOGP) გეოდეზიის ქვეკომიტეტის მიერ და ეს სტანდარტი ერთ-ერთ ყველაზე ფართოდ გამოყენებადია გეოგრაფიული ინფორმაციული სისტემებისა (GIS) და რუკების შექმნის პროგრამებისთვის.</p>
+</li>
+<li>
+<p>EPSG კოდების ძირითადი მახასიათებლები:
+უნიკალური მაიდენტიფიცირებელი: თითოეული EPSG კოდი არის რიცხვითი იდენტიფიკატორი კონკრეტული სარეფერენციო სისტემისთვის ან ტრანსფორმაციისთვის, რაც ხელს უწყობს მომხმარებლებსა და პროგრამებს იდენტიფიცირებას.</p>
+</li>
+<li>
+<p>გამოყენება GIS-ში:</p>
+</li>
+</ul>
+<p>სივრცულ მონაცემებთან მუშაობისას მნიშვნელოვანია ვიცოდეთ ან ვიაზრებდეთ რომელ საკოორდინატო სისტემის გამოყენებას ვაპირებთ საქმიანობაში. ამის განსასაზღვრავად აუცილებელია ადგილმდებარეობის გათვალისწინება.
+პროგრამები როგორიცაა QGIS, ArcGIS, SuperMap და ა.შ, მომხმარებელს აძლევს საშუალებას მიუთითონ EPSG კოდი, თუმცა ახალბედა GIS-ში მოღვაწემ იშვიათად იცის მის შესახებ.
+მონაცემები და წვდომა: EPSG ბაზა საჯაროდ ხელმისაწვდომია და მოიცავს ათასობით EPSG კოდს, რომლებიც ფარავს სარეფერენციო სისტემების და პროექციების ფართო სპექტრს სხვადასხვა რეგიონისა და დანიშნულებისთვის.</p>
+<div class="admonition info">
+<p class="admonition-title">___</p>
+<p>საკოორდინატო სისტემები რომელიც გამოიყენება საქართველოში:</p>
+<ul>
+<li>
+<p>EPSG:4326 – ეს არის ერთ-ერთი ყველაზე გავრცელებული EPSG კოდი, რომელიც აღნიშნავს WGS 84 ელიფსოიდს, რომელიც გამოიყენება GPS სისტემებში და სხვა გლობალური სივრცული მონაცემებისთვის.</p>
+</li>
+<li>
+<p>მართკუთხა ახალი  :
+ელიფსოიდია WGS 84 და პროექცია UTM  <br>
+WGS 84 / UTM zone 38N | EPSG:32638 <br>
+WGS 84 / UTM zone 37N | EPSG:32637  <br></p>
+<p>WGS 84 / Pseudo-Mercator -- Spherical Mercator, Google Maps, OpenStreetMap, Bing, ArcGIS, ESRI. EPSG:3857 (Web Mercator) – ხშირად გამოიყენება ვებ რუკების აპლიკაციებში. <br></p>
+</li>
+<li>
+<p>მართკუთხა ძველი  :
+ელიფსოიდია Pulkovo 1942 და პროექცია Gauss-Kruger <br>
+Pulkovo 1942 / Gauss-Kruger zone 8 | EPSG:28408 <br>
+Pulkovo 1942 / Gauss-Kruger zone 7 | EPSG:28407 <br></p>
+</li>
+</ul>
+</div>
+<p>სხვა EPSG კოდების არქივი შეგიძლია <a href="https://epsg.io/">ნახო აქ</a></p>
+<p>WGS84 (World Geodetic System 1984) and Pulkovo 1942 are both geodetic coordinate systems, but they are based on different reference ellipsoids and datum definitions, leading to several key differences:</p>
+<p>Datum and Reference Ellipsoid:</p>
+<p>WGS84 is based on a global datum that is designed to best fit the Earth's shape for global positioning. It uses the WGS84 ellipsoid, which is aligned with the Earth's center of mass and is designed for GPS systems. The WGS84 ellipsoid has a semi-major axis of 6,378,137 meters and a flattening of 1/298.257223563.</p>
+<p>Pulkovo 1942 is a regional geodetic datum used primarily in Russia and surrounding areas. It uses the Krassovsky 1940 ellipsoid, which is optimized for the area around Russia and has a semi-major axis of 6,378,245 meters and a flattening of 1/298.3. This ellipsoid is slightly different from the WGS84 ellipsoid.</p>
+<p>Geographical Coverage:</p>
+<p>WGS84 is a global datum, meaning it’s used worldwide and forms the basis for most modern GPS systems.</p>
+<p>Pulkovo 1942 is a regional datum, and its usage is mostly limited to the former Soviet Union and Eastern Europe, particularly Russia, where the system was developed to fit the specific regional geography better.</p>
+<p>Coordinate System Alignment:</p>
+<p>WGS84 is aligned with the Earth's center of mass (mean sea level), and the system is designed to represent the Earth's shape as accurately as possible on a global scale.</p>
+<p>Pulkovo 1942 is oriented based on local measurements, so its coordinates are not aligned with the global Earth center, which can lead to differences in positioning when compared to WGS84.</p>
+<p>Transformations:</p>
+<p>If you need to convert coordinates between the two systems (WGS84 and Pulkovo 1942), transformation parameters must be used. Typically, these transformations involve translations, rotations, and scaling between the two coordinate systems.</p>
+<p>The differences can be quite significant, with shifts of several meters, particularly over long distances, due to the different definitions of the reference ellipsoid and the origin of the coordinate systems.</p>
+<p>Usage in Modern Systems:</p>
+<p>WGS84 is the standard for GPS and modern mapping systems, making it much more widespread and used globally.</p>
+<p>Pulkovo 1942 was more commonly used for mapping and surveying in the Soviet era and in the Russian Federation but is less commonly used in modern global applications.</p>
+<p>In summary, the main differences lie in their reference ellipsoids, geographic relevance (global vs. regional), and the fact that WGS84 is aligned with the Earth's center of mass for global use, while Pulkovo 1942 is more regionally focused and was designed to fit specific areas in Eastern Europe and Russia.</p>
+<div class="admonition bug">
+<p class="admonition-title">Bug</p>
+<p>დოკუმენტაციის ზოგიერთი ნაწილი შექმნილია ხელოვნური ინტელექტის მიერ, შესაძლებელია იყოს დაშვებული შეცდომები.
+თუ რაიმეს შესწორება გსურთ, Github-ზე შეგიძლიათ "Submit the Pull Request". </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u10d9\u10dd\u10de\u10d8\u10e0\u10d4\u10d1\u10e3\u10da\u10d8\u10d0", "clipboard.copy": "\u10d9\u10dd\u10de\u10d8\u10e0\u10d4\u10d1\u10d0", "search.result.more.one": "\u10d9\u10d8\u10d3\u10d4\u10d5 1 \u10d0\u10db \u10d2\u10d5\u10d4\u10e0\u10d3\u10d6\u10d4", "search.result.more.other": "\u10d9\u10d8\u10d3\u10d4\u10d5 # \u10d0\u10db \u10d2\u10d5\u10d4\u10e0\u10d3\u10d6\u10d4", "search.result.none": "\u10d3\u10dd\u10d9\u10e3\u10db\u10d4\u10dc\u10e2\u10d8 \u10d5\u10d4\u10e0 \u10db\u10dd\u10d8\u10eb\u10d4\u10d1\u10dc\u10d0", "search.result.one": "\u10db\u10dd\u10d8\u10eb\u10d4\u10d1\u10dc\u10d0 1 \u10d3\u10dd\u10d9\u10e3\u10db\u10d4\u10dc\u10e2\u10d8", "search.result.other": "\u10db\u10dd\u10d8\u10eb\u10d4\u10d1\u10dc\u10d0 # \u10d3\u10dd\u10d9\u10e3\u10db\u10d4\u10dc\u10e2\u10d8", "search.result.placeholder": "\u10e9\u10d0\u10ec\u10d4\u10e0\u10d4 \u10eb\u10d4\u10d1\u10dc\u10d8\u10e1 \u10d3\u10d0\u10e1\u10d0\u10ec\u10e7\u10d4\u10d1\u10d0\u10d3", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  </body>
+</html>

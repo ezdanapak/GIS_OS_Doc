@@ -1,0 +1,579 @@
+
+<!doctype html>
+<html lang="ka" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://osdoc.qgis.ge/Programming/PyQGIS/PyQGIS_topics/PyQGIS_coordinates/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+    
+    
+      
+        <title>PyQGIS coordinates - GIS დოკუმენტაცია</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-coordinate-conversion" class="md-skip">
+          კონტენტზე გადასვლა
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="GIS დოკუმენტაცია" class="md-header__button md-logo" aria-label="GIS დოკუმენტაცია" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GIS დოკუმენტაცია
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PyQGIS coordinates
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="ძებნა" placeholder="ძებნა" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="გასუფთავება" aria-label="გასუფთავება" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ნავიგაცია" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="GIS დოკუმენტაცია" class="md-nav__button md-logo" aria-label="GIS დოკუმენტაცია" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    GIS დოკუმენტაცია
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    მთავარი
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="სარჩევი">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      სარჩევი
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-coordinate-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      კოორდინატების კონვერტაცია - Coordinate conversion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="კოორდინატების კონვერტაცია - Coordinate conversion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      გრადუსები მინუტები სეკუნდებიდან &gt; მეათედ გრადუსებში
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4221328611111112-4332436666666667" class="md-nav__link">
+    <span class="md-ellipsis">
+      შედეგი: 42.21328611111112 43.32436666666667
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-coordinates-in-dms-format-degrees-minutes-seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of coordinates in DMS format: (degrees, minutes, seconds)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-coordinates-to-dd-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convert coordinates to DD format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-coordinates-in-dms-format-degrees-minutes-seconds_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of coordinates in DMS format: (degrees, minutes, seconds)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-coordinates-to-dd-format_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convert coordinates to DD format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save-coordinates-to-a-text-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Save coordinates to a text file
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h2 id="-coordinate-conversion">კოორდინატების კონვერტაცია - Coordinate conversion<a class="headerlink" href="#-coordinate-conversion" title="Permanent link">&para;</a></h2>
+<h3 id="_1">გრადუსები მინუტები სეკუნდებიდან &gt; მეათედ გრადუსებში<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>Degrees, Minutes, Seconds &gt; Decimal Degrees </p>
+<p>Kotia Cave, Chiatura-Perevisa-Sveri-Tvalueti-Gezruli, Georgia. <br>
+კოორდინატები <a href="https://www.google.com/maps/place/42%C2%B012'47.8%22N+43%C2%B019'27.7%22E/@42.2058273,43.2713168,21099m/data=!3m1!1e3!4m4!3m3!8m2!3d42.213286!4d43.324367?entry=ttu&amp;g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">Google Earth - იდან</a> <br>
+42°12'47.83"N 43°19'27.72"E &gt; 42.213286° 43.324367° </p>
+<p>```py title="DMS_DD.py" linenums="1" hl_lines="7 8"</p>
+<p>def transformation(deg, min, sec):</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">deg</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">min</span><span class="o">/</span><span class="mi">60</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">sec</span><span class="o">/</span><span class="mi">3600</span>
+
+<span class="k">return</span><span class="w"> </span><span class="nb">result</span>
+</code></pre></div>
+
+<p>print(transformation(42, 12, 47.83))
+print(transformation(43, 19, 27.72))</p>
+<h1 id="4221328611111112-4332436666666667">შედეგი: 42.21328611111112 43.32436666666667<a class="headerlink" href="#4221328611111112-4332436666666667" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="c1">### მეათედი გრადუსებიდან &gt; გრადუსები მინუტები სეკუნდებზე</span>
+<span class="n">Decimal</span><span class="w"> </span><span class="n">Degrees</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Degrees</span><span class="p">,</span><span class="w"> </span><span class="n">Minutes</span><span class="p">,</span><span class="w"> </span><span class="n">Seconds</span>
+
+<span class="err">```</span><span class="n">py</span><span class="w"> </span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;DD_DMS.py&quot;</span><span class="w"> </span><span class="n">linenums</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="w"> </span><span class="n">hl_lines</span><span class="s2">&quot;&quot;</span>
+<span class="n">def</span><span class="w"> </span><span class="n">reverse_transform</span><span class="p">(</span><span class="n">decimal_deg</span><span class="p">):</span>
+
+<span class="w">    </span><span class="n">degrees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="p">(</span><span class="n">decimal_deg</span><span class="p">)</span>
+
+<span class="w">    </span><span class="n">decimal_min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">decimal_deg</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">degrees</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">60</span>
+
+<span class="w">    </span><span class="n">minutes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="p">(</span><span class="n">decimal_min</span><span class="p">)</span>
+
+<span class="w">    </span><span class="n">seconds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">decimal_min</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">minutes</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">60</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">degrees</span><span class="p">,</span><span class="w"> </span><span class="n">minutes</span><span class="p">,</span><span class="w"> </span><span class="n">seconds</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">reverse_transform</span><span class="p">(</span><span class="mf">41.688554</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reverse_transform</span><span class="p">(</span><span class="mf">44.693789</span><span class="p">))</span>
+
+<span class="c1">#შედეგი </span>
+<span class="p">(</span><span class="mi">41</span><span class="p">,</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w"> </span><span class="mf">18.794400000012388</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">44</span><span class="p">,</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w"> </span><span class="mf">37.64040000000875</span><span class="p">)</span>
+</code></pre></div>
+
+<p>გრადუსები მინუტები სეკუნდები, მეათედ მინუტებზე</p>
+<p>გასარჩევია</p>
+<p>def dms_to_dd(d, m, s):</p>
+<div class="codehilite"><pre><span></span><code><span class="s2">&quot;&quot;&quot;Converts degrees, minutes, and seconds to decimal degrees.&quot;&quot;&quot;</span>
+
+<span class="nv">dd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">m</span><span class="o">/</span><span class="mi">60</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">s</span><span class="o">/</span><span class="mi">3600</span>
+
+<span class="k">return</span><span class="w"> </span><span class="nv">dd</span>
+</code></pre></div>
+
+<p>def convert_coordinates(coordinates):</p>
+<div class="codehilite"><pre><span></span><code>&quot;&quot;&quot;Converts a list of coordinates from DMS to DD format.&quot;&quot;&quot;
+
+decimal_coordinates = []
+
+for coord in coordinates:
+
+    d, m, s = coord
+
+    dd = dms_to_dd(d, m, s)
+
+    decimal_coordinates.append(dd)
+
+return decimal_coordinates
+</code></pre></div>
+
+<h1 id="list-of-coordinates-in-dms-format-degrees-minutes-seconds">List of coordinates in DMS format: (degrees, minutes, seconds)<a class="headerlink" href="#list-of-coordinates-in-dms-format-degrees-minutes-seconds" title="Permanent link">&para;</a></h1>
+<p>coordinates_dms = [</p>
+<div class="codehilite"><pre><span></span><code>(45, 30, 15),
+
+(60, 20, 10),
+
+(30, 15, 45)
+</code></pre></div>
+
+<p>]</p>
+<h1 id="convert-coordinates-to-dd-format">Convert coordinates to DD format<a class="headerlink" href="#convert-coordinates-to-dd-format" title="Permanent link">&para;</a></h1>
+<p>decimal_coordinates = convert_coordinates(coordinates_dms)</p>
+<p>print(decimal_coordinates)</p>
+<p>print(transformation(45, 31, 14.306))</p>
+<p>print(transformation(45, 31, 14.697))</p>
+<p>print(transformation(45, 31, 14.660))</p>
+<p>print(transformation(45, 31, 14.699))</p>
+<p>print(transformation(45, 31, 14.510))</p>
+<p>print(transformation(45, 31, 14.333))</p>
+<p>print(transformation(45, 31, 14.296))</p>
+<p>print(transformation(45, 31, 14.041))</p>
+<p>print(transformation(45, 31, 14.079))</p>
+<p>print(transformation(45, 31, 14.040))</p>
+<p>print(transformation(45, 31, 14.229))</p>
+<p>print(transformation(45, 31, 14.268))</p>
+<p>print('N')</p>
+<p>print(transformation(41, 57, 18.654))</p>
+<p>print(transformation(41, 57, 18.513))</p>
+<p>print(transformation(41, 57, 18.454))</p>
+<p>print(transformation(41, 57, 18.440))</p>
+<p>print(transformation(41, 57, 18.148))</p>
+<p>print(transformation(41, 57, 18.211))</p>
+<p>print(transformation(41, 57, 18.153))</p>
+<p>print(transformation(41, 57, 18.244))</p>
+<p>print(transformation(41, 57, 18.303))</p>
+<p>print(transformation(41, 57, 18.317))</p>
+<p>print(transformation(41, 57, 18.609))</p>
+<p>print(transformation(41, 57, 18.595))</p>
+<p>def dms_to_dd(d, m, s):</p>
+<div class="codehilite"><pre><span></span><code><span class="s2">&quot;&quot;&quot;Converts degrees, minutes, and seconds to decimal degrees.&quot;&quot;&quot;</span>
+
+<span class="nv">dd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">m</span><span class="o">/</span><span class="mi">60</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">s</span><span class="o">/</span><span class="mi">3600</span>
+
+<span class="k">return</span><span class="w"> </span><span class="nv">dd</span>
+</code></pre></div>
+
+<p>def convert_coordinates(coordinates):</p>
+<div class="codehilite"><pre><span></span><code>&quot;&quot;&quot;Converts a list of coordinates from DMS to DD format.&quot;&quot;&quot;
+
+decimal_coordinates = []
+
+for coord in coordinates:
+
+    d, m, s = coord
+
+    dd = dms_to_dd(d, m, s)
+
+    decimal_coordinates.append(dd)
+
+return decimal_coordinates
+</code></pre></div>
+
+<h1 id="list-of-coordinates-in-dms-format-degrees-minutes-seconds_1">List of coordinates in DMS format: (degrees, minutes, seconds)<a class="headerlink" href="#list-of-coordinates-in-dms-format-degrees-minutes-seconds_1" title="Permanent link">&para;</a></h1>
+<p>coordinates_dms_north = [</p>
+<div class="codehilite"><pre><span></span><code>(45, 31, 14.306),
+
+(45, 31, 14.697),
+
+(45, 31, 14.660),
+
+(45, 31, 14.699),
+
+(45, 31, 14.510),
+
+(45, 31, 14.333),
+
+(45, 31, 14.296),
+
+(45, 31, 14.041),
+
+(45, 31, 14.079),
+
+(45, 31, 14.040),
+
+(45, 31, 14.229),
+
+(45, 31, 14.268)
+</code></pre></div>
+
+<p>]</p>
+<p>coordinates_dms_south = [</p>
+<div class="codehilite"><pre><span></span><code>(41, 57, 18.654),
+
+(41, 57, 18.513),
+
+(41, 57, 18.454),
+
+(41, 57, 18.440),
+
+(41, 57, 18.148),
+
+(41, 57, 18.211),
+
+(41, 57, 18.153),
+
+(41, 57, 18.244),
+
+(41, 57, 18.303),
+
+(41, 57, 18.317),
+
+(41, 57, 18.609),
+
+(41, 57, 18.595)
+</code></pre></div>
+
+<p>]</p>
+<h1 id="convert-coordinates-to-dd-format_1">Convert coordinates to DD format<a class="headerlink" href="#convert-coordinates-to-dd-format_1" title="Permanent link">&para;</a></h1>
+<p>decimal_coordinates_north = convert_coordinates(coordinates_dms_north)</p>
+<p>decimal_coordinates_south = convert_coordinates(coordinates_dms_south)</p>
+<h1 id="save-coordinates-to-a-text-file">Save coordinates to a text file<a class="headerlink" href="#save-coordinates-to-a-text-file" title="Permanent link">&para;</a></h1>
+<p>with open("converted_coordinates.txt", "w") as file:</p>
+<div class="codehilite"><pre><span></span><code>file.write(&quot;North Coordinates:\n&quot;)
+
+for coord in decimal_coordinates_north:
+
+    file.write(f&quot;{coord}\n&quot;)
+
+
+
+file.write(&quot;\nSouth Coordinates:\n&quot;)
+
+for coord in decimal_coordinates_south:
+
+    file.write(f&quot;{coord}\n&quot;)
+</code></pre></div>
+
+<p>print("Coordinates have been saved to 'converted_coordinates.txt' file.")</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u10d9\u10dd\u10de\u10d8\u10e0\u10d4\u10d1\u10e3\u10da\u10d8\u10d0", "clipboard.copy": "\u10d9\u10dd\u10de\u10d8\u10e0\u10d4\u10d1\u10d0", "search.result.more.one": "\u10d9\u10d8\u10d3\u10d4\u10d5 1 \u10d0\u10db \u10d2\u10d5\u10d4\u10e0\u10d3\u10d6\u10d4", "search.result.more.other": "\u10d9\u10d8\u10d3\u10d4\u10d5 # \u10d0\u10db \u10d2\u10d5\u10d4\u10e0\u10d3\u10d6\u10d4", "search.result.none": "\u10d3\u10dd\u10d9\u10e3\u10db\u10d4\u10dc\u10e2\u10d8 \u10d5\u10d4\u10e0 \u10db\u10dd\u10d8\u10eb\u10d4\u10d1\u10dc\u10d0", "search.result.one": "\u10db\u10dd\u10d8\u10eb\u10d4\u10d1\u10dc\u10d0 1 \u10d3\u10dd\u10d9\u10e3\u10db\u10d4\u10dc\u10e2\u10d8", "search.result.other": "\u10db\u10dd\u10d8\u10eb\u10d4\u10d1\u10dc\u10d0 # \u10d3\u10dd\u10d9\u10e3\u10db\u10d4\u10dc\u10e2\u10d8", "search.result.placeholder": "\u10e9\u10d0\u10ec\u10d4\u10e0\u10d4 \u10eb\u10d4\u10d1\u10dc\u10d8\u10e1 \u10d3\u10d0\u10e1\u10d0\u10ec\u10e7\u10d4\u10d1\u10d0\u10d3", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  </body>
+</html>

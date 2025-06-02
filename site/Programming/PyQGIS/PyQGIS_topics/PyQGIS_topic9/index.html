@@ -1,0 +1,378 @@
+
+<!doctype html>
+<html lang="ka" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://osdoc.qgis.ge/Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic9/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+    
+    
+      
+        <title>DEM - GIS დოკუმენტაცია</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dem" class="md-skip">
+          კონტენტზე გადასვლა
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="GIS დოკუმენტაცია" class="md-header__button md-logo" aria-label="GIS დოკუმენტაცია" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GIS დოკუმენტაცია
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DEM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="ძებნა" placeholder="ძებნა" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="გასუფთავება" aria-label="გასუფთავება" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ნავიგაცია" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="GIS დოკუმენტაცია" class="md-nav__button md-logo" aria-label="GIS დოკუმენტაცია" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    GIS დოკუმენტაცია
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    მთავარი
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="სარჩევი">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="dem">DEM<a class="headerlink" href="#dem" title="Permanent link">&para;</a></h1>
+<p>ორი რასტრული მონაცემის გაერთიანება ციფრული რელიეფის(DEM) მაგალითზე. merge</p>
+<p>fn = r'C:/Users/Public/Documents/GK/PyQGIS/shp/tema_9/Raster/DEM/srtm_46_04.tif'</p>
+<p>fn1 = r'C:/Users/Public/Documents/GK/PyQGIS/shp/tema_9/Raster/DEM/srtm_45_04.tif'</p>
+<p>output = r'C:/Users/Public/Documents/GK/PyQGIS/shp/tema_9/Raster/DEM/dem.tif'</p>
+<p>processing.run("gdal:merge", {'INPUT':[fn, fn1],\</p>
+<p>'PCT':False,'SEPARATE':False,'NODATA_INPUT':None,'NODATA_OUTPUT':None,'OPTIONS':'',\</p>
+<p>'EXTRA':'','DATA_TYPE':5,'OUTPUT':output})</p>
+<p>layer = iface.addRasterLayer(output, '')</p>
+<p>კავკასიის ციფრული რელიეფის მოჭრა საქართველოზე ვექტორული შრით. cliprasterbymasklayer</p>
+<p>fn = r'C:/Users/Public/Documents/GK/PyQGIS/shp/tema_9/Raster/DEM/dem.tif'</p>
+<p>fn1 = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_9\shp\Georgia_regionebi.shp'</p>
+<p>output = r'C:/Users/Public/Documents/GK/PyQGIS/shp/tema_9/Raster/DEM/Georgia_dem.tif'</p>
+<p>processing.run("gdal:cliprasterbymasklayer", {'INPUT':fn,\</p>
+<p>'MASK':fn1,'SOURCE_CRS':QgsCoordinateReferenceSystem \</p>
+<p>('EPSG:4326'),'TARGET_CRS':QgsCoordinateReferenceSystem('EPSG:32638'),'TARGET_EXTENT':None,'NODATA':255,'ALPHA_BAND':False,\</p>
+<p>'CROP_TO_CUTLINE':True,'KEEP_RESOLUTION':False,'SET_RESOLUTION':False,'X_RESOLUTION':None,'Y_RESOLUTION':None,\</p>
+<p>'MULTITHREADING':False,'OPTIONS':'','DATA_TYPE':0,'EXTRA':'','OUTPUT':output})</p>
+<p>layer = iface.addRasterLayer(output, '')</p>
+<p>ფერდობების დახრილობა რელიეფიდან(Slope)</p>
+<p>dem = r'C:/Users/Public/Documents/GK/PyQGIS/shp/tema_9/Raster/DEM/Georgia_dem.tif'</p>
+<p>slp = r'C:/Users/Public/Documents/GK/PyQGIS/shp/tema_9/Raster/DEM/Georgia_slope.tif'</p>
+<p>processing.run('qgis:slope', \</p>
+<div class="codehilite"><pre><span></span><code>{&#39;INPUT&#39;:dem,&#39;Z_FACTOR&#39;:1,&#39;OUTPUT&#39;:slp})
+</code></pre></div>
+
+<p>iface.addRasterLayer(slp)</p>
+<p>ექსპოზიცია რელიეფიდან(Aspect)</p>
+<p>dem = r'C:/Users/Public/Documents/GK/PyQGIS/shp/tema_9/Raster/DEM/Georgia_dem.tif'</p>
+<p>aspect = r'C:/Users/Public/Documents/GK/PyQGIS/shp/tema_9/Raster/DEM/Georgia_aspect.tif'</p>
+<p>processing.run(native:aspect", {'INPUT':dem,'Z_FACTOR':1,'OUTPUT':aspect"})</p>
+<p>iface.addRasterLayer(aspect)</p>
+<p>რელიეფის ჩრდილი (hillshade)</p>
+<p>dem = r'C:/Users/Public/Documents/GK/PyQGIS/shp/tema_9/Raster/DEM/Georgia_dem.tif'</p>
+<p>hillshade = r'C:/Users/Public/Documents/GK/PyQGIS/shp/tema_9/Raster/DEM/Georgia_hillshade.tif'</p>
+<p>processing.run("native:hillshade", {'INPUT':dem,\</p>
+<p>'Z_FACTOR':1,'AZIMUTH':300,'V_ANGLE':40,'OUTPUT':hillshade})</p>
+<p>iface.addRasterLayer(hillshade)</p>
+<p>რელიეფიდან იზოჰიფსების ამოღება ინტერვალებით. contour</p>
+<p>dem = r'C:/Users/Public/Documents/GK/PyQGIS/shp/tema_9/Raster/DEM/Georgia_dem.tif'</p>
+<p>contour = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_9\shp\contour.shp'</p>
+<p>processing.run("gdal:contour", {'INPUT':dem,'BAND':1,'INTERVAL':150,\</p>
+<p>'FIELD_NAME':'ELEV','CREATE_3D':False,'IGNORE_NODATA':False,'NODATA':255,\</p>
+<p>'OFFSET':0,'EXTRA':'','OUTPUT':contour})</p>
+<p>iface.addVectorLayer(contour, '', 'ogr')</p>
+<p>რასტრული გამოსახულებიდან ჰისტოგრამის აგება. rasterlayerhistogram</p>
+<p>fn = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_9\Raster\DEM\Georgia_dem.tif'</p>
+<p>histogram = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_9\histogram\dem_histogram.html'</p>
+<p>processing.run("qgis:rasterlayerhistogram", {'INPUT':f,'BAND':1,\</p>
+<p>'BINS':15,'OUTPUT':"histogram"})</p>
+<p>დასაკორექტირებელია</p>
+<h1 id="extent">Extent შრის ჩარჩოსგან შექმნას პოლიგონი<a class="headerlink" href="#extent" title="Permanent link">&para;</a></h1>
+<p>cont = r'D:!Work!BTU\Raster\Contour_Vere.shp'</p>
+<p>ext = r'D:!Work!BTU\Raster\Extent_Vere.shp'</p>
+<p>processing.run("native:polygonfromlayerextent", \</p>
+<div class="codehilite"><pre><span></span><code>   {&#39;INPUT&#39;:cont,&#39;ROUND_TO&#39;:0,&#39;OUTPUT&#39;:ext})
+</code></pre></div>
+
+<p>iface.addVectorLayer(ext, '', 'ogr')</p>
+<h1 id="tin">TIN<a class="headerlink" href="#tin" title="Permanent link">&para;</a></h1>
+<p>'::~::0::~::1::~::1' არის ვექტორული შრის შემავალი ატრიბუტები სიმაღლე და ა.შ</p>
+<p>cont = r'D:!Work!BTU\Raster\Contour_Vere.shp'</p>
+<p>tin = r'D:!Work!BTU\Raster\TIN_Vere.tif'</p>
+<p>processing.run("qgis:tininterpolation", \</p>
+<p>{'INTERPOLATION_DATA':cont + '::~::0::~::1::~::1',\</p>
+<p>'METHOD':0,'EXTENT':'451209,483929,4608998,4625248 \</p>
+<p>[EPSG:32638]','PIXEL_SIZE':10,'OUTPUT':tin})</p>
+<p>iface.addRasterLayer(tin)</p>
+<p>from qgis.PyQt import QtGui</p>
+<p>from qgis.core import QgsVectorLayer, QgsSymbol, QgsRendererRange,</p>
+<p>QgsGraduatedSymbolRenderer</p>
+<p>file_name = r'C:\Users\KETI\Desktop\QGIS\gis-masala\tema_6\rivers.shp'</p>
+<p>layer_name = 'Rivers'</p>
+<p>layer = QgsVectorLayer(file_name, layer_name, 'ogr')</p>
+<p>range_field= 'Shape_Leng'</p>
+<p>opacity = 0.75</p>
+<p>minval = 1000</p>
+<p>maxval = 20000</p>
+<p>color = '#c0ec19'</p>
+<p>label = 'short'</p>
+<p>range1_symbol = QgsSymbol.defaultSymbol(QgsWkbTypes.LineGeometry)</p>
+<p>range1_symbol.setColor(QColor(color))</p>
+<p>range1_symbol.setOpacity (opacity)</p>
+<p>range1 = QgsRendererRange(minval, maxval, range1_symbol, label)</p>
+<p>renderer = QgsGraduatedSymbolRenderer(range_field, [range1])</p>
+<p>layer.setRenderer(renderer)</p>
+<p>QgsProject.instance().addMapLayer(layer) </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u10d9\u10dd\u10de\u10d8\u10e0\u10d4\u10d1\u10e3\u10da\u10d8\u10d0", "clipboard.copy": "\u10d9\u10dd\u10de\u10d8\u10e0\u10d4\u10d1\u10d0", "search.result.more.one": "\u10d9\u10d8\u10d3\u10d4\u10d5 1 \u10d0\u10db \u10d2\u10d5\u10d4\u10e0\u10d3\u10d6\u10d4", "search.result.more.other": "\u10d9\u10d8\u10d3\u10d4\u10d5 # \u10d0\u10db \u10d2\u10d5\u10d4\u10e0\u10d3\u10d6\u10d4", "search.result.none": "\u10d3\u10dd\u10d9\u10e3\u10db\u10d4\u10dc\u10e2\u10d8 \u10d5\u10d4\u10e0 \u10db\u10dd\u10d8\u10eb\u10d4\u10d1\u10dc\u10d0", "search.result.one": "\u10db\u10dd\u10d8\u10eb\u10d4\u10d1\u10dc\u10d0 1 \u10d3\u10dd\u10d9\u10e3\u10db\u10d4\u10dc\u10e2\u10d8", "search.result.other": "\u10db\u10dd\u10d8\u10eb\u10d4\u10d1\u10dc\u10d0 # \u10d3\u10dd\u10d9\u10e3\u10db\u10d4\u10dc\u10e2\u10d8", "search.result.placeholder": "\u10e9\u10d0\u10ec\u10d4\u10e0\u10d4 \u10eb\u10d4\u10d1\u10dc\u10d8\u10e1 \u10d3\u10d0\u10e1\u10d0\u10ec\u10e7\u10d4\u10d1\u10d0\u10d3", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  </body>
+</html>
