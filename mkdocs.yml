@@ -1,0 +1,17 @@
+site_name: GIS დოკუმენტაცია
+site_url: https://osdoc.qgis.ge
+theme:
+  name: material
+  language: ka
+
+nav:
+  - მთავარი: index.md
+  - კითხვები და პასუხები: სხვა_faqs.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - codehilite
+  - footnotes
+  - tables
