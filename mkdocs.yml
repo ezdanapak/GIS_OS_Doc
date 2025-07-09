@@ -124,13 +124,6 @@ nav:
   - შესახებ: 'about.md'
   - გაფრთხილება: 'warning.md'
   - 'QGIS':
-    - 'GTU GIS': 
-      - info: './QGIS/GTU_GIS/info.md'
-      - Software: './QGIS/GTU_GIS/software.md'
-      - Topics:
-        - Topic 1: './QGIS/GTU_GIS/topic_1.md'
-        - Topic 2: './QGIS/GTU_GIS/topic_2.md'
-
     - შეიპ-ფაილი: './QGIS/shapefile.md'
     - საკოორდინატო სისტემები: './QGIS/Coordinate_systems.md'
     - დატუმი: './QGIS/Datum.md'
@@ -143,7 +136,11 @@ nav:
     - 'პერსონალური მონაცემების დაცვა': './Personal_data_protection/Personal_data_protection.md'
     - 'GDPR': './Personal_data_protection/GDPR.md'
     - 'პერსონალური მონაცემების დაცვა GIS-ში': './Personal_data_protection/Personal_data_protection_in_GIS.md'
-  
+  - არაფორმალური განათლება:
+    - 'სწავლების მეთოდები': './Non_formal_education/Teaching_methods.md'
+    - 'სწავლების სტილი': './Non_formal_education/Teaching_style.md'
+    - 'სწავლების პროცესის დაგეგმვა': './Non-formal_education/Planning_the_learning_process.md'
+    - 'სწავლების პროცესის შეფასება': './Non-formal_education/Evaluation_of_the_learning_process.md'
   - 'პროგრამირება':
     
     - 'სივრცული პითონი':
