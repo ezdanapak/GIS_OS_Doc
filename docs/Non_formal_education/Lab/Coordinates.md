@@ -44,6 +44,15 @@ Projected coordinate systems are based on a plane and utilize linear units (feet
 სფერული / მართკუთხა
 
 
+მართკუთხა ახალი პროექცია :
+ელიფსოიდია WGS 84 და პროექცია UTM
+WGS 84 / UTM zone 38N | EPSG:32638
+WGS 84 / UTM zone 37N | EPSG:32637
+
+ტოპოგრაფიულ რუკაზე
+ნომენკლატურა იწყება T / T 37 და T 38 - ზე.
+
+
 
 | ფორმატი | მაგალითი | აღწერა |
 |---------|----------|--------|
@@ -101,6 +110,11 @@ UTM 38N
 4683394.40 m N
 
 ---
+
+ამოცანა
+Georgian State Hydrographic Service ჰიდროგრაფიული სამსახური
+
+
 
 ## 💡 რჩევები მასწავლებლისთვის
 
