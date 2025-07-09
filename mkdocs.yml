@@ -139,8 +139,8 @@ nav:
   - არაფორმალური განათლება:
     - 'სწავლების მეთოდები': './Non_formal_education/Teaching_methods.md'
     - 'სწავლების სტილი': './Non_formal_education/Teaching_style.md'
-    - 'სწავლების პროცესის დაგეგმვა': './Non-formal_education/Planning_the_learning_process.md'
-    - 'სწავლების პროცესის შეფასება': './Non-formal_education/Evaluation_of_the_learning_process.md'
+    - 'სწავლების პროცესის დაგეგმვა': './Non_formal_education/Planning_the_learning_process.md'
+    - 'სწავლების პროცესის შეფასება': './Non_formal_education/Evaluation_of_the_learning_process.md'
   - 'პროგრამირება':
     
     - 'სივრცული პითონი':
