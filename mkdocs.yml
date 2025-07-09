@@ -137,10 +137,22 @@ nav:
     - 'GDPR': './Personal_data_protection/GDPR.md'
     - 'პერსონალური მონაცემების დაცვა GIS-ში': './Personal_data_protection/Personal_data_protection_in_GIS.md'
   - არაფორმალური განათლება:
-    - 'სწავლების მეთოდები': './Non_formal_education/Teaching_methods.md'
-    - 'სწავლების სტილი': './Non_formal_education/Teaching_style.md'
-    - 'სწავლების პროცესის დაგეგმვა': './Non_formal_education/Planning_the_learning_process.md'
-    - 'სწავლების პროცესის შეფასება': './Non_formal_education/Evaluation_of_the_learning_process.md'
+    - 'სწავლების შესახებ':
+      - 'სწავლების მეთოდები': './Non_formal_education/Teaching_methods.md'
+      - 'სწავლების სტილი': './Non_formal_education/Teaching_style.md'
+      - 'სწავლების პროცესის დაგეგმვა': './Non_formal_education/Planning_the_learning_process.md'
+      - 'სწავლების პროცესის შეფასება': './Non_formal_education/Evaluation_of_the_learning_process.md'
+    - 'შესავალი': './Non_formal_education/Lab/Introduction.md'
+    - 'კოორდინატები': './Non_formal_education/Lab/Coordinates.md'
+    - 'ანიმაცია': './Non_formal_education/Lab/Animation.md'
+    - 'კოორდინატებიანი ფოტო': './Non_formal_education/Lab/Geotagged_photo.md'
+    - 'Google Maps': './Non_formal_education/Lab/Google_Maps.md'
+    - 'ისტორიული სურათები': './Non_formal_education/Lab/Historical_Images.md'
+    - 'ამბავი რუკები': './Non_formal_education/Lab/Story_maps.md'
+    - 'სახელწმიფო სერვისები': './Non_formal_education/Lab/Government_Services.md'
+
+
+
   - 'პროგრამირება':
     
     - 'სივრცული პითონი':
