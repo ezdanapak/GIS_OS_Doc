@@ -54,18 +54,18 @@ StoryMaps იდეალურია სასწავლო პროცე�
 ---
 
 ## 🌐 მაგალითი
-🔗 იხილე მაგალითი: [Mount Everest StoryMap](https://storymaps.arcgis.com/stories/6e69a221e19e4b649d4850d8ce52bdf9)
-🔗 Examples from the ArcGIS StoryMaps community [გალერეა](https://doc.arcgis.com/en/arcgis-storymaps/gallery/)
-🔗 ფარავნის [ტბა](https://kapanadze.medium.com/%E1%83%A4%E1%83%90%E1%83%A0%E1%83%90%E1%83%95%E1%83%9C%E1%83%98%E1%83%A1-%E1%83%A2%E1%83%91%E1%83%90-558ba6606438)
+🔗 იხილე მაგალითი: [Mount Everest StoryMap](https://storymaps.arcgis.com/stories/6e69a221e19e4b649d4850d8ce52bdf9) <br>
+🔗 Examples from the ArcGIS StoryMaps community [გალერეა](https://doc.arcgis.com/en/arcgis-storymaps/gallery/) <br>
+🔗 ფარავნის [ტბა](https://kapanadze.medium.com/%E1%83%A4%E1%83%90%E1%83%A0%E1%83%90%E1%83%95%E1%83%9C%E1%83%98%E1%83%A1-%E1%83%A2%E1%83%91%E1%83%90-558ba6606438) <br>
 
-🔗 Old Joliet [Prison](https://storymaps.arcgis.com/stories/1988836046c24b99b1c8a49b7e6bccee)
+🔗 Old Joliet [Prison](https://storymaps.arcgis.com/stories/1988836046c24b99b1c8a49b7e6bccee) <br>
 ---
 
 ## 📚 დამატებითი რესურსები
 
-- [StoryMaps Learning Guide](https://learn.arcgis.com/en/projects/get-started-with-arcgis-storymaps/)
-- [StoryMaps Blog](https://storymaps.arcgis.com/blog/)
-- [Free Media for Stories (Pixabay, Unsplash)](https://unsplash.com/)
+- [StoryMaps Learning Guide](https://learn.arcgis.com/en/projects/get-started-with-arcgis-storymaps/) <br>
+- [StoryMaps Blog](https://storymaps.arcgis.com/blog/) <br>
+- [Free Media for Stories (Pixabay, Unsplash)](https://unsplash.com/) <br>
 
 ---
 
