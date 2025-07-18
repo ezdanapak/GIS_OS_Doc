@@ -2,6 +2,11 @@
 
 ---
 
+ნივთების ინტერნეტი (Internet of Things - IoT), <br>
+გაფართოებული რეალობა (Augmented Reality – AR), <br>
+ვირტუალური რეალობა (Virtual Reality – VR), <br>
+ჭკვიანი მოწყობილობები (Smart Devices). <br>
+
 ## 📌 GIS-ის მნიშვნელობა
 
 **GIS** (Geographic Information System) არის სივრცითი მონაცემების ანალიზისა და ვიზუალიზაციის საშუალება. გამოიყენება:

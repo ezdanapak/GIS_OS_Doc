@@ -142,7 +142,8 @@ nav:
       - 'სწავლების სტილი': './Non_formal_education/Teaching_style.md'
       - 'სწავლების პროცესის დაგეგმვა': './Non_formal_education/Planning_the_learning_process.md'
       - 'სწავლების პროცესის შეფასება': './Non_formal_education/Evaluation_of_the_learning_process.md'
-    - 'შესავალი': './Non_formal_education/Lab/Introduction.md'
+    - 'შესავალი': './Non_formal_education/Lab/GIS_for_pupils_intro.md'
+    - 'GIS შესავალი': './Non_formal_education/Lab/Introduction.md'
     - 'კოორდინატები': './Non_formal_education/Lab/Coordinates.md'
     - 'ანიმაცია': './Non_formal_education/Lab/Animation.md'
     - 'კოორდინატებიანი ფოტო': './Non_formal_education/Lab/Geotagged_photo.md'
@@ -150,6 +151,7 @@ nav:
     - 'ისტორიული სურათები': './Non_formal_education/Lab/Historical_Images.md'
     - 'ამბავი რუკები': './Non_formal_education/Lab/Story_maps.md'
     - 'სახელწმიფო სერვისები': './Non_formal_education/Lab/Government_Services.md'
+    - 'ვირტუალური რეალობა': './Non_formal_education/Lab/GEVR.md' 
 
 
 
