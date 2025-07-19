@@ -2,10 +2,11 @@
 
 
 <p align="center">
-  <img src="/docs/Non_formal_education/Lab/Files/qr-code.png" alt="QR კოდი დოკუმენტაციისთვის" width="150">
+  <img src="Files/qr-code.png" alt="QR კოდი დოკუმენტაციისთვის" width="150">
 </p>
 
-# 🌍 შესავალი GIS ტექნოლოგიაში მოსწავლეებისთვის
+
+
 
 
 ## რა არის GIS?
