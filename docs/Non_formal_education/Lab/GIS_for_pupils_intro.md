@@ -1,5 +1,13 @@
 # 🌍 შესავალი GIS ტექნოლოგიაში მოსწავლეებისთვის
 
+
+<p align="center">
+  <img src="/docs/Non_formal_education/Lab/Files/qr-code.png" alt="QR კოდი დოკუმენტაციისთვის" width="150">
+</p>
+
+# 🌍 შესავალი GIS ტექნოლოგიაში მოსწავლეებისთვის
+
+
 ## რა არის GIS?
 
 **GIS** ნიშნავს **გეოგრაფიულ საინფორმაციო სისტემას** (Geographic Information System).  
@@ -30,9 +38,13 @@ GIS-ს იყენებენ სხვადასხვა პროფე�
 | საგანგებო სამსახური       | კატასტროფის მართვა |
 ---
 
+დაათვალიერე  ყველა ინდუსტრია 
+[ESRI.com](https://www.esri.com/en-us/industries/index) 
+[SuperMap.com](https://www.supermap.com/en-us/list/?84_1.html)
+
 ## სად ვისწავლოთ GIS?
 
-### 🇬🇪 საქართველოში:
+### საქართველოში:
 
 ქვემოთ ჩამოთვლილია უნივერსიტეტები, სადაც შეგიძლიათ ისწავლოთ GIS:
 
@@ -44,7 +56,7 @@ GIS-ს იყენებენ სხვადასხვა პროფე�
 
 📎 [სრული სია - იხილეთ აქ](https://sites.google.com/view/gisgeo/gis/subpage-4/part-2/%E1%83%A1%E1%83%AC%E1%83%90%E1%83%95%E1%83%9A%E1%83%94%E1%83%91%E1%83%90?authuser=0)
 
-### 🌐 უცხოეთში:
+### 🌐 სხვა ქვეყნებში:
 
 - Esri Academy (ონლაინ)
 - UNIGIS International
