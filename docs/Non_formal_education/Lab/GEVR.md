@@ -55,9 +55,15 @@
 
 ---
 
-## 🎥 სქრინშოტი
+## 🎥 ვიდეო
 
-![Google Earth VR](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Google_Earth_VR_screenshot.jpg/800px-Google_Earth_VR_screenshot.jpg)
+<!-- Obsidian / VSCode Preview / Web rendering -->
+<p align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/SCrkZOx5Q1M" 
+          title="YouTube video" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
 
 ---
 
