@@ -135,11 +135,11 @@ nav:
           - Geoserver: './GIS_Basic/Software/Geoserver.md'
       - თეორია:
         - გეოიდი & ელიფსოიდი : './GIS_Basic/Theory/Base_Theory/Ellipsoid_Geoid_intro.md'
-        - დატუმი : './GIS_Basic/Theory/Base_Theory/Base_Theory/Datum.md'
+        - დატუმი : './GIS_Basic/Theory/Base_Theory/Datum.md'
 
         - გეომონაცემთა ბაზები:
           - Apache parquet: './GIS_Basic/Theory/Geodatabase/Apache_parquet.md'
-          - Geodatabase: './GIS_Basic/Theory/Geodatabase.md'
+          - Geodatabase: './GIS_Basic/Theory/Geodatabase/Geodatabase.md'
         
         - Google:
           - KML & KMZ : './GIS_Basic/Theory/Google/KML_KMZ_formats.md'
@@ -163,9 +163,9 @@ nav:
           - დროებითი შრე: './GIS_Basic/Theory/QGIS/Scratch_layer.md'
 
         - რასტრი :
-          - გეორეფერენცირება : './GIS_Basic/Theory/Georeferencing.md'
-          - რელიეფი: './GIS_Basic/Theory/Terrain.md'
-          - Raster მონაცემები : './GIS_Basic/Theory/Raster.md'
+          - გეორეფერენცირება : './GIS_Basic/Theory/Raster/Georeferencing.md'
+          - რელიეფი: './GIS_Basic/Theory/Raster/Terrain.md'
+          - Raster მონაცემები : './GIS_Basic/Theory/Raster/Raster.md'
 
         - ვექტორი :
           - შეიპ-ფაილი: './GIS_Basic/Theory/Vector/Shapefile.md'

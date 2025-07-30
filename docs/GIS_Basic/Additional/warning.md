@@ -12,7 +12,7 @@
 
 თუ უკვე ცხრილის სვეტებში არსებობს ჩანაწერები ქართული ასოებით მისი კონვერტაცია ლათინურზე შესაძლებელია მარტივად PyQGIS კოდის გამოყენებით, ისე რომ ქართული ფონტისთვის შესაბამისი გახდეს.
 
-![A cool animation](./images/PyQGIS_transliter_code_geo_to_eng.gif)
+![Transliter](/docs/images/PyQGIS_transliter_code_geo_to_eng.gif)
 
 ```py title="transliteration.py" linenums="1"
 #ქუდის ნაწილის გამოტოვება შესაძლებელია, თუ QGIS კონსოლს ვიყენებთ.
