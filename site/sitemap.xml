@@ -26,6 +26,61 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://osdoc.qgis.ge/GIS_Basic/Lab/Digitization/</loc>
+         <lastmod>2025-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/GIS_Basic/Lab/Digitization1/</loc>
+         <lastmod>2025-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/GIS_Basic/Lab/GPS/</loc>
+         <lastmod>2025-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/GIS_Basic/Lab/Geodatabase/</loc>
+         <lastmod>2025-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/GIS_Basic/Lab/Georeference/</loc>
+         <lastmod>2025-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/GIS_Basic/Lab/Map_composition/</loc>
+         <lastmod>2025-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/GIS_Basic/Lab/OGC_WEB/</loc>
+         <lastmod>2025-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/GIS_Basic/Lab/Selection/</loc>
+         <lastmod>2025-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/GIS_Basic/Lab/Terrain_analysis/</loc>
+         <lastmod>2025-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/GIS_Basic/Lab/Topology/</loc>
+         <lastmod>2025-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/GIS_Basic/Lab/WEB_GIS/</loc>
+         <lastmod>2025-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://osdoc.qgis.ge/GIS_Basic/Software/Geoserver/</loc>
          <lastmod>2025-07-30</lastmod>
          <changefreq>daily</changefreq>

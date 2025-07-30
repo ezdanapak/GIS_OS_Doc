@@ -173,23 +173,20 @@ nav:
 
 
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       - Google:
         - Geoserver: './GIS_Basic/Software/Geoserver.md'
       - დავალებები:
-        - Geoserver: './GIS_Basic/Software/Geoserver.md'
+        - გეორეფერენცირება : './GIS_Basic/Lab/Georeference.md'
+        - დიგიტალიზაცია: './GIS_Basic/Lab/Digitization.md'
+        - გლობალური პოზიციონირება: './GIS_Basic/Lab/GPS.md'
+        - გეომონაცემთა ბაზები: './GIS_Basic/Lab/Geodatabase.md'
+        - დიგიტალიზაცია 1: './GIS_Basic/Lab/Digitization1.md'
+        - მონიშვნები : './GIS_Basic/Lab/Selection.md'
+        - OGC WEB: './GIS_Basic/Lab/OGC_WEB.md'
+        - WEB GIS: './GIS_Basic/Lab/WEB_GIS.md'
+        - ტოპოლოგია: './GIS_Basic/Lab/Topology.md'
+        - რელიეფის ანალიზი: './GIS_Basic/Lab/Terrain_analysis.md'
+        - რუკის კომპოზიცია: './GIS_Basic/Lab/Map_composition.md'
 
 
 
