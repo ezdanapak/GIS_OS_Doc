@@ -10,11 +10,11 @@ QGIS Documentation - [Georeferencer](https://docs.qgis.org/3.40/en/docs/user_man
 
 
 ### დამატებითი ბმულები <br>
-თეორიული ნაწილი ინახება [აქ](https://ezdanapak.github.io/GTU-GIS/GIS_SKA/Theory/Georeferencing/) <br>
-დამატებით ამავე [საკითხებზე](https://ezdanapak.github.io/GTU-GIS/GIS_SKA/Theory/Theory/) <br>
+თეორიული ნაწილი ინახება [აქ](https://osdoc.qgis.ge/GIS_Basic/Theory/Georeferencing/) <br>
+დამატებით ამავე [საკითხებზე](https://osdoc.qgis.ge/GIS_Basic/Theory/Base_Theory/Ellipsoid_Geoid_intro/) <br>
 
 
-გარკვეული მასალები ინახება გუგლის საკლასო [ოთახში](https://classroom.google.com/c/Nzg3MzAxMDU4MzEy/m/Nzg3NTk5MzU2OTYw/details) ⚠️ <br>
+გარკვეული მასალები ინახება გუგლის საკლასო [ოთახში](https://classroom.google.com/) ⚠️ <br>
 
 ---
 ## დავალების ინსტრუქციები
