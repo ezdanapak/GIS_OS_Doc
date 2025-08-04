@@ -68,7 +68,7 @@ QGIS Documentation - [Georeferencer](https://docs.qgis.org/3.40/en/docs/user_man
 === "I ეტაპი: საქაღალდის ორგანიზება"
 * QGIS - ში დააინსტალირეთ ფლაგინი [HCMGIS](https://plugins.qgis.org/plugins/HCMGIS/) და 
 [QuickMapServices](https://plugins.qgis.org/plugins/quick_map_services/) საბაზისო რუკებისთვის.
-* ჩამოტვირთეთ ტოპო [რუკა](https://github.com/ezdanapak/GTU-GIS/raw/e309e38dcb2aee7e2a7188eb2c755c394074f9c3/GIS_SKA/topo_map/K-38-51-G-b.jpg)
+* ჩამოტვირთეთ ტოპო რუკა
 * შექმენით თქვენი სახელისა და გვარის საფუძველზე ახალი საქაღალდე. გამოიყენეთ ზემოთ მოცემული დასახელების წესები. მაგ: `"Giorgi_Kapanadze_Group_1_work_1_georeferencing"` <br>
 * მის შიგნით შექმენით შემდეგი ქვე-საქაღალდეები:  
   - Raster  
