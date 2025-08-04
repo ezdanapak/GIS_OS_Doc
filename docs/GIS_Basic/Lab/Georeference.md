@@ -1,7 +1,7 @@
 <!-- https://cloud.mail.ru/public/js3t/PQ6wiuvrC -->
 # გეორეფერენცირება
 
-ვიდეო ჩანაწერებს ნახავ [აქ](https://ezdanapak.github.io/GTU-GIS/GIS_SKA/Videos/) <br>
+ვიდეო ჩანაწერებს ნახავ [აქ](#) <br>
 
 
 ### ოფიციალური დოკუმენტაცია <br>

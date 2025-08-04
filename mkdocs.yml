@@ -136,7 +136,7 @@ nav:
       - თეორია:
         - გეოიდი & ელიფსოიდი : './GIS_Basic/Theory/Base_Theory/Ellipsoid_Geoid_intro.md'
         - დატუმი : './GIS_Basic/Theory/Base_Theory/Datum.md'
-
+        - გეორეფერენცირება : './GIS_Basic/Theory/Georeferencing.md'
         - გეომონაცემთა ბაზები:
           - Apache parquet: './GIS_Basic/Theory/Geodatabase/Apache_parquet.md'
           - Geodatabase: './GIS_Basic/Theory/Geodatabase/Geodatabase.md'
