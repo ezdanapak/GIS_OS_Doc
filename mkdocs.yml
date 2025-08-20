@@ -241,9 +241,9 @@ nav:
     - 'PyQGIS':
       - 'რესურსები': './Programming/PyQGIS/PyQGIS_resources.md'
       - 'განმარტებები':
-        - 'OGR ბიბლიოთეკა': './Programming/PyQGIS/explanations/ogr_library.md'
-        - 'დახრილი ხაზი': './Programming/PyQGIS/explanations/PyQGIS_slashes.md'
-        - 'QVariant': './Programming/PyQGIS/explanations/QVariant.md'
+        - 'OGR ბიბლიოთეკა': './Programming/PyQGIS/Explanations/ogr_library.md'
+        - 'დახრილი ხაზი': './Programming/PyQGIS/Explanations/PyQGIS_slashes.md'
+        - 'QVariant': './Programming/PyQGIS/Explanations/QVariant.md'
       - 'თემები':
         - 'თემა 2': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic2.md'
         - 'თემა 3': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic3.md'

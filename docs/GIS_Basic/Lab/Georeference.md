@@ -1,4 +1,4 @@
-<!-- https://cloud.mail.ru/public/js3t/PQ6wiuvrC -->
+
 # გეორეფერენცირება
 
 ვიდეო ჩანაწერებს ნახავ [აქ](#) <br>
