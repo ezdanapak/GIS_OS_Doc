@@ -241,6 +241,14 @@ nav:
         - 'OGR ბიბლიოთეკა': './Programming/PyQGIS/Explanations/ogr_library.md'
         - 'დახრილი ხაზი': './Programming/PyQGIS/Explanations/PyQGIS_slashes.md'
         - 'QVariant': './Programming/PyQGIS/Explanations/QVariant.md'
+        - 'QgsFields': './Programming/PyQGIS/Explanations/QgsFields.md'
+        - 'QgsFeature': './Programming/PyQGIS/Explanations/QgsFeature.md'
+        - 'QgsGeometry': './Programming/PyQGIS/Explanations/QgsGeometry.md'
+        - 'QgsPointXY': './Programming/PyQGIS/Explanations/QgsPointXY.md'
+        - 'QgsVectorLayer': './Programming/PyQGIS/Explanations/QgsVectorLayer.md'
+        - 'QgsRasterLayer': './Programming/PyQGIS/Explanations/QgsRasterLayer.md'
+        - 'QgsProject': './Programming/PyQGIS/Explanations/QgsProject.md'
+        - 'QgsCoordinateReferenceSystem': './Programming/PyQGIS/Explanations/QgsCoordinateReferenceSystem.md'
       - 'თეორია':
         - 'სწავლის საფეხურები': './Programming/PyQGIS/Theory/Learning_stages.md'
 
