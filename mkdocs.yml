@@ -244,6 +244,15 @@ nav:
         - 'OGR ბიბლიოთეკა': './Programming/PyQGIS/Explanations/ogr_library.md'
         - 'დახრილი ხაზი': './Programming/PyQGIS/Explanations/PyQGIS_slashes.md'
         - 'QVariant': './Programming/PyQGIS/Explanations/QVariant.md'
+      - 'თეორია':
+        - 'ვირტუალური გარემო': './Programming/PyQGIS/Theory/VENV.md'
+        - 'პითონის კლასები': './Programming/PyQGIS/Theory/Python_classes.md'
+        # - 'შესავალი': './Programming/PyQGIS/PyQGIS_intro.md'
+        # - 'პროგრამირების საფუძვლები': './Programming/PyQGIS/PyQGIS_basics.md'
+        # - 'მოდულები': './Programming/PyQGIS/PyQGIS_modules.md'
+        # - 'ფუნქციები': './Programming/PyQGIS/PyQGIS_functions.md'
+        # - 'კლასები': './Programming/PyQGIS/PyQGIS_classes.md'
+        # - 'დოკუმენტაცია': './Programming/PyQGIS/PyQGIS_documentation.md'
       - 'თემები':
         - 'თემა 2': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic2.md'
         - 'თემა 3': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic3.md'
