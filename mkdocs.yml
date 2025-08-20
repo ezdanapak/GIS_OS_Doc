@@ -234,9 +234,6 @@ nav:
 # პროგრამირება - პროგრამირება - პროგრამირება - პროგრამირება - პროგრამირება - პროგრამირება - პროგრამირება
 # Programming - Programming - Programming - Programming - Programming - Programming - Programming
   - 'პროგრამირება':
-    
-    - 'სივრცული პითონი':
-        - 'რესურსები': './Programming/Spatial_python/resources.md'
         
     - 'PyQGIS':
       - 'რესურსები': './Programming/PyQGIS/PyQGIS_resources.md'
@@ -247,7 +244,7 @@ nav:
       - 'თეორია':
         - 'სწავლის საფეხურები': './Programming/PyQGIS/Theory/Learning_stages.md'
 
-        - 'PyQGIS კლასები': './Programming/PyQGIS/Theory/pyqgis_classes_guide.md'
+        - 'PyQGIS კლასები': './Programming/PyQGIS/Theory/PyQGIS_classes_guide.md'
 
         # - 'შესავალი': './Programming/PyQGIS/PyQGIS_intro.md'
         # - 'პროგრამირების საფუძვლები': './Programming/PyQGIS/PyQGIS_basics.md'
@@ -271,6 +268,16 @@ nav:
         - 'მონიშვნები': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_SQL_Spatial_Selection.md'
         - 'ტემპერატურების კონვერტაცია': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_temperatures.md'
         - 'კოორდინატების კონვერტაცია': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_coordinates.md'
+
+# სივრცული პითონი - Spatial_python - სივრცული პითონი - Spatial_python- სივრცული პითონი - Spatial_python - სივრცული პითონი - Spatial_python  
+# სივრცული პითონი - Spatial_python - სივრცული პითონი - Spatial_python- სივრცული პითონი - Spatial_python - სივრცული პითონი - Spatial_python 
+# სივრცული პითონი - Spatial_python - სივრცული პითონი - Spatial_python- სივრცული პითონი - Spatial_python - სივრცული პითონი - Spatial_python  
+    - 'სივრცული პითონი':
+        - 'რესურსები': './Programming/Spatial_python/resources.md'
+
+# პითონი გეოგრაფებისთვის - Python for Geographers - პითონი გეოგრაფებისთვის - Python for Geographers - პითონი გეოგრაფებისთვის - Python for Geographers
+# პითონი გეოგრაფებისთვის - Python for Geographers - პითონი გეოგრაფებისთვის - Python for Geographers - პითონი გეოგრაფებისთვის - Python for Geographers
+# პითონი გეოგრაფებისთვის - Python for Geographers - პითონი გეოგრაფებისთვის - Python for Geographers - პითონი გეოგრაფებისთვის - Python for Geographers
     - 'პითონი გეოგრაფებისთვის':
       - 'შესავალი': './Programming/Python_for_geographers/intro.md'
       #- 'რვეულები': './Programming/Python_for_geographers/notebooks/01_variables.md' #გადუბლირებულია
