@@ -245,8 +245,8 @@ nav:
         - 'დახრილი ხაზი': './Programming/PyQGIS/Explanations/PyQGIS_slashes.md'
         - 'QVariant': './Programming/PyQGIS/Explanations/QVariant.md'
       - 'თეორია':
-        - 'ვირტუალური გარემო': './Programming/PyQGIS/Theory/VENV.md'
-        - 'პითონის კლასები': './Programming/PyQGIS/Theory/Python_classes.md'
+        - 'სწავლის საფეხურები': './Programming/PyQGIS/Theory/Learning_stages.md'
+
         - 'PyQGIS კლასები': './Programming/PyQGIS/Theory/pyqgis_classes_guide.md'
 
         # - 'შესავალი': './Programming/PyQGIS/PyQGIS_intro.md'
@@ -276,6 +276,8 @@ nav:
       #- 'რვეულები': './Programming/Python_for_geographers/notebooks/01_variables.md' #გადუბლირებულია
       - 'ცვლადები': './Programming/Python_for_geographers/notebooks/md/01_variables.md'
       - 'მონ.სტრუქტურები': './Programming/Python_for_geographers/notebooks/md/02_data_structures.md'
+      - 'ვირტუალური გარემო': './Programming/Python_for_geographers/Theory/Python_VENV.md'
+      - 'პითონის კლასები': './Programming/Python_for_geographers/Theory/Python_classes.md'
 
 # Google Earth - Google Earth - Google Earth - Google Earth - Google Earth - Google Earth - Google Earth
 # Google Earth Engine - Google Earth Engine - Google Earth Engine - Google Earth Engine - Google Earth Engine
