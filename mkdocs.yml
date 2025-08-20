@@ -245,6 +245,7 @@ nav:
         - 'სწავლის საფეხურები': './Programming/PyQGIS/Theory/Learning_stages.md'
 
         - 'PyQGIS კლასები': './Programming/PyQGIS/Theory/PyQGIS_classes_guide.md'
+        - 'PyQGIS OOP': './Programming/PyQGIS/Theory/PyQGIS_oop_guide.md'
 
         # - 'შესავალი': './Programming/PyQGIS/PyQGIS_intro.md'
         # - 'პროგრამირების საფუძვლები': './Programming/PyQGIS/PyQGIS_basics.md'
