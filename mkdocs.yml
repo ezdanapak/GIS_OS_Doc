@@ -247,6 +247,8 @@ nav:
       - 'თეორია':
         - 'ვირტუალური გარემო': './Programming/PyQGIS/Theory/VENV.md'
         - 'პითონის კლასები': './Programming/PyQGIS/Theory/Python_classes.md'
+        - 'PyQGIS კლასები': './Programming/PyQGIS/Theory/pyqgis_classes_guide.md'
+
         # - 'შესავალი': './Programming/PyQGIS/PyQGIS_intro.md'
         # - 'პროგრამირების საფუძვლები': './Programming/PyQGIS/PyQGIS_basics.md'
         # - 'მოდულები': './Programming/PyQGIS/PyQGIS_modules.md'
