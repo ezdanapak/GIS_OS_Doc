@@ -311,12 +311,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://osdoc.qgis.ge/Non_formal_education/Lab/Story_maps/</loc>
+         <loc>https://osdoc.qgis.ge/Non_formal_education/Lab/Quiz/</loc>
          <lastmod>2025-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://osdoc.qgis.ge/Non_formal_education/Lab/quiz/</loc>
+         <loc>https://osdoc.qgis.ge/Non_formal_education/Lab/Story_maps/</loc>
          <lastmod>2025-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -332,11 +332,6 @@
     </url>
     <url>
          <loc>https://osdoc.qgis.ge/Programming/PyQGIS/PyQGIS_resources/</loc>
-         <lastmod>2025-08-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/geotaggedphoto/</loc>
          <lastmod>2025-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -397,6 +392,11 @@
     </url>
     <url>
          <loc>https://osdoc.qgis.ge/Programming/PyQGIS/PyQGIS_topics/PyQGIS_Create_layer/</loc>
+         <lastmod>2025-08-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/PyQGIS_topics/PyQGIS_Geotagged_photos/</loc>
          <lastmod>2025-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -482,11 +482,6 @@
     </url>
     <url>
          <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Theory/PyQGIS_oop_guide/</loc>
-         <lastmod>2025-08-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Theory/PyQGIS_resources/</loc>
          <lastmod>2025-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
