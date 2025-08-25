@@ -198,12 +198,9 @@ nav:
 # Personal data protection GDPR - Personal data protection in GIS - Personal data protection - Personal data protection
 # პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა       
   - 'პერს.მონ. დაცვა':
-    - 'პერსონალური მონაცემების დაცვა': './Personal_data_protection/PDP_GIS.md'
-    - 'GDPR': './Personal_data_protection/GDPR.md'
-    - 'პერსონალური მონაცემების დაცვა GIS-ში': './Personal_data_protection/Personal_data_protection_in_GIS.md'
-    - 'პერსონალური მონაცემების დაცვა': './Personal_data_protection/Personal_data_protection.md'
-    - 'GDPR': './Personal_data_protection/GDPR.md'
-    - 'პერსონალური მონაცემების დაცვა GIS-ში': './Personal_data_protection/Personal_data_protection_in_GIS.md'
+    - 'პერსონალური მონაცემების დაცვა': './Personal_Data_Protection/PDP_GIS.md'
+    - 'GDPR': './Personal_Data_Protection/GDPR.md'
+
 
 # Non-formal education - Non-formal education - Non-formal education - Non-formal education - Non-formal education - Non-formal education
 # არაფორმალური განათლება - არაფორმალური განათლება - არაფორმალური განათლება - არაფორმალური განათლება - არაფორმალური განათლება
@@ -238,7 +235,7 @@ nav:
     - 'PyQGIS':
       - 'რესურსები': './Programming/PyQGIS/PyQGIS_resources.md'
       - 'განმარტებები':
-        - 'OGR ბიბლიოთეკა': './Programming/PyQGIS/Explanations/ogr_library.md'
+        - 'OGR ბიბლიოთეკა': './Programming/PyQGIS/Explanations/OGR_Library.md'
         - 'დახრილი ხაზი': './Programming/PyQGIS/Explanations/PyQGIS_slashes.md'
         - 'QVariant': './Programming/PyQGIS/Explanations/QVariant.md'
         - 'QgsFields': './Programming/PyQGIS/Explanations/QgsFields.md'
