@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/QgsFields/">
+        <link rel="canonical" href="https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/PyQGIS_QgsCoordinateReferenceSystem/">
       
       
-        <link rel="prev" href="../QVariant/">
+        <link rel="prev" href="../PyQGIS_QgsProject/">
       
       
-        <link rel="next" href="../QgsFeature/">
+        <link rel="next" href="../PyQGIS_iface/">
       
       
       <link rel="icon" href="../../../../assets/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>QgsFields - GIS OS Docs</title>
+        <title>QgsCoordinateReferenceSystem - GIS OS Docs</title>
       
     
     
@@ -115,7 +115,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pyqgis_qgsfields" class="md-skip">
+        <a href="#qgscoordinatereferencesystem_qgscrs" class="md-skip">
           კონტენტზე გადასვლა
         </a>
       
@@ -150,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              QgsFields
+              QgsCoordinateReferenceSystem
             
           </span>
         </div>
@@ -2675,6 +2675,8 @@
       
         
       
+        
+      
     
     
     
@@ -2710,7 +2712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OGR_Library/" class="md-nav__link">
+      <a href="../PyQGIS_OGR_Library/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2752,11 +2754,158 @@
   
   
     <li class="md-nav__item">
-      <a href="../QVariant/" class="md-nav__link">
+      <a href="../PyQGIS_QVariant/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     QVariant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_QgsFields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QgsFields
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_QgsFeature/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QgsFeature
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_QgsGeometry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QgsGeometry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_QgsPointXY/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QgsPointXY
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_QgsVectorLayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QgsVectorLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_QgsRasterLayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QgsRasterLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_QgsProject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QgsProject
   </span>
   
 
@@ -2786,7 +2935,7 @@
           
   
   <span class="md-ellipsis">
-    QgsFields
+    QgsCoordinateReferenceSystem
   </span>
   
 
@@ -2797,7 +2946,7 @@
         
   
   <span class="md-ellipsis">
-    QgsFields
+    QgsCoordinateReferenceSystem
   </span>
   
 
@@ -2819,63 +2968,96 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#qgsfields" class="md-nav__link">
+  <a href="#key_responsibilities" class="md-nav__link">
     <span class="md-ellipsis">
-      ▶️ რა არის QgsFields()?
+      🔑 Key Responsibilities
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#creating_a_crs" class="md-nav__link">
     <span class="md-ellipsis">
-      📦 ძირითადი ფუნქცია
+      📌 Creating a CRS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Creating a CRS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from_epsg_code" class="md-nav__link">
+    <span class="md-ellipsis">
+      From EPSG Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from_proj_string" class="md-nav__link">
+    <span class="md-ellipsis">
+      From PROJ String
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from_wkt_well-known_text" class="md-nav__link">
+    <span class="md-ellipsis">
+      From WKT (Well-Known Text)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful_methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      📖 Useful Methods
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#example_usage" class="md-nav__link">
     <span class="md-ellipsis">
-      🧱 მაგალითი – ახალი ატრიბუტული ცხრილის შექმნა
+      ⚙️ Example Usage
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#reprojecting_layers_to_another_crs" class="md-nav__link">
     <span class="md-ellipsis">
-      📊 როგორ მუშაობს?
+      🔄 Reprojecting Layers to Another CRS
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#notes_for_students" class="md-nav__link">
     <span class="md-ellipsis">
-      🔎 რატომ არის მნიშვნელოვანი?
+      🎯 Notes for Students
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      🚀 პრაქტიკული მაგალითი: შრის შექმნა სვეტებით
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 დასკვნა
+      📚 References
     </span>
   </a>
   
@@ -2897,137 +3079,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../QgsFeature/" class="md-nav__link">
+      <a href="../PyQGIS_iface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    QgsFeature
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../QgsGeometry/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    QgsGeometry
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../QgsPointXY/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    QgsPointXY
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../QgsVectorLayer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    QgsVectorLayer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../QgsRasterLayer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    QgsRasterLayer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../QgsProject/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    QgsProject
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../QgsCoordinateReferenceSystem/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    QgsCoordinateReferenceSystem
+    iface
   </span>
   
 
@@ -4634,63 +4690,96 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#qgsfields" class="md-nav__link">
+  <a href="#key_responsibilities" class="md-nav__link">
     <span class="md-ellipsis">
-      ▶️ რა არის QgsFields()?
+      🔑 Key Responsibilities
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#creating_a_crs" class="md-nav__link">
     <span class="md-ellipsis">
-      📦 ძირითადი ფუნქცია
+      📌 Creating a CRS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Creating a CRS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from_epsg_code" class="md-nav__link">
+    <span class="md-ellipsis">
+      From EPSG Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from_proj_string" class="md-nav__link">
+    <span class="md-ellipsis">
+      From PROJ String
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from_wkt_well-known_text" class="md-nav__link">
+    <span class="md-ellipsis">
+      From WKT (Well-Known Text)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful_methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      📖 Useful Methods
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#example_usage" class="md-nav__link">
     <span class="md-ellipsis">
-      🧱 მაგალითი – ახალი ატრიბუტული ცხრილის შექმნა
+      ⚙️ Example Usage
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#reprojecting_layers_to_another_crs" class="md-nav__link">
     <span class="md-ellipsis">
-      📊 როგორ მუშაობს?
+      🔄 Reprojecting Layers to Another CRS
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#notes_for_students" class="md-nav__link">
     <span class="md-ellipsis">
-      🔎 რატომ არის მნიშვნელოვანი?
+      🎯 Notes for Students
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      🚀 პრაქტიკული მაგალითი: შრის შექმნა სვეტებით
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 დასკვნა
+      📚 References
     </span>
   </a>
   
@@ -4714,79 +4803,120 @@
   
 
 
-<h1 id="pyqgis_qgsfields">📝 PyQGIS: <strong>QgsFields()</strong> რა არის და რას აკეთებს?<a class="headerlink" href="#pyqgis_qgsfields" title="Permanent link">&para;</a></h1>
-<h2 id="qgsfields">▶️ რა არის QgsFields()?<a class="headerlink" href="#qgsfields" title="Permanent link">&para;</a></h2>
-<p><code>QgsFields</code> არის <strong>კლასი PyQGIS-ში</strong>, რომელიც წარმოადგენს <strong>ატრიბუტული ცხრილის სვეტების კოლექციას</strong>.<br />
-ანუ, როდესაც ვქმნით ახალ ვექტორულ შრეს (მაგ., shapefile), მის ცხრილში აუცილებლად უნდა განვსაზღვროთ სვეტები (ID, სახელი, ასაკი და ა.შ.). სწორედ ეს სვეტები ინახება <strong>QgsFields()</strong> ობიექტში.</p>
+<h1 id="qgscoordinatereferencesystem_qgscrs">QgsCoordinateReferenceSystem (QgsCRS)<a class="headerlink" href="#qgscoordinatereferencesystem_qgscrs" title="Permanent link">&para;</a></h1>
+<p>The <code>QgsCoordinateReferenceSystem</code> (often abbreviated as <code>QgsCRS</code>) class in PyQGIS is used to represent and manipulate Coordinate Reference Systems (CRS). A CRS defines how the two-dimensional, projected map in your GIS relates to real places on the earth.</p>
 <hr />
-<h2 id="_1">📦 ძირითადი ფუნქცია<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="key_responsibilities">🔑 Key Responsibilities<a class="headerlink" href="#key_responsibilities" title="Permanent link">&para;</a></h2>
 <ul>
-<li>ინახავს <strong>QgsField</strong> ობიექტებს (ანუ თითოეული სვეტის აღწერას).  </li>
-<li>იძლევა საშუალებას მივუმატოთ, წავშალოთ ან მოვიძიოთ სვეტები.  </li>
-<li>გამოიყენება ახალ შრეში მონაცემების ჩასაწერად.</li>
+<li>Define and store coordinate reference system information.</li>
+<li>Support for both EPSG codes and PROJ strings.</li>
+<li>Conversion between different CRS definitions.</li>
+<li>Check validity of CRS.</li>
+<li>Provide information about units, ellipsoid, and projections.</li>
 </ul>
 <hr />
-<h2 id="_2">🧱 მაგალითი – ახალი ატრიბუტული ცხრილის შექმნა<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsFields</span><span class="p">,</span> <span class="n">QgsField</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">PyQt5.QtCore</span> <span class="kn">import</span> <span class="n">QVariant</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># ვქმნით ცარიელ სვეტების კოლექციას</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">fields</span> <span class="o">=</span> <span class="n">QgsFields</span><span class="p">()</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># ვამატებთ სვეტებს</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">fields</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">QgsField</span><span class="p">(</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="n">QVariant</span><span class="o">.</span><span class="n">Int</span><span class="p">))</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">fields</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">QgsField</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="n">QVariant</span><span class="o">.</span><span class="n">String</span><span class="p">))</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">fields</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">QgsField</span><span class="p">(</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="n">QVariant</span><span class="o">.</span><span class="n">Double</span><span class="p">))</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># ახლა fields ობიექტი ინახავს 3 სვეტს: ID, Name, Age</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">fields</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>   <span class="c1"># გამოიტანს 3</span>
+<h2 id="creating_a_crs">📌 Creating a CRS<a class="headerlink" href="#creating_a_crs" title="Permanent link">&para;</a></h2>
+<h3 id="from_epsg_code">From EPSG Code<a class="headerlink" href="#from_epsg_code" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">crs</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">crs</span><span class="o">.</span><span class="n">isValid</span><span class="p">())</span>  <span class="c1"># True if valid</span>
+</span></code></pre></div>
+<h3 id="from_proj_string">From PROJ String<a class="headerlink" href="#from_proj_string" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">crs</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="o">.</span><span class="n">fromProj</span><span class="p">(</span><span class="s2">&quot;+proj=longlat +datum=WGS84 +no_defs&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="from_wkt_well-known_text">From WKT (Well-Known Text)<a class="headerlink" href="#from_wkt_well-known_text" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">wkt</span> <span class="o">=</span> <span class="s1">&#39;GEOGCS[&quot;WGS 84&quot;,DATUM[&quot;WGS_1984&quot;,...]]&#39;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">crs</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">()</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">crs</span><span class="o">.</span><span class="n">createFromWkt</span><span class="p">(</span><span class="n">wkt</span><span class="p">)</span>
 </span></code></pre></div>
 <hr />
-<h2 id="_3">📊 როგორ მუშაობს?<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="useful_methods">📖 Useful Methods<a class="headerlink" href="#useful_methods" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>isValid()</code></td>
+<td>Checks if the CRS is valid</td>
+</tr>
+<tr>
+<td><code>authid()</code></td>
+<td>Returns the authority ID (e.g., "EPSG:4326")</td>
+</tr>
+<tr>
+<td><code>description()</code></td>
+<td>Returns a human-readable description</td>
+</tr>
+<tr>
+<td><code>mapUnits()</code></td>
+<td>Returns units of measurement (e.g., degrees, meters)</td>
+</tr>
+<tr>
+<td><code>toWkt()</code></td>
+<td>Converts CRS to WKT format</td>
+</tr>
+<tr>
+<td><code>toProj()</code></td>
+<td>Returns PROJ string</td>
+</tr>
+<tr>
+<td><code>ellipsoidAcronym()</code></td>
+<td>Returns ellipsoid name/acronym</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="example_usage">⚙️ Example Usage<a class="headerlink" href="#example_usage" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Load CRS by EPSG code</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">crs</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s2">&quot;EPSG:32638&quot;</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">if</span> <span class="n">crs</span><span class="o">.</span><span class="n">isValid</span><span class="p">():</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CRS is valid&quot;</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Auth ID:&quot;</span><span class="p">,</span> <span class="n">crs</span><span class="o">.</span><span class="n">authid</span><span class="p">())</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Description:&quot;</span><span class="p">,</span> <span class="n">crs</span><span class="o">.</span><span class="n">description</span><span class="p">())</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Units:&quot;</span><span class="p">,</span> <span class="n">crs</span><span class="o">.</span><span class="n">mapUnits</span><span class="p">())</span>
+</span></code></pre></div>
+<p>Output:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>CRS is valid
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Auth ID: EPSG:32638
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Description: WGS 84 / UTM zone 38N
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Units: Meters
+</span></code></pre></div></p>
+<hr />
+<h2 id="reprojecting_layers_to_another_crs">🔄 Reprojecting Layers to Another CRS<a class="headerlink" href="#reprojecting_layers_to_another_crs" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsProject</span><span class="p">,</span> <span class="n">QgsVectorLayer</span><span class="p">,</span> <span class="n">QgsCoordinateTransform</span><span class="p">,</span> <span class="n">QgsCoordinateReferenceSystem</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># Load a vector layer</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">layer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="s2">&quot;path/to/shapefile.shp&quot;</span><span class="p">,</span> <span class="s2">&quot;My Layer&quot;</span><span class="p">,</span> <span class="s2">&quot;ogr&quot;</span><span class="p">)</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># Define source and destination CRS</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">src_crs</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">crs</span><span class="p">()</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">dest_crs</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">)</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1"># Setup transformation</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="n">transform</span> <span class="o">=</span> <span class="n">QgsCoordinateTransform</span><span class="p">(</span><span class="n">src_crs</span><span class="p">,</span> <span class="n">dest_crs</span><span class="p">,</span> <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">())</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="c1"># Transform a point</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="n">point</span> <span class="o">=</span> <span class="n">QgsPointXY</span><span class="p">(</span><span class="mi">500000</span><span class="p">,</span> <span class="mi">4649776</span><span class="p">)</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="n">reprojected_point</span> <span class="o">=</span> <span class="n">transform</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reprojected point:&quot;</span><span class="p">,</span> <span class="n">reprojected_point</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="notes_for_students">🎯 Notes for Students<a class="headerlink" href="#notes_for_students" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>QgsField</code> – აღწერს ერთ სვეტს (სახელი + ტიპი).  </li>
-<li><code>QgsFields</code> – არის <strong>სვეტების ჯგუფი</strong>.  </li>
-<li>როცა <code>QgsVectorFileWriter</code>–ს ვაწვდით <code>QgsFields</code>, ის ქმნის ახალ shapefile-ს მითითებული სვეტებით.</li>
+<li>Always check CRS validity with <code>isValid()</code>.</li>
+<li>EPSG codes are the most common and recommended way to define CRS.</li>
+<li>CRS mismatches are a common source of errors in GIS projects.</li>
+<li>Understanding CRS ensures accurate distance, area, and spatial analysis.</li>
 </ul>
 <hr />
-<h2 id="_4">🔎 რატომ არის მნიშვნელოვანი?<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>სტრუქტურის განსაზღვრა</strong> – თუ არ გვაქვს ატრიბუტული სვეტები, ვერ შევინახავთ მნიშვნელობებს.  </li>
-<li><strong>მონაცემების მართვა</strong> – პროგრამულად ვაკონტროლებთ რა ტიპის ინფორმაცია ჩაიწერება (მთელი რიცხვი, ტექსტი, ათწილადი და ა.შ.).  </li>
-<li><strong>ავტომატიზაცია</strong> – როცა ბევრი shapefile უნდა შევქმნათ ერთნაირი სტრუქტურით, <code>QgsFields()</code> ამ პროცესს ამარტივებს.</li>
-</ol>
-<hr />
-<h2 id="_5">🚀 პრაქტიკული მაგალითი: შრის შექმნა სვეტებით<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsVectorFileWriter</span><span class="p">,</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">,</span> <span class="n">QgsWkbTypes</span><span class="p">,</span> <span class="n">QgsFeature</span><span class="p">,</span> <span class="n">QgsGeometry</span><span class="p">,</span> <span class="n">QgsPointXY</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># ფაილის მისამართი</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">fn</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Users\Public\Documents\GIS\new_points.shp&quot;</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># ვქმნით სვეტებს</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">fields</span> <span class="o">=</span> <span class="n">QgsFields</span><span class="p">()</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">fields</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">QgsField</span><span class="p">(</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="n">QVariant</span><span class="o">.</span><span class="n">Int</span><span class="p">))</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">fields</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">QgsField</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="n">QVariant</span><span class="o">.</span><span class="n">String</span><span class="p">))</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1"># ვქმნით შრეს</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">writer</span> <span class="o">=</span> <span class="n">QgsVectorFileWriter</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">QgsWkbTypes</span><span class="o">.</span><span class="n">Point</span><span class="p">,</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>                             <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s2">&quot;EPSG:32638&quot;</span><span class="p">),</span> <span class="s2">&quot;ESRI Shapefile&quot;</span><span class="p">)</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1"># ვამატებთ წერტილს</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">feat</span> <span class="o">=</span> <span class="n">QgsFeature</span><span class="p">()</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">feat</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QgsGeometry</span><span class="o">.</span><span class="n">fromPointXY</span><span class="p">(</span><span class="n">QgsPointXY</span><span class="p">(</span><span class="mi">356000</span><span class="p">,</span> <span class="mi">4679000</span><span class="p">)))</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">feat</span><span class="o">.</span><span class="n">setAttributes</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Lake&quot;</span><span class="p">])</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="n">writer</span><span class="o">.</span><span class="n">addFeature</span><span class="p">(</span><span class="n">feat</span><span class="p">)</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="k">del</span><span class="p">(</span><span class="n">writer</span><span class="p">)</span>  <span class="c1"># ვხურავთ writer-ს</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">iface</span><span class="o">.</span><span class="n">addVectorLayer</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;ogr&quot;</span><span class="p">)</span>  <span class="c1"># ვამატებთ QGIS-ში</span>
-</span></code></pre></div>
-<hr />
-<h2 id="_6">🎯 დასკვნა<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="references">📚 References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong><code>QgsField</code></strong> – ერთ სვეტს აღწერს.  </li>
-<li><strong><code>QgsFields</code></strong> – სვეტების სრული სიაა (ატრიბუტული ცხრილის სტრუქტურა).  </li>
-<li>თუ გინდა QGIS-ში ახალი ფაილი შექმნა, <code>QgsFields()</code> აუცილებელია.</li>
+<li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_projections/working_with_projections.html">QGIS Documentation - Coordinate Reference Systems</a></li>
+<li><a href="https://docs.qgis.org/latest/en/docs/pyqgis_developer_cookbook/crs.html">PyQGIS Developer Cookbook</a></li>
 </ul>
 
 
@@ -4823,7 +4953,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../QVariant/" class="md-footer__link md-footer__link--prev" aria-label="წინა: QVariant">
+          <a href="../PyQGIS_QgsProject/" class="md-footer__link md-footer__link--prev" aria-label="წინა: QgsProject">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -4833,20 +4963,20 @@
                 წინა
               </span>
               <div class="md-ellipsis">
-                QVariant
+                QgsProject
               </div>
             </div>
           </a>
         
         
           
-          <a href="../QgsFeature/" class="md-footer__link md-footer__link--next" aria-label="შემდეგი: QgsFeature">
+          <a href="../PyQGIS_iface/" class="md-footer__link md-footer__link--next" aria-label="შემდეგი: iface">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 შემდეგი
               </span>
               <div class="md-ellipsis">
-                QgsFeature
+                iface
               </div>
             </div>
             <div class="md-footer__button md-icon">

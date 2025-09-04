@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/OGR_Library/">
+        <link rel="canonical" href="https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/PyQGIS_QgsVectorLayer/">
       
       
-        <link rel="prev" href="../../PyQGIS_resources/">
+        <link rel="prev" href="../PyQGIS_QgsPointXY/">
       
       
-        <link rel="next" href="../PyQGIS_slashes/">
+        <link rel="next" href="../PyQGIS_QgsRasterLayer/">
       
       
       <link rel="icon" href="../../../../assets/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>OGR ბიბლიოთეკა - GIS OS Docs</title>
+        <title>QgsVectorLayer - GIS OS Docs</title>
       
     
     
@@ -115,7 +115,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ogr" class="md-skip">
+        <a href="#qgsvectorlayer_qgis-" class="md-skip">
           კონტენტზე გადასვლა
         </a>
       
@@ -150,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OGR ბიბლიოთეკა
+              QgsVectorLayer
             
           </span>
         </div>
@@ -2675,6 +2675,8 @@
       
         
       
+        
+      
     
     
     
@@ -2707,28 +2709,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    OGR ბიბლიოთეკა
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../PyQGIS_OGR_Library/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2737,33 +2721,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="სარჩევი">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      სარჩევი
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ogr" class="md-nav__link">
-    <span class="md-ellipsis">
-      OGR ბიბლიოთეკა
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2797,7 +2754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../QVariant/" class="md-nav__link">
+      <a href="../PyQGIS_QVariant/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2818,7 +2775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../QgsFields/" class="md-nav__link">
+      <a href="../PyQGIS_QgsFields/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2839,7 +2796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../QgsFeature/" class="md-nav__link">
+      <a href="../PyQGIS_QgsFeature/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2860,7 +2817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../QgsGeometry/" class="md-nav__link">
+      <a href="../PyQGIS_QgsGeometry/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2881,7 +2838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../QgsPointXY/" class="md-nav__link">
+      <a href="../PyQGIS_QgsPointXY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2899,10 +2856,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../QgsVectorLayer/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    QgsVectorLayer
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2911,6 +2888,107 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="სარჩევი">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      სარჩევი
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔑 ძირითადი იდეა
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgsvectorlayer-" class="md-nav__link">
+    <span class="md-ellipsis">
+      ▶️ QgsVectorLayer-ის შექმნა
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠 შრის ტიპები
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 ატრიბუტების წვდომა
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ➕ ახალი ობიექტის დამატება
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      💾 ახალი ვექტორული ფაილის შექმნა
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 ფილტრაცია და Query
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 სიმბოლიკა და ვიზუალიზაცია
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 შეჯამება
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2923,7 +3001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../QgsRasterLayer/" class="md-nav__link">
+      <a href="../PyQGIS_QgsRasterLayer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2944,7 +3022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../QgsProject/" class="md-nav__link">
+      <a href="../PyQGIS_QgsProject/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2965,11 +3043,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../QgsCoordinateReferenceSystem/" class="md-nav__link">
+      <a href="../PyQGIS_QgsCoordinateReferenceSystem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     QgsCoordinateReferenceSystem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_iface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    iface
   </span>
   
 
@@ -4566,6 +4665,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -4574,9 +4675,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ogr" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      OGR ბიბლიოთეკა
+      🔑 ძირითადი იდეა
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgsvectorlayer-" class="md-nav__link">
+    <span class="md-ellipsis">
+      ▶️ QgsVectorLayer-ის შექმნა
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠 შრის ტიპები
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 ატრიბუტების წვდომა
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ➕ ახალი ობიექტის დამატება
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      💾 ახალი ვექტორული ფაილის შექმნა
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 ფილტრაცია და Query
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 სიმბოლიკა და ვიზუალიზაცია
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 შეჯამება
     </span>
   </a>
   
@@ -4600,11 +4773,111 @@
   
 
 
-  <h1>OGR ბიბლიოთეკა</h1>
-
-<h2 id="ogr">OGR ბიბლიოთეკა<a class="headerlink" href="#ogr" title="Permanent link">&para;</a></h2>
-<p>QGIS uses the OGR library to read and write vector data formats, including ESRI shapefiles, MapInfo and MicroStation file formats, AutoCAD DXF, PostGIS, SpatiaLite, DB2, Oracle Spatial and MSSQL Spatial databases, and many more. GRASS vector and PostgreSQL support is supplied by native QGIS data provider plugins. Vector data can also be loaded in read mode from zip and gzip archives into QGIS. As of the date of this document, 69 vector formats are supported by the OGR library (see OGR-SOFTWARE-SUITE in Literature and Web References). The complete list is available at http://www.gdal.org/ogr/ogr_formats.html</p>
-<p>Not all of the listed formats may work in QGIS for various reasons. For example, some require external commercial libraries, or the GDAL/OGR installation of your OS may not have been built to support the format you want to use. Only those formats that have been well tested will appear in the list of file types when loading a vector into QGIS. Other untested formats can be loaded by selecting <em>.</em>.</p>
+<h1 id="qgsvectorlayer_qgis-">QgsVectorLayer QGIS-ში<a class="headerlink" href="#qgsvectorlayer_qgis-" title="Permanent link">&para;</a></h1>
+<p><strong>QgsVectorLayer</strong> არის PyQGIS-ის ერთ-ერთი ყველაზე მნიშვნელოვანი კლასი, რომელიც გამოიყენება ვექტორული მონაცემების ჩასატვირთად და სამართავად (მაგ. Shapefile, GeoPackage, PostGIS).</p>
+<hr />
+<h2 id="_1">🔑 ძირითადი იდეა<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>QgsVectorLayer წარმოადგენს <strong>ვექტორულ შრეს</strong> (წერტილები, ხაზები, პოლიგონები), რომელსაც აქვს:
+- <strong>გეომეტრია</strong> (სპატიური მონაცემები)
+- <strong>ატრიბუტები</strong> (ცხრილური მონაცემები)</p>
+<p>ეს ობიექტი გვაძლევს საშუალებას:
+- ჩავტვირთოთ არსებული ფაილი
+- შევქმნათ ახალი შრე
+- წავიკითხოთ/დავამატოთ/ჩავწეროთ ობიექტები
+- ვმართოთ სიმბოლიკა და შრის სტილი</p>
+<hr />
+<h2 id="qgsvectorlayer-">▶️ QgsVectorLayer-ის შექმნა<a class="headerlink" href="#qgsvectorlayer-" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># არსებულ ვექტორულ ფაილთან დაკავშირება</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">fn</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:/Users/Public/Documents/GIS/shapefile/lake.shp&quot;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">layer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="s2">&quot;Lake Layer&quot;</span><span class="p">,</span> <span class="s2">&quot;ogr&quot;</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">if</span> <span class="ow">not</span> <span class="n">layer</span><span class="o">.</span><span class="n">isValid</span><span class="p">():</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ შრის ჩატვირთვა ვერ მოხერხდა&quot;</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ შრე წარმატებით ჩაიტვირთა&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>📌 აქ:
+- <code>fn</code> = ფაილის მისამართი
+- <code>"Lake Layer"</code> = სახელი QGIS-ში
+- <code>"ogr"</code> = data provider (Shapefile, GeoJSON, GeoPackage და სხვ.)</p>
+<hr />
+<h2 id="_2">🛠 შრის ტიპები<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>QgsVectorLayer შეიძლება იყოს:
+- <strong>QgsWkbTypes.Point</strong> → წერტილები
+- <strong>QgsWkbTypes.LineString</strong> → ხაზები
+- <strong>QgsWkbTypes.Polygon</strong> → პოლიგონები</p>
+<hr />
+<h2 id="_3">📋 ატრიბუტების წვდომა<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">layer</span><span class="o">.</span><span class="n">getFeatures</span><span class="p">():</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">geom</span> <span class="o">=</span> <span class="n">feature</span><span class="o">.</span><span class="n">geometry</span><span class="p">()</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">attrs</span> <span class="o">=</span> <span class="n">feature</span><span class="o">.</span><span class="n">attributes</span><span class="p">()</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Geometry:&quot;</span><span class="p">,</span> <span class="n">geom</span><span class="o">.</span><span class="n">asWkt</span><span class="p">())</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Attributes:&quot;</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="_4">➕ ახალი ობიექტის დამატება<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">qgis.PyQt.QtCore</span> <span class="kn">import</span> <span class="n">QVariant</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">pr</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">dataProvider</span><span class="p">()</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># ახალი ატრიბუტების ველები</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">pr</span><span class="o">.</span><span class="n">addAttributes</span><span class="p">([</span><span class="n">QgsField</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="n">QVariant</span><span class="o">.</span><span class="n">String</span><span class="p">),</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>                  <span class="n">QgsField</span><span class="p">(</span><span class="s2">&quot;Value&quot;</span><span class="p">,</span> <span class="n">QVariant</span><span class="o">.</span><span class="n">Double</span><span class="p">)])</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">layer</span><span class="o">.</span><span class="n">updateFields</span><span class="p">()</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># ახალი ობიექტის შექმნა</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">feat</span> <span class="o">=</span> <span class="n">QgsFeature</span><span class="p">(</span><span class="n">layer</span><span class="o">.</span><span class="n">fields</span><span class="p">())</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">feat</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QgsGeometry</span><span class="o">.</span><span class="n">fromPointXY</span><span class="p">(</span><span class="n">QgsPointXY</span><span class="p">(</span><span class="mf">357965.61</span><span class="p">,</span> <span class="mf">4683353.56</span><span class="p">)))</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="n">feat</span><span class="o">.</span><span class="n">setAttributes</span><span class="p">([</span><span class="s2">&quot;Lake1&quot;</span><span class="p">,</span> <span class="mf">123.45</span><span class="p">])</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="n">pr</span><span class="o">.</span><span class="n">addFeature</span><span class="p">(</span><span class="n">feat</span><span class="p">)</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="n">layer</span><span class="o">.</span><span class="n">updateExtents</span><span class="p">()</span>
+</span></code></pre></div>
+<hr />
+<h2 id="_5">💾 ახალი ვექტორული ფაილის შექმნა<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsVectorFileWriter</span><span class="p">,</span> <span class="n">QgsFields</span><span class="p">,</span> <span class="n">QgsField</span><span class="p">,</span> <span class="n">QgsWkbTypes</span><span class="p">,</span> <span class="n">QgsCoordinateReferenceSystem</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">fn</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:/Users/Public/Documents/GIS/shapefile/new_layer.shp&quot;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">fields</span> <span class="o">=</span> <span class="n">QgsFields</span><span class="p">()</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">fields</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">QgsField</span><span class="p">(</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="n">QVariant</span><span class="o">.</span><span class="n">Int</span><span class="p">))</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">fields</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">QgsField</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="n">QVariant</span><span class="o">.</span><span class="n">String</span><span class="p">))</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">writer</span> <span class="o">=</span> <span class="n">QgsVectorFileWriter</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>                             <span class="n">QgsWkbTypes</span><span class="o">.</span><span class="n">Point</span><span class="p">,</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>                             <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s2">&quot;EPSG:32638&quot;</span><span class="p">),</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>                             <span class="s2">&quot;ESRI Shapefile&quot;</span><span class="p">)</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="k">del</span> <span class="n">writer</span>
+</span></code></pre></div>
+<hr />
+<h2 id="query">🔍 ფილტრაცია და Query<a class="headerlink" href="#query" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">expr</span> <span class="o">=</span> <span class="n">QgsExpression</span><span class="p">(</span><span class="s2">&quot;Value &gt; 100&quot;</span><span class="p">)</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">it</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">getFeatures</span><span class="p">(</span><span class="n">QgsFeatureRequest</span><span class="p">(</span><span class="n">expr</span><span class="p">))</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">it</span><span class="p">:</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">],</span> <span class="n">f</span><span class="p">[</span><span class="s2">&quot;Value&quot;</span><span class="p">])</span>
+</span></code></pre></div>
+<hr />
+<h2 id="_6">🎨 სიმბოლიკა და ვიზუალიზაცია<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">symbol</span> <span class="o">=</span> <span class="n">QgsSymbol</span><span class="o">.</span><span class="n">defaultSymbol</span><span class="p">(</span><span class="n">layer</span><span class="o">.</span><span class="n">geometryType</span><span class="p">())</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">symbol</span><span class="o">.</span><span class="n">setColor</span><span class="p">(</span><span class="n">QColor</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">))</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">symbol</span><span class="o">.</span><span class="n">setSize</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">layer</span><span class="o">.</span><span class="n">renderer</span><span class="p">()</span><span class="o">.</span><span class="n">setSymbol</span><span class="p">(</span><span class="n">symbol</span><span class="p">)</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">layer</span><span class="o">.</span><span class="n">triggerRepaint</span><span class="p">()</span>
+</span></code></pre></div>
+<hr />
+<h2 id="_7">📌 შეჯამება<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>QgsVectorLayer</strong> არის ვექტორული მონაცემების ძირითადი ობიექტი PyQGIS-ში.</li>
+<li>შეგვიძლია:</li>
+<li>ჩავტვირთოთ შრე</li>
+<li>დავამატოთ ახალი ობიექტები</li>
+<li>ვმართოთ ატრიბუტები</li>
+<li>ჩავწეროთ ფაილად</li>
+<li>შევცვალოთ სიმბოლიკა</li>
+</ul>
+<p>👉 ეს კლასი არის QGIS API-ის ერთ-ერთი ყველაზე გამოყენებადი ინსტრუმენტი GIS მონაცემების მართვისთვის.</p>
 
 
 
@@ -4640,7 +4913,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../PyQGIS_resources/" class="md-footer__link md-footer__link--prev" aria-label="წინა: რესურსები">
+          <a href="../PyQGIS_QgsPointXY/" class="md-footer__link md-footer__link--prev" aria-label="წინა: QgsPointXY">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -4650,20 +4923,20 @@
                 წინა
               </span>
               <div class="md-ellipsis">
-                რესურსები
+                QgsPointXY
               </div>
             </div>
           </a>
         
         
           
-          <a href="../PyQGIS_slashes/" class="md-footer__link md-footer__link--next" aria-label="შემდეგი: დახრილი ხაზი">
+          <a href="../PyQGIS_QgsRasterLayer/" class="md-footer__link md-footer__link--next" aria-label="შემდეგი: QgsRasterLayer">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 შემდეგი
               </span>
               <div class="md-ellipsis">
-                დახრილი ხაზი
+                QgsRasterLayer
               </div>
             </div>
             <div class="md-footer__button md-icon">

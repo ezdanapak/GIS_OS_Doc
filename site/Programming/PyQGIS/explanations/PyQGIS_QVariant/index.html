@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/QgsRasterLayer/">
+        <link rel="canonical" href="https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/PyQGIS_QVariant/">
       
       
-        <link rel="prev" href="../QgsVectorLayer/">
+        <link rel="prev" href="../PyQGIS_slashes/">
       
       
-        <link rel="next" href="../QgsProject/">
+        <link rel="next" href="../PyQGIS_QgsFields/">
       
       
       <link rel="icon" href="../../../../assets/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>QgsRasterLayer - GIS OS Docs</title>
+        <title>QVariant - GIS OS Docs</title>
       
     
     
@@ -115,7 +115,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#qgsrasterlayer_pyqgis-" class="md-skip">
+        <a href="#qvariant" class="md-skip">
           კონტენტზე გადასვლა
         </a>
       
@@ -150,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              QgsRasterLayer
+              QVariant
             
           </span>
         </div>
@@ -2675,6 +2675,8 @@
       
         
       
+        
+      
     
     
     
@@ -2710,7 +2712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OGR_Library/" class="md-nav__link">
+      <a href="../PyQGIS_OGR_Library/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2749,132 +2751,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../QVariant/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    QVariant
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../QgsFields/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    QgsFields
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../QgsFeature/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    QgsFeature
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../QgsGeometry/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    QgsGeometry
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../QgsPointXY/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    QgsPointXY
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../QgsVectorLayer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    QgsVectorLayer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -2884,14 +2760,12 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    QgsRasterLayer
+    QVariant
   </span>
   
 
@@ -2902,7 +2776,7 @@
         
   
   <span class="md-ellipsis">
-    QgsRasterLayer
+    QVariant
   </span>
   
 
@@ -2914,8 +2788,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2924,105 +2796,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#qvariant" class="md-nav__link">
     <span class="md-ellipsis">
-      🔑 ძირითადი კონცეფცია
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      📂 ძირითადი ატრიბუტები
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      📝 მაგალითები
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📝 მაგალითები">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. რასტრული ფაილის ჩატვირთვა
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. რასტრული შრის ინფორმაციის ამოღება
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. კონკრეტული ბანდის ინფორმაცია
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. პიქსელის მნიშვნელობის ამოღება კოორდინატიდან
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5_singleband_gray" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. სიმბოლიზაციის ცვლილება (Singleband Gray)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6_pseudo_color" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. სიმბოლიზაცია ფერადი პალიტრით (Pseudo color)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚙️ გამოყენების სფეროები
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#i" class="md-nav__link">
-    <span class="md-ellipsis">
-      ℹ️ შენიშვნები
+      რა არის QVariant?
     </span>
   </a>
   
@@ -3044,7 +2820,133 @@
   
   
     <li class="md-nav__item">
-      <a href="../QgsProject/" class="md-nav__link">
+      <a href="../PyQGIS_QgsFields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QgsFields
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_QgsFeature/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QgsFeature
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_QgsGeometry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QgsGeometry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_QgsPointXY/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QgsPointXY
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_QgsVectorLayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QgsVectorLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_QgsRasterLayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QgsRasterLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_QgsProject/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3065,11 +2967,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../QgsCoordinateReferenceSystem/" class="md-nav__link">
+      <a href="../PyQGIS_QgsCoordinateReferenceSystem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     QgsCoordinateReferenceSystem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_iface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    iface
   </span>
   
 
@@ -4666,8 +4589,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -4676,105 +4597,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#qvariant" class="md-nav__link">
     <span class="md-ellipsis">
-      🔑 ძირითადი კონცეფცია
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      📂 ძირითადი ატრიბუტები
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      📝 მაგალითები
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📝 მაგალითები">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. რასტრული ფაილის ჩატვირთვა
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. რასტრული შრის ინფორმაციის ამოღება
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. კონკრეტული ბანდის ინფორმაცია
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. პიქსელის მნიშვნელობის ამოღება კოორდინატიდან
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5_singleband_gray" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. სიმბოლიზაციის ცვლილება (Singleband Gray)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6_pseudo_color" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. სიმბოლიზაცია ფერადი პალიტრით (Pseudo color)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚙️ გამოყენების სფეროები
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#i" class="md-nav__link">
-    <span class="md-ellipsis">
-      ℹ️ შენიშვნები
+      რა არის QVariant?
     </span>
   </a>
   
@@ -4798,121 +4623,10 @@
   
 
 
-<h1 id="qgsrasterlayer_pyqgis-">QgsRasterLayer PyQGIS-ში<a class="headerlink" href="#qgsrasterlayer_pyqgis-" title="Permanent link">&para;</a></h1>
-<p><code>QgsRasterLayer</code> არის QGIS-ის კლასი, რომელიც გამოიყენება <strong>რასტრული მონაცემების</strong> (მაგ. GeoTIFF, JPEG, DEM, სატელიტური სურათები და სხვ.) ჩასატვირთად და სამართავად.</p>
-<hr />
-<h2 id="_1">🔑 ძირითადი კონცეფცია<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>რასტრული შრე შედგება <strong>პიქსელების მატრიცისგან</strong>. თითოეულ პიქსელს აქვს მნიშვნელობა (მაგ. სიმაღლე, ტემპერატურა, სურათის ფერი).<br />
-PyQGIS-ში <code>QgsRasterLayer</code> საშუალებას გაძლევს:</p>
-<ul>
-<li>ჩატვირთო და აჩვენო სხვადასხვა ფორმატის რასტრები (GeoTIFF, ASCII GRID, JPEG, PNG და სხვ.)</li>
-<li>იმუშაო მრავალბანდიან (multiband) მონაცემებთან.</li>
-<li>წაიკითხო პიქსელების მნიშვნელობები.</li>
-<li>გამოიყენო სტილიზაცია (symbology).</li>
-<li>შეასრულო ანალიზი Raster Processing Toolbox–ით.</li>
-</ul>
-<hr />
-<h2 id="_2">📂 ძირითადი ატრიბუტები<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Datasource path</strong> – ფაილის მისამართი (მაგ. <code>"C:/data/dem.tif"</code>)</li>
-<li><strong>Layer name</strong> – შრის სახელი QGIS პროექტში</li>
-<li><strong>Provider type</strong> – ჩვეულებრივ <code>"gdal"</code> (რადგან GDAL გამოიყენება რასტრული ფაილების წასაკითხად)</li>
-</ul>
-<hr />
-<h2 id="_3">📝 მაგალითები<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="1">1. რასტრული ფაილის ჩატვირთვა<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsRasterLayer</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Users\Public\GIS\data\dem.tif&quot;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">layer_name</span> <span class="o">=</span> <span class="s2">&quot;Digital Elevation Model&quot;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">raster_layer</span> <span class="o">=</span> <span class="n">QgsRasterLayer</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">layer_name</span><span class="p">,</span> <span class="s2">&quot;gdal&quot;</span><span class="p">)</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">if</span> <span class="n">raster_layer</span><span class="o">.</span><span class="n">isValid</span><span class="p">():</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">addMapLayer</span><span class="p">(</span><span class="n">raster_layer</span><span class="p">)</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Raster loaded successfully!&quot;</span><span class="p">)</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">else</span><span class="p">:</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Failed to load raster.&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<hr />
-<h3 id="2">2. რასტრული შრის ინფორმაციის ამოღება<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Layer name:&quot;</span><span class="p">,</span> <span class="n">raster_layer</span><span class="o">.</span><span class="n">name</span><span class="p">())</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Crs:&quot;</span><span class="p">,</span> <span class="n">raster_layer</span><span class="o">.</span><span class="n">crs</span><span class="p">()</span><span class="o">.</span><span class="n">authid</span><span class="p">())</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Width:&quot;</span><span class="p">,</span> <span class="n">raster_layer</span><span class="o">.</span><span class="n">width</span><span class="p">())</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Height:&quot;</span><span class="p">,</span> <span class="n">raster_layer</span><span class="o">.</span><span class="n">height</span><span class="p">())</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bands:&quot;</span><span class="p">,</span> <span class="n">raster_layer</span><span class="o">.</span><span class="n">bandCount</span><span class="p">())</span>
-</span></code></pre></div>
-<hr />
-<h3 id="3">3. კონკრეტული ბანდის ინფორმაცია<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">provider</span> <span class="o">=</span> <span class="n">raster_layer</span><span class="o">.</span><span class="n">dataProvider</span><span class="p">()</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># ბანდის სტატისტიკის გამოთვლა</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">stats</span> <span class="o">=</span> <span class="n">provider</span><span class="o">.</span><span class="n">bandStatistics</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minimum:&quot;</span><span class="p">,</span> <span class="n">stats</span><span class="o">.</span><span class="n">minimumValue</span><span class="p">)</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Maximum:&quot;</span><span class="p">,</span> <span class="n">stats</span><span class="o">.</span><span class="n">maximumValue</span><span class="p">)</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean:&quot;</span><span class="p">,</span> <span class="n">stats</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span>
-</span></code></pre></div>
-<hr />
-<h3 id="4">4. პიქსელის მნიშვნელობის ამოღება კოორდინატიდან<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsPointXY</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">point</span> <span class="o">=</span> <span class="n">QgsPointXY</span><span class="p">(</span><span class="mi">356671</span><span class="p">,</span> <span class="mi">4679923</span><span class="p">)</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">ident</span> <span class="o">=</span> <span class="n">raster_layer</span><span class="o">.</span><span class="n">dataProvider</span><span class="p">()</span><span class="o">.</span><span class="n">identify</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">QgsRaster</span><span class="o">.</span><span class="n">IdentifyFormatValue</span><span class="p">)</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">if</span> <span class="n">ident</span><span class="o">.</span><span class="n">isValid</span><span class="p">():</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pixel value:&quot;</span><span class="p">,</span> <span class="n">ident</span><span class="o">.</span><span class="n">results</span><span class="p">())</span>
-</span></code></pre></div>
-<hr />
-<h3 id="5_singleband_gray">5. სიმბოლიზაციის ცვლილება (Singleband Gray)<a class="headerlink" href="#5_singleband_gray" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsSingleBandGrayRenderer</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">provider</span> <span class="o">=</span> <span class="n">raster_layer</span><span class="o">.</span><span class="n">dataProvider</span><span class="p">()</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">renderer</span> <span class="o">=</span> <span class="n">QgsSingleBandGrayRenderer</span><span class="p">(</span><span class="n">provider</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># პირველი ბანდი</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">raster_layer</span><span class="o">.</span><span class="n">setRenderer</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">raster_layer</span><span class="o">.</span><span class="n">triggerRepaint</span><span class="p">()</span>
-</span></code></pre></div>
-<hr />
-<h3 id="6_pseudo_color">6. სიმბოლიზაცია ფერადი პალიტრით (Pseudo color)<a class="headerlink" href="#6_pseudo_color" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsColorRampShader</span><span class="p">,</span> <span class="n">QgsRasterShader</span><span class="p">,</span> <span class="n">QgsSingleBandPseudoColorRenderer</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span> <span class="nn">qgis.PyQt.QtGui</span> <span class="kn">import</span> <span class="n">QColor</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">provider</span> <span class="o">=</span> <span class="n">raster_layer</span><span class="o">.</span><span class="n">dataProvider</span><span class="p">()</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">fcn</span> <span class="o">=</span> <span class="n">QgsColorRampShader</span><span class="p">()</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">fcn</span><span class="o">.</span><span class="n">setColorRampType</span><span class="p">(</span><span class="n">QgsColorRampShader</span><span class="o">.</span><span class="n">Interpolated</span><span class="p">)</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1"># მინ/მაქს მნიშვნელობები</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">fcn</span><span class="o">.</span><span class="n">setColorRampItemList</span><span class="p">([</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="n">QgsColorRampShader</span><span class="o">.</span><span class="n">ColorRampItem</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">QColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="s1">&#39;Low&#39;</span><span class="p">),</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="n">QgsColorRampShader</span><span class="o">.</span><span class="n">ColorRampItem</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">QColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="s1">&#39;Medium&#39;</span><span class="p">),</span>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    <span class="n">QgsColorRampShader</span><span class="o">.</span><span class="n">ColorRampItem</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="n">QColor</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="s1">&#39;High&#39;</span><span class="p">)</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="p">])</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="n">shader</span> <span class="o">=</span> <span class="n">QgsRasterShader</span><span class="p">()</span>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="n">shader</span><span class="o">.</span><span class="n">setRasterShaderFunction</span><span class="p">(</span><span class="n">fcn</span><span class="p">)</span>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="n">renderer</span> <span class="o">=</span> <span class="n">QgsSingleBandPseudoColorRenderer</span><span class="p">(</span><span class="n">provider</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">shader</span><span class="p">)</span>
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="n">raster_layer</span><span class="o">.</span><span class="n">setRenderer</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
-</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="n">raster_layer</span><span class="o">.</span><span class="n">triggerRepaint</span><span class="p">()</span>
-</span></code></pre></div>
-<hr />
-<h2 id="_4">⚙️ გამოყენების სფეროები<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>DEM (Digital Elevation Model)</strong> → სიმაღლის ანალიზი, დახრილობა, ექსპოზიცია</li>
-<li><strong>სატელიტური სურათები</strong> → Landsat, Sentinel, MODIS</li>
-<li><strong>ოროფოტოები (Orthoimagery)</strong> → კარტოგრაფია, ტოპოგრაფიული რუკები</li>
-<li><strong>კლიმატური მონაცემები</strong> → ტემპერატურა, ნალექები</li>
-</ul>
-<hr />
-<h2 id="i">ℹ️ შენიშვნები<a class="headerlink" href="#i" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Raster always uses <strong>GDAL provider</strong> PyQGIS-ში.</li>
-<li>CRS-ის დამთხვევა აუცილებელია სხვა შრეებთან სწორი გადაფარვისთვის.</li>
-<li>დიდ რასტრებზე მუშაობისას შეიძლება საჭირო გახდეს <strong>pyramids</strong> და <strong>tiling</strong>.</li>
-</ul>
-<hr />
-<h1 id="_5">დასკვნა<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
-<p><code>QgsRasterLayer</code> არის PyQGIS-ის ძირითადი ინსტრუმენტი რასტრული მონაცემების სამართავად.<br />
-მისი საშუალებით შესაძლებელია როგორც მარტივი ვიზუალიზაცია, ასევე რთული გეოანალიზი Processing Toolbox-თან ერთად.</p>
+  <h1>QVariant</h1>
+
+<h2 id="qvariant">რა არის QVariant?<a class="headerlink" href="#qvariant" title="Permanent link">&para;</a></h2>
+<p>QVariant არის ტიპის მჭიდროდ დაკავშირებული კონტეინერი, რომელსაც შეუძლია შეინახოს სხვადასხვა ტიპის მონაცემები. ეს ხდება Qt-ის კომპონენტებს შორის მონაცემთა გაცვლის გასამარტივებლად, რადგან QVariant შეიძლება შეიცავდეს სხვადასხვა ტიპის მნიშვნელობებს (მაგ., რიცხვები, სტრიქონები, ობიექტები და სხვა) და მოგვიანებით ეს მონაცემები გადააქციოს საჭირო ტიპად.</p>
 
 
 
@@ -4948,7 +4662,7 @@ PyQGIS-ში <code>QgsRasterLayer</code> საშუალებას გა�
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../QgsVectorLayer/" class="md-footer__link md-footer__link--prev" aria-label="წინა: QgsVectorLayer">
+          <a href="../PyQGIS_slashes/" class="md-footer__link md-footer__link--prev" aria-label="წინა: დახრილი ხაზი">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -4958,20 +4672,20 @@ PyQGIS-ში <code>QgsRasterLayer</code> საშუალებას გა�
                 წინა
               </span>
               <div class="md-ellipsis">
-                QgsVectorLayer
+                დახრილი ხაზი
               </div>
             </div>
           </a>
         
         
           
-          <a href="../QgsProject/" class="md-footer__link md-footer__link--next" aria-label="შემდეგი: QgsProject">
+          <a href="../PyQGIS_QgsFields/" class="md-footer__link md-footer__link--next" aria-label="შემდეგი: QgsFields">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 შემდეგი
               </span>
               <div class="md-ellipsis">
-                QgsProject
+                QgsFields
               </div>
             </div>
             <div class="md-footer__button md-icon">
