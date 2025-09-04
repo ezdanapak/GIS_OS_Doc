@@ -247,6 +247,7 @@ nav:
           - 'QgsRasterLayer': './Programming/PyQGIS/Explanations/QgsRasterLayer.md'
           - 'QgsProject': './Programming/PyQGIS/Explanations/QgsProject.md'
           - 'QgsCoordinateReferenceSystem': './Programming/PyQGIS/Explanations/QgsCoordinateReferenceSystem.md'
+          - 'iface': './Programming/PyQGIS/Explanations/PyQGIS_iface.md'
         - 'თეორია':
           - 'სწავლის საფეხურები': './Programming/PyQGIS/Theory/Learning_stages.md'
 

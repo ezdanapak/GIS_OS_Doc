@@ -1,6 +1,7 @@
 ## შრის შექმნა(ESRI Shapefile)
 <br>
 
+
 ### წერტილოვანი შრე
 
 ```py title="shapefile_point.py" linenums="1"
