@@ -234,32 +234,25 @@ nav:
     - 'პროგრამირება':
           
       - 'PyQGIS':
-        - 'რესურსები': './PyQGIS/PyQGIS_resources.md'
-        # - 'განმარტებები':
-        #   - 'OGR ბიბლიოთეკა': './PyQGIS/Explanations/PyQGIS_OGR_library.md'
-        #   - 'დახრილი ხაზი': './PyQGIS/Explanations/PyQGIS_slashes.md'
-        #   - 'QVariant': './PyQGIS/Explanations/PyQGIS_QVariant.md'
-        #   - 'QgsFields': './PyQGIS/Explanations/PyQGIS_QgsFields.md'
-        #   - 'QgsFeature': './PyQGIS/Explanations/PyQGIS_QgsFeature.md'
-        #   - 'QgsGeometry': './PyQGIS/Explanations/PyQGIS_QgsGeometry.md'
-        #   - 'QgsPointXY': './PyQGIS/Explanations/PyQGIS_QgsPointXY.md'
-        #   - 'QgsVectorLayer': './PyQGIS/Explanations/PyQGIS_QgsVectorLayer.md'
-        #   - 'QgsRasterLayer': './PyQGIS/Explanations/PyQGIS_QgsRasterLayer.md'
-        #   - 'QgsProject': './PyQGIS/Explanations/PyQGIS_QgsProject.md'
-        #   - 'QgsCoordinateReferenceSystem': './PyQGIS/Explanations/PyQGIS_QgsCoordinateReferenceSystem.md'
-        #   - 'iface': './PyQGIS/Explanations/PyQGIS_iface.md'
-        # - 'თეორია':
-        #   - 'სწავლის საფეხურები': './Programming/PyQGIS/Theory/Learning_stages.md'
-
-        #   - 'PyQGIS კლასები': './Programming/PyQGIS/Theory/PyQGIS_classes_guide.md'
-        #   - 'PyQGIS OOP': './Programming/PyQGIS/Theory/PyQGIS_oop_guide.md'
-
-          # - 'შესავალი': './Programming/PyQGIS/PyQGIS_intro.md'
-          # - 'პროგრამირების საფუძვლები': './Programming/PyQGIS/PyQGIS_basics.md'
-          # - 'მოდულები': './Programming/PyQGIS/PyQGIS_modules.md'
-          # - 'ფუნქციები': './Programming/PyQGIS/PyQGIS_functions.md'
-          # - 'კლასები': './Programming/PyQGIS/PyQGIS_classes.md'
-          # - 'დოკუმენტაცია': './Programming/PyQGIS/PyQGIS_documentation.md'
+        
+        - 'განმარტებები':
+          #- 'OGR ბიბლიოთეკა': './Programming/PyQGIS/Explanations/PyQGIS_OGR_library.md'
+          - 'დახრილი ხაზი': './Programming/PyQGIS/Explanations/PyQGIS_slashes.md'
+          - 'QVariant': './Programming/PyQGIS/Explanations/PyQGIS_QVariant.md'
+          - 'QgsFields': './Programming/PyQGIS/Explanations/PyQGIS_QgsFields.md'
+          - 'QgsFeature': './Programming/PyQGIS/Explanations/PyQGIS_QgsFeature.md'
+          - 'QgsGeometry': './Programming/PyQGIS/Explanations/PyQGIS_QgsGeometry.md'
+          - 'QgsPointXY': './Programming/PyQGIS/Explanations/PyQGIS_QgsPointXY.md'
+          - 'QgsVectorLayer': './Programming/PyQGIS/Explanations/PyQGIS_QgsVectorLayer.md'
+          - 'QgsRasterLayer': './Programming/PyQGIS/Explanations/PyQGIS_QgsRasterLayer.md'
+          - 'QgsProject': './Programming/PyQGIS/Explanations/PyQGIS_QgsProject.md'
+          - 'QgsCoordinateReferenceSystem': './Programming/PyQGIS/Explanations/PyQGIS_QgsCoordinateReferenceSystem.md'
+          - 'iface': './Programming/PyQGIS/Explanations/PyQGIS_iface.md'
+        - 'თეორია':
+          - 'სწავლის საფეხურები': './Programming/PyQGIS/Theory/Learning_stages.md'
+          - 'PyQGIS კლასები': './Programming/PyQGIS/Theory/PyQGIS_classes_guide.md'
+          - 'PyQGIS OOP': './Programming/PyQGIS/Theory/PyQGIS_oop_guide.md'
+          
         - 'თემები':
           - 'თემა 2': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic2.md'
           - 'თემა 3': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic3.md'
