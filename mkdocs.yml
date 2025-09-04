@@ -234,20 +234,20 @@ nav:
     - 'პროგრამირება':
           
       - 'PyQGIS':
-        - 'რესურსები': './Programming/PyQGIS/PyQGIS_resources.md'
+        - 'რესურსები': './PyQGIS/PyQGIS_resources.md'
         - 'განმარტებები':
-          - 'OGR ბიბლიოთეკა': '../Programming/PyQGIS/Explanations/PyQGIS_OGR_Library.md'
-          - 'დახრილი ხაზი': 'Programming/PyQGIS/Explanations/PyQGIS_slashes.md'
-          - 'QVariant': 'Programming/PyQGIS/Explanations/PyQGIS_QVariant.md'
-          - 'QgsFields': 'Programming/PyQGIS/Explanations/PyQGIS_QgsFields.md'
-          - 'QgsFeature': 'Programming/PyQGIS/Explanations/PyQGIS_QgsFeature.md'
-          - 'QgsGeometry': 'Programming/PyQGIS/Explanations/PyQGIS_QgsGeometry.md'
-          - 'QgsPointXY': 'Programming/PyQGIS/Explanations/PyQGIS_QgsPointXY.md'
-          - 'QgsVectorLayer': 'Programming/PyQGIS/Explanations/PyQGIS_QgsVectorLayer.md'
-          - 'QgsRasterLayer': 'Programming/PyQGIS/Explanations/PyQGIS_QgsRasterLayer.md'
-          - 'QgsProject': 'Programming/PyQGIS/Explanations/PyQGIS_QgsProject.md'
-          - 'QgsCoordinateReferenceSystem': 'Programming/PyQGIS/Explanations/PyQGIS_QgsCoordinateReferenceSystem.md'
-          - 'iface': 'Programming/PyQGIS/Explanations/PyQGIS_iface.md'
+          - 'OGR ბიბლიოთეკა': './PyQGIS/Explanations/PyQGIS_OGR_library.md'
+          - 'დახრილი ხაზი': './PyQGIS/Explanations/PyQGIS_slashes.md'
+          - 'QVariant': './PyQGIS/Explanations/PyQGIS_QVariant.md'
+          - 'QgsFields': './PyQGIS/Explanations/PyQGIS_QgsFields.md'
+          - 'QgsFeature': './PyQGIS/Explanations/PyQGIS_QgsFeature.md'
+          - 'QgsGeometry': './PyQGIS/Explanations/PyQGIS_QgsGeometry.md'
+          - 'QgsPointXY': './PyQGIS/Explanations/PyQGIS_QgsPointXY.md'
+          - 'QgsVectorLayer': './PyQGIS/Explanations/PyQGIS_QgsVectorLayer.md'
+          - 'QgsRasterLayer': './PyQGIS/Explanations/PyQGIS_QgsRasterLayer.md'
+          - 'QgsProject': './PyQGIS/Explanations/PyQGIS_QgsProject.md'
+          - 'QgsCoordinateReferenceSystem': './PyQGIS/Explanations/PyQGIS_QgsCoordinateReferenceSystem.md'
+          - 'iface': './PyQGIS/Explanations/PyQGIS_iface.md'
         - 'თეორია':
           - 'სწავლის საფეხურები': './Programming/PyQGIS/Theory/Learning_stages.md'
 
