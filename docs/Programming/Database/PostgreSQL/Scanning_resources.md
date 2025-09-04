@@ -6,7 +6,7 @@
 
 ## ვიზუალური მიმოხილვა (Cheat Sheet)
 
-![Postgres Data Scans — cheatsheet](./postgres-data-scans-cheatsheet.png)
+
 
 **ლეგენდა:**
 - **Sequential Scan** — ცხრილის ბლოკების ზედიზედ კითხვა.
