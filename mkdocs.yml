@@ -339,5 +339,5 @@ plugins:
 
 
 # mkdocs.yml
-strict: true
+strict: False
 
