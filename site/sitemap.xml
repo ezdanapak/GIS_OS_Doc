@@ -461,66 +461,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/PyQGIS_OGR_Library/</loc>
-         <lastmod>2025-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/PyQGIS_QVariant/</loc>
-         <lastmod>2025-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/PyQGIS_QgsCoordinateReferenceSystem/</loc>
-         <lastmod>2025-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/PyQGIS_QgsFeature/</loc>
-         <lastmod>2025-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/PyQGIS_QgsFields/</loc>
-         <lastmod>2025-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/PyQGIS_QgsGeometry/</loc>
-         <lastmod>2025-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/PyQGIS_QgsPointXY/</loc>
-         <lastmod>2025-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/PyQGIS_QgsProject/</loc>
-         <lastmod>2025-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/PyQGIS_QgsRasterLayer/</loc>
-         <lastmod>2025-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/PyQGIS_QgsVectorLayer/</loc>
-         <lastmod>2025-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/PyQGIS_iface/</loc>
-         <lastmod>2025-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Explanations/PyQGIS_slashes/</loc>
-         <lastmod>2025-09-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://osdoc.qgis.ge/Programming/PyQGIS/PyQGIS_topics/PyQGIS_Create_layer/</loc>
          <lastmod>2025-09-16</lastmod>
          <changefreq>daily</changefreq>
@@ -612,6 +552,66 @@
     </url>
     <url>
          <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Theory/PyQGIS_oop_guide/</loc>
+         <lastmod>2025-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/explanations/PyQGIS_OGR_Library/</loc>
+         <lastmod>2025-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/explanations/PyQGIS_QVariant/</loc>
+         <lastmod>2025-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/explanations/PyQGIS_QgsCoordinateReferenceSystem/</loc>
+         <lastmod>2025-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/explanations/PyQGIS_QgsFeature/</loc>
+         <lastmod>2025-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/explanations/PyQGIS_QgsFields/</loc>
+         <lastmod>2025-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/explanations/PyQGIS_QgsGeometry/</loc>
+         <lastmod>2025-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/explanations/PyQGIS_QgsPointXY/</loc>
+         <lastmod>2025-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/explanations/PyQGIS_QgsProject/</loc>
+         <lastmod>2025-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/explanations/PyQGIS_QgsRasterLayer/</loc>
+         <lastmod>2025-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/explanations/PyQGIS_QgsVectorLayer/</loc>
+         <lastmod>2025-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/explanations/PyQGIS_iface/</loc>
+         <lastmod>2025-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/explanations/PyQGIS_slashes/</loc>
          <lastmod>2025-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
