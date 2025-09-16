@@ -1,7 +1,16 @@
 site_name: GIS OS Docs
 site_url: https://osdoc.qgis.ge/
 
+# Repository
+repo_name: GIS_OS_Doc
+repo_url: https://github.com/ezdanapak/GIS_OS_Doc
+copyright: "Copyright © 2024 Giorgi Kapanadze"
 
+# Build behavior
+strict: false            # მცირე გაფრთხილებებზე ბილდი არ შეჩერდეს
+use_directory_urls: true # /page/ სტილის URL-ები (რეკომენდებულია)
+
+# Theme (Material)
 theme:
   name: material
   language: ka
@@ -18,22 +27,19 @@ theme:
     - content.code.copy
     - content.code.annotate
     - content.tooltips
-
   font:
     text: Merriweather Sans
     code: Red Hat Mono
-
   logo: assets/Q_white.svg
   favicon: assets/favicon.ico
   palette:
-    # Dark Mode
+    # Dark Mode
     - scheme: slate
       toggle:
         icon: material/weather-sunny
         name: Light mode
       primary: green
       accent: orange
-
     # Light Mode
     - scheme: default
       toggle:
@@ -41,7 +47,6 @@ theme:
         name: Dark mode
       primary: green
       accent: deep orange
-
   icon:
     admonition:
       note: octicons/tag-16
@@ -57,238 +62,190 @@ theme:
       example: octicons/beaker-16
       quote: octicons/quote-16
 
-# extra:
-#   status:
-#       new: Recently added
-#       deprecated: Deprecated
-#   social:
-#     - icon: simple/youtube
-#       link: https://www.youtube.com/@GISGEORGIA
-#     - icon: simple/linkedin
-#       link: https://www.linkedin.com/company/gisgeorgia/
+# Plugins
+plugins:
+  - search
+  # სურვილისამებრ: ძველი ბმულების რედირექტები (.md → ახალი მისამართები)
+  # - redirects:
+  #     redirect_maps:
+  #       Programming/PyQGIS/Explanations/PyQGIS_OGR_library.md: Programming/PyQGIS/Explanations/PyQGIS_OGR_Library/
 
-# Repository
-repo_name: GIS_OS_Doc
-repo_url: https://github.com/ezdanapak/GIS_OS_Doc
-
-copyright: Copyright &copy; 2024 Giorgi Kapanadze
-
+# Markdown Extensions (გაუციფრებული, დუბლების გარეშე)
 markdown_extensions:
-  
-  
+  - admonition
   - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      separator: "_"
+  - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
-  - pymdownx.highlight
-  - pymdownx.tabbed:
-      alternate_style: true 
-  - admonition
-  - pymdownx.details
-
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  
-  #- tables
-  - toc:
-        permalink: True
-        separator: "_"
-  - admonition
-  - codehilite
-  - footnotes
-  - tables
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
-#extra_javascript:
-  #- js/toggle-lines.js
-  # - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
-  # - javascripts/tablesort.js
-
+# Optional assets
 # extra_css:
 #   - stylesheets/styles.css
 #   - stylesheets/extra.css
+# extra_javascript:
+#   - js/toggle-lines.js
+#   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+#   - javascripts/tablesort.js
 
-
-
+# Navigation
 nav:
-  - მთავარი: 'index.md'
-  - შესახებ: 'about.md'
+  - მთავარი: index.md
+  - შესახებ: about.md
   - დოკუმენტაცია:
     - GIS Basic:
         - შესახებ:
-            - დახმარება: './GIS_Basic/Additional/Help.md'
-            - საავტორო უფლებები: './GIS_Basic/Additional/Copyright_Disclaimer.md'
-            - გაფრთხილება: './GIS_Basic/Additional/Warning.md'
-            - კომპიუტერის მონაცემები: './GIS_Basic/Theory/Computer_Requirements.md'
+            - დახმარება: GIS_Basic/Additional/Help.md
+            - საავტორო უფლებები: GIS_Basic/Additional/Copyright_Disclaimer.md
+            - გაფრთხილება: GIS_Basic/Additional/Warning.md
+            - კომპიუტერის მონაცემები: GIS_Basic/Theory/Computer_Requirements.md
         - პროგრამული უზრუნველყოფა:
-            - QGIS: './GIS_Basic/Software/QGIS.md'
-            - Google Earth: './GIS_Basic/Software/GoogleEarth.md'
-            - Geoserver: './GIS_Basic/Software/Geoserver.md'
+            - QGIS: GIS_Basic/Software/QGIS.md
+            - Google Earth: GIS_Basic/Software/GoogleEarth.md
+            - Geoserver: GIS_Basic/Software/Geoserver.md
         - თეორია:
-          - გეოიდი & ელიფსოიდი : './GIS_Basic/Theory/Base_Theory/Ellipsoid_Geoid_intro.md'
-          - დატუმი : './GIS_Basic/Theory/Base_Theory/Datum.md'
-          - გეორეფერენცირება : './GIS_Basic/Theory/Georeferencing.md'
-          - დიგიტალიზაცია : './GIS_Basic/Theory/Digitization.md'
+          - გეოიდი & ელიფსოიდი: GIS_Basic/Theory/Base_Theory/Ellipsoid_Geoid_intro.md
+          - დატუმი: GIS_Basic/Theory/Base_Theory/Datum.md
+          - გეორეფერენცირება: GIS_Basic/Theory/Georeferencing.md
+          - დიგიტალიზაცია: GIS_Basic/Theory/Digitization.md
           - გეომონაცემთა ბაზები:
-            - Apache parquet: './GIS_Basic/Theory/Geodatabase/Apache_parquet.md'
-            - Geodatabase: './GIS_Basic/Theory/Geodatabase/Geodatabase.md'
-          
+            - Apache parquet: GIS_Basic/Theory/Geodatabase/Apache_parquet.md
+            - Geodatabase: GIS_Basic/Theory/Geodatabase/Geodatabase.md
           - Google:
-            - KML & KMZ : './GIS_Basic/Theory/Google/KML_KMZ_formats.md'
-            - წერტილის სიმაღლე: './GIS_Basic/Theory/Google/Placemark_altitudes.md'
-
-          - OGC WEB: 
-            - XML: './GIS_Basic/Theory/OGC_WEB/XML.md'
-            - GeoNetwork: './GIS_Basic/Theory/OGC_WEB/GeoNetwork.md'
-            - GeoNode: './GIS_Basic/Theory/OGC_WEB/GeoNode.md'
-            - GeoJSON: './GIS_Basic/Theory/OGC_WEB/Geojson_formats.md'
-            - WEB Services: './GIS_Basic/Theory/OGC_WEB/WEB_Services.md'
-            - Win ENV: './GIS_Basic/Theory/OGC_WEB/Win_ENV.md'
-
-          - QGIS :
-            - დიგიტალიზაცია : './GIS_Basic/Theory/QGIS/Digitization.md'
-            - რუკის კომპოზიცია: './GIS_Basic/Theory/QGIS/Map_composition_theory.md'
-            - ბილიკები: './GIS_Basic/Theory/QGIS/Path.md'
-            - პროექტის ფაილი : './GIS_Basic/Theory/QGIS/Project_file.md'
-            - სტილები: './GIS_Basic/Theory/QGIS/QML_SLD.md'
-            - ვექტორული შრის შენახვა : './GIS_Basic/Theory/QGIS/Save_vector_layer.md'
-            - დროებითი შრე: './GIS_Basic/Theory/QGIS/Scratch_layer.md'
-
-          - რასტრი :
-            - გეორეფერენცირება : './GIS_Basic/Theory/Raster/Georeferencing.md'
-            - რელიეფი: './GIS_Basic/Theory/Raster/Terrain.md'
-            - Raster მონაცემები : './GIS_Basic/Theory/Raster/Raster.md'
-
-          - ვექტორი :
-            - შეიპ-ფაილი: './GIS_Basic/Theory/Vector/Shapefile.md'
-            - CAD: './GIS_Basic/Theory/Vector/CAD.md'
-
-
-
+            - KML & KMZ: GIS_Basic/Theory/Google/KML_KMZ_formats.md
+            - წერტილის სიმაღლე: GIS_Basic/Theory/Google/Placemark_altitudes.md
+          - OGC WEB:
+            - XML: GIS_Basic/Theory/OGC_WEB/XML.md
+            - GeoNetwork: GIS_Basic/Theory/OGC_WEB/GeoNetwork.md
+            - GeoNode: GIS_Basic/Theory/OGC_WEB/GeoNode.md
+            - GeoJSON: GIS_Basic/Theory/OGC_WEB/Geojson_formats.md
+            - WEB Services: GIS_Basic/Theory/OGC_WEB/WEB_Services.md
+            - Win ENV: GIS_Basic/Theory/OGC_WEB/Win_ENV.md
+          - QGIS:
+            - დიგიტალიზაცია: GIS_Basic/Theory/QGIS/Digitization.md
+            - რუკის კომპოზიცია: GIS_Basic/Theory/QGIS/Map_composition_theory.md
+            - ბილიკები: GIS_Basic/Theory/QGIS/Path.md
+            - პროექტის ფაილი: GIS_Basic/Theory/QGIS/Project_file.md
+            - სტილები: GIS_Basic/Theory/QGIS/QML_SLD.md
+            - ვექტორული შრის შენახვა: GIS_Basic/Theory/QGIS/Save_vector_layer.md
+            - დროებითი შრე: GIS_Basic/Theory/QGIS/Scratch_layer.md
+          - რასტრი:
+            - გეორეფერენცირება: GIS_Basic/Theory/Raster/Georeferencing.md
+            - რელიეფი: GIS_Basic/Theory/Raster/Terrain.md
+            - Raster მონაცემები: GIS_Basic/Theory/Raster/Raster.md
+          - ვექტორი:
+            - შეიპ-ფაილი: GIS_Basic/Theory/Vector/Shapefile.md
+            - CAD: GIS_Basic/Theory/Vector/CAD.md
         - Google:
-          - Geoserver: './GIS_Basic/Software/Geoserver.md'
+          - Geoserver: GIS_Basic/Software/Geoserver.md
         - დავალებები:
-          - გეორეფერენცირება : './GIS_Basic/Lab/Georeference.md'
-          - დიგიტალიზაცია: './GIS_Basic/Lab/Digitization.md'
-          - გლობალური პოზიციონირება: './GIS_Basic/Lab/GPS.md'
-          - გეომონაცემთა ბაზები: './GIS_Basic/Lab/Geodatabase.md'
-          - დიგიტალიზაცია 1: './GIS_Basic/Lab/Digitization1.md'
-          - მონიშვნები : './GIS_Basic/Lab/Selection.md'
-          - OGC WEB: './GIS_Basic/Lab/OGC_WEB.md'
-          - WEB GIS: './GIS_Basic/Lab/WEB_GIS.md'
-          - ტოპოლოგია: './GIS_Basic/Lab/Topology.md'
-          - რელიეფის ანალიზი: './GIS_Basic/Lab/Terrain_analysis.md'
-          - რუკის კომპოზიცია: './GIS_Basic/Lab/Map_composition.md'
+          - გეორეფერენცირება: GIS_Basic/Lab/Georeference.md
+          - დიგიტალიზაცია: GIS_Basic/Lab/Digitization.md
+          - გლობალური პოზიციონირება: GIS_Basic/Lab/GPS.md
+          - გეომონაცემთა ბაზები: GIS_Basic/Lab/Geodatabase.md
+          - დიგიტალიზაცია 1: GIS_Basic/Lab/Digitization1.md
+          - მონიშვნები: GIS_Basic/Lab/Selection.md
+          - OGC WEB: GIS_Basic/Lab/OGC_WEB.md
+          - WEB GIS: GIS_Basic/Lab/WEB_GIS.md
+          - ტოპოლოგია: GIS_Basic/Lab/Topology.md
+          - რელიეფის ანალიზი: GIS_Basic/Lab/Terrain_analysis.md
+          - რუკის კომპოზიცია: GIS_Basic/Lab/Map_composition.md
 
-
-
-
-  # პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა 
-  # Personal data protection GDPR - Personal data protection in GIS - Personal data protection - Personal data protection
-  # პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა 
-  # Personal data protection GDPR - Personal data protection in GIS - Personal data protection - Personal data protection
-  # პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა - პერს.მონ. დაცვა       
-    - 'პერს.მონ. დაცვა':
-      - 'პერსონალური მონაცემების დაცვა': './Personal_Data_Protection/PDP_GIS.md'
-      - 'GDPR': './Personal_Data_Protection/GDPR.md'
-
-
-  # Non-formal education - Non-formal education - Non-formal education - Non-formal education - Non-formal education - Non-formal education
-  # არაფორმალური განათლება - არაფორმალური განათლება - არაფორმალური განათლება - არაფორმალური განათლება - არაფორმალური განათლება
-  # Non-formal education - Non-formal education - Non-formal education - Non-formal education - Non-formal education - Non-formal education
-  # არაფორმალური განათლება - არაფორმალური განათლება - არაფორმალური განათლება - არაფორმალური განათლება - არაფორმალური განათლება
+    - პერს.მონ. დაცვა:
+      - პერსონალური მონაცემების დაცვა: Personal_Data_Protection/PDP_GIS.md
+      - GDPR: Personal_Data_Protection/GDPR.md
 
     - არაფორმალური განათლება:
-      - 'სწავლების შესახებ':
-        - 'სწავლების მეთოდები': './Non_formal_education/Teaching_methods.md'
-        - 'სწავლების სტილი': './Non_formal_education/Teaching_style.md'
-        - 'სწავლების პროცესის დაგეგმვა': './Non_formal_education/Planning_the_learning_process.md'
-        - 'სწავლების პროცესის შეფასება': './Non_formal_education/Evaluation_of_the_learning_process.md'
-      - 'შესავალი': './Non_formal_education/Lab/GIS_for_pupils_intro.md'
-      - 'GIS შესავალი': './Non_formal_education/Lab/Introduction.md'
-      - 'კოორდინატები': './Non_formal_education/Lab/Coordinates.md'
-      - 'ანიმაცია': './Non_formal_education/Lab/Animation.md'
-      - 'კოორდინატებიანი ფოტო': './Non_formal_education/Lab/Geotagged_photo.md'
-      - 'Google Maps': './Non_formal_education/Lab/Google_Maps.md'
-      - 'ისტორიული სურათები': './Non_formal_education/Lab/Historical_Images.md'
-      - 'ამბავი რუკები': './Non_formal_education/Lab/Story_maps.md'
-      - 'სახელწმიფო სერვისები': './Non_formal_education/Lab/Government_Services.md'
-      - 'ვირტუალური რეალობა': './Non_formal_education/Lab/GEVR.md' 
-      - 'ML|AI|AR|VR': './Non_formal_education/Lab/MLAIAR.md'
-      - 'ტესტები': './Non_formal_education/Lab/Quiz.md'
+      - სწავლების შესახებ:
+        - სწავლების მეთოდები: Non_formal_education/Teaching_methods.md
+        - სწავლების სტილი: Non_formal_education/Teaching_style.md
+        - სწავლის პროცესის დაგეგმვა: Non_formal_education/Planning_the_learning_process.md
+        - სწავლის პროცესის შეფასება: Non_formal_education/Evaluation_of_the_learning_process.md
+      - შესავალი: Non_formal_education/Lab/GIS_for_pupils_intro.md
+      - GIS შესავალი: Non_formal_education/Lab/Introduction.md
+      - კოორდინატები: Non_formal_education/Lab/Coordinates.md
+      - ანიმაცია: Non_formal_education/Lab/Animation.md
+      - კოორდინატებიანი ფოტო: Non_formal_education/Lab/Geotagged_photo.md
+      - Google Maps: Non_formal_education/Lab/Google_Maps.md
+      - ისტორიული სურათები: Non_formal_education/Lab/Historical_Images.md
+      - ამბავი რუკები: Non_formal_education/Lab/Story_maps.md
+      - სახელწმიფო სერვისები: Non_formal_education/Lab/Government_Services.md
+      - ვირტუალური რეალობა: Non_formal_education/Lab/GEVR.md
+      - ML|AI|AR|VR: Non_formal_education/Lab/MLAIAR.md
+      - ტესტები: Non_formal_education/Lab/Quiz.md
 
+    - პროგრამირება:
+      - PyQGIS:
+        - რესურსები: Programming/PyQGIS/PyQGIS_resources.md
+        - განმარტებები:
+          - OGR ბიბლიოთეკა: Programming/PyQGIS/Explanations/PyQGIS_OGR_Library.md
+          - დახრილი ხაზი: Programming/PyQGIS/Explanations/PyQGIS_slashes.md
+          - QVariant: Programming/PyQGIS/Explanations/PyQGIS_QVariant.md
+          - QgsFields: Programming/PyQGIS/Explanations/PyQGIS_QgsFields.md
+          - QgsFeature: Programming/PyQGIS/Explanations/PyQGIS_QgsFeature.md
+          - QgsGeometry: Programming/PyQGIS/Explanations/PyQGIS_QgsGeometry.md
+          - QgsPointXY: Programming/PyQGIS/Explanations/PyQGIS_QgsPointXY.md
+          - QgsVectorLayer: Programming/PyQGIS/Explanations/PyQGIS_QgsVectorLayer.md
+          - QgsRasterLayer: Programming/PyQGIS/Explanations/PyQGIS_QgsRasterLayer.md
+          - QgsProject: Programming/PyQGIS/Explanations/PyQGIS_QgsProject.md
+          - QgsCoordinateReferenceSystem: Programming/PyQGIS/Explanations/PyQGIS_QgsCoordinateReferenceSystem.md
+          - iface: Programming/PyQGIS/Explanations/PyQGIS_iface.md
+        - თეორია:
+          - სწავლების საფეხურები: Programming/PyQGIS/Theory/Learning_stages.md
+          - PyQGIS კლასები: Programming/PyQGIS/Theory/PyQGIS_classes_guide.md
+          - PyQGIS OOP: Programming/PyQGIS/Theory/PyQGIS_oop_guide.md
+        - თემები:
+          - თემა 2: Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic2.md
+          - თემა 3: Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic3.md
+          - თემა 4: Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic4.md
+          - თემა 5: Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic5.md
+          - თემა 6: Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic6.md
+          - თემა 7: Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic7.md
+          - თემა 8: Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic8.md
+          - თემა 9: Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic9.md
+          - თემა 10: Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic10.md
+          - თემა 11: Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic11.md
+          - თემა 12: Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic12.md
+          - შრის შექმნა: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Create_layer.md
+          - მონიშვნები: Programming/PyQGIS/PyQGIS_topics/PyQGIS_SQL_Spatial_Selection.md
+          - ტემპერატურების კონვერტაცია: Programming/PyQGIS/PyQGIS_topics/PyQGIS_temperatures.md
+          - კოორდინატების კონვერტაცია: Programming/PyQGIS/PyQGIS_topics/PyQGIS_coordinates.md
+          - კოორდინატებიანი ფოტოები: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Geotagged_photos.md
 
-  # პროგრამირება - პროგრამირება - პროგრამირება - პროგრამირება - პროგრამირება - პროგრამირება - პროგრამირება
-  # Programming - Programming - Programming - Programming - Programming - Programming - Programming
-  # პროგრამირება - პროგრამირება - პროგრამირება - პროგრამირება - პროგრამირება - პროგრამირება - პროგრამირება
-  # Programming - Programming - Programming - Programming - Programming - Programming - Programming
-    - 'პროგრამირება':
-          
-      - 'PyQGIS':
-        - 'რესურსები': './Programming/PyQGIS/PyQGIS_resources.md'
-        - 'განმარტებები':
-          - 'OGR ბიბლიოთეკა': './Programming/PyQGIS/Explanations/PyQGIS_OGR_Library.md'
-          - 'დახრილი ხაზი': './Programming/PyQGIS/Explanations/PyQGIS_slashes.md'
-          - 'QVariant': './Programming/PyQGIS/Explanations/PyQGIS_QVariant.md'
-          - 'QgsFields': './Programming/PyQGIS/Explanations/PyQGIS_QgsFields.md'
-          - 'QgsFeature': './Programming/PyQGIS/Explanations/PyQGIS_QgsFeature.md'
-          - 'QgsGeometry': './Programming/PyQGIS/Explanations/PyQGIS_QgsGeometry.md'
-          - 'QgsPointXY': './Programming/PyQGIS/Explanations/PyQGIS_QgsPointXY.md'
-          - 'QgsVectorLayer': './Programming/PyQGIS/Explanations/PyQGIS_QgsVectorLayer.md'
-          - 'QgsRasterLayer': './Programming/PyQGIS/Explanations/PyQGIS_QgsRasterLayer.md'
-          - 'QgsProject': './Programming/PyQGIS/Explanations/PyQGIS_QgsProject.md'
-          - 'QgsCoordinateReferenceSystem': './Programming/PyQGIS/Explanations/PyQGIS_QgsCoordinateReferenceSystem.md'
-          - 'iface': './Programming/PyQGIS/Explanations/PyQGIS_iface.md'
-        - 'თეორია':
-          - 'სწავლის საფეხურები': './Programming/PyQGIS/Theory/Learning_stages.md'
-          - 'PyQGIS კლასები': './Programming/PyQGIS/Theory/PyQGIS_classes_guide.md'
-          - 'PyQGIS OOP': './Programming/PyQGIS/Theory/PyQGIS_oop_guide.md'
-          
-        - 'თემები':
-          - 'თემა 2': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic2.md'
-          - 'თემა 3': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic3.md'
-          - 'თემა 4': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic4.md'
-          - 'თემა 5': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic5.md'
-          - 'თემა 6': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic6.md'
-          - 'თემა 7': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic7.md'
-          - 'თემა 8': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic8.md'
-          - 'თემა 9': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic9.md'
-          - 'თემა 10': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic10.md'
-          - 'თემა 11': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic11.md'
-          - 'თემა 12': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic12.md'
-          - 'შრის შექმნა': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_Create_layer.md'
-          - 'მონიშვნები': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_SQL_Spatial_Selection.md'
-          - 'ტემპერატურების კონვერტაცია': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_temperatures.md'
-          - 'კოორდინატების კონვერტაცია': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_coordinates.md'
-          - 'კოორდინატებიანი ფოტოები': './Programming/PyQGIS/PyQGIS_topics/PyQGIS_Geotagged_photos.md'
+    - სივრცული პითონი:
+      - რესურსები: Programming/Spatial_python/resources.md
 
-  # სივრცული პითონი - Spatial_python - სივრცული პითონი - Spatial_python- სივრცული პითონი - Spatial_python - სივრცული პითონი - Spatial_python  
-  # სივრცული პითონი - Spatial_python - სივრცული პითონი - Spatial_python- სივრცული პითონი - Spatial_python - სივრცული პითონი - Spatial_python 
-  # სივრცული პითონი - Spatial_python - სივრცული პითონი - Spatial_python- სივრცული პითონი - Spatial_python - სივრცული პითონი - Spatial_python  
-      - 'სივრცული პითონი':
-          - 'რესურსები': './Programming/Spatial_python/resources.md'
+    - პითონი გეოგრაფებისთვის:
+      - შესავალი: Programming/Python_for_geographers/intro.md
+      # - რვეულები: Programming/Python_for_geographers/notebooks/01_variables.md
+      - ცვლადები: Programming/Python_for_geographers/notebooks/md/01_variables.md
+      - მონ.სტრუქტურები: Programming/Python_for_geographers/notebooks/md/02_data_structures.md
+      - ვირტუალური გარემო: Programming/Python_for_geographers/Theory/Python_VENV.md
+      - პითონის კლასები: Programming/Python_for_geographers/Theory/Python_classes.md
 
-  # პითონი გეოგრაფებისთვის - Python for Geographers - პითონი გეოგრაფებისთვის - Python for Geographers - პითონი გეოგრაფებისთვის - Python for Geographers
-  # პითონი გეოგრაფებისთვის - Python for Geographers - პითონი გეოგრაფებისთვის - Python for Geographers - პითონი გეოგრაფებისთვის - Python for Geographers
-  # პითონი გეოგრაფებისთვის - Python for Geographers - პითონი გეოგრაფებისთვის - Python for Geographers - პითონი გეოგრაფებისთვის - Python for Geographers
-      - 'პითონი გეოგრაფებისთვის':
-        - 'შესავალი': './Programming/Python_for_geographers/intro.md'
-        #- 'რვეულები': './Programming/Python_for_geographers/notebooks/01_variables.md' #გადუბლირებულია
-        - 'ცვლადები': './Programming/Python_for_geographers/notebooks/md/01_variables.md'
-        - 'მონ.სტრუქტურები': './Programming/Python_for_geographers/notebooks/md/02_data_structures.md'
-        - 'ვირტუალური გარემო': './Programming/Python_for_geographers/Theory/Python_VENV.md'
-        - 'პითონის კლასები': './Programming/Python_for_geographers/Theory/Python_classes.md'
-    
-    - 'მონ.ბაზები':
+  - მონ.ბაზები:
       - 'PostgreSQL':
         - 'რესურსები': './Programming/Database/PostgreSQL/resources.md'
         - 'შესავალი': './Programming/Database/PostgreSQL/intro.md'
@@ -316,21 +273,7 @@ nav:
         - 'შრებში ობიექტების წაშლა SQL-ში': './Programming/Database/PSQLPostGIS/Deleting_features_in_SQL.md'
         - 'შრებში სივრცული ოპერაციები SQL-ში': './Programming/Database/PSQLPostGIS/Spatial_operations_in_SQL.md'
 
-
-  # Google Earth - Google Earth - Google Earth - Google Earth - Google Earth - Google Earth - Google Earth
-  # Google Earth Engine - Google Earth Engine - Google Earth Engine - Google Earth Engine - Google Earth Engine
-    - 'Google Earth':
+  - Google Earth:
       - 'GEE md': './GoogleEarth/GE.md'
       - 'რესურსები': './GoogleEarth/resources.md'
-  
-
-
-plugins:
-    #- table-reader
-    - search
     
-
-
-# mkdocs.yml
-#strict: False
-
