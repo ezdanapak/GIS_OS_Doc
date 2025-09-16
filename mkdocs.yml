@@ -234,9 +234,9 @@ nav:
     - 'პროგრამირება':
           
       - 'PyQGIS':
-        
+        - 'რესურსები': './Programming/PyQGIS/PyQGIS_resources.md'
         - 'განმარტებები':
-          #- 'OGR ბიბლიოთეკა': './Programming/PyQGIS/Explanations/PyQGIS_OGR_library.md'
+          - 'OGR ბიბლიოთეკა': './Programming/PyQGIS/Explanations/PyQGIS_OGR_Library.md'
           - 'დახრილი ხაზი': './Programming/PyQGIS/Explanations/PyQGIS_slashes.md'
           - 'QVariant': './Programming/PyQGIS/Explanations/PyQGIS_QVariant.md'
           - 'QgsFields': './Programming/PyQGIS/Explanations/PyQGIS_QgsFields.md'
@@ -332,5 +332,5 @@ plugins:
 
 
 # mkdocs.yml
-strict: False
+#strict: False
 
