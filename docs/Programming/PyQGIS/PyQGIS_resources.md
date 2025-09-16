@@ -1,5 +1,8 @@
 ## რესურსები
 
+ქვემოთ მოცემულია PyQGIS-ის შესწავლისა და პრაქტიკაში გამოყენებისათვის სასარგებლო ოფიციალური და დამატებითი რესურსების სია:
+
+
 - [Customizing QGIS with Python](https://docs.qgis.org/latest/en/docs/pyqgis_developer_cookbook/intro.html#customizing-qgis-with-python)  
 - [PyQGIS Developer Cookbook](https://docs.qgis.org/latest/en/docs/pyqgis_developer_cookbook/index.html)  
 - [PyQGIS Samples](https://qgis.org/pyqgis-cookbook/)  
