@@ -1,8 +1,4 @@
 
- ვიდეო ჩავსვათ Youtube დან Landsat
-
-
-
 ## 🎥 ვიდეო
 
 <!-- Obsidian / VSCode Preview / Web rendering -->
