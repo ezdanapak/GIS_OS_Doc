@@ -233,6 +233,7 @@ nav:
           - ტემპერატურების კონვერტაცია: Programming/PyQGIS/PyQGIS_topics/PyQGIS_temperatures.md
           - კოორდინატების კონვერტაცია: Programming/PyQGIS/PyQGIS_topics/PyQGIS_coordinates.md
           - კოორდინატებიანი ფოტოები: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Geotagged_photos.md
+        - შეცდომები და მათი მოგვარება: Programming/PyQGIS/Error_handling.md
 
     - სივრცული პითონი:
       - რესურსები: Programming/Spatial_python/resources.md
