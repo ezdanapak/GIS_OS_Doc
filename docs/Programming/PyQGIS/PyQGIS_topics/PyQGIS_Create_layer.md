@@ -1,8 +1,8 @@
 ## შრის შექმნა(ESRI Shapefile)
 <br>
-ოფიციალური დოკუმენტაცია
-Class: [QgsWkbTypes](https://qgis.org/pyqgis/3.44/core/QgsWkbTypes.html)
-GDAL [OGR](https://www.osgeo.org/projects/gdal/)
+ოფიციალური დოკუმენტაცია <br>
+Class: [QgsWkbTypes](https://qgis.org/pyqgis/3.44/core/QgsWkbTypes.html) <br>
+GDAL [OGR](https://www.osgeo.org/projects/gdal/) <br>
 
 ### წერტილოვანი შრე
 
