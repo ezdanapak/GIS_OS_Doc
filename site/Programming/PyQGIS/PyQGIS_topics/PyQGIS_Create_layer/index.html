@@ -522,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../GIS_Basic/Additional/Warning.md" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Additional/Warning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2507,7 +2507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Non_formal_education/Lab/Quiz.md" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Lab/Quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2647,16 +2647,132 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_1_1" id="__nav_3_4_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    თეორია
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_4_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            თეორია
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../Python/Python_resources.md" class="md-nav__link">
+      <a href="../../../Python/Theory/Python_first_lecture_outline/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    რესურსები
+    Python პირველი შეხვედრა
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Theory/Hello_world_history/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello world
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Theory/Python_repl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python REPL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Theory/Python_philosophy_simple_better/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zen of Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3929,6 +4045,21 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgis" class="md-nav__link">
+    <span class="md-ellipsis">
+      შრის დამატება QGIS პროექტის გარემოში
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="შრის დამატება QGIS პროექტის გარემოში">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#qgsfields" class="md-nav__link">
     <span class="md-ellipsis">
@@ -5141,6 +5272,21 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgis" class="md-nav__link">
+    <span class="md-ellipsis">
+      შრის დამატება QGIS პროექტის გარემოში
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="შრის დამატება QGIS პროექტის გარემოში">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#qgsfields" class="md-nav__link">
     <span class="md-ellipsis">
@@ -5176,8 +5322,20 @@
   <h1>შრის შექმნა</h1>
 
 <h2 id="esri_shapefile">შრის შექმნა(ESRI Shapefile)<a class="headerlink" href="#esri_shapefile" title="Permanent link">&para;</a></h2>
-<p><br></p>
+<p><br>
+ოფიციალური დოკუმენტაცია <br>
+Class: <a href="https://qgis.org/pyqgis/3.44/core/QgsWkbTypes.html">QgsWkbTypes</a> <br>
+GDAL <a href="https://www.osgeo.org/projects/gdal/">OGR</a> <br></p>
 <h3 id="_1">წერტილოვანი შრე<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>გეომეტრია დაკონკრეტებულია აქვე რადგან საჭიროა writer - ში მისი გათვალისწინება, QgsWkbTypes.Point ის ნაცვლად შესაძლებელია Line, Polygon, Unknown, Null - ის გამოყენება.</p>
+<ul>
+<li>shapefile_home ცვლადია და თემატური სახელწოდებით გადის სკრიპტში</li>
+<li>ატრიბუტული ცხრილის სვეტებს შექმნის QgsFields()</li>
+<li>writer კრებს ინფორმაციას, უნიკოდირებას, სვეტებს, გეომეტრიას, საკოორდინატო სისტემას და აერიანებს მას კონტეინერად.</li>
+<li>ახალი შრე შეიქმნება და შეინახება 'ESRI Shapefile' დრაივერის დახმარებით.</li>
+<li>არგუმენტებში აუცილებელია გადავცეთ უნიკოდირება, პროექცია, დრაივერი და ა.შ</li>
+<li>ფუნქცია დააბრუნებს ობიექტს რომელიც განსაზღვრულია როგორც writer კოდში, რომელსაც შეუძლია დაამატოს და ჩაწეროს ახალი ობიექტები შრეში.</li>
+</ul>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">shapefile_point.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -5193,12 +5351,9 @@
 <span class="normal"><a href="#__codelineno-0-13">13</a></span>
 <span class="normal"><a href="#__codelineno-0-14">14</a></span>
 <span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">shapefile_home</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GIS\shapefile\saxli.shp&#39;</span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">shapefile_home</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GIS\shapefile\saxli.shp&#39;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">layerfield</span> <span class="o">=</span> <span class="n">QgsFields</span><span class="p">()</span> <span class="c1">#თუ გვინდა რომ ატრიბუტულ ცხრილში სვეტები დავამატოთ</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">layerfield</span> <span class="o">=</span> <span class="n">QgsFields</span><span class="p">()</span> 
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">layerfield</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">QgsField</span><span class="p">(</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="n">QVariant</span><span class="o">.</span><span class="n">Int</span><span class="p">))</span> <span class="c1">#სვეტი 1</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>
@@ -5206,15 +5361,12 @@
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="n">layerfield</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">QgsField</span><span class="p">(</span><span class="s1">&#39;Field_2&#39;</span><span class="p">,</span> <span class="n">QVariant</span><span class="o">.</span><span class="n">Double</span><span class="p">))</span> <span class="c1">#სვეტი 3</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1">#writer კრებს ინფორმაციას, უნიკოდირებას, სვეტებს, გეომეტრიას,</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="c1">#საკოორდინატო სისტემას და აერიანებს მას კონტეინერად.</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="n">writer</span> <span class="o">=</span> <span class="n">QgsVectorFileWriter</span><span class="p">(</span><span class="n">shapefile_home</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">,</span> <span class="n">layerfield</span><span class="p">,</span> <span class="n">QgsWkbTypes</span><span class="o">.</span><span class="n">Point</span><span class="p">,</span> \
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="n">writer</span> <span class="o">=</span> <span class="n">QgsVectorFileWriter</span><span class="p">(</span><span class="n">shapefile_home</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">,</span> <span class="n">layerfield</span><span class="p">,</span> <span class="n">QgsWkbTypes</span><span class="o">.</span><span class="n">Point</span><span class="p">,</span> \
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>               <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s1">&#39;EPSG:32638&#39;</span><span class="p">),</span> <span class="s1">&#39;ESRI Shapefile&#39;</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>               <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s1">&#39;EPSG:32638&#39;</span><span class="p">),</span> <span class="s1">&#39;ESRI Shapefile&#39;</span><span class="p">)</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="k">del</span><span class="p">(</span><span class="n">writer</span><span class="p">)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="k">del</span><span class="p">(</span><span class="n">writer</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <p>შესაძლებელია აქვე ჩავწეროთ მონაცემი შრეში</p>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">shapefile_point.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
@@ -5241,13 +5393,128 @@
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="n">writer</span><span class="o">.</span><span class="n">addFeature</span><span class="p">(</span><span class="n">fc</span><span class="p">)</span> <span class="c1">#დაემატოს შრეს ობიექტი</span>
 </span></code></pre></div></td></tr></table></div>
-<p><div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">shapefile_point.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<h2 id="qgis">შრის დამატება QGIS პროექტის გარემოში<a class="headerlink" href="#qgis" title="Permanent link">&para;</a></h2>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">shapefile_point.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">#shapefile_home ფაილის სახელწოდება - &#39;&#39; შრის სახელწოდება - ogr vector file</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">layer</span> <span class="o">=</span> <span class="n">iface</span><span class="o">.</span><span class="n">addVectorLayer</span><span class="p">(</span><span class="n">shapefile_home</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;ogr&#39;</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<a href="https://osdoc.qgis.ge/PyQGIS/explanations/ogr_library/">OGR ბიბლიოთეკა</a></p>
+<p>ახალი წერტილოვანი ვექტორული შრის შექმნა, წყვილი წერტილებით და დამატება QGIS პროექტის გარემოში.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">create_shapefile_with_tuples.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span>
+<span class="normal"><a href="#__codelineno-3-31">31</a></span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span>
+<span class="normal"><a href="#__codelineno-3-33">33</a></span>
+<span class="normal"><a href="#__codelineno-3-34">34</a></span>
+<span class="normal"><a href="#__codelineno-3-35">35</a></span>
+<span class="normal"><a href="#__codelineno-3-36">36</a></span>
+<span class="normal"><a href="#__codelineno-3-37">37</a></span>
+<span class="normal"><a href="#__codelineno-3-38">38</a></span>
+<span class="normal"><a href="#__codelineno-3-39">39</a></span>
+<span class="normal"><a href="#__codelineno-3-40">40</a></span>
+<span class="normal"><a href="#__codelineno-3-41">41</a></span>
+<span class="normal"><a href="#__codelineno-3-42">42</a></span>
+<span class="normal"><a href="#__codelineno-3-43">43</a></span>
+<span class="normal"><a href="#__codelineno-3-44">44</a></span>
+<span class="normal"><a href="#__codelineno-3-45">45</a></span>
+<span class="normal"><a href="#__codelineno-3-46">46</a></span>
+<span class="normal"><a href="#__codelineno-3-47">47</a></span>
+<span class="normal"><a href="#__codelineno-3-48">48</a></span>
+<span class="normal"><a href="#__codelineno-3-49">49</a></span>
+<span class="normal"><a href="#__codelineno-3-50">50</a></span>
+<span class="normal"><a href="#__codelineno-3-51">51</a></span>
+<span class="normal"><a href="#__codelineno-3-52">52</a></span>
+<span class="normal"><a href="#__codelineno-3-53">53</a></span>
+<span class="normal"><a href="#__codelineno-3-54">54</a></span>
+<span class="normal"><a href="#__codelineno-3-55">55</a></span>
+<span class="normal"><a href="#__codelineno-3-56">56</a></span>
+<span class="normal"><a href="#__codelineno-3-57">57</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">fn</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GIS\shapefile\lake.shp&#39;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">layerfield</span> <span class="o">=</span> <span class="n">QgsFields</span><span class="p">()</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">layerfield</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">QgsField</span><span class="p">(</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="n">QVariant</span><span class="o">.</span><span class="n">Int</span><span class="p">))</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">layerfield</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">QgsField</span><span class="p">(</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="n">QVariant</span><span class="o">.</span><span class="n">String</span><span class="p">))</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="n">writer</span> <span class="o">=</span> <span class="n">QgsVectorFileWriter</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">,</span> <span class="n">layerfield</span><span class="p">,</span> <span class="n">QgsWkbTypes</span><span class="o">.</span><span class="n">Point</span><span class="p">,</span> \
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a>              <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s1">&#39;EPSG:32638&#39;</span><span class="p">),</span> <span class="s1">&#39;ESRI Shapefile&#39;</span><span class="p">)</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="n">XY</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">356671.0049</span><span class="p">,</span> <span class="mf">4679923.0988</span><span class="p">),</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="p">(</span><span class="mf">356672.2015</span><span class="p">,</span> <span class="mf">4679929.5719</span><span class="p">),</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="p">(</span><span class="mf">356672.9728</span><span class="p">,</span> <span class="mf">4679933.1198</span><span class="p">),</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="p">(</span><span class="mf">356674.5925</span><span class="p">,</span> <span class="mf">4679935.2022</span><span class="p">),</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="p">(</span><span class="mf">356676.0579</span><span class="p">,</span> <span class="mf">4679936.8219</span><span class="p">),</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28"></a>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="p">(</span><span class="mf">356676.9835</span><span class="p">,</span> <span class="mf">4679938.1332</span><span class="p">),</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30"></a>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="p">(</span><span class="mf">356645.632</span><span class="p">,</span> <span class="mf">4679901.1075</span><span class="p">),</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32"></a>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="p">(</span><span class="mf">356654.4244</span><span class="p">,</span> <span class="mf">4679905.3495</span><span class="p">),</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34"></a>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="p">(</span><span class="mf">356659.9775</span><span class="p">,</span> <span class="mf">4679909.2829</span><span class="p">),</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36"></a>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="p">(</span><span class="mf">356664.2194</span><span class="p">,</span> <span class="mf">4679912.7536</span><span class="p">),</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38"></a>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="p">(</span><span class="mf">356668.055</span><span class="p">,</span> <span class="mf">4679916.8107</span><span class="p">)]</span>  
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40"></a>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">XY</span><span class="p">:</span>
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42"></a>
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43"></a>    <span class="n">fc</span> <span class="o">=</span> <span class="n">QgsFeature</span><span class="p">()</span>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44"></a>
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45"></a>    <span class="n">fc</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QgsGeometry</span><span class="o">.</span><span class="n">fromPointXY</span><span class="p">(</span><span class="n">QgsPointXY</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">])))</span>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46"></a>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47"></a>    <span class="n">fc</span><span class="o">.</span><span class="n">setAttributes</span><span class="p">([</span><span class="n">XY</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="s1">&#39;lake&#39;</span><span class="p">])</span>
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48"></a>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49"></a>    <span class="n">writer</span><span class="o">.</span><span class="n">addFeature</span><span class="p">(</span><span class="n">fc</span><span class="p">)</span>
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50"></a>
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51"></a>
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52"></a>
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53"></a><span class="k">del</span><span class="p">(</span><span class="n">writer</span><span class="p">)</span>
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54"></a>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55"></a>
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56"></a>
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57"></a><span class="n">layer</span> <span class="o">=</span> <span class="n">iface</span><span class="o">.</span><span class="n">addVectorLayer</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;ogr&#39;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="qgsfields">QgsFields კლასი<a class="headerlink" href="#qgsfields" title="Permanent link">&para;</a></h3>
 <p>QgsFields არის QGIS API-ში გამოყენებული კლასი, რომელიც წარმოადგენს ატრიბუტების (ველების) კოლექციას.
 ველები (Fields) არის მონაცემთა სტრუქტურები, რომლებიც განსაზღვრავენ ფენას (Layer) ან ფაილში შენახულ მონაცემებს. თითოეული ველი აქვს სახელი, ტიპი (მაგ., ტექსტი, რიცხვი) და სხვა თვისებები.
