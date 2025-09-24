@@ -701,17 +701,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://osdoc.qgis.ge/Programming/Python/Theory/Prepl/</loc>
+         <lastmod>2025-09-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://osdoc.qgis.ge/Programming/Python/Theory/Python_first_lecture_outline/</loc>
          <lastmod>2025-09-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://osdoc.qgis.ge/Programming/Python/Theory/Python_philosophy_simple_better/</loc>
-         <lastmod>2025-09-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://osdoc.qgis.ge/Programming/Python/Theory/Python_repl/</loc>
          <lastmod>2025-09-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
