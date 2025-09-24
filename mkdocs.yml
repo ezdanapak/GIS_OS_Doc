@@ -198,8 +198,9 @@ nav:
 
     - პროგრამირება:
       - Python:
-        - რესურსები:
-          - Hello world: Programming/Python/Hello_world_history.md
+        - თეორია:
+          - Hello world: Programming/Python/Theory/Hello_world_history.md
+          - Python REPL: Programming/Python/Theory/python_repl.md
         - შესავალი: Programming/Python/python_intro.md
         - საბაზისო: Programming/Python/python_basics.md
         - ლოგიკური ოპერაციები: Programming/Python/python_logical_ops.md
