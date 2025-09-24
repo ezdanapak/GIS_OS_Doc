@@ -202,6 +202,7 @@ nav:
           - Python პირველი შეხვედრა: Programming/Python/Theory/Python_first_lecture_outline.md
           - Hello world: Programming/Python/Theory/Hello_world_history.md
           - Python REPL: Programming/Python/Theory/Python_repl.md
+          - Zen of Python: Programming/Python/Theory/Python_philosophy_simple_better.md
         - შესავალი: Programming/Python/python_intro.md
         - საბაზისო: Programming/Python/python_basics.md
         - ლოგიკური ოპერაციები: Programming/Python/python_logical_ops.md
