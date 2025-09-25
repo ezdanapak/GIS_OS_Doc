@@ -115,7 +115,7 @@ nav:
   - მთავარი: index.md
   - შესახებ: about.md
   - დოკუმენტაცია:
-    - GIS Basic:
+    - GIS საბაზისო:
         - შესახებ:
             - დახმარება: GIS_Basic/Additional/Help.md
             - საავტორო უფლებები: GIS_Basic/Additional/Copyright_Disclaimer.md
