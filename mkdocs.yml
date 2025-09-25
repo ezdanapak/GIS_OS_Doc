@@ -172,11 +172,15 @@ nav:
           - ტოპოლოგია: GIS_Basic/Lab/Topology.md
           - რელიეფის ანალიზი: GIS_Basic/Lab/Terrain_analysis.md
           - რუკის კომპოზიცია: GIS_Basic/Lab/Map_composition.md
-
+    - 
     - პერს.მონ. დაცვა:
       - პერსონალური მონაცემების დაცვა: Personal_Data_Protection/PDP_GIS.md
       - GDPR: Personal_Data_Protection/GDPR.md
-
+    - Enterprise GIS:
+      - GIS in Organizations: Enterprise_GIS/GIS_in_Organizations.md
+      - GIS Infrastructure: Enterprise_GIS/GIS_Infrastructure.md
+      - Data Management: Enterprise_GIS/Data_Management.md
+      - Web GIS: Enterprise_GIS/Web_GIS.md
     - არაფორმალური განათლება:
       - სწავლების შესახებ:
         - სწავლების მეთოდები: Non_formal_education/Teaching_methods.md
@@ -204,6 +208,7 @@ nav:
           - REPL: Programming/Python/Theory/Prepl.md
           - Zen of Python: Programming/Python/Theory/Python_philosophy_simple_better.md
           - ლექცია 1: Programming/Python/Theory/Lecture_1_intro.md
+          - რეზერვირებული სიტყვები: Programming/Python/Theory/Python_Reserved_Words.md
         - შესავალი: Programming/Python/python_intro.md
         - საბაზისო: Programming/Python/python_basics.md
         - ლოგიკური ოპერაციები: Programming/Python/python_logical_ops.md
