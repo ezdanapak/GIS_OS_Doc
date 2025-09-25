@@ -172,7 +172,7 @@ nav:
           - ტოპოლოგია: GIS_Basic/Lab/Topology.md
           - რელიეფის ანალიზი: GIS_Basic/Lab/Terrain_analysis.md
           - რუკის კომპოზიცია: GIS_Basic/Lab/Map_composition.md
-    - 
+
     - პერს.მონ. დაცვა:
       - პერსონალური მონაცემების დაცვა: Personal_Data_Protection/PDP_GIS.md
       - GDPR: Personal_Data_Protection/GDPR.md
