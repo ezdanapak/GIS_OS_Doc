@@ -1,47 +1,62 @@
 # Python -- პირველი გაცნობითი ლექცია
 
-## 1. შესავალი
+## შესავალი | რა არის პროგრამირება?
 
--   სტუდენტების მოკლე გაცნობა
--   რა არის პროგრამირება?
--   რისთვის შეიძლება გამოიყენო Python?
+- რა არის პროგრამირება?
+- რისთვის შეიძლება გამოიყენო Python?
+- კომპიუტერისთვის ინსტრუქციების მიცემა
+- ალგორითმების ჩანაწერი ადამიანისთვის გასაგებ ენაზე
+- პროგრამირების ენები – განსხვავება კომპილირებულ და ინტერპრეტირებულ ენებს შორის
 
-## 2. Python-ის ისტორია და ფილოსოფია
+## Python-ის ისტორია და ფილოსოფია
 
 -   Python შეიქმნა 1991 წელს Guido van Rossum-ის მიერ.
 -   ფილოსოფია: **Simple is better than complex.**
 -   *Zen of Python*: `import this`
 
-## 3. რატომ Python?
+## რატომ Python?
 
 -   მარტივი და ადვილად გასაგები სინტაქსი.
 -   ფართო გამოყენება:
-    -   Web Development (Django, Flask)
-    -   Data Science და Machine Learning (pandas, NumPy, scikit-learn)
-    -   GIS და გეოინფორმაცია (GeoPandas, PyQGIS, ArcPy)
-    -   Automation და Scripting
-    -   Game Development (Pygame)
--   დიდი და აქტიური საზოგადოება.
+    - **ვებ-პროგრამირება** Web Development (Django, Flask)
+    - **მეცნიერება და მონაცემთა ანალიზი** Data Science და Machine Learning (pandas, NumPy, scikit-learn)
+    - **GIS და რუკები** GIS და გეოინფორმაცია (GeoPandas, PyQGIS, ArcPy)
+    - **ავტომატიზაცია** Automation (task automation, Scripting)
+    - **თამაშების დეველოპმენტი** Game Development (Pygame)
+    - **AI და ML** (TensorFlow, PyTorch, scikit-learn)
 
-## 4. Python ყოველდღიურ ცხოვრებაში
+
+## Python-ის ფილოსოფია
+    - „Simple is better than complex“  
+    - კოდის წაკითხვადობა > ხრიკები  
+    - სუფთა და მკაფიო სტილი (PEP 8)
+    - დიდი და აქტიური საზოგადოება.
+
+## Python ყოველდღიურ ცხოვრებაში
 
 -   Google, YouTube, Instagram, Spotify, NASA იყენებენ Python-ს.
 -   უნივერსიტეტებში და კვლევებში Python არის ერთ-ერთი მთავარი
     ინსტრუმენტი.
 
-## 5. ინსტრუმენტები, რომლებიც დასჭირდებათ
+## საჭირო ხელსაწყოები
 
 -   Python ინტერპრეტერი (CPython, Anaconda).
 -   IDE/რედაქტორები: VS Code, PyCharm, Jupyter Notebook.
 -   პაკეტების მენეჯერი: `pip`.
 
-## 6. პირველი კოდი -- Hello World
+## ინსტალაცია და გარემო
+- Python.org-დან დაყენება
+- IDLE, VS Code, PyCharm
+- Jupyter Notebook დემო
+- **REPL** – ინტერპრეტატორი (სწრაფი ტესტებისთვის)
+
+## პირველი კოდი -- Hello World
 
 ``` python
 print("Hello, World!")
 ```
 
-## 7. მარტივი მაგალითები
+## მარტივი მაგალითები
 
 -   არითმეტიკა:
 
@@ -57,19 +72,19 @@ print("Hello, World!")
     print("Welcome,", name)
     ```
 
-## 8. სწავლების მიდგომა
+## სწავლების მიდგომა
 
 -   პრაქტიკაზე ორიენტირებული სწავლა.
 -   ცოტაოდენი თეორია -- ბევრი პრაქტიკა.
 -   REPL, Jupyter Notebook და სავარჯიშო დავალებების აქტიური გამოყენება.
 
-## 9. მოტივაცია
+## მოტივაცია
 
 -   Python-ის ცოდნა ძალიან მოთხოვნადია შრომის ბაზარზე.
 -   კოდის დაწერა არა მხოლოდ პროფესიული, არამედ შემოქმედებითი პროცესიც
     არის.
 
-## 10. პრაქტიკული აქტივობა
+## პრაქტიკული აქტივობა
 
 -   ერთად გავუშვებთ Python REPL-ს.
 

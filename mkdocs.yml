@@ -207,7 +207,6 @@ nav:
           - Hello world: Programming/Python/Theory/Hello_world_history.md
           - REPL: Programming/Python/Theory/Prepl.md
           - Zen of Python: Programming/Python/Theory/Python_philosophy_simple_better.md
-          - ლექცია 1: Programming/Python/Theory/Lecture_1_intro.md
           - რეზერვირებული სიტყვები: Programming/Python/Theory/Python_Reserved_Words.md
         - შესავალი: Programming/Python/python_intro.md
         - საბაზისო: Programming/Python/python_basics.md
