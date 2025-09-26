@@ -203,14 +203,15 @@ nav:
     - პროგრამირება:
       - Python:
         - თეორია:
+          - შესავალი: Programming/Python/python_intro.md
           - Python პირველი შეხვედრა: Programming/Python/Theory/Python_first_lecture_outline.md
           - Hello world: Programming/Python/Theory/Hello_world_history.md
           - REPL: Programming/Python/Theory/Prepl.md
           - Zen of Python: Programming/Python/Theory/Python_philosophy_simple_better.md
           - რეზერვირებული სიტყვები: Programming/Python/Theory/Python_Reserved_Words.md
           - AnaMiniConda: Programming/Python/Theory/Python_Anaconda_Miniconda_vs_Pip.md
-        - შესავალი: Programming/Python/python_intro.md
-        - საბაზისო: Programming/Python/python_basics.md
+        - პრაქტიკა:
+          - საბაზისო: Programming/Python/Arithmetic_Operations/python_basics.md
         - ლოგიკური ოპერაციები: Programming/Python/python_logical_ops.md
         - ციკლები: Programming/Python/python_loops.md
         - მათემატიკური ფუნქციები: Programming/Python/python_math_functions.md
