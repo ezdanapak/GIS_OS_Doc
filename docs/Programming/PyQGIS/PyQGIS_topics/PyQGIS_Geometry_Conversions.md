@@ -1,3 +1,15 @@
+## გეომეტრიის ცვლილება(Geometry conversions)
+<br>
+ოფიციალური დოკუმენტაცია <br>
+წერტილოვანი შრის ხაზში გადაყვანა - Point to Line Conversion
+Points to [path:](https://docs.qgis.org/3.40/en/docs/user_manual/processing_algs/qgis/vectorcreation.html#points-to-path) <br>
+ხაზოვანი შრის პოლიგონში გადაყვანა - Lines to polygon
+Lines to [polygons:](https://docs.qgis.org/3.40/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#lines-to-polygons) <br>
+პოლიგონალური შრის ხაზში გადაყვანა - Polygon to Lines Conversion
+Polygons to [lines:](https://docs.qgis.org/3.40/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#polygons-to-lines) <br>
+ხაზოვანი შრიდან წერტილების მიღება - Points along geometry
+Points along [geometry:](https://docs.qgis.org/3.40/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#points-along-geometry) <br>
+
 
 
 - ზოგიერთი განმარტება
