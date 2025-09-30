@@ -20,8 +20,7 @@ Points along [geometry:](https://docs.qgis.org/3.40/en/docs/user_manual/processi
 ## 🟢 წერტილოვანი შრის ხაზში გადაყვანა (Point to Line Conversion)
 
 
-
-```py title="new_layer_points_to_path.py" linenums="1"
+```py title="Points_to_line.py" linenums="1"
 fn = r'C:\Users\Public\Documents\GIS\shapefile\points.shp'
 output = r'C:\Users\Public\Documents\GIS\shapefile\points_to_line.shp'
 
@@ -37,24 +36,55 @@ processing.run("native:pointstopath", {
 layer = iface.addVectorLayer(output, '', 'ogr')
 ```
 
-📌 აქედან ვიღებთ ხაზს წერტილების თანმიმდევრობით.
+📌 შედეგად ვიღებთ ხაზს წერტილების თანმიმდევრობით.
 
 ---
 
 
-## 🟢 ხაზოვანი შრის პოლიგონში გადაყვანა (Lines to Polygon)
+## 🟢 ხაზოვანი შრის პოლიგონში გადაყვანა (Line to Polygon)
 
-```python
-fn = r'C:\Users\Public\Documents\GK\PyQGIS\shp\lake_line.shp'
-output = r'C:\Users\Public\Documents\GK\PyQGIS\shp\lake_poly.shp'
+```py title="Line_to_polygon.py" linenums="1"
+fn = r'C:\Users\Public\Documents\GK\PyQGIS\shp\line_layer.shp'
+output = r'C:\Users\Public\Documents\GK\PyQGIS\shp\Polygon_layer_from_line.shp'
 
 processing.run("qgis:linestopolygons", {'INPUT':fn, 'OUTPUT':output})
 layer = iface.addVectorLayer(output, '', 'ogr')
 ```
 
-📌 ხაზები ერთდება და პოლიგონი ყალიბდება.
+📌 ხაზები ერთდება და გეომეტრიულად პოლიგონი ყალიბდება.
 
 ---
+
+## 🟢 პოლიგონალური შრის ხაზში გადაყვანა (Polygon to Lines Conversion)
+
+```py title="Polygon_to_Line_Conversion.py" linenums="1"
+fn = r'C:\Users\Public\Documents\GK\PyQGIS\shp\Polygon_layer.shp'
+output = r'C:\Users\Public\Documents\GK\PyQGIS\shp\Line_layer_from_polygon.shp'
+
+processing.run("native:polygonstolines", {'INPUT':fn,'OUTPUT':output})
+layer = iface.addVectorLayer(output, '', 'ogr')
+```
+
+📌 პოლიგონალური შრის ელემენტები გადადის ხაზობრივ სტილში, მათი კონტურიდან/ფორმიდან გამომდინარე.
+
+---
+
+## 🟢 ხაზოვანი შრიდან წერტილების მიღება (Points along geometry)
+
+```py title="Points_along_geometry.py" linenums="1"
+fn = r'C:\Users\Public\Documents\GK\PyQGIS\shp\Line_layer.shp'
+output = r'C:\Users\Public\Documents\GK\PyQGIS\shp\Points_placed_on_line.shp'
+
+processing.run("native:pointsalonglines", {'INPUT':fn,'DISTANCE':5,'START_OFFSET':0,'END_OFFSET':0,'OUTPUT':output})
+layer = iface.addVectorLayer(output, '', 'ogr')
+```
+
+📌 ხაზოვანი შრის ნებისმიერ ელემენტზე განსაზღვრული დაშორებით წერტილების განთავსება.
+
+---
+
+
+
 
 ## ❗️ შენიშვნები სტუდენტებისთვის
 
