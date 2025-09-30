@@ -232,7 +232,7 @@ nav:
          - რესურსები: Programming/PyQGIS/PyQGIS_resources.md
          - განმარტებები:
             - OGR ბიბლიოთეკა: Programming/PyQGIS/explanations/PyQGIS_OGR_Library.md
-            - დახრილი ხაზი: Programming/PyQGIS/explanations/PyQGIS_slashes.md
+            - დახრილი ხაზი: Programming/PyQGIS/explanations/PyQGIS_paths_and_escape_characters.md
             - QVariant: Programming/PyQGIS/explanations/PyQGIS_QVariant.md
             - QgsFields: Programming/PyQGIS/explanations/PyQGIS_QgsFields.md
             - QgsFeature: Programming/PyQGIS/explanations/PyQGIS_QgsFeature.md
