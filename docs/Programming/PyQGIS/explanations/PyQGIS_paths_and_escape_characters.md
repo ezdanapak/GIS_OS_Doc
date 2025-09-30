@@ -92,7 +92,6 @@ Linux:     /home/student/project/data.csv
 Raw string: r"C:\Users\Student\Documents\project\data.csv"
 ```
 
-![Path Examples](https://i.ibb.co/mz0tw6H/python-paths.png)
 
 ---
 
