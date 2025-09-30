@@ -5,23 +5,14 @@ Class: [QgsWkbTypes](https://qgis.org/pyqgis/3.44/core/QgsWkbTypes.html) <br>
 GDAL [OGR](https://www.osgeo.org/projects/gdal/) <br>
 საკოორდინატო სისტემის შესარჩევად: Coordinate Systems [Worldwide](https://epsg.io/)
 
-რა არის QgsField,QgsFields() , QVariant, QgsFeature() , iface და ა.შ დეტალებს 
+რა არის QgsField,QgsFields() , QVariant, QgsFeature() , iface და ა.შ დეტალებს <br>
 < < < განმარტებების განყოფილებაში ნახავ
 
 ### წერტილოვანი შრე
 
-- ზოგიერთი განმარტება
+**ზოგიერთი განმარტება**
 
 - გეომეტრია დაკონკრეტებულია აქვე რადგან საჭიროა writer - ში მისი გათვალისწინება, QgsWkbTypes.Point ის ნაცვლად შესაძლებელია Line, Polygon, Unknown, Null - ის გამოყენება.
-
-- shapefile_home ცვლადია და თემატური სახელწოდებით გადის სკრიპტში
-- ატრიბუტული ცხრილის სვეტებს შექმნის QgsFields()
-- File Handling - "r" - Read - Default value. Opens a file for reading, error if the file does not exist 
-- writer კრებს ინფორმაციას, უნიკოდირებას, სვეტებს, გეომეტრიას, საკოორდინატო სისტემას და აერიანებს მას კონტეინერად.
-- ახალი შრე შეიქმნება და შეინახება 'ESRI Shapefile' დრაივერის დახმარებით.
-- არგუმენტებში აუცილებელია გადავცეთ უნიკოდირება, პროექცია, დრაივერი და ა.შ
-- ფუნქცია დააბრუნებს ობიექტს რომელიც განსაზღვრულია როგორც writer კოდში, რომელსაც შეუძლია დაამატოს და ჩაწეროს ახალი ობიექტები შრეში.
-
 
 ## ✅ ძირითადი გეომეტრიული ტიპები PyQGIS-ში:
 
@@ -33,6 +24,17 @@ GDAL [OGR](https://www.osgeo.org/projects/gdal/) <br>
 | მრავალხაზი     | `"MultiLineString"`      | `QgsGeometry.fromMultiPolylineXY([[QgsPointXY(x1, y1), QgsPointXY(x2, y2)], [QgsPointXY(x3, y3), QgsPointXY(x4, y4)]])` |
 | პოლიგონი       | `"Polygon"`              | `QgsGeometry.fromPolygonXY([[QgsPointXY(x1, y1), QgsPointXY(x2, y2), QgsPointXY(x3, y3), QgsPointXY(x1, y1)]])` |
 | მრავალპოლიგონი | `"MultiPolygon"`         | `QgsGeometry.fromMultiPolygonXY([[[QgsPointXY(x1, y1), QgsPointXY(x2, y2), QgsPointXY(x3, y3), QgsPointXY(x1, y1)]]])` |
+
+- shapefile_home ცვლადია და თემატური სახელწოდებით გადის სკრიპტში
+- ატრიბუტული ცხრილის სვეტებს შექმნის QgsFields()
+- File Handling - "r" - Read - Default value. Opens a file for reading, error if the file does not exist 
+- writer კრებს ინფორმაციას, უნიკოდირებას, სვეტებს, გეომეტრიას, საკოორდინატო სისტემას და აერიანებს მას კონტეინერად.
+- ახალი შრე შეიქმნება და შეინახება 'ESRI Shapefile' დრაივერის დახმარებით.
+- არგუმენტებში აუცილებელია გადავცეთ უნიკოდირება, პროექცია, დრაივერი და ა.შ
+- ფუნქცია დააბრუნებს ობიექტს რომელიც განსაზღვრულია როგორც writer კოდში, რომელსაც შეუძლია დაამატოს და ჩაწეროს ახალი ობიექტები შრეში.
+
+
+
 
 
 ```py title="new_shapefile_point.py" linenums="1"
@@ -93,7 +95,7 @@ layerfield = QgsFields()
 
 layerfield.append(QgsField('ID', QVariant.Int))
 
-layerfield.append(QgsField('Name', QVariant.String))
+layerfield.append(QgsField('Category', QVariant.String))
 
 
 
