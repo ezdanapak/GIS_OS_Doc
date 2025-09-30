@@ -11,7 +11,6 @@ Polygons to [lines:](https://docs.qgis.org/3.40/en/docs/user_manual/processing_a
 Points along [geometry:](https://docs.qgis.org/3.40/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#points-along-geometry) <br>
 
 
-
 - ზოგიერთი განმარტება
 - processing.run ნიშნავს QGIS - ის Processing Toolbox - ს. [მეთოდი/ფუნქცია]
 - სიტყვა native ნიშნავს QGIS ის ხელსაწყოს და pointstopath მის დასახელებას.

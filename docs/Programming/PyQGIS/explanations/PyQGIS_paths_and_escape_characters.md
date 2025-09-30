@@ -1,58 +1,105 @@
-## კოდში დირექტორიების საკითხი
+# 📂 Python-ში დირექტორიების სწორად ჩაწერა
 
+Python-ში ფაილებისა და დირექტორიების მისამართების ჩაწერისას მნიშვნელოვანია სწორად განვასხვავოთ **უკუქცეული ხაზი (\\)** და **მიმართული ხაზი (/)**.  
 
-<p>ორმაგი უკუქცეული ხაზი (\\) გამოიყენება ბილიკში(Path) ერთის (\) ნაცვლად. 
-Python-ში ერთი გამოყენებულია როგორც escape სიმბოლო და შეიძლება გამოიწვიოს არასასურველი შედეგები. 
-ორმაგი უკუქცეული ხაზის ნაცვლად, შეგიძლიათ გამოიყენოთ სიმბოლო r (raw) სტრიქონის წინ, მაგალითად: r"C:\QGIS\PyQGIS\database.gpkg", ან გამოიყენოთ ერთი მიმართული ხაზი (forward slash), მაგალითად: "C:/QGIS/PyQGIS/database.gpkg". 
-ეს სამი ფორმატი სწორი და ურთიერთშენაცვლებადია გამოყენებისას.
-თუ იყენებ (/) or double backslash (\\) - ს r დაწერა სავალდებულო აღარაა. </p>
+---
 
-* r"C:\QGIS\PyQGIS\database.gpkg"
+## ✅ ვალიდური დირექტორიების ჩანაწერები
 
-* "C:/QGIS/PyQGIS/database.gpkg" 
+Python-ში ერთზე მეტი გზაა ბილიკების (path) სწორად ჩასაწერად:
 
-* "C:\ \QGIS\ \PyQGIS\ \database.gpkg" 
+- ორმაგი უკუქცეული ხაზი (**\\**)  
+- მიმართული ხაზი (**/**)  
+- **raw string** სინტაქსი (r"...")  
 
-Python-ში Escape Character არის უკუქცეული ხაზი ( \ ). ეს სიმბოლო მიუთითებს, რომ შემდეგი სიმბოლო ან კომბინაცია უნდა იყოს ინტერპრეტირებული განსაკუთრებულად, გარკვეული სიმბოლოების ჩასასმელად ან გასაკონტროლებლად, რომლებიც სხვაგვარად ვერ ჩაეწერებოდა პირდაპირ.
+> თუ იყენებ `/` ან `\\` — **r დაწერა სავალდებულო აღარაა**.
 
-
-## Escape Character 
-სპეციალური სიმბოლოების ჩასმა:
-
-მაგალითად, თუ საჭიროა სტრიქონში ბრჭყალების გამოყენება:
-
-```py title="Special characters" linenums="1"
-
-City = "My city is \"Chiatura!\""
-print(City)
-# დაბეჭდავს: My city is "Chiatura!"
-
+### მაგალითები:
+```py
+r"C:\Lessons\NotebookStart\Toronto.gdb\ambulances"
+"C:/Lessons/NotebookStart/Toronto.gdb/ambulances"
+"C:\\Lessons\\NotebookStart\\Toronto.gdb\\ambulances"
 ```
 
-სიმბოლო \n გამოიყენება ახალი ხაზის დასაწყებად.
+ყველა ეს ჩანაწერი სწორია და **ურთიერთშენაცვლებადია**.
 
+---
+
+## 🔹 კოდში დირექტორიების საკითხი
+
+Python-ში ერთი უკუქცეული ხაზი **(\)** გამოიყენება როგორც **Escape Character**.  
+ამის გამო, ბილიკებში რეკომენდებულია ორმაგი უკუქცეული ხაზი (\\), raw სტრიქონი (r"...") ან მიმართული ხაზი (/).
+
+მაგალითები:
+
+```py
+r"C:\QGIS\PyQGIS\database.gpkg"
+"C:/QGIS/PyQGIS/database.gpkg"
+"C:\\QGIS\\PyQGIS\\database.gpkg"
+```
+
+---
+
+# 🔑 Escape Character Python-ში
+
+Escape Character არის **უკუქცეული ხაზი ( \ )**, რომელიც გამოიყენება სპეციალური სიმბოლოების გამოსატანად.  
+
+---
+
+## 📍 სპეციალური სიმბოლოების ჩასმა
+
+### ბრჭყალები სტრიქონში
+```py title="Special characters" linenums="1"
+City = "My city is \"Chiatura!\""
+print(City)
+# გამოსავალი: My city is "Chiatura!"
+```
+
+### ახალი ხაზი `\n`
 ```py title="New line" linenums="1"
 City = "My city is \nChiatura"
 print(City)
-# დაბეჭდავს:
+# გამოსავალი:
 # My city is
 # Chiatura
 ```
 
-სიმბოლო \t ამატებს გამოტოვებას.
-
-```py title="tab" linenums="1"
-
+### ტაბულაცია `\t`
+```py title="Tab character" linenums="1"
 City = "My city is \tChiatura"
 print(City)
-# გამოსავალი: My city is  Chiatura
+# გამოსავალი: My city is   Chiatura
 ```
 
-თუ საჭიროა თვითონ ხაზის გამოჩენა, მას ორჯერ ვწერთ: \ \ .
-```py title="backslash" linenums="1"
+### უკუქცეული ხაზი `\\`
+თუ გვჭირდება თავად ხაზის გამოჩენა, მას ორჯერ ვწერთ:
+
+```py title="Backslash" linenums="1"
 path = "C:\\QGIS\\PyQGIS\\database.gpkg"
 print(path)
 # გამოსავალი: C:\QGIS\PyQGIS\database.gpkg
 ```
 
-Escape Character Python-ში ძალზედ მნიშვნელოვანია სპეციალური სიმბოლოების მართვისთვის და ტექსტთან მუშაობისას სიზუსტის უზრუნველსაყოფად.
+---
+
+## 🖼️ Path მაგალითების ვიზუალური დიაგრამა
+
+Windows და Linux ბილიკების მაგალითები:
+
+```
+Windows:   C:\Users\Student\Documents\project\data.csv
+Linux:     /home/student/project/data.csv
+Raw string: r"C:\Users\Student\Documents\project\data.csv"
+```
+
+![Path Examples](https://i.ibb.co/mz0tw6H/python-paths.png)
+
+---
+
+## 📌 შეჯამება
+- **\** → Escape Character (სპეციალური სიმბოლოებისთვის).  
+- **\\** → რეალური უკუქცეული ხაზი ბილიკში.  
+- **/** → შეიძლება გამოიყენო Windows-ზეც.  
+- **r"..."** → raw string, გამორიცხავს Escape Character-ის საჭიროებას.  
+
+👉 ეს ყველაფერი Python-ში აუცილებელია სწორი ბილიკების ჩასაწერად და ტექსტთან მუშაობისას სიზუსტის შესანარჩუნებლად.
