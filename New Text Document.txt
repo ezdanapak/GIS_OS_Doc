@@ -15,7 +15,11 @@ https://mermaid.live/edit#pako:eNpVjbFugzAQhl_FuqmVksg4dqAeKjWkzRKpHTIVMljgYJRgI
 https://mkdocs-magicspace.alnoda.org/
 https://squidfunk.github.io/mkdocs-material/
 https://gittodoc.com/pallets/flask
-
+https://facelessuser.github.io/pymdown-extensions/
+https://jdecked.github.io/twemoji/v/latest/preview-svg.html
+https://github.com/jdecked/twemoji
+https://emojipedia.org/
+git add .; git commit -m "Initial commit"; git push origin main
 
 ბრენჩები
 
