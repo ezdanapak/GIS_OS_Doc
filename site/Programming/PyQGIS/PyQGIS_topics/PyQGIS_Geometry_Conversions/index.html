@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://osdoc.qgis.ge/Programming/Python/python_basics/">
+        <link rel="canonical" href="https://osdoc.qgis.ge/Programming/PyQGIS/PyQGIS_topics/PyQGIS_Geometry_Conversions/">
       
       
-        <link rel="prev" href="../python_intro/">
+        <link rel="prev" href="../PyQGIS_Create_layer/">
       
       
-        <link rel="next" href="../python_logical_ops/">
+        <link rel="next" href="../PyQGIS_SQL_Spatial_Selection/">
       
       
-      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="icon" href="../../../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
-        <title>საბაზისო - GIS OS Docs</title>
+        <title>გეომეტრიის ცვლილება - GIS OS Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -89,7 +89,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -115,7 +115,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-" class="md-skip">
+        <a href="#geometry_conversions" class="md-skip">
           კონტენტზე გადასვლა
         </a>
       
@@ -131,9 +131,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="GIS OS Docs" class="md-header__button md-logo" aria-label="GIS OS Docs" data-md-component="logo">
+    <a href="../../../.." title="GIS OS Docs" class="md-header__button md-logo" aria-label="GIS OS Docs" data-md-component="logo">
       
-  <img src="../../../assets/Q_white.svg" alt="logo">
+  <img src="../../../../assets/Q_white.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -150,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              საბაზისო
+              გეომეტრიის ცვლილება
             
           </span>
         </div>
@@ -268,9 +268,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="ნავიგაცია" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="GIS OS Docs" class="md-nav__button md-logo" aria-label="GIS OS Docs" data-md-component="logo">
+    <a href="../../../.." title="GIS OS Docs" class="md-nav__button md-logo" aria-label="GIS OS Docs" data-md-component="logo">
       
-  <img src="../../../assets/Q_white.svg" alt="logo">
+  <img src="../../../../assets/Q_white.svg" alt="logo">
 
     </a>
     GIS OS Docs
@@ -297,7 +297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -317,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about/" class="md-nav__link">
+      <a href="../../../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Additional/Help/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Additional/Help/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -503,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Additional/Copyright_Disclaimer/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Additional/Copyright_Disclaimer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -524,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Additional/Warning/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Additional/Warning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -545,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/Computer_Requirements/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/Computer_Requirements/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -617,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Software/QGIS/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Software/QGIS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -638,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Software/GoogleEarth/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Software/GoogleEarth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -659,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Software/Geoserver/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Software/Geoserver/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -745,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/Base_Theory/Ellipsoid_Geoid_intro/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/Base_Theory/Ellipsoid_Geoid_intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -766,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/Base_Theory/Datum/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/Base_Theory/Datum/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -787,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/Georeferencing/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/Georeferencing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -808,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/Digitization/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/Digitization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -870,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/Geodatabase/Apache_parquet/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/Geodatabase/Apache_parquet/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -891,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/Geodatabase/Geodatabase/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/Geodatabase/Geodatabase/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -961,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/Google/KML_KMZ_formats/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/Google/KML_KMZ_formats/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -982,7 +982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/Google/Placemark_altitudes/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/Google/Placemark_altitudes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1060,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/OGC_WEB/XML/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/OGC_WEB/XML/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1081,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/OGC_WEB/GeoNetwork/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/OGC_WEB/GeoNetwork/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1102,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/OGC_WEB/GeoNode/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/OGC_WEB/GeoNode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1123,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/OGC_WEB/Geojson_formats/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/OGC_WEB/Geojson_formats/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1144,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/OGC_WEB/WEB_Services/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/OGC_WEB/WEB_Services/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1165,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/OGC_WEB/Win_ENV/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/OGC_WEB/Win_ENV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1245,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/QGIS/Digitization/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/QGIS/Digitization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1266,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/QGIS/Map_composition_theory/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/QGIS/Map_composition_theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1287,7 +1287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/QGIS/Path/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/QGIS/Path/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1308,7 +1308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/QGIS/Project_file/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/QGIS/Project_file/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1329,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/QGIS/QML_SLD/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/QGIS/QML_SLD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1350,7 +1350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/QGIS/Save_vector_layer/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/QGIS/Save_vector_layer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1371,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/QGIS/Scratch_layer/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/QGIS/Scratch_layer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1443,7 +1443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/Raster/Georeferencing/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/Raster/Georeferencing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1464,7 +1464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/Raster/Terrain/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/Raster/Terrain/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1485,7 +1485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/Raster/Raster/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/Raster/Raster/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1555,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/Vector/Shapefile/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/Vector/Shapefile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1576,7 +1576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Theory/Vector/CAD/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Theory/Vector/CAD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1652,7 +1652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Software/Geoserver/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Software/Geoserver/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1740,7 +1740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Lab/Georeference/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Lab/Georeference/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1761,7 +1761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Lab/Digitization/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Lab/Digitization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1782,7 +1782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Lab/GPS/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Lab/GPS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1803,7 +1803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Lab/Geodatabase/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Lab/Geodatabase/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1824,7 +1824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Lab/Digitization1/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Lab/Digitization1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1845,7 +1845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Lab/Selection/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Lab/Selection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1866,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Lab/OGC_WEB/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Lab/OGC_WEB/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1887,7 +1887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Lab/WEB_GIS/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Lab/WEB_GIS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1908,7 +1908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Lab/Topology/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Lab/Topology/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1929,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Lab/Terrain_analysis/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Lab/Terrain_analysis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1950,7 +1950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GIS_Basic/Lab/Map_composition/" class="md-nav__link">
+      <a href="../../../../GIS_Basic/Lab/Map_composition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2028,7 +2028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Personal_Data_Protection/PDP_GIS/" class="md-nav__link">
+      <a href="../../../../Personal_Data_Protection/PDP_GIS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2049,7 +2049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Personal_Data_Protection/GDPR/" class="md-nav__link">
+      <a href="../../../../Personal_Data_Protection/GDPR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2123,7 +2123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Enterprise_GIS/GIS_in_Organizations/" class="md-nav__link">
+      <a href="../../../../Enterprise_GIS/GIS_in_Organizations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2144,7 +2144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Enterprise_GIS/GIS_Infrastructure.md" class="md-nav__link">
+      <a href="../../../../Enterprise_GIS/GIS_Infrastructure.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2165,7 +2165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Enterprise_GIS/Data_Management.md" class="md-nav__link">
+      <a href="../../../../Enterprise_GIS/Data_Management.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2186,7 +2186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Enterprise_GIS/Web_GIS.md" class="md-nav__link">
+      <a href="../../../../Enterprise_GIS/Web_GIS.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2323,7 +2323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Non_formal_education/Teaching_methods/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Teaching_methods/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2344,7 +2344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Non_formal_education/Teaching_style/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Teaching_style/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2365,7 +2365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Non_formal_education/Planning_the_learning_process/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Planning_the_learning_process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2386,7 +2386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Non_formal_education/Evaluation_of_the_learning_process/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Evaluation_of_the_learning_process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2415,7 +2415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Non_formal_education/Lab/GIS_for_pupils_intro/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Lab/GIS_for_pupils_intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2436,7 +2436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Non_formal_education/Lab/Introduction/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Lab/Introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2457,7 +2457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Non_formal_education/Lab/Coordinates/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Lab/Coordinates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2478,7 +2478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Non_formal_education/Lab/Animation/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Lab/Animation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2499,7 +2499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Non_formal_education/Lab/Geotagged_photo/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Lab/Geotagged_photo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2520,7 +2520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Non_formal_education/Lab/Google_Maps/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Lab/Google_Maps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2541,7 +2541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Non_formal_education/Lab/Historical_Images/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Lab/Historical_Images/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2562,7 +2562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Non_formal_education/Lab/Story_maps/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Lab/Story_maps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2583,7 +2583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Non_formal_education/Lab/Government_Services/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Lab/Government_Services/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2604,7 +2604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Non_formal_education/Lab/GEVR/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Lab/GEVR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2625,7 +2625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Non_formal_education/Lab/MLAIAR/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Lab/MLAIAR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2646,7 +2646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Non_formal_education/Lab/Quiz/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Lab/Quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2715,14 +2715,10 @@
                 
   
   
-    
   
   
-  
     
     
-      
-        
       
         
       
@@ -2757,11 +2753,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_1" >
         
           
           <label class="md-nav__link" for="__nav_3_5_1" id="__nav_3_5_1_label" tabindex="0">
@@ -2775,7 +2771,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_5_1">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -2790,6 +2786,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -2838,7 +2838,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../Theory/Python_first_lecture_outline/" class="md-nav__link">
+      <a href="../../../Python/python_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    შესავალი
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Theory/Python_first_lecture_outline/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2859,7 +2880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Theory/Hello_world_history/" class="md-nav__link">
+      <a href="../../../Python/Theory/Hello_world_history/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2880,7 +2901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Theory/Prepl/" class="md-nav__link">
+      <a href="../../../Python/Theory/Prepl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2901,7 +2922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Theory/Python_philosophy_simple_better/" class="md-nav__link">
+      <a href="../../../Python/Theory/Python_philosophy_simple_better/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2922,11 +2943,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Theory/Lecture_1_intro/" class="md-nav__link">
+      <a href="../../../Python/Theory/Python_Reserved_Words/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ლექცია 1
+    რეზერვირებული სიტყვები
   </span>
   
 
@@ -2943,11 +2964,123 @@
   
   
     <li class="md-nav__item">
-      <a href="../Theory/Python_Reserved_Words/" class="md-nav__link">
+      <a href="../../../Python/Theory/Python_Anaconda_Miniconda_vs_Pip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    რეზერვირებული სიტყვები
+    AnaMiniConda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Theory/Python_VS_Code_extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VS Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_1_2" id="__nav_3_5_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    პრაქტიკა
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_5_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            პრაქტიკა
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Code_template/Python_basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    საბაზისო
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Code_template/Python_data_types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    მონ.ტიპები
   </span>
   
 
@@ -2972,143 +3105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_intro/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    შესავალი
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    საბაზისო
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    საბაზისო
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="სარჩევი">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      სარჩევი
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    <span class="md-ellipsis">
-      Python ენის საბაზისო მონაცემთა ტიპები
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      ცვლადები და მათი ტიპები
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      ცვლადების გამოცხადებისა და გამოყენების წესი
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      არითმეტიკული ოპერაციები რიცხვით მონაცემებზე
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      [1] კლავიატურიდან მონაცემების შეტანა და კონსოლში შედეგის გამოტანა
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      მაგალითი – სრული პატარა პროგრამა
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../python_logical_ops/" class="md-nav__link">
+      <a href="../../../Python/python_logical_ops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3129,7 +3126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_loops/" class="md-nav__link">
+      <a href="../../../Python/python_loops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3150,7 +3147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_math_functions/" class="md-nav__link">
+      <a href="../../../Python/python_math_functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3171,7 +3168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_functions/" class="md-nav__link">
+      <a href="../../../Python/python_functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3192,7 +3189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_strings/" class="md-nav__link">
+      <a href="../../../Python/python_strings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3213,7 +3210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_files/" class="md-nav__link">
+      <a href="../../../Python/python_files/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3234,7 +3231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_lists_tuples/" class="md-nav__link">
+      <a href="../../../Python/python_lists_tuples/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3255,7 +3252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_sets_dicts/" class="md-nav__link">
+      <a href="../../../Python/python_sets_dicts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3276,7 +3273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_exceptions/" class="md-nav__link">
+      <a href="../../../Python/python_exceptions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3297,7 +3294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_iterators_containers/" class="md-nav__link">
+      <a href="../../../Python/python_iterators_containers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3318,7 +3315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_pep8_pypi/" class="md-nav__link">
+      <a href="../../../Python/python_pep8_pypi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3339,7 +3336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_modules_packages_git/" class="md-nav__link">
+      <a href="../../../Python/python_modules_packages_git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3373,10 +3370,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_1_16" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_1_15" >
         
           
-          <label class="md-nav__link" for="__nav_3_5_1_16" id="__nav_3_5_1_16_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_5_1_15" id="__nav_3_5_1_15_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3387,8 +3384,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_5_1_16_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5_1_16">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_5_1_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_1_15">
             <span class="md-nav__icon md-icon"></span>
             გამოცდა
           </label>
@@ -3401,7 +3398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_midterm_review/" class="md-nav__link">
+      <a href="../../../Python/python_midterm_review/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3422,7 +3419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_final_review/" class="md-nav__link">
+      <a href="../../../Python/python_final_review/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3456,8 +3453,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -3472,11 +3471,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5_2" id="__nav_3_5_2_label" tabindex="0">
@@ -3490,7 +3489,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5_2">
             <span class="md-nav__icon md-icon"></span>
             PyQGIS
@@ -3504,7 +3503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_resources/" class="md-nav__link">
+      <a href="../../PyQGIS_resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3586,7 +3585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/explanations/PyQGIS_OGR_Library/" class="md-nav__link">
+      <a href="../../explanations/PyQGIS_OGR_Library/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3607,7 +3606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/explanations/PyQGIS_slashes/" class="md-nav__link">
+      <a href="../../explanations/PyQGIS_paths_and_escape_characters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3628,7 +3627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/explanations/PyQGIS_QVariant/" class="md-nav__link">
+      <a href="../../explanations/PyQGIS_QVariant/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3649,7 +3648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/explanations/PyQGIS_QgsFields/" class="md-nav__link">
+      <a href="../../explanations/PyQGIS_QgsFields/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3670,7 +3669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/explanations/PyQGIS_QgsFeature/" class="md-nav__link">
+      <a href="../../explanations/PyQGIS_QgsFeature/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3691,7 +3690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/explanations/PyQGIS_QgsGeometry/" class="md-nav__link">
+      <a href="../../explanations/PyQGIS_QgsGeometry/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3712,7 +3711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/explanations/PyQGIS_QgsPointXY/" class="md-nav__link">
+      <a href="../../explanations/PyQGIS_QgsPointXY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3733,7 +3732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/explanations/PyQGIS_QgsVectorLayer/" class="md-nav__link">
+      <a href="../../explanations/PyQGIS_QgsVectorLayer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3754,7 +3753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/explanations/PyQGIS_QgsRasterLayer/" class="md-nav__link">
+      <a href="../../explanations/PyQGIS_QgsRasterLayer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3775,7 +3774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/explanations/PyQGIS_QgsProject/" class="md-nav__link">
+      <a href="../../explanations/PyQGIS_QgsProject/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3796,7 +3795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/explanations/PyQGIS_QgsCoordinateReferenceSystem/" class="md-nav__link">
+      <a href="../../explanations/PyQGIS_QgsCoordinateReferenceSystem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3817,7 +3816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/explanations/PyQGIS_iface/" class="md-nav__link">
+      <a href="../../explanations/PyQGIS_iface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3889,7 +3888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/Theory/Learning_stages/" class="md-nav__link">
+      <a href="../../Theory/Learning_stages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3910,7 +3909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/Theory/PyQGIS_classes_guide/" class="md-nav__link">
+      <a href="../../Theory/PyQGIS_classes_guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3931,7 +3930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/Theory/PyQGIS_oop_guide/" class="md-nav__link">
+      <a href="../../Theory/PyQGIS_oop_guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3957,8 +3956,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -3996,14 +3997,16 @@
       
         
       
+        
+      
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2_4" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5_2_4" id="__nav_3_5_2_4_label" tabindex="0">
@@ -4017,7 +4020,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_5_2_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_5_2_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5_2_4">
             <span class="md-nav__icon md-icon"></span>
             თემები
@@ -4031,7 +4034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_topics/PyQGIS_topic2/" class="md-nav__link">
+      <a href="../PyQGIS_topic2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4052,7 +4055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_topics/PyQGIS_topic3/" class="md-nav__link">
+      <a href="../PyQGIS_topic3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4073,7 +4076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_topics/PyQGIS_topic4/" class="md-nav__link">
+      <a href="../PyQGIS_topic4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4094,7 +4097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_topics/PyQGIS_topic5/" class="md-nav__link">
+      <a href="../PyQGIS_topic5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4115,7 +4118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_topics/PyQGIS_topic6/" class="md-nav__link">
+      <a href="../PyQGIS_topic6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4136,7 +4139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_topics/PyQGIS_topic7/" class="md-nav__link">
+      <a href="../PyQGIS_topic7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4157,7 +4160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_topics/PyQGIS_topic8/" class="md-nav__link">
+      <a href="../PyQGIS_topic8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4178,7 +4181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_topics/PyQGIS_topic9/" class="md-nav__link">
+      <a href="../PyQGIS_topic9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4199,7 +4202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_topics/PyQGIS_topic10/" class="md-nav__link">
+      <a href="../PyQGIS_topic10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4220,7 +4223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_topics/PyQGIS_topic11/" class="md-nav__link">
+      <a href="../PyQGIS_topic11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4241,7 +4244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_topics/PyQGIS_topic12/" class="md-nav__link">
+      <a href="../PyQGIS_topic12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4262,7 +4265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_topics/PyQGIS_Create_layer/" class="md-nav__link">
+      <a href="../PyQGIS_Create_layer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4280,10 +4283,121 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    გეომეტრიის ცვლილება
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    გეომეტრიის ცვლილება
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="სარჩევი">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      სარჩევი
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#geometry_conversions" class="md-nav__link">
+    <span class="md-ellipsis">
+      გეომეტრიის ცვლილება(Geometry conversions)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#point_to_line_conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 წერტილოვანი შრის ხაზში გადაყვანა (Point to Line Conversion)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#line_to_polygon" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 ხაზოვანი შრის პოლიგონში გადაყვანა (Line to Polygon)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polygon_to_lines_conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 პოლიგონალური შრის ხაზში გადაყვანა (Polygon to Lines Conversion)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#points_along_geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 ხაზოვანი შრიდან წერტილების მიღება (Points along geometry)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 შეჯამება
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_topics/PyQGIS_SQL_Spatial_Selection/" class="md-nav__link">
+      <a href="../PyQGIS_SQL_Spatial_Selection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4304,7 +4418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_topics/PyQGIS_temperatures/" class="md-nav__link">
+      <a href="../PyQGIS_temperatures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4325,7 +4439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_topics/PyQGIS_coordinates/" class="md-nav__link">
+      <a href="../PyQGIS_coordinates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4346,7 +4460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/PyQGIS_topics/PyQGIS_Geotagged_photos/" class="md-nav__link">
+      <a href="../PyQGIS_Geotagged_photos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4367,7 +4481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PyQGIS/Error_handling/" class="md-nav__link">
+      <a href="../../Error_handling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4451,7 +4565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Spatial_python/resources/" class="md-nav__link">
+      <a href="../../../Spatial_python/resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4527,7 +4641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python_for_geographers/intro/" class="md-nav__link">
+      <a href="../../../Python_for_geographers/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4548,7 +4662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python_for_geographers/notebooks/md/01_variables/" class="md-nav__link">
+      <a href="../../../Python_for_geographers/notebooks/md/01_variables/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2M7 9.5C7 8.7 7.7 8 8.5 8s1.5.7 1.5 1.5S9.3 11 8.5 11 7 10.3 7 9.5m5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81M15.5 11c-.8 0-1.5-.7-1.5-1.5S14.7 8 15.5 8s1.5.7 1.5 1.5-.7 1.5-1.5 1.5Z"/></svg>
@@ -4571,7 +4685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python_for_geographers/notebooks/md/02_data_structures/" class="md-nav__link">
+      <a href="../../../Python_for_geographers/notebooks/md/02_data_structures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4592,7 +4706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python_for_geographers/Theory/Python_VENV/" class="md-nav__link">
+      <a href="../../../Python_for_geographers/Theory/Python_VENV/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4613,7 +4727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python_for_geographers/Theory/Python_classes/" class="md-nav__link">
+      <a href="../../../Python_for_geographers/Theory/Python_classes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4735,7 +4849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PostgreSQL/resources/" class="md-nav__link">
+      <a href="../../../Database/PostgreSQL/resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4756,7 +4870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PostgreSQL/intro/" class="md-nav__link">
+      <a href="../../../Database/PostgreSQL/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4777,7 +4891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PostgreSQL/PostgreSQL_installation/" class="md-nav__link">
+      <a href="../../../Database/PostgreSQL/PostgreSQL_installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4798,7 +4912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PostgreSQL/Scanning_resources/" class="md-nav__link">
+      <a href="../../../Database/PostgreSQL/Scanning_resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4904,7 +5018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/resources/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4925,7 +5039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/intro/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4946,7 +5060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/PostgreSQL_installation/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/PostgreSQL_installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4967,7 +5081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/PostGIS_installation/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/PostGIS_installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4988,7 +5102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/pgAdmin_installation/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/pgAdmin_installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5009,7 +5123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/first_steps/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/first_steps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5030,7 +5144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/data_types/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/data_types/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5051,7 +5165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/create_database/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/create_database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5072,7 +5186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/connecting_database_in_QGIS/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/connecting_database_in_QGIS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5093,7 +5207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/import_layer_to_PostgreSQL/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/import_layer_to_PostgreSQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5114,7 +5228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/export_layer_from_PostgreSQL/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/export_layer_from_PostgreSQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5135,7 +5249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/SQL_basics/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/SQL_basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5156,7 +5270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/spatial_SQL_functions/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/spatial_SQL_functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5177,7 +5291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/Selections_in_SQL/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/Selections_in_SQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5198,7 +5312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/Grouping_and_aggregation_in_SQL/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/Grouping_and_aggregation_in_SQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5219,7 +5333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/Modifying_layers_in_SQL/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/Modifying_layers_in_SQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5240,7 +5354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/New_fields_in_SQL/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/New_fields_in_SQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5261,7 +5375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/New_features_in_SQL/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/New_features_in_SQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5282,7 +5396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/Deleting_features_in_SQL/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/Deleting_features_in_SQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5303,7 +5417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Database/PSQLPostGIS/Spatial_operations_in_SQL/" class="md-nav__link">
+      <a href="../../../Database/PSQLPostGIS/Spatial_operations_in_SQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5380,7 +5494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GoogleEarth/GE/" class="md-nav__link">
+      <a href="../../../../GoogleEarth/GE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5401,7 +5515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GoogleEarth/resources/" class="md-nav__link">
+      <a href="../../../../GoogleEarth/resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5439,8 +5553,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -5449,9 +5561,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
+  <a href="#geometry_conversions" class="md-nav__link">
     <span class="md-ellipsis">
-      Python ენის საბაზისო მონაცემთა ტიპები
+      გეომეტრიის ცვლილება(Geometry conversions)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#point_to_line_conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 წერტილოვანი შრის ხაზში გადაყვანა (Point to Line Conversion)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#line_to_polygon" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 ხაზოვანი შრის პოლიგონში გადაყვანა (Line to Polygon)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polygon_to_lines_conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 პოლიგონალური შრის ხაზში გადაყვანა (Polygon to Lines Conversion)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#points_along_geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 ხაზოვანი შრიდან წერტილების მიღება (Points along geometry)
     </span>
   </a>
   
@@ -5460,43 +5608,7 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      ცვლადები და მათი ტიპები
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      ცვლადების გამოცხადებისა და გამოყენების წესი
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      არითმეტიკული ოპერაციები რიცხვით მონაცემებზე
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      [1] კლავიატურიდან მონაცემების შეტანა და კონსოლში შედეგის გამოტანა
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      მაგალითი – სრული პატარა პროგრამა
+      📚 შეჯამება
     </span>
   </a>
   
@@ -5520,86 +5632,98 @@
   
 
 
-<h1 id="python-">Python-ის საბაზისო ელემენტები<a class="headerlink" href="#python-" title="Permanent link">&para;</a></h1>
-<h2 id="python">Python ენის საბაზისო მონაცემთა ტიპები<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
-<p>Python-ში მონაცემები წარმოდგენილია სხვადასხვა ტიპით:</p>
+<h2 id="geometry_conversions">გეომეტრიის ცვლილება(Geometry conversions)<a class="headerlink" href="#geometry_conversions" title="Permanent link">&para;</a></h2>
+<p><br>
+ოფიციალური დოკუმენტაცია <br>
+წერტილოვანი შრის ხაზში გადაყვანა - Point to Line Conversion
+Points to <a href="https://docs.qgis.org/3.40/en/docs/user_manual/processing_algs/qgis/vectorcreation.html#points-to-path">path:</a> <br>
+ხაზოვანი შრის პოლიგონში გადაყვანა - Lines to polygon
+Lines to <a href="https://docs.qgis.org/3.40/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#lines-to-polygons">polygons:</a> <br>
+პოლიგონალური შრის ხაზში გადაყვანა - Polygon to Lines Conversion
+Polygons to <a href="https://docs.qgis.org/3.40/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#polygons-to-lines">lines:</a> <br>
+ხაზოვანი შრიდან წერტილების მიღება - Points along geometry
+Points along <a href="https://docs.qgis.org/3.40/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#points-along-geometry">geometry:</a> <br></p>
 <ul>
-<li><strong>int</strong> – მთელი რიცხვები (მაგ.: 5, -10, 2025)  </li>
-<li><strong>float</strong> – ათწილადი რიცხვები (მაგ.: 3.14, -0.5, 2.0)  </li>
-<li><strong>str (string)</strong> – ტექსტი (მაგ.: <code>"Hello"</code>, <code>"გამარჯობა"</code>)  </li>
-<li><strong>bool (boolean)</strong> – ლოგიკური მნიშვნელობები: <code>True</code> ან <code>False</code>  </li>
-<li><strong>list</strong> – ელემენტების სია (მაგ.: <code>[1, 2, 3]</code>, <code>["a", "b", "c"]</code>)  </li>
-<li><strong>tuple</strong> – უცვლელი ელემენტების სია (მაგ.: <code>(1, 2, 3)</code>)  </li>
-<li><strong>dict</strong> – გასაღები–მნიშვნელობის წყვილი (მაგ.: <code>{"სახელი": "გიორგი", "ასაკი": 25}</code>)  </li>
+<li>ზოგიერთი განმარტება</li>
+<li>processing.run ნიშნავს QGIS - ის Processing Toolbox - ს. [მეთოდი/ფუნქცია]</li>
+<li>სიტყვა native ნიშნავს QGIS ის ხელსაწყოს და pointstopath მის დასახელებას.</li>
+<li>მასში კოდი მთლიანად არის Dictionary პრინციპი {}  არგუმენტი key:value ობიექტის მნიშვნელობები.</li>
+<li>*ყურადღება მიაქციე ხელსაწყოში 'ORDER_EXPRESSION': '"ID"' , იმიტომ რომ ყველა შრეში ცხრილში ეს აიდის სვეტი არ არის და უნდა ჩაენაცვლოს შესაბამისით.წინააღმდეგ შემთხვევაში პროგრამა მთლიანად გამოდის მწყობრიდან.</li>
 </ul>
+<h2 id="point_to_line_conversion">🟢 წერტილოვანი შრის ხაზში გადაყვანა (Point to Line Conversion)<a class="headerlink" href="#point_to_line_conversion" title="Permanent link">&para;</a></h2>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Points_to_line.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">fn</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GIS\shapefile\points.shp&#39;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">output</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GIS\shapefile\points_to_line.shp&#39;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;native:pointstopath&quot;</span><span class="p">,</span> <span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="s1">&#39;INPUT&#39;</span><span class="p">:</span> <span class="n">fn</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="s1">&#39;CLOSE_PATH&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>    <span class="s1">&#39;ORDER_EXPRESSION&#39;</span><span class="p">:</span> <span class="s1">&#39;&quot;ID&quot;&#39;</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="s1">&#39;NATURAL_SORT&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="s1">&#39;GROUP_EXPRESSION&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>    <span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span> <span class="n">output</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="p">})</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="n">layer</span> <span class="o">=</span> <span class="n">iface</span><span class="o">.</span><span class="n">addVectorLayer</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;ogr&#39;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>📌 შედეგად ვიღებთ ხაზს წერტილების თანმიმდევრობით.</p>
 <hr />
-<h2 id="_1">ცვლადები და მათი ტიპები<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><strong>ცვლადი</strong> არის მეხსიერებაში ადგილი, სადაც ვინახავთ მონაცემს.<br />
-Python-ში ცვლადის გამოცხადება ხდება პირდაპირ მნიშვნელობის მინიჭებით:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>        <span class="c1"># int</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">y</span> <span class="o">=</span> <span class="mf">3.14</span>      <span class="c1"># float</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Ana&quot;</span>  <span class="c1"># str</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">is_ok</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># bool</span>
-</span></code></pre></div>
-<p>ცვლადის ტიპის შესამოწმებლად გამოიყენება <code>type()</code> ფუნქცია:
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>      <span class="c1"># &lt;class &#39;int&#39;&gt;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>   <span class="c1"># &lt;class &#39;str&#39;&gt;</span>
-</span></code></pre></div></p>
+<h2 id="line_to_polygon">🟢 ხაზოვანი შრის პოლიგონში გადაყვანა (Line to Polygon)<a class="headerlink" href="#line_to_polygon" title="Permanent link">&para;</a></h2>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Line_to_polygon.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">fn</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GK\PyQGIS\shp\line_layer.shp&#39;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">output</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GK\PyQGIS\shp\Polygon_layer_from_line.shp&#39;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;qgis:linestopolygons&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;INPUT&#39;</span><span class="p">:</span><span class="n">fn</span><span class="p">,</span> <span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span><span class="n">output</span><span class="p">})</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">layer</span> <span class="o">=</span> <span class="n">iface</span><span class="o">.</span><span class="n">addVectorLayer</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;ogr&#39;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>📌 ხაზები ერთდება და გეომეტრიულად პოლიგონი ყალიბდება.</p>
 <hr />
-<h2 id="_2">ცვლადების გამოცხადებისა და გამოყენების წესი<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li>ცვლადის სახელი უნდა იწყებოდეს ასოთი ან <code>_</code> სიმბოლოთი  </li>
-<li>დასაშვებია ასოები, ციფრები და <code>_</code>, მაგრამ არა სხვა სიმბოლოები  </li>
-<li>Python <strong>დიდსა და პატარას შორის განასხვავებს</strong> (<code>name</code> და <code>Name</code> სხვადასხვა ცვლადებია)  </li>
-</ul>
-<p>არასწორი მაგალითი ❌<br />
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="mi">1</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Ana&quot;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">my</span><span class="o">-</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Ana&quot;</span>
-</span></code></pre></div></p>
-<p>სწორი მაგალითი ✔️<br />
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">name1</span> <span class="o">=</span> <span class="s2">&quot;Ana&quot;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">my_name</span> <span class="o">=</span> <span class="s2">&quot;Ana&quot;</span>
-</span></code></pre></div></p>
+<h2 id="polygon_to_lines_conversion">🟢 პოლიგონალური შრის ხაზში გადაყვანა (Polygon to Lines Conversion)<a class="headerlink" href="#polygon_to_lines_conversion" title="Permanent link">&para;</a></h2>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Polygon_to_Line_Conversion.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">fn</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GK\PyQGIS\shp\Polygon_layer.shp&#39;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">output</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GK\PyQGIS\shp\Line_layer_from_polygon.shp&#39;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;native:polygonstolines&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;INPUT&#39;</span><span class="p">:</span><span class="n">fn</span><span class="p">,</span><span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span><span class="n">output</span><span class="p">})</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">layer</span> <span class="o">=</span> <span class="n">iface</span><span class="o">.</span><span class="n">addVectorLayer</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;ogr&#39;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>📌 პოლიგონალური შრის ელემენტები გადადის ხაზობრივ სტილში, მათი კონტურიდან/ფორმიდან გამომდინარე.</p>
 <hr />
-<h2 id="_3">არითმეტიკული ოპერაციები რიცხვით მონაცემებზე<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>Python-ში რიცხვებით შეგვიძლია სხვადასხვა ოპერაციის შესრულება:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># 13  (მიმატება)</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># 7   (გამოკლება)</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># 30  (გამრავლება)</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># 3.333... (გაყოფა float-ად)</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">//</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># 3   (მთლიანი გაყოფა)</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># 1   (ნაშთი)</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">**</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># 1000 (ხარისხად აყვანა)</span>
-</span></code></pre></div>
+<h2 id="points_along_geometry">🟢 ხაზოვანი შრიდან წერტილების მიღება (Points along geometry)<a class="headerlink" href="#points_along_geometry" title="Permanent link">&para;</a></h2>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Points_along_geometry.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">fn</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GK\PyQGIS\shp\Line_layer.shp&#39;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">output</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GK\PyQGIS\shp\Points_placed_on_line.shp&#39;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;native:pointsalonglines&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;INPUT&#39;</span><span class="p">:</span><span class="n">fn</span><span class="p">,</span><span class="s1">&#39;DISTANCE&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;START_OFFSET&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;END_OFFSET&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span><span class="n">output</span><span class="p">})</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">layer</span> <span class="o">=</span> <span class="n">iface</span><span class="o">.</span><span class="n">addVectorLayer</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;ogr&#39;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>📌 ხაზოვანი შრის ნებისმიერ ელემენტზე განსაზღვრული დაშორებით წერტილების განთავსება.</p>
 <hr />
-<h2 id="1">[1] კლავიატურიდან მონაცემების შეტანა და კონსოლში შედეგის გამოტანა<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p><strong>მონაცემების შეყვანა</strong> ხდება <code>input()</code> ფუნქციით, რომელიც ყოველთვის აბრუნებს სტრინგს (<code>str</code>).<br />
-რიცხვის მისაღებად საჭიროა გარდაქმნა (<code>int()</code> ან <code>float()</code>).</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># მომხმარებლის სახელის შეყვანა</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;შეიყვანე შენი სახელი: &quot;</span><span class="p">)</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;გამარჯობა,&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># რიცხვების შეყვანა და შეკრება</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;შეიყვანე პირველი რიცხვი: &quot;</span><span class="p">))</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;შეიყვანე მეორე რიცხვი: &quot;</span><span class="p">))</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;შედეგი =&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
-</span></code></pre></div>
-<hr />
-<h2 id="_4">მაგალითი – სრული პატარა პროგრამა<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Python საბაზისო ოპერაციები&quot;</span><span class="p">)</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;შეიყვანე რიცხვი x: &quot;</span><span class="p">))</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;შეიყვანე რიცხვი y: &quot;</span><span class="p">))</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x + y =&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x - y =&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x * y =&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x / y =&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">)</span>
-</span></code></pre></div>
-<p>გაშვებისას, პროგრამა მომხმარებლისგან იღებს რიცხვებს და ეკრანზე ბეჭდავს მათზე შესრულებული ოპერაციების შედეგს.</p>
+<h1 id="_1">📚 შეჯამება<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>ამ თემაში გავიარეთ:<br />
+- ახალი შრეების შექმნა PyQGIS-ით<br />
+- წერტილი → ხაზი → პოლიგონი კონვერტაციები<br />
+- დროებითი და მუდმივი შედეგების შენახვა<br />
+- შეცდომების აღმოჩენა და გასწორება  </p>
 
 
 
@@ -5635,7 +5759,7 @@ Python-ში ცვლადის გამოცხადება ხდე�
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../python_intro/" class="md-footer__link md-footer__link--prev" aria-label="წინა: შესავალი">
+          <a href="../PyQGIS_Create_layer/" class="md-footer__link md-footer__link--prev" aria-label="წინა: შრის შექმნა">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -5645,20 +5769,20 @@ Python-ში ცვლადის გამოცხადება ხდე�
                 წინა
               </span>
               <div class="md-ellipsis">
-                შესავალი
+                შრის შექმნა
               </div>
             </div>
           </a>
         
         
           
-          <a href="../python_logical_ops/" class="md-footer__link md-footer__link--next" aria-label="შემდეგი: ლოგიკური ოპერაციები">
+          <a href="../PyQGIS_SQL_Spatial_Selection/" class="md-footer__link md-footer__link--next" aria-label="შემდეგი: მონიშვნები">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 შემდეგი
               </span>
               <div class="md-ellipsis">
-                ლოგიკური ოპერაციები
+                მონიშვნები
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -5698,10 +5822,10 @@ Python-ში ცვლადის გამოცხადება ხდე�
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.indexes", "navigation.top", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u10d9\u10dd\u10de\u10d8\u10e0\u10d4\u10d1\u10e3\u10da\u10d8\u10d0", "clipboard.copy": "\u10d9\u10dd\u10de\u10d8\u10e0\u10d4\u10d1\u10d0", "search.result.more.one": "\u10d9\u10d8\u10d3\u10d4\u10d5 1 \u10d0\u10db \u10d2\u10d5\u10d4\u10e0\u10d3\u10d6\u10d4", "search.result.more.other": "\u10d9\u10d8\u10d3\u10d4\u10d5 # \u10d0\u10db \u10d2\u10d5\u10d4\u10e0\u10d3\u10d6\u10d4", "search.result.none": "\u10d3\u10dd\u10d9\u10e3\u10db\u10d4\u10dc\u10e2\u10d8 \u10d5\u10d4\u10e0 \u10db\u10dd\u10d8\u10eb\u10d4\u10d1\u10dc\u10d0", "search.result.one": "\u10db\u10dd\u10d8\u10eb\u10d4\u10d1\u10dc\u10d0 1 \u10d3\u10dd\u10d9\u10e3\u10db\u10d4\u10dc\u10e2\u10d8", "search.result.other": "\u10db\u10dd\u10d8\u10eb\u10d4\u10d1\u10dc\u10d0 # \u10d3\u10dd\u10d9\u10e3\u10db\u10d4\u10dc\u10e2\u10d8", "search.result.placeholder": "\u10e9\u10d0\u10ec\u10d4\u10e0\u10d4 \u10eb\u10d4\u10d1\u10dc\u10d8\u10e1 \u10d3\u10d0\u10e1\u10d0\u10ec\u10e7\u10d4\u10d1\u10d0\u10d3", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.indexes", "navigation.top", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u10d9\u10dd\u10de\u10d8\u10e0\u10d4\u10d1\u10e3\u10da\u10d8\u10d0", "clipboard.copy": "\u10d9\u10dd\u10de\u10d8\u10e0\u10d4\u10d1\u10d0", "search.result.more.one": "\u10d9\u10d8\u10d3\u10d4\u10d5 1 \u10d0\u10db \u10d2\u10d5\u10d4\u10e0\u10d3\u10d6\u10d4", "search.result.more.other": "\u10d9\u10d8\u10d3\u10d4\u10d5 # \u10d0\u10db \u10d2\u10d5\u10d4\u10e0\u10d3\u10d6\u10d4", "search.result.none": "\u10d3\u10dd\u10d9\u10e3\u10db\u10d4\u10dc\u10e2\u10d8 \u10d5\u10d4\u10e0 \u10db\u10dd\u10d8\u10eb\u10d4\u10d1\u10dc\u10d0", "search.result.one": "\u10db\u10dd\u10d8\u10eb\u10d4\u10d1\u10dc\u10d0 1 \u10d3\u10dd\u10d9\u10e3\u10db\u10d4\u10dc\u10e2\u10d8", "search.result.other": "\u10db\u10dd\u10d8\u10eb\u10d4\u10d1\u10dc\u10d0 # \u10d3\u10dd\u10d9\u10e3\u10db\u10d4\u10dc\u10e2\u10d8", "search.result.placeholder": "\u10e9\u10d0\u10ec\u10d4\u10e0\u10d4 \u10eb\u10d4\u10d1\u10dc\u10d8\u10e1 \u10d3\u10d0\u10e1\u10d0\u10ec\u10e7\u10d4\u10d1\u10d0\u10d3", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>

@@ -78,6 +78,7 @@ markdown_extensions:
   - footnotes
   - md_in_html
   - tables
+  - pymdownx.keys
   - toc:
       permalink: true
       separator: "_"
@@ -212,7 +213,8 @@ nav:
           - AnaMiniConda: Programming/Python/Theory/Python_Anaconda_Miniconda_vs_Pip.md
           - VS Code: Programming/Python/Theory/Python_VS_Code_extensions.md
         - პრაქტიკა:
-          - საბაზისო: Programming/Python/Arithmetic_Operations/python_basics.md
+          - საბაზისო: Programming/Python/Code_template/python_basics.md
+          - მონ.ტიპები: Programming/Python/Code_template/python_data_types.md
         - ლოგიკური ოპერაციები: Programming/Python/python_logical_ops.md
         - ციკლები: Programming/Python/python_loops.md
         - მათემატიკური ფუნქციები: Programming/Python/python_math_functions.md
