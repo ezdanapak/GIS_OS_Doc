@@ -1,0 +1,115 @@
+…or create a new repository on the command line
+echo "# GIS-ICS" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ezdanapak/GIS-ICS.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/ezdanapak/GIS-ICS.git
+git branch -M main
+git push -u origin main
+
+https://mermaid.live/edit#pako:eNpVjbFugzAQhl_FuqmVksg4dqAeKjWkzRKpHTIVMljgYJRgI2OUpsC71xBFbW-60_f9_3WQmVwCh-PZXDIlrEP7TaqRn5ckVrZsXCWaA5rPn_utdKgyWl57tH7YGtQoU9elLh5v_nqUUNztRk0ip0p9Gm4onvLvWvZok-xE7Ux9-Ev2F9Oj16T8UL7-P1FW-tRbchT8KOaZsCgWdlJgBoUtc-DOtnIGlbSVGE_oRpqCU7KSKXC_5sKeUkj14DO10J_GVPeYNW2hwHefG3-1dS6c3JSisOJXkTqXNjatdsAJnSqAd_AFfEmWC0pDsiRhsCIUB55egbNogSOGCYlCyhiNgmEG39NTvAgZphFh7IlgGuBgNfwAlax1hg
+https://mkdocs-magicspace.alnoda.org/
+https://squidfunk.github.io/mkdocs-material/
+https://gittodoc.com/pallets/flask
+
+
+ბრენჩები
+
+ძალიან მარტივად შეგიძლია main branch-ზე დაბრუნდე შემდეგი ბრძანებით:
+
+git checkout main
+
+შემოწმებისათვის რომელი branch-ზე ხარ:
+git branch
+
+თუ ახალი ხარ რეპოზიტორიაში და ჯერ არ გაქვს ჩამოტვირთული main, გამოიყენე:
+
+git fetch origin
+git checkout main
+
+
+თუ Files ბრენჩზე რამე ფაილი ჩაამატე და არ გაქვს commit გაკეთებული, Git შეგატყობინებს, რომ ცვლილებები გაქვს. ასეთ შემთხვევაში შეგიძლია:
+
+ან commit გააკეთო Files ბრენჩზე (git commit -m "Message")
+
+ან დროებით შეინახო ცვლილებები stash-ით:
+
+git stash
+git checkout main
+თუ დაგჭირდა stash-ის დაბრუნება:
+
+
+git stash apply
+
+
+# გავაუქმოთ ლოკალური ცვლილებები და დავესქროვოთ GitHub-ის ვერსიას
+git fetch origin
+git reset --hard origin/main
+
+git fetch origin – ჩამოიტვირთება GitHub-ზე არსებული უახლესი ვერსია.
+
+git reset --hard origin/main – აიძულებს ლოკალურ main ბრანჩს ზუსტად ემთხვეოდეს GitHub-ის ვერსიას — overwrite-ით.
+
+🧹 დასუფთავება (არასავალდებულო):
+თუ დარჩა გამოუყენებელი ან მოტოვებული ფაილები, შეგიძლია ესეც გაუშვა:
+
+git clean -fd
+
+
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+
+
+PS D:\WEB_GIS\GTU> git clone https://github.com/ezdanapak/GIS-ICS.git
+Cloning into 'GIS-ICS'...
+warning: You appear to have cloned an empty repository.
+PS D:\WEB_GIS\GTU> cd .\GIS-ICS\
+PS D:\WEB_GIS\GTU\GIS-ICS> git init
+Reinitialized existing Git repository in D:/WEB_GIS/GTU/GIS-ICS/.git/
+PS D:\WEB_GIS\GTU\GIS-ICS> git add README.md
+fatal: pathspec 'README.md' did not match any files
+PS D:\WEB_GIS\GTU\GIS-ICS> git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\WEB_GIS\GTU\GIS-ICS> git add .
+PS D:\WEB_GIS\GTU\GIS-ICS> git commit -m "first commit"
+[main (root-commit) 2504690] first commit       
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.md
+PS D:\WEB_GIS\GTU\GIS-ICS> git branch -M main
+PS D:\WEB_GIS\GTU\GIS-ICS> git remote add origin https://github.com/ezdanapak/GIS-ICS.git
+error: remote origin already exists.
+PS D:\WEB_GIS\GTU\GIS-ICS> git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 210 bytes | 210.00 KiB/s, done. 
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ezdanapak/GIS-ICS.git 
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS D:\WEB_GIS\GTU\GIS-ICS> 
+
+
+
+
+mkdocs new [dir-name] - Create a new project.
+mkdocs serve - Start the live-reloading docs server.
+mkdocs build - Build the documentation site.
+mkdocs -h - Print help message and exit.
+
+
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
