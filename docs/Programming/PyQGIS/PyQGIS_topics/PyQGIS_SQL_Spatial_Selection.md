@@ -6,9 +6,25 @@
 - `iface` — QGIS-ის GUI ინტერფეისისთვის (QGIS Python Console / Plugins).
 - `QgsProject` — მიმდინარე პროექტის მართვა (გაფართოება, შრეთა წაკითხვა).
 - `processing` — QGIS-ის ხელსაწყოების ნაკრები; მონიშვნების `qgis:selectbyattribute`, `native:selectbylocation` და სხვ.
-- ამ თემის კოდებში მოცემულია როგორც დირექტორიიდან წაკითხვა შრის და ისე მისი ობიექტების შერჩევა, ასევე პროექში უკვე დამატებულის მოძებნა, გააქტიურება და ოპერაციის განხორციელება.
+
 - writer - ის წაშლა აუცილებელია. განმარტება ჩასამატებელია.
+- ამ თემის კოდებში მოცემულია როგორც დირექტორიიდან წაკითხვა შრის და ისე მისი ობიექტების შერჩევა, ასევე პროექტში უკვე დამატებულის მოძებნა, გააქტიურება და ოპერაციის განხორციელება.
 ---
+
+```py title="Read_layer_from_directory_add_to_project" linenums="1"
+fn = r'C:\Users\Public\Documents\GIS\shp\Georgia_municipalities.shp'
+
+layer = iface.addVectorLayer(fn, '', 'ogr')
+#proccess
+```
+---
+
+```py title="Read_already_added_layer_directly_from_project" linenums="1"
+layers = QgsProject.instance().mapLayersByName('Georgia_municipalities')
+layer = layers[0]
+
+#proccess
+```
 
 მონიშვნის ოპერატორები გამოიყენება `selectbyattribute` ფუნქციაში. ისინი განსაზღვრავენ ლოგიკურ შედარებას ველის მნიშვნელობასთან.
 
