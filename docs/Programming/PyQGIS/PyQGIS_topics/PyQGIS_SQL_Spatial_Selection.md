@@ -1,56 +1,58 @@
-
-## მონიშვნის ოპერატორები
-
-'OPERATOR':0
+# QGIS-ში შრის მონიშვნა და შერჩევა PyQGIS-ით
 
 
-0 — =
+## განმარტებები
 
-1 — ≠
+- `iface` — QGIS-ის GUI ინტერფეისისთვის (QGIS Python Console / Plugins).
+- `QgsProject` — მიმდინარე პროექტის მართვა (გაფართოება, შრეთა წაკითხვა).
+- `processing` — QGIS-ის ხელსაწყოების ნაკრები; მონიშვნების `qgis:selectbyattribute`, `native:selectbylocation` და სხვ.
+- ამ თემის კოდებში მოცემულია როგორც დირექტორიიდან წაკითხვა შრის და ისე მისი ობიექტების შერჩევა, ასევე პროექში უკვე დამატებულის მოძებნა, გააქტიურება და ოპერაციის განხორციელება.
+- writer - ის წაშლა აუცილებელია. განმარტება ჩასამატებელია.
+---
 
-2 — >
+მონიშვნის ოპერატორები გამოიყენება `selectbyattribute` ფუნქციაში. ისინი განსაზღვრავენ ლოგიკურ შედარებას ველის მნიშვნელობასთან.
 
-3 — >=
+| კოდი | ოპერატორი | აღწერა | მაგალითი SQL-ში |
+|------|-----------|--------|------------------|
+| 0    | =         | ტოლია | `DISTR_ENG = 'Oni'` |
+| 1    | ≠         | არ უდრის | `DISTR_ENG ≠ 'Poti'` |
+| 2    | >         | მეტია | `Area > 1000000` |
+| 3    | >=        | მეტი ან ტოლი | `Area >= 1000000` |
+| 4    | <         | ნაკლებია | `Area < 1000000` |
+| 5    | <=        | ნაკლები ან ტოლი | `Area <= 1000000` |
+| 6    | begins with | იწყება...-ით | `DISTR_ENG begins with 'O'` |
+| 7    | contains  | შეიცავს | `DISTR_ENG contains 'ani'` |
+| 8    | is null   | ცარიელია | `DISTR_ENG is null` |
+| 9    | is not null | არ არის ცარიელი | `DISTR_ENG is not null` |
+| 10   | does not contain | არ შეიცავს | `DISTR_ENG does not contain 'ani'` |
 
-4 — <
-
-5 — <=
-
-6 — begins with
-
-7 — contains
-
-8 — is null
-
-9 — is not null
-
-10 — does not contain
+---
 
 
 ## ინტერაქტიული მონიშვნის მეთოდები
 
-'METHOD':0
+ინტერაქტიული მონიშვნის მეთოდები განსაზღვრავს, როგორ მოქმედებს ახალი შერჩევა არსებულზე.
 
+| კოდი | მეთოდი | აღწერა |
+|------|--------|--------|
+| 'METHOD':0    | creating new selection | ქმნის ახალ შერჩევას (წინა შერჩევა იწმინდება) |
+| 'METHOD':1    | adding to current selection | ამატებს ახალ ობიექტებს მიმდინარე შერჩევას |
+| 'METHOD':2    | removing from current selection | აცილებს ობიექტებს მიმდინარე შერჩევიდან |
+| 'METHOD':3    | selecting within current selection | შერჩევა მხოლოდ მიმდინარე შერჩევის ფარგლებში |
 
-0 — creating new selection
+---
 
-1 — adding to current selection
+### შრეში ყველა ობიექტის მონიშვნა — *Select All*
 
-2 — removing from current selection
-
-3 — selecting within current selection
-
-
-## შრეში ყველა ობიექტის მონიშვნა - Select all
-
-#დაამატებს შრეს პროგრამაში დირექტორიიდან
-
-```py title="add_shapefile_from_directory" linenums="1"
+```py title="select_all_features" linenums="1"
 
 fn = r'C:\Users\Public\Documents\GIS\shp\Georgia_municipalities.shp'
+layer = iface.addVectorLayer(fn, 'Georgia Municipalities', 'ogr')
+if not layer:
+    raise ValueError(f"Layer not loaded: {fn}")
 
-layer = iface.addVectorLayer(fn, '', 'ogr')
-
+#ყველა ობიექტის მონიშვნა
+#layer.selectAll()
 ```
 
 ## მონიშნული ობიექტების ფერის შეცვლა <br>
@@ -61,16 +63,11 @@ iface.mapCanvas().setSelectionColor(QColor('red'))
 
 ```
 
-## ფუნქცია რომ ყველა ელემენტი მონიშნოს
 
-layer.selectAll()
-
-
-## მოვნიშნოთ შრეში ონის მუნიციპალიტეტი
-SQL  - ში DISTR_ENG = 'Oni'
-
+## შრეში ატრიბუტებით მონიშვნა
 
 ```py title="select_object_with_selectbyattribute_tool" linenums="1"
+#SQL  - ში DISTR_ENG = 'Oni'
 
 fn = r'C:\Users\Public\Documents\GIS\shp\Georgia_municipalities.shp'
 
@@ -82,9 +79,8 @@ processing.run("qgis:selectbyattribute", {'INPUT':fn,'FIELD':'DISTR_ENG','OPERAT
 
 ## მოვნიშნოთ შრეში ყველა მუნიციპალიტეტი, გარდა ფოთისა.
 
-SQL  - ში DISTR_ENG = 'Oni'
-
 ```py title="select_object_with_selectbyattribute_tool" linenums="1"
+SQL  - ში DISTR_ENG ≠ 'Oni'
 
 fn = r'C:\Users\Public\Documents\GIS\shp\Georgia_municipalities.shp'
 
@@ -96,13 +92,11 @@ processing.run("qgis:selectbyattribute", {'INPUT':fn,'FIELD':'DISTR_ENG','OPERAT
 
 ```
 
-
 ## ობიექტის გამოხატვით შერჩევა - Select By Expression
 
+#ტექსტური ტიპის მონაცემები
 
-ტექსტური ტიპის მონაცემები
-
-SQL  - ში  DISTR_ENG  =  'Gardabani'
+#SQL  - ში  DISTR_ENG  =  'Gardabani'
 
 ```py title="select_object_with_selectbyattribute_tool" linenums="1"
 
@@ -112,8 +106,13 @@ layer = iface.addVectorLayer(fn, '', 'ogr')
 
 layer.selectByExpression('"DISTR_ENG"  =  \'Gardabani\'')
 ```
+!!!info
+    ბრჭყალები ('') გამოიყენება ტექსტური მნიშვნელობებისთვის (სტრინგები), რადგან QGIS SQL-ში ასეა განსაზღვრული.
+    \' არის ესკეიპი (escape sequence) Python-ში: რადგან მთლიანი გამოხატვა ერთ ციტატაშია ჩაკეტილი ("" ან ''), შიგნით მეორე ციტატის დასაწყებად/დასასრულებლად \' უნდა გამოიყენო, რომ Python-ნი არ შეცდეს და სწორად გაანალიზოს სტრინგი. თუ ესკეიპი არ იქნება, Python-ის პარსერი დაუშვებდა სინტაქსურ შეცდომას.
 
 
+
+---
 ## ობიექტის სივრცითი შერჩევა - Select By Location
 #დასამუშავებელია - 
 
@@ -153,7 +152,7 @@ processing.run("native:selectbylocation", {'INPUT':fn1,'PREDICATE':[0],'INTERSEC
 
 layer = iface.addVectorLayer(fn1, '', 'ogr')
 
-
+---
 
 
 
@@ -161,43 +160,27 @@ layer = iface.addVectorLayer(fn1, '', 'ogr')
 
 ## რიცხვითი ტიპის მონაცემები
 
-SQL  - ში  Area = 1268097314
-
-
-
+```py title="select_object_selectByExpression" linenums="1"
+#SQL - ში  Area >= 1268097314
 fn = r'C:\Users\Public\Documents\GIS\shp\Georgia_municipalities.shp'
-
-
 
 layer = iface.addVectorLayer(fn, '', 'ogr')
 
+layer.selectByExpression('"Area"  >=  1268097314')
 
-
-
-
-layer.selectByExpression('"Area"  =  1268097314')
-
-
-
+```
 ## პროექტში არსებული შრის შერჩევა გამოხატვით
-
-
+```py title="select_object_selectByExpression" linenums="1"
+#
 layers = QgsProject.instance().mapLayersByName('Georgia_municipalities')
-
 layer = layers[0]
 
-
-
-layer.selectByExpression('"Area"  =  1268097314')
+layer.selectByExpression('"Area"  <=  1268097314')
 
 
 
 ## შერჩეული ელემენტისგან ცალკე ახალი შრის შექმნა
-
-
-## პროექტში არსებული შრის შერჩევა გამოხატვით
-
-
+```py title="selectByExpression_create_new_layer" linenums="1"
 
 layers = QgsProject.instance().mapLayersByName('Georgia_municipalities')
 
@@ -205,32 +188,16 @@ layer = layers[0]
 
 layer.selectByExpression('"Area"  =  1268097314')
 
-
-
 ახალი შრის განსაზღვრა და გადაცემა writer - ისთვის ჩასაწერად
-
-
 
 fn2 = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_3\Georgia_municipalities1.shp'
 
-
-
 #მხოლოდ შერჩეული ელემენტისთვის შექმნა onlySelected = True პარამეტრი
-
-
-
 writer = QgsVectorFileWriter.writeAsVectorFormat(layer, fn2, \
-
-
-
     'utf-8', driverName = 'ESRI Shapefile', onlySelected = True)
-
-
-
-დაამატოს ახალი შექმნილი შრე პროექტში
-
-
 
 layer2 = iface.addVectorLayer(fn2, '', 'ogr')
 
 del(writer)
+
+```
