@@ -134,9 +134,6 @@ nav:
           - გეომონაცემთა ბაზები:
             - Apache parquet: GIS_Basic/Theory/Geodatabase/Apache_parquet.md
             - Geodatabase: GIS_Basic/Theory/Geodatabase/Geodatabase.md
-          - Google:
-            - KML & KMZ: GIS_Basic/Theory/Google/KML_KMZ_formats.md
-            - წერტილის სიმაღლე: GIS_Basic/Theory/Google/Placemark_altitudes.md
           - OGC WEB:
             - XML: GIS_Basic/Theory/OGC_WEB/XML.md
             - GeoNetwork: GIS_Basic/Theory/OGC_WEB/GeoNetwork.md
@@ -308,8 +305,11 @@ nav:
 
   - Google Earth:
       - Earth:
-          - 'რელიეფის პროფილი': './GoogleEarth/google_earth_elevation_profile.md'
+          - რელიეფის პროფილი: './GoogleEarth/google_earth_elevation_profile.md'
+          - KML & KMZ: GIS_Basic/Theory/Google/KML_KMZ_formats.md
+          - წერტილის სიმაღლე: GIS_Basic/Theory/Google/Placemark_altitudes.md
       - Engine:
           - 'GEE md': './GoogleEarth/GE.md'
           - 'რესურსები': './GoogleEarth/resources.md'
-    
+                
+            
