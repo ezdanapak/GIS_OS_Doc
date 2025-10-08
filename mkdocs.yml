@@ -307,9 +307,9 @@ nav:
         - 'შრებში სივრცული ოპერაციები SQL-ში': './Programming/Database/PSQLPostGIS/Spatial_operations_in_SQL.md'
 
   - Google Earth:
-    - Earth:
-      - 'რელიეფის პროფილი': './GoogleEarth/google_earth_elevation_profile.md'
-    - Engine:
-      - 'GEE md': './GoogleEarth/GE.md'
-      - 'რესურსები': './GoogleEarth/resources.md'
+      - Earth:
+          - 'რელიეფის პროფილი': './GoogleEarth/google_earth_elevation_profile.md'
+      - Engine:
+          - 'GEE md': './GoogleEarth/GE.md'
+          - 'რესურსები': './GoogleEarth/resources.md'
     
