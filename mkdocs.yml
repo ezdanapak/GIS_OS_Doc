@@ -206,10 +206,12 @@ nav:
           - Zen of Python: Programming/Python/Theory/Python_philosophy_simple_better.md
           - რეზერვირებული სიტყვები: Programming/Python/Theory/Python_Reserved_Words.md
           - AnaMiniConda: Programming/Python/Theory/Python_Anaconda_Miniconda_vs_Pip.md
-          - VS Code: Programming/Python/Theory/Python_VS_Code_extensions.md
+          - VS Code Extension: Programming/Python/Theory/Python_VS_Code_extensions.md
+          - VS Code Shortcuts: Programming/Python/Theory/Python_VScode_hotkeys.md
         - პრაქტიკა:
           - საბაზისო: Programming/Python/Code_template/python_basics.md
           - მონ.ტიპები: Programming/Python/Code_template/python_data_types.md
+          - ოპერატორები და პირობები: Programming/Python/Code_template/python_operators_conditions.md
         - ლოგიკური ოპერაციები: Programming/Python/python_logical_ops.md
         - ციკლები: Programming/Python/python_loops.md
         - მათემატიკური ფუნქციები: Programming/Python/python_math_functions.md
