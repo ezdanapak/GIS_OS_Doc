@@ -59,6 +59,7 @@ layer = iface.addVectorLayer(fn, '', 'ogr')
 #პროექტში შემოტანილი შრის წაკითხვა
 layers = QgsProject.instance().mapLayersByName('Georgia_municipalities')
 layer = layers[0]
+#proccess
 ```
 
 ### შრეში ყველა ობიექტის მონიშვნა — *Select All*
