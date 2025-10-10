@@ -52,7 +52,6 @@
 ```py title="Read_layer" linenums="1"
 #შრის წაკითხვა დირექტორიიდან პროექტში
 fn = r'C:\Users\Public\Documents\GIS\shp\Georgia_municipalities.shp'
-
 layer = iface.addVectorLayer(fn, '', 'ogr')
 #proccess
 
