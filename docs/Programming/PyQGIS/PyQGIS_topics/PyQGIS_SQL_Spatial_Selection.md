@@ -9,7 +9,10 @@
 
 - writer - ის წაშლა აუცილებელია. განმარტება ჩასამატებელია.
 - ამ თემის კოდებში მოცემულია როგორც დირექტორიიდან წაკითხვა შრის და ისე მისი ობიექტების შერჩევა, ასევე პროექტში უკვე დამატებულის მოძებნა, გააქტიურება და ოპერაციის განხორციელება.
+
 ---
+
+შრის წაკითხვა დირექტორიიდან პროექტში
 
 ```py title="Read_layer_from_directory_add_to_project" linenums="1"
 fn = r'C:\Users\Public\Documents\GIS\shp\Georgia_municipalities.shp'
@@ -18,7 +21,8 @@ layer = iface.addVectorLayer(fn, '', 'ogr')
 #proccess
 ```
 ---
-
+პროექტში შემოტანილი შრის წაკითხვა
+ 
 ```py title="Read_already_added_layer_directly_from_project" linenums="1"
 layers = QgsProject.instance().mapLayersByName('Georgia_municipalities')
 layer = layers[0]
