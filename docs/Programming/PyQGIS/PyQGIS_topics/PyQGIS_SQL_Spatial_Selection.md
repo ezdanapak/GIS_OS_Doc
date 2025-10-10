@@ -12,23 +12,7 @@
 
 ---
 
-### შრის წაკითხვა დირექტორიიდან პროექტში
 
-```py title="Read_layer_from_directory_add_to_project" linenums="1"
-fn = r'C:\Users\Public\Documents\GIS\shp\Georgia_municipalities.shp'
-
-layer = iface.addVectorLayer(fn, '', 'ogr')
-#proccess
-```
----
-### პროექტში შემოტანილი შრის წაკითხვა
-
-```py title="Read_already_added_layer_directly_from_project" linenums="1"
-layers = QgsProject.instance().mapLayersByName('Georgia_municipalities')
-layer = layers[0]
-
-#proccess
-```
 
 მონიშვნის ოპერატორები გამოიყენება `selectbyattribute` ფუნქციაში. ისინი განსაზღვრავენ ლოგიკურ შედარებას ველის მნიშვნელობასთან.
 
@@ -61,6 +45,24 @@ layer = layers[0]
 | 'METHOD':3    | selecting within current selection | შერჩევა მხოლოდ მიმდინარე შერჩევის ფარგლებში |
 
 ---
+
+### შრის წაკითხვა დირექტორიიდან პროექტში
+
+```py title="Read_layer_from_directory_add_to_project" linenums="1"
+fn = r'C:\Users\Public\Documents\GIS\shp\Georgia_municipalities.shp'
+
+layer = iface.addVectorLayer(fn, '', 'ogr')
+#proccess
+```
+---
+### პროექტში შემოტანილი შრის წაკითხვა
+
+```py title="Read_already_added_layer_directly_from_project" linenums="1"
+layers = QgsProject.instance().mapLayersByName('Georgia_municipalities')
+layer = layers[0]
+
+#proccess
+```
 
 ### შრეში ყველა ობიექტის მონიშვნა — *Select All*
 
