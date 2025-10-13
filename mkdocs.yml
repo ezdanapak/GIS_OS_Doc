@@ -265,7 +265,7 @@ nav:
             - კოორდინატების კონვერტაცია: Programming/PyQGIS/PyQGIS_topics/PyQGIS_coordinates.md
             - კოორდინატებიანი ფოტოები: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Geotagged_photos.md
             - შეცდომები და მათი მოგვარება: Programming/PyQGIS/Error_handling.md
-            - წაშლა: Programming/PyQGIS/PyQGIS_Obj_delete.md
+            - წაშლა: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Obj_delete.md
 
     - სივრცული პითონი:
       - რესურსები: Programming/Spatial_python/resources.md
