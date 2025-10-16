@@ -212,6 +212,7 @@ nav:
           - საბაზისო: Programming/Python/Code_template/python_basics.md
           - მონ.ტიპები: Programming/Python/Code_template/python_data_types.md
           - ოპერატორები და პირობები: Programming/Python/Code_template/python_operators_conditions.md
+          - ციკლი და ოპერატორი: Programming/Python/Code_template/python_cycles_operators.md
         - ლოგიკური ოპერაციები: Programming/Python/python_logical_ops.md
         - ციკლები: Programming/Python/python_loops.md
         - მათემატიკური ფუნქციები: Programming/Python/python_math_functions.md
