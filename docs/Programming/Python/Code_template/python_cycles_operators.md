@@ -532,6 +532,7 @@ print("საბოლოო რიცხვი: ")
 print(number)
 print("გამრავლება მოხდა ჯერ: ")
 print(multiplication_count)
+
 ```
 ---
 
