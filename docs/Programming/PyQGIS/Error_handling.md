@@ -25,3 +25,64 @@ import qgis
 - **TEMPORARY_OUTPUT** → დროებითი შედეგი, თუ გვინდა ფაილად შევინახოთ → ჩავანაცვლოთ `output`
 !!!warning
     სხვა შემთხვევაში პროგრამის დახურვის შემდეგ მიღებული შედეგები დაიკარგება.
+
+
+
+    layers = QgsProject.instance().mapLayersByName('sadguri')
+
+layer = layers[0]
+
+delf = layer.dataProvider().capabilities()
+
+feats = layer.getFeatures()
+
+dfeats = []
+
+
+
+კოდის ნაწილია წარმოდგენილი და თუ შეცდომას აგდებს
+
+>>>>
+IndexError: list index out of range
+ნიშნავს რომ mapLayersByName('sadguri') სახელი შრის არ გაქვს შეცვლილი და ვერ ხვდება.
+
+
+--
+
+out = r'C:\Users\Public\GIS\PyGK\tema_4_1\Georgia_municipalities2.shp'
+
+processing.run("native:deletecolumn", {INPUT': layer,\
+
+
+'COLUMN':['SHAPE_Leng'],'OUTPUT':out})
+
+
+EOL while scanning string literal
+
+შეცდომა ნიშნავს რომ 'INPUT':  - ს აკლია ' ცალ მხარეს
+
+
+layer = layes[0]
+
+
+NameError: name 'layes' is not defined
+
+layes აკლია r    - layers
+
+
+proces sing.run("native:deleteduplicategeometries", {'INPUT':layer,'OUTPUT':output})
+
+invalid syntax შეცდომა proces sing.run ერთად უნდა ეწეროს processing.run
+
+
+სვეტი რომელსაც სკრიპტი ეძებს ატრიბუტულ ცხრილში ფიზიკურად არ არსებობს...
+
+ამ შემთხვევაში ეს არის fid სვეტი.
+
+Traceback (most recent call last):
+
+  File "<input>", line 1, in <module>
+
+  File "<string>", line 15, in <module>
+
+KeyError: 'fid'
