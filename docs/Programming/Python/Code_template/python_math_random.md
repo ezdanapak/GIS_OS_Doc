@@ -147,3 +147,97 @@ print("შემთხვევითი რიცხვების სია:"
 ```
 
 ---
+
+ჩაშენებული ფუნქციები (1-10)
+1. აბსოლუტური მნიშვნელობა
+python# შეიყვანე რიცხვი, გამოთვალე abs
+num = int(input("რიცხვი: "))
+print(f"აბსოლუტური: {abs(num)}")
+2. შეკრეგმა
+python# შეიყვანე 3.14159, შეკრეგმე
+pi = 3.14159
+print(round(pi, 2))  # 3.14
+3. მინიმუმი სიიდან
+pythonnumbers = [5, 2, 8, 1, 9]
+print(min(numbers))  # 1
+4. მაქსიმუმი
+pythonprint(max(3, 7, 2, 9, 1))  # 9
+5. ხარისხი
+pythonbase = 2
+exp = 5
+print(pow(base, exp))  # 32
+6. უარყოფითი → დადებითი
+pythonnum = -15
+print(abs(num))  # 15
+7. შეყვანის შეკრეგმა
+pythonnum = float(input("რიცხვი: "))
+print(round(num))
+8. სამი რიცხვიდან მინიმუმი
+pythona, b, c = 4, 1, 7
+print(min(a, b, c))  # 1
+9. ორი რიცხვის შუალედი
+pythona, b = 3, 7
+print((a + b) / 2)  # შეკრეგმა არაა საჭირო
+10. კვადრატი
+pythonnum = 4
+print(pow(num, 2))  # 16
+
+Math მოდული (11-18)
+11. კვადრატული ფესვი
+pythonimport math
+print(math.sqrt(81))  # 9.0
+12. ცირკლის ღერძი
+pythonimport math
+r = 5
+print(2 * math.pi * r)  # ~31.4
+13. ზევით შეკრეგმა
+pythonimport math
+print(math.ceil(3.1))  # 4
+14. ქვემოთ შეკრეგმა
+pythonimport math
+print(math.floor(3.9))  # 3
+15. ფართობი
+pythonimport math
+r = 3
+print(math.pi * pow(r, 2))  # ~28.27
+16. მთელი ნაწილი
+pythonimport math
+print(math.floor(5.89))  # 5
+17. შეყვანა + ფესვი
+pythonimport math
+num = int(input("რიცხვი: "))
+print(math.sqrt(num))
+18. პი
+pythonimport math
+print(f"Pi = {math.pi:.2f}")
+
+შემთხვევითი რიცხვები (19-25)
+19. კამათელი
+pythonimport random
+print(random.randint(1, 6))
+20. რიცხვის გამოცნობა
+pythonimport random
+secret = random.randint(1, 10)
+guess = int(input("გამოცანე (1-10): "))
+if guess == secret:
+    print("სწორია!")
+21. 3 რიცხვი
+pythonimport random
+for i in range(3):
+    print(random.randint(1, 100))
+22. ლუწი/კენტი
+pythonimport random
+num = random.randint(1, 20)
+print(f"{num} - {'ლუწი' if num % 2 == 0 else 'კენტი'}")
+23. შემთხვევითი არჩევანი
+pythonimport random
+colors = ["წითელი", "ლურჯი", "მწვანე"]
+print(random.choice(colors))
+24. 5 რიცხვის სია
+pythonimport random
+numbers = [random.randint(1, 50) for _ in range(5)]
+print(numbers)
+25. ლოტო
+pythonimport random
+lotto = random.randint(1, 49)
+print(f"ლოტოს რიცხვი: {lotto}")
