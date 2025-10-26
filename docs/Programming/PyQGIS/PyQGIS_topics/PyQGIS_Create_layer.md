@@ -149,7 +149,65 @@ layer = iface.addVectorLayer(fn, '', 'ogr')
 ```
 
 
+# ცხრილში ახალი სვეტის შექმნა და მონაცემის შეტანა
 
+```python
+with edit არის ოპერატორი
+
+იმისათვის რომ გაეშვას გამოხატვით გადაცემული ჩვენი კოდი საჭიროა შესაბამისი QgsExpressionContext-ის მიწოდება
+```
+
+## Calculate Field
+
+```python
+layers = QgsProject.instance().mapLayersByName('Rivers')
+layer = layers[0]
+
+pv = layer.dataProvider()
+pv.addAttributes([QgsField('Type', QVariant.String)])
+# QVariant.String-ის ნაცვლად თუ QVariant.Int-ს გამოვიყენებთ
+
+layer.updateFields()
+
+cntx = QgsExpressionContext()
+cntx.appendScopes(QgsExpressionContextUtils.globalProjectLayerScopes(layer))
+
+with edit(layer):
+    for i in layer.getFeatures():
+        cntx.setFeature(i)
+        i['Type'] = 'mdinare'
+        # აქ უკვე ეს ფრჩხილები აღარ გვჭირდება, რიცხვები წავა სვეტში ტექსტის ნაცვლად
+        layer.updateFeature(i)
+```
+
+---
+
+# ცხრილში ახალი სვეტების შექმნა და მონაცემების შეტანა
+
+## Calculate Fields
+
+```python
+layers = QgsProject.instance().mapLayersByName('Rivers')
+layer = layers[0]
+
+pv = layer.dataProvider()
+pv.addAttributes([
+    QgsField('Type', QVariant.String),
+    QgsField('Type_Eng', QVariant.String)
+])
+
+layer.updateFields()
+
+cntx = QgsExpressionContext()
+cntx.appendScopes(QgsExpressionContextUtils.globalProjectLayerScopes(layer))
+
+with edit(layer):
+    for i in layer.getFeatures():
+        cntx.setFeature(i)
+        i['Type'] = 'mdinare'
+        i['Type_Eng'] = 'River'
+        layer.updateFeature(i)
+```
 
 ## ℹ️ განმარტებები – PyQGIS კომპონენტები
 

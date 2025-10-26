@@ -86,3 +86,73 @@ Traceback (most recent call last):
   File "<string>", line 15, in <module>
 
 KeyError: 'fid'
+
+
+
+
+Traceback (most recent call last):
+
+  File "C:\PROGRA1\QGIS331.2\apps\Python39\lib\code.py", line 90, in runcode
+
+    exec(code, self.locals)
+
+  File "<input>", line 1, in <module>
+
+  File "<string>", line 27, in <module>
+
+KeyError: 'X_coordinate' 
+
+
+ნიშნავს რომ კოდში დაწერილი 
+
+pv.addAttributes([QgsField('Area_sq_m', QVariant.Double)])
+
+სვეტის ეს სახელწოდება არის გრძელი შეიპისთვის და უნდა შემოკლდეს
+
+
+
+Traceback (most recent call last):
+
+  File "C:\PROGRA~1\QGIS33~1.2\apps\Python39\lib\code.py", line 90, in runcode
+
+    exec(code, self.locals)
+
+  File "<input>", line 1, in <module>
+
+  File "<string>", line 29, in <module>
+
+  File "C:\PROGRA~1/QGIS33~1.2/apps/qgis/./python\qgis\core\additions\edit.py", line 38, in __enter__
+
+    assert self.layer.startEditing()
+
+AssertionError
+
+
+
+შრის რედაქტირება გარსიდან უკვე ჩართული გაქვს და უნდა გათიშო
+
+
+
+
+განმარტება
+
+'', შრის სახელწოდებაა
+
+iface.addVectorLayer(fn, '', 'ogr')
+
+
+
+NameError: name 'Region' is not defined ნიშნავს რომ [Region] ჩასმული უნდა იყოს ფრჩხილებში >>>  ['Region']
+
+processing.run("native:dissolve", {'INPUT':layer ,'FIELD':['Region'],\
+
+'SEPARATE_DISJOINT':False,'OUTPUT':fn})
+
+
+NameError: name 'f' is not defined
+
+iface.addVectorLayer(f, '', 'ogr')
+
+iface.addVectorLayer(fაქ აკლია n ასო და მაგიტომ ვერ ხედავს, '', 'ogr')
+
+iface.addVectorLayer(fn, '', 'ogr')
