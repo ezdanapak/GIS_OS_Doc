@@ -26,7 +26,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://osdoc.qgis.ge/GIS_Basic/Additional/warning/</loc>
+         <loc>https://osdoc.qgis.ge/GIS_Basic/Additional/Warning/</loc>
          <lastmod>2025-10-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -321,12 +321,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://osdoc.qgis.ge/Non_formal_education/Lab/Story_maps/</loc>
+         <loc>https://osdoc.qgis.ge/Non_formal_education/Lab/Quiz/</loc>
          <lastmod>2025-10-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://osdoc.qgis.ge/Non_formal_education/Lab/quiz/</loc>
+         <loc>https://osdoc.qgis.ge/Non_formal_education/Lab/Story_maps/</loc>
          <lastmod>2025-10-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -736,7 +736,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://osdoc.qgis.ge/Programming/Python/Code_template/python_function/</loc>
+         <loc>https://osdoc.qgis.ge/Programming/Python/Code_template/python_functions/</loc>
          <lastmod>2025-10-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
