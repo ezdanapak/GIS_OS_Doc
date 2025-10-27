@@ -496,6 +496,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Processing/</loc>
+         <lastmod>2025-10-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Statistics/</loc>
+         <lastmod>2025-10-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://osdoc.qgis.ge/Programming/PyQGIS/PyQGIS_topics/PyQGIS_SQL_Spatial_Selection/</loc>
          <lastmod>2025-10-27</lastmod>
          <changefreq>daily</changefreq>

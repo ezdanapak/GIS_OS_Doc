@@ -14,7 +14,7 @@
         <link rel="prev" href="../PyQGIS_Calc_Attrib_Expressions/">
       
       
-        <link rel="next" href="../../../Spatial_python/resources/">
+        <link rel="next" href="../PyQGIS_Raster_Processing/">
       
       
       <link rel="icon" href="../../../../assets/favicon.ico">
@@ -3964,22 +3964,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -4015,221 +3999,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../PyQGIS_topic2/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic3/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 3
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic4/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 4
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic5/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 5
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic6/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 6
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic7/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 7
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic8/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 8
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic9/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 9
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic10/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 10
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../PyQGIS_topic11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     თემა 11
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic12/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 12
   </span>
   
 
@@ -4592,6 +4366,48 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_Raster_Processing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    რასტრის გეოდამუშავება
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_Raster_Statistics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    რასტრის სტატისტიკა
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -6057,7 +5873,7 @@
 </table>
 <hr />
 <h2 id="extract_data_from_layer">📊 შრიდან მონაცემების წამოღება (Extract Data from Layer)<a class="headerlink" href="#extract_data_from_layer" title="Permanent link">&para;</a></h2>
-<p>დამრგვალება, დაფილტვრა და ახალი შრის შექმნა:</p>
+<p><strong>დამრგვალება, დაფილტვრა და ახალი შრის შექმნა</strong></p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">layers</span> <span class="o">=</span> <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">mapLayersByName</span><span class="p">(</span><span class="s1">&#39;rivers&#39;</span><span class="p">)</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">layer</span> <span class="o">=</span> <span class="n">layers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">feats</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">getFeatures</span><span class="p">()</span>
@@ -6294,13 +6110,13 @@
         
         
           
-          <a href="../../../Spatial_python/resources/" class="md-footer__link md-footer__link--next" aria-label="შემდეგი: რესურსები">
+          <a href="../PyQGIS_Raster_Processing/" class="md-footer__link md-footer__link--next" aria-label="შემდეგი: რასტრის გეოდამუშავება">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 შემდეგი
               </span>
               <div class="md-ellipsis">
-                რესურსები
+                რასტრის გეოდამუშავება
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://osdoc.qgis.ge/Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic11/">
       
       
-        <link rel="prev" href="../PyQGIS_topic10/">
+        <link rel="prev" href="../../Theory/PyQGIS_oop_guide/">
       
       
-        <link rel="next" href="../PyQGIS_topic12/">
+        <link rel="next" href="../PyQGIS_Create_layer/">
       
       
       <link rel="icon" href="../../../../assets/favicon.ico">
@@ -115,7 +115,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#remove_all_first-degree_neighbors_from_the_set" class="md-skip">
+        <a href="#pyqgis_raster_vector_operations" class="md-skip">
           კონტენტზე გადასვლა
         </a>
       
@@ -3964,22 +3964,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -4012,195 +3996,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic2/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic3/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 3
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic4/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 4
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic5/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 5
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic6/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 6
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic7/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 7
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic8/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 8
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic9/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 9
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic10/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 10
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -4213,6 +4008,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    თემა 11
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -4223,27 +4029,79 @@
 
       </a>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PyQGIS_topic12/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    თემა 12
-  </span>
-  
 
-      </a>
+<nav class="md-nav md-nav--secondary" aria-label="სარჩევი">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      სარჩევი
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reclassify_by_table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗺️ Reclassify by Table — რეკლასიფიცირება ცხრილის მიხედვით
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#symbology" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Symbology — რასტრული გამოსახულების სიმბოლიზირება (ფერების მიცემა)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧮 Volume — მოცულობის დათვლა რასტრულ გამოსახულებაზე
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting_neighbors" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Selecting Neighbors — მეზობელი ობიექტების შერჩევა მოქმედების ღილაკით
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgis_layout_export" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗺️ QGIS Layout Export — რუკის ავტომატური შექმნა და ექსპორტი
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#withas" class="md-nav__link">
+    <span class="md-ellipsis">
+      📘 With…as კონსტრუქტორი
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4450,6 +4308,48 @@
   
   <span class="md-ellipsis">
     ვექტორის გეოდამუშავება
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_Raster_Processing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    რასტრის გეოდამუშავება
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_Raster_Statistics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    რასტრის სტატისტიკა
   </span>
   
 
@@ -5683,6 +5583,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      სარჩევი
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reclassify_by_table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗺️ Reclassify by Table — რეკლასიფიცირება ცხრილის მიხედვით
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#symbology" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Symbology — რასტრული გამოსახულების სიმბოლიზირება (ფერების მიცემა)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧮 Volume — მოცულობის დათვლა რასტრულ გამოსახულებაზე
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting_neighbors" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Selecting Neighbors — მეზობელი ობიექტების შერჩევა მოქმედების ღილაკით
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgis_layout_export" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗺️ QGIS Layout Export — რუკის ავტომატური შექმნა და ექსპორტი
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#withas" class="md-nav__link">
+    <span class="md-ellipsis">
+      📘 With…as კონსტრუქტორი
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -5699,156 +5661,203 @@
   
 
 
-<p>Reclassify by table - რეკლასიფიცირება ცხრილის მიხედვით</p>
-<p>rl = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_9\Raster\DEM\Georgia_slope.tif'</p>
-<p>out = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_9\Raster\DEM\G_Slope_Reclass.tif'</p>
-<p>processing.run('native:reclassifybytable', {'INPUT_RASTER':rl, 'RASTER_BAND':1, \</p>
-<p>'TABLE':[0, 10, 1, 10, 25, 2, 25, 40, 3, 40, 55, 4], 'NO_DATA':0, \</p>
-<p>'RANGE_BOUNDARIES':0, 'NODATA_FOR_MISSING':True, 'DATA_TYPE':5, 'OUTPUT':out})</p>
-<p>iface.addRasterLayer(out)</p>
-<p>Symbology - რასტრული გამოსახულების სიმბოლიზირება(გამოსახვა)</p>
-<p>rl = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_9\Raster\DEM\Georgia_slope.tif'</p>
-<p>ifc = iface.addRasterLayer(rl)</p>
-<p>stats = ifc.dataProvider().bandStatistics(1, QgsRasterBandStats.All)</p>
-<p>min = stats.minimumValue</p>
-<p>a = 10</p>
-<p>b = 25</p>
-<p>c = 40</p>
-<p>max = stats.maximumValue</p>
-<p>CS = QgsColorRampShader()</p>
-<p>CS.setColorRampType(QgsColorRampShader.Interpolated)</p>
-<p>lst = [QgsColorRampShader.ColorRampItem(min, QColor(250, 235, 221)),\</p>
-<div class="language-text highlight"><pre><span></span><code>QgsColorRampShader.ColorRampItem(a, QColor(245, 136, 96)),\
-
-QgsColorRampShader.ColorRampItem(b, QColor(&#39;#cb1b4f&#39;)),\
-
-QgsColorRampShader.ColorRampItem(c, QColor(&#39;#611f53&#39;)),\
-
-QgsColorRampShader.ColorRampItem(max, QColor(&#39;#03051a&#39;))]
-</code></pre></div>
-<p>CS.setColorRampItemList(lst)</p>
-<p>shad = QgsRasterShader()</p>
-<p>shad.setRasterShaderFunction(CS)</p>
-<p>render = QgsSingleBandPseudoColorRenderer(ifc.dataProvider(), 1, shad)</p>
-<p>ifc.setRenderer(render)</p>
-<p>Volume - მოცულობის დათვლა რასტრულ გამოსახულებაზე</p>
-<p>rl = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_11\Raster\chiatura_dem.tif'</p>
-<p>chiatura_volume_html = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_11\HTML_stat\chiatura_dem_volume.html'</p>
-<p>chiatura_volume_Table = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_11\shp\chiatura_dem_volume_table.shp'</p>
-<p>processing.run("native:rastersurfacevolume", \</p>
-<div class="language-text highlight"><pre><span></span><code>{&#39;INPUT&#39;:rl,&#39;BAND&#39;:1,&#39;LEVEL&#39;:0,&#39;METHOD&#39;:0,\
-
-
-
-&#39;OUTPUT_HTML_FILE&#39;:chiatura_volume_html,&#39;OUTPUT_TABLE&#39;:chiatura_volume_Table})
-</code></pre></div>
-<p>მეზობელი ობიექტების შერჩევა მოქმედების ღილაკით  - Selecting Neighbors - Actions button</p>
-<p>layer_id = '[%@layer_id%]'</p>
-<p>fid = [% $id %]</p>
-<p>layer = QgsProject.instance().mapLayer(layer_id)</p>
-<p>def get_neighbors(fid):</p>
-<div class="language-text highlight"><pre><span></span><code>f = layer.getFeature(fid)
-
-# Use list comprehension to get all intersecting features
-
-# You may also use touches() if your data is topologically correct
-
-# Supply the bounding box to getFeatures() to use Spatial Index
-
-neighbors = [
-
-    c.id()
-
-    for c in layer.getFeatures(f.geometry().boundingBox())
-
-    if c.geometry().intersects(f.geometry()) and c.id() != f.id()
-
-]
-
-return neighbors
-</code></pre></div>
-<p>first_degree_neighbors = get_neighbors(fid)</p>
-<p>second_degree_neighbors = set()</p>
-<p>for n in first_degree_neighbors:</p>
-<div class="language-text highlight"><pre><span></span><code>neighbors = get_neighbors(n)
-
-second_degree_neighbors.update(neighbors)
-</code></pre></div>
-<h1 id="remove_all_first-degree_neighbors_from_the_set">Remove all first-degree neighbors from the set<a class="headerlink" href="#remove_all_first-degree_neighbors_from_the_set" title="Permanent link">&para;</a></h1>
-<p>second_degree_neighbors = second_degree_neighbors.difference(</p>
-<div class="language-text highlight"><pre><span></span><code>set(first_degree_neighbors))
-</code></pre></div>
-<h1 id="remove_the_feature_itself_from_the_set_if_it_exists">Remove the feature itself from the set if it exists<a class="headerlink" href="#remove_the_feature_itself_from_the_set_if_it_exists" title="Permanent link">&para;</a></h1>
-<p>second_degree_neighbors.discard(fid)</p>
-<h1 id="apply_the_selection">Apply the selection<a class="headerlink" href="#apply_the_selection" title="Permanent link">&para;</a></h1>
-<p>layer.selectByIds(list(second_degree_neighbors))</p>
-<p>from qgis.PyQt import QtGui</p>
-<p>layers = QgsProject.instance().mapLayersByName('stream_order')</p>
-<p>layer = layers[0]</p>
-<p>project = QgsProject.instance()</p>
-<p>manager = project.layoutManager()</p>
-<p>layoutName = 'Layout1'</p>
-<p>layouts_list = manager.printLayouts()</p>
-<h1 id="remove_any_duplicate_layouts">remove any duplicate layouts<a class="headerlink" href="#remove_any_duplicate_layouts" title="Permanent link">&para;</a></h1>
-<p>for layout in layouts_list:</p>
-<div class="language-text highlight"><pre><span></span><code>if layout.name() == layoutName:
-
-    manager.removeLayout(layout)
-</code></pre></div>
-<p>layout = QgsPrintLayout(project)</p>
-<p>layout.initializeDefaults()</p>
-<p>layout.setName(layoutName)</p>
-<p>manager.addLayout(layout)</p>
-<h1 id="create_map_item_in_the_layout">create map item in the layout<a class="headerlink" href="#create_map_item_in_the_layout" title="Permanent link">&para;</a></h1>
-<p>map = QgsLayoutItemMap(layout)</p>
-<p>map.setRect(20, 20, 20, 20)</p>
-<h1 id="set_the_map_extent">set the map extent<a class="headerlink" href="#set_the_map_extent" title="Permanent link">&para;</a></h1>
-<p>ms = QgsMapSettings()</p>
-<p>ms.setLayers([layer]) # set layers to be mapped</p>
-<p>rect = QgsRectangle(ms.fullExtent())</p>
-<p>rect.scale(1.0)</p>
-<p>ms.setExtent(rect)</p>
-<p>map.setExtent(rect)</p>
-<p>map.setBackgroundColor(QColor(255, 255, 255, 0))</p>
-<p>layout.addLayoutItem(map)</p>
-<p>map.attemptMove(QgsLayoutPoint(5, 20, QgsUnitTypes.LayoutMillimeters))</p>
-<p>map.attemptResize(QgsLayoutSize(180, 180, QgsUnitTypes.LayoutMillimeters))</p>
-<p>legend = QgsLayoutItemLegend(layout)</p>
-<p>legend.setTitle("Legend")</p>
-<p>layerTree = QgsLayerTree()</p>
-<p>layerTree.addLayer(layer)</p>
-<p>legend.model().setRootGroup(layerTree)</p>
-<p>layout.addLayoutItem(legend)</p>
-<p>legend.attemptMove(QgsLayoutPoint(230, 15, QgsUnitTypes.LayoutMillimeters))</p>
-<p>scalebar = QgsLayoutItemScaleBar(layout)</p>
-<p>scalebar.setStyle('Line Ticks Up')</p>
-<p>scalebar.setUnits(QgsUnitTypes.DistanceKilometers)</p>
-<p>scalebar.setNumberOfSegments(4)</p>
-<p>scalebar.setNumberOfSegmentsLeft(0)</p>
-<p>scalebar.setUnitsPerSegment(0.5)</p>
-<p>scalebar.setLinkedMap(map)</p>
-<p>scalebar.setUnitLabel('km')</p>
-<p>scalebar.setFont(QFont('Arial', 14))</p>
-<p>scalebar.update()</p>
-<p>layout.addLayoutItem(scalebar)</p>
-<p>scalebar.attemptMove(QgsLayoutPoint(220, 190, QgsUnitTypes.LayoutMillimeters))</p>
-<p>title = QgsLayoutItemLabel(layout)</p>
-<p>title.setText("My Title")</p>
-<p>title.setFont(QFont('Arial', 24))</p>
-<p>title.adjustSizeToText()</p>
-<p>layout.addLayoutItem(title)</p>
-<p>title.attemptMove(QgsLayoutPoint(10, 5, QgsUnitTypes.LayoutMillimeters))</p>
-<p>layout = manager.layoutByName(layoutName)</p>
-<p>exporter = QgsLayoutExporter(layout)</p>
-<p>fn = 'C:/temp/layout_export.pdf'</p>
-<h1 id="exporterexporttoimagefn_qgslayoutexporterimageexportsettings">exporter.exportToImage(fn, QgsLayoutExporter.ImageExportSettings())<a class="headerlink" href="#exporterexporttoimagefn_qgslayoutexporterimageexportsettings" title="Permanent link">&para;</a></h1>
-<p>exporter.exportToPdf(fn, QgsLayoutExporter.PdfExportSettings())</p>
-<p>with… as კონსტრუქტორი</p>
-<p>with open(r'C:\Users\kapo\Desktop\koordinatebi.txt') as X:</p>
-<div class="language-text highlight"><pre><span></span><code>a = X.read()
-
-print(a)
-</code></pre></div>
+<h1 id="pyqgis_raster_vector_operations">🧩 PyQGIS — Raster &amp; Vector Operations<a class="headerlink" href="#pyqgis_raster_vector_operations" title="Permanent link">&para;</a></h1>
+<p>ეს დოკუმენტი მოიცავს PyQGIS-ის რამდენიმე პრაქტიკულ მაგალითს:
+- რასტრული მონაცემების რეკლასიფიცირება<br />
+- რასტრული სიმბოლიზაცია (ფერადი გამოსახვა)<br />
+- მოცულობის გამოთვლა DEM-ზე<br />
+- მეზობელი ობიექტების შერჩევა<br />
+- რუკის ავტომატური გენერაცია Layout-ში<br />
+- <code>with...as</code> კონსტრუქტორის გამოყენება ფაილებთან მუშაობისთვის  </p>
+<hr />
+<h2 id="reclassify_by_table">🗺️ <strong>Reclassify by Table — რეკლასიფიცირება ცხრილის მიხედვით</strong><a class="headerlink" href="#reclassify_by_table" title="Permanent link">&para;</a></h2>
+<p>👉 აღნიშნული ფუნქცია საშუალებას გვაძლევს დავაჯგუფოთ რასტრის მნიშვნელობები განსაზღვრულ დიაპაზონებში (კლასებში).</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">rl</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GK\PyQGIS\shp\tema_9\Raster\DEM\Georgia_slope.tif&#39;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">out</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GK\PyQGIS\shp\tema_9\Raster\DEM\G_Slope_Reclass.tif&#39;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="s1">&#39;native:reclassifybytable&#39;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="s1">&#39;INPUT_RASTER&#39;</span><span class="p">:</span> <span class="n">rl</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="s1">&#39;RASTER_BAND&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="s1">&#39;TABLE&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="s1">&#39;NO_DATA&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="s1">&#39;RANGE_BOUNDARIES&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="s1">&#39;NODATA_FOR_MISSING&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="s1">&#39;DATA_TYPE&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        <span class="s1">&#39;OUTPUT&#39;</span><span class="p">:</span> <span class="n">out</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="p">}</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">)</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">iface</span><span class="o">.</span><span class="n">addRasterLayer</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="symbology">🎨 <strong>Symbology — რასტრული გამოსახულების სიმბოლიზირება (ფერების მიცემა)</strong><a class="headerlink" href="#symbology" title="Permanent link">&para;</a></h2>
+<p>👉 ვიზუალურად აღსაქმელი ფერების მინიჭება მნიშვნელობების მიხედვით.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">rl</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GK\PyQGIS\shp\tema_9\Raster\DEM\Georgia_slope.tif&#39;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">ifc</span> <span class="o">=</span> <span class="n">iface</span><span class="o">.</span><span class="n">addRasterLayer</span><span class="p">(</span><span class="n">rl</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">stats</span> <span class="o">=</span> <span class="n">ifc</span><span class="o">.</span><span class="n">dataProvider</span><span class="p">()</span><span class="o">.</span><span class="n">bandStatistics</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">QgsRasterBandStats</span><span class="o">.</span><span class="n">All</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">min</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">minimumValue</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">25</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">c</span> <span class="o">=</span> <span class="mi">40</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nb">max</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">maximumValue</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">CS</span> <span class="o">=</span> <span class="n">QgsColorRampShader</span><span class="p">()</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">CS</span><span class="o">.</span><span class="n">setColorRampType</span><span class="p">(</span><span class="n">QgsColorRampShader</span><span class="o">.</span><span class="n">Interpolated</span><span class="p">)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="n">QgsColorRampShader</span><span class="o">.</span><span class="n">ColorRampItem</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span> <span class="n">QColor</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">235</span><span class="p">,</span> <span class="mi">221</span><span class="p">)),</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="n">QgsColorRampShader</span><span class="o">.</span><span class="n">ColorRampItem</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">QColor</span><span class="p">(</span><span class="mi">245</span><span class="p">,</span> <span class="mi">136</span><span class="p">,</span> <span class="mi">96</span><span class="p">)),</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="n">QgsColorRampShader</span><span class="o">.</span><span class="n">ColorRampItem</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">QColor</span><span class="p">(</span><span class="s1">&#39;#cb1b4f&#39;</span><span class="p">)),</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    <span class="n">QgsColorRampShader</span><span class="o">.</span><span class="n">ColorRampItem</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">QColor</span><span class="p">(</span><span class="s1">&#39;#611f53&#39;</span><span class="p">)),</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    <span class="n">QgsColorRampShader</span><span class="o">.</span><span class="n">ColorRampItem</span><span class="p">(</span><span class="nb">max</span><span class="p">,</span> <span class="n">QColor</span><span class="p">(</span><span class="s1">&#39;#03051a&#39;</span><span class="p">))</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">]</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="n">CS</span><span class="o">.</span><span class="n">setColorRampItemList</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">shad</span> <span class="o">=</span> <span class="n">QgsRasterShader</span><span class="p">()</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="n">shad</span><span class="o">.</span><span class="n">setRasterShaderFunction</span><span class="p">(</span><span class="n">CS</span><span class="p">)</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="n">render</span> <span class="o">=</span> <span class="n">QgsSingleBandPseudoColorRenderer</span><span class="p">(</span><span class="n">ifc</span><span class="o">.</span><span class="n">dataProvider</span><span class="p">(),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">shad</span><span class="p">)</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="n">ifc</span><span class="o">.</span><span class="n">setRenderer</span><span class="p">(</span><span class="n">render</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="volume">🧮 <strong>Volume — მოცულობის დათვლა რასტრულ გამოსახულებაზე</strong><a class="headerlink" href="#volume" title="Permanent link">&para;</a></h2>
+<p>👉 გამოიყენება მოცულობის გამოთვლისთვის DEM ფენიდან, განსაზღვრული სიმაღლის დონეზე.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">rl</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GK\PyQGIS\shp\tema_11\Raster\chiatura_dem.tif&#39;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">chiatura_volume_html</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GK\PyQGIS\shp\tema_11\HTML_stat\chiatura_dem_volume.html&#39;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">chiatura_volume_Table</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Public\Documents\GK\PyQGIS\shp\tema_11\shp\chiatura_dem_volume_table.shp&#39;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="s2">&quot;native:rastersurfacevolume&quot;</span><span class="p">,</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="p">{</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        <span class="s1">&#39;INPUT&#39;</span><span class="p">:</span> <span class="n">rl</span><span class="p">,</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        <span class="s1">&#39;BAND&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="s1">&#39;LEVEL&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        <span class="s1">&#39;METHOD&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        <span class="s1">&#39;OUTPUT_HTML_FILE&#39;</span><span class="p">:</span> <span class="n">chiatura_volume_html</span><span class="p">,</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>        <span class="s1">&#39;OUTPUT_TABLE&#39;</span><span class="p">:</span> <span class="n">chiatura_volume_Table</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    <span class="p">}</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="selecting_neighbors">🧭 <strong>Selecting Neighbors — მეზობელი ობიექტების შერჩევა მოქმედების ღილაკით</strong><a class="headerlink" href="#selecting_neighbors" title="Permanent link">&para;</a></h2>
+<p>👉 ეს სკრიპტი ამოარჩევს ობიექტებს, რომლებიც სივრცულად ეხებიან მოცემულ ობიექტს (მეზობლებს).</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">layer_id</span> <span class="o">=</span> <span class="s1">&#39;[%@layer_id%]&#39;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">fid</span> <span class="o">=</span> <span class="p">[</span><span class="o">%</span> <span class="err">$</span><span class="nb">id</span> <span class="o">%</span><span class="p">]</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">layer</span> <span class="o">=</span> <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">mapLayer</span><span class="p">(</span><span class="n">layer_id</span><span class="p">)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">def</span> <span class="nf">get_neighbors</span><span class="p">(</span><span class="n">fid</span><span class="p">):</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">f</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">getFeature</span><span class="p">(</span><span class="n">fid</span><span class="p">)</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">neighbors</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        <span class="n">c</span><span class="o">.</span><span class="n">id</span><span class="p">()</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">layer</span><span class="o">.</span><span class="n">getFeatures</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">geometry</span><span class="p">()</span><span class="o">.</span><span class="n">boundingBox</span><span class="p">())</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">geometry</span><span class="p">()</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">geometry</span><span class="p">())</span> <span class="ow">and</span> <span class="n">c</span><span class="o">.</span><span class="n">id</span><span class="p">()</span> <span class="o">!=</span> <span class="n">f</span><span class="o">.</span><span class="n">id</span><span class="p">()</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="p">]</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="k">return</span> <span class="n">neighbors</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="n">first_degree_neighbors</span> <span class="o">=</span> <span class="n">get_neighbors</span><span class="p">(</span><span class="n">fid</span><span class="p">)</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="n">second_degree_neighbors</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">first_degree_neighbors</span><span class="p">:</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    <span class="n">neighbors</span> <span class="o">=</span> <span class="n">get_neighbors</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    <span class="n">second_degree_neighbors</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">neighbors</span><span class="p">)</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="n">second_degree_neighbors</span> <span class="o">=</span> <span class="n">second_degree_neighbors</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">first_degree_neighbors</span><span class="p">))</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="n">second_degree_neighbors</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="n">fid</span><span class="p">)</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="n">layer</span><span class="o">.</span><span class="n">selectByIds</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">second_degree_neighbors</span><span class="p">))</span>
+</span></code></pre></div>
+<hr />
+<h2 id="qgis_layout_export">🗺️ <strong>QGIS Layout Export — რუკის ავტომატური შექმნა და ექსპორტი</strong><a class="headerlink" href="#qgis_layout_export" title="Permanent link">&para;</a></h2>
+<p>👉 მაგალითი, როგორ შეიძლება პროგრამულად შეიქმნას რუკის განლაგება (Layout) და ექსპორტირდეს PDF ფორმატში.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">qgis.PyQt</span> <span class="kn">import</span> <span class="n">QtGui</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">layers</span> <span class="o">=</span> <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">mapLayersByName</span><span class="p">(</span><span class="s1">&#39;stream_order&#39;</span><span class="p">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">layer</span> <span class="o">=</span> <span class="n">layers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">project</span> <span class="o">=</span> <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">manager</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">layoutManager</span><span class="p">()</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">layoutName</span> <span class="o">=</span> <span class="s1">&#39;Layout1&#39;</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">layouts_list</span> <span class="o">=</span> <span class="n">manager</span><span class="o">.</span><span class="n">printLayouts</span><span class="p">()</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="c1"># წაშლა ძველი Layout-ის, თუ უკვე არსებობს</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="k">for</span> <span class="n">layout</span> <span class="ow">in</span> <span class="n">layouts_list</span><span class="p">:</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="k">if</span> <span class="n">layout</span><span class="o">.</span><span class="n">name</span><span class="p">()</span> <span class="o">==</span> <span class="n">layoutName</span><span class="p">:</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>        <span class="n">manager</span><span class="o">.</span><span class="n">removeLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="n">layout</span> <span class="o">=</span> <span class="n">QgsPrintLayout</span><span class="p">(</span><span class="n">project</span><span class="p">)</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="n">layout</span><span class="o">.</span><span class="n">initializeDefaults</span><span class="p">()</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="n">layout</span><span class="o">.</span><span class="n">setName</span><span class="p">(</span><span class="n">layoutName</span><span class="p">)</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="n">manager</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="c1"># რუკის ელემენტის შექმნა</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="nb">map</span> <span class="o">=</span> <span class="n">QgsLayoutItemMap</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="nb">map</span><span class="o">.</span><span class="n">setRect</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="n">ms</span> <span class="o">=</span> <span class="n">QgsMapSettings</span><span class="p">()</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="n">ms</span><span class="o">.</span><span class="n">setLayers</span><span class="p">([</span><span class="n">layer</span><span class="p">])</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="n">rect</span> <span class="o">=</span> <span class="n">QgsRectangle</span><span class="p">(</span><span class="n">ms</span><span class="o">.</span><span class="n">fullExtent</span><span class="p">())</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="n">rect</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="n">ms</span><span class="o">.</span><span class="n">setExtent</span><span class="p">(</span><span class="n">rect</span><span class="p">)</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="nb">map</span><span class="o">.</span><span class="n">setExtent</span><span class="p">(</span><span class="n">rect</span><span class="p">)</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="nb">map</span><span class="o">.</span><span class="n">setBackgroundColor</span><span class="p">(</span><span class="n">QColor</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="n">layout</span><span class="o">.</span><span class="n">addLayoutItem</span><span class="p">(</span><span class="nb">map</span><span class="p">)</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="nb">map</span><span class="o">.</span><span class="n">attemptMove</span><span class="p">(</span><span class="n">QgsLayoutPoint</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">QgsUnitTypes</span><span class="o">.</span><span class="n">LayoutMillimeters</span><span class="p">))</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="nb">map</span><span class="o">.</span><span class="n">attemptResize</span><span class="p">(</span><span class="n">QgsLayoutSize</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="n">QgsUnitTypes</span><span class="o">.</span><span class="n">LayoutMillimeters</span><span class="p">))</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="c1"># ლეგენდა</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="n">legend</span> <span class="o">=</span> <span class="n">QgsLayoutItemLegend</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="n">legend</span><span class="o">.</span><span class="n">setTitle</span><span class="p">(</span><span class="s2">&quot;Legend&quot;</span><span class="p">)</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="n">layerTree</span> <span class="o">=</span> <span class="n">QgsLayerTree</span><span class="p">()</span>
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="n">layerTree</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a><span class="n">legend</span><span class="o">.</span><span class="n">model</span><span class="p">()</span><span class="o">.</span><span class="n">setRootGroup</span><span class="p">(</span><span class="n">layerTree</span><span class="p">)</span>
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="n">layout</span><span class="o">.</span><span class="n">addLayoutItem</span><span class="p">(</span><span class="n">legend</span><span class="p">)</span>
+</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a><span class="n">legend</span><span class="o">.</span><span class="n">attemptMove</span><span class="p">(</span><span class="n">QgsLayoutPoint</span><span class="p">(</span><span class="mi">230</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">QgsUnitTypes</span><span class="o">.</span><span class="n">LayoutMillimeters</span><span class="p">))</span>
+</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>
+</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a><span class="c1"># სკალის ზოლი</span>
+</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a><span class="n">scalebar</span> <span class="o">=</span> <span class="n">QgsLayoutItemScaleBar</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a><span class="n">scalebar</span><span class="o">.</span><span class="n">setStyle</span><span class="p">(</span><span class="s1">&#39;Line Ticks Up&#39;</span><span class="p">)</span>
+</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a><span class="n">scalebar</span><span class="o">.</span><span class="n">setUnits</span><span class="p">(</span><span class="n">QgsUnitTypes</span><span class="o">.</span><span class="n">DistanceKilometers</span><span class="p">)</span>
+</span><span id="__span-4-50"><a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a><span class="n">scalebar</span><span class="o">.</span><span class="n">setNumberOfSegments</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a><span class="n">scalebar</span><span class="o">.</span><span class="n">setNumberOfSegmentsLeft</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a><span class="n">scalebar</span><span class="o">.</span><span class="n">setUnitsPerSegment</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+</span><span id="__span-4-53"><a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a><span class="n">scalebar</span><span class="o">.</span><span class="n">setLinkedMap</span><span class="p">(</span><span class="nb">map</span><span class="p">)</span>
+</span><span id="__span-4-54"><a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a><span class="n">scalebar</span><span class="o">.</span><span class="n">setUnitLabel</span><span class="p">(</span><span class="s1">&#39;km&#39;</span><span class="p">)</span>
+</span><span id="__span-4-55"><a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a><span class="n">scalebar</span><span class="o">.</span><span class="n">setFont</span><span class="p">(</span><span class="n">QFont</span><span class="p">(</span><span class="s1">&#39;Arial&#39;</span><span class="p">,</span> <span class="mi">14</span><span class="p">))</span>
+</span><span id="__span-4-56"><a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a><span class="n">scalebar</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+</span><span id="__span-4-57"><a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a><span class="n">layout</span><span class="o">.</span><span class="n">addLayoutItem</span><span class="p">(</span><span class="n">scalebar</span><span class="p">)</span>
+</span><span id="__span-4-58"><a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a><span class="n">scalebar</span><span class="o">.</span><span class="n">attemptMove</span><span class="p">(</span><span class="n">QgsLayoutPoint</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span> <span class="mi">190</span><span class="p">,</span> <span class="n">QgsUnitTypes</span><span class="o">.</span><span class="n">LayoutMillimeters</span><span class="p">))</span>
+</span><span id="__span-4-59"><a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>
+</span><span id="__span-4-60"><a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a><span class="c1"># სათაური</span>
+</span><span id="__span-4-61"><a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a><span class="n">title</span> <span class="o">=</span> <span class="n">QgsLayoutItemLabel</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+</span><span id="__span-4-62"><a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a><span class="n">title</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;My Title&quot;</span><span class="p">)</span>
+</span><span id="__span-4-63"><a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a><span class="n">title</span><span class="o">.</span><span class="n">setFont</span><span class="p">(</span><span class="n">QFont</span><span class="p">(</span><span class="s1">&#39;Arial&#39;</span><span class="p">,</span> <span class="mi">24</span><span class="p">))</span>
+</span><span id="__span-4-64"><a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a><span class="n">title</span><span class="o">.</span><span class="n">adjustSizeToText</span><span class="p">()</span>
+</span><span id="__span-4-65"><a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a><span class="n">layout</span><span class="o">.</span><span class="n">addLayoutItem</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+</span><span id="__span-4-66"><a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a><span class="n">title</span><span class="o">.</span><span class="n">attemptMove</span><span class="p">(</span><span class="n">QgsLayoutPoint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">QgsUnitTypes</span><span class="o">.</span><span class="n">LayoutMillimeters</span><span class="p">))</span>
+</span><span id="__span-4-67"><a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a>
+</span><span id="__span-4-68"><a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a><span class="n">layout</span> <span class="o">=</span> <span class="n">manager</span><span class="o">.</span><span class="n">layoutByName</span><span class="p">(</span><span class="n">layoutName</span><span class="p">)</span>
+</span><span id="__span-4-69"><a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a><span class="n">exporter</span> <span class="o">=</span> <span class="n">QgsLayoutExporter</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+</span><span id="__span-4-70"><a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a>
+</span><span id="__span-4-71"><a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a><span class="n">fn</span> <span class="o">=</span> <span class="s1">&#39;C:/temp/layout_export.pdf&#39;</span>
+</span><span id="__span-4-72"><a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a><span class="n">exporter</span><span class="o">.</span><span class="n">exportToPdf</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">QgsLayoutExporter</span><span class="o">.</span><span class="n">PdfExportSettings</span><span class="p">())</span>
+</span></code></pre></div>
+<hr />
+<h2 id="withas">📘 <strong>With…as კონსტრუქტორი</strong><a class="headerlink" href="#withas" title="Permanent link">&para;</a></h2>
+<p>👉 <code>with</code> გამოიყენება ფაილებისა და რესურსების გახსნისას — ის ავტომატურად ხურავს ფაილს გამოყენების შემდეგ.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Users\kapo\Desktop\koordinatebi.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">X</span><span class="p">:</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<p>✅ <strong>დასკვნა:</strong><br />
+PyQGIS იძლევა საშუალებას ავტომატიზირდეს როგორც რასტრული, ისე ვექტორული ოპერაციები — მონაცემების დამუშავებიდან რუკის გენერაციამდე.</p>
+<hr />
 
 
 
@@ -5884,7 +5893,7 @@ print(a)
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../PyQGIS_topic10/" class="md-footer__link md-footer__link--prev" aria-label="წინა: თემა 10">
+          <a href="../../Theory/PyQGIS_oop_guide/" class="md-footer__link md-footer__link--prev" aria-label="წინა: PyQGIS OOP">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -5894,20 +5903,20 @@ print(a)
                 წინა
               </span>
               <div class="md-ellipsis">
-                თემა 10
+                PyQGIS OOP
               </div>
             </div>
           </a>
         
         
           
-          <a href="../PyQGIS_topic12/" class="md-footer__link md-footer__link--next" aria-label="შემდეგი: თემა 12">
+          <a href="../PyQGIS_Create_layer/" class="md-footer__link md-footer__link--next" aria-label="შემდეგი: შრის შექმნა">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 შემდეგი
               </span>
               <div class="md-ellipsis">
-                თემა 12
+                შრის შექმნა
               </div>
             </div>
             <div class="md-footer__button md-icon">
