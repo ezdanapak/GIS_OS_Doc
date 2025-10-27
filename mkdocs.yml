@@ -209,6 +209,8 @@ nav:
           - VS Code Extension: Programming/Python/Theory/Python_VS_Code_extensions.md
           - VS Code Shortcuts: Programming/Python/Theory/Python_VScode_hotkeys.md
         - პრაქტიკა:
+          - პრაქტიკული სავარჯიშოები: Programming/Python/Practical_exercise/Number1.md
+          - პრაქტიკული სავარჯიშოს გაფრთხილება: Programming/Python/Practical_exercise/Practical_warning.md
           - საბაზისო: Programming/Python/Code_template/python_basics.md
           - მონ.ტიპები: Programming/Python/Code_template/python_data_types.md
           - ოპერატორები და პირობები: Programming/Python/Code_template/python_operators_conditions.md

@@ -756,6 +756,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://osdoc.qgis.ge/Programming/Python/Practical_exercise/Practical_warning/</loc>
+         <lastmod>2025-10-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://osdoc.qgis.ge/Programming/Python/Theory/Hello_world_history/</loc>
          <lastmod>2025-10-27</lastmod>
          <changefreq>daily</changefreq>
