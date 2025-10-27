@@ -2882,6 +2882,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2973,6 +2979,69 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Code_template/python_cycles_operators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ციკლი და ოპერატორი
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Code_template/python_math_random/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    რიცხვები
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Code_template/python_functions.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ფუნქციები
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3051,7 +3120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Python/python_functions/" class="md-nav__link">
+      <a href="../../../Python/python_functions.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4021,6 +4090,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -4418,6 +4493,69 @@
   
   <span class="md-ellipsis">
     შეცდომები და მათი მოგვარება
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyQGIS_topics/PyQGIS_Obj_delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    წაშლა
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyQGIS_topics/PyQGIS_Calc_Attrib_Expressions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    გაანგარიშებები ცხრილში
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyQGIS_topics/PyQGIS_Vector_Processing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ვექტორის გეოდამუშავება
   </span>
   
 
@@ -5795,7 +5933,7 @@
 </ul>
 <hr />
 <h2 id="qgsfeature">✅ სწრაფი მაგალითი — QgsFeature შექმნა და ატრიბუტების დაყენება<a class="headerlink" href="#qgsfeature" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">QgsFeature</span><span class="p">,</span> <span class="n">QgsGeometry</span><span class="p">,</span> <span class="n">QgsPointXY</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsFeature</span><span class="p">,</span> <span class="n">QgsGeometry</span><span class="p">,</span> <span class="n">QgsPointXY</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">feat</span> <span class="o">=</span> <span class="n">QgsFeature</span><span class="p">()</span>                              <span class="c1"># ცარიელი ობიექტი</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">geom</span> <span class="o">=</span> <span class="n">QgsGeometry</span><span class="o">.</span><span class="n">fromPointXY</span><span class="p">(</span><span class="n">QgsPointXY</span><span class="p">(</span><span class="mf">44.8</span><span class="p">,</span> <span class="mf">41.7</span><span class="p">))</span>
@@ -5807,8 +5945,8 @@
 </blockquote>
 <hr />
 <h2 id="_2">🧪 გამოყენება ფენასთან — ახალი ობიექტის ჩაწერა<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">QgsProject</span><span class="p">,</span> <span class="n">QgsVectorLayer</span><span class="p">,</span> <span class="n">QgsField</span><span class="p">,</span> <span class="n">QgsFields</span><span class="p">,</span> <span class="n">QgsWkbTypes</span><span class="p">,</span> <span class="n">QgsFeature</span><span class="p">,</span> <span class="n">QgsGeometry</span><span class="p">,</span> <span class="n">QgsPointXY</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">PyQt5.QtCore</span><span class="w"> </span><span class="kn">import</span> <span class="n">QVariant</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsProject</span><span class="p">,</span> <span class="n">QgsVectorLayer</span><span class="p">,</span> <span class="n">QgsField</span><span class="p">,</span> <span class="n">QgsFields</span><span class="p">,</span> <span class="n">QgsWkbTypes</span><span class="p">,</span> <span class="n">QgsFeature</span><span class="p">,</span> <span class="n">QgsGeometry</span><span class="p">,</span> <span class="n">QgsPointXY</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">PyQt5.QtCore</span> <span class="kn">import</span> <span class="n">QVariant</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># შევქმნათ მეხსიერების ფენა (Point, EPSG:4326)</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">vl</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="s2">&quot;Point?crs=EPSG:4326&quot;</span><span class="p">,</span> <span class="s2">&quot;Cities&quot;</span><span class="p">,</span> <span class="s2">&quot;memory&quot;</span><span class="p">)</span>
@@ -5864,7 +6002,7 @@
 </ul>
 <hr />
 <h2 id="multipart">🧷 მრავალნაწილიანი გეომეტრია (Multipart)<a class="headerlink" href="#multipart" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">QgsGeometry</span><span class="p">,</span> <span class="n">QgsPointXY</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsGeometry</span><span class="p">,</span> <span class="n">QgsPointXY</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># ორი წერტილისგან Multipart Point</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">mp</span> <span class="o">=</span> <span class="n">QgsGeometry</span><span class="o">.</span><span class="n">fromMultiPointXY</span><span class="p">([</span><span class="n">QgsPointXY</span><span class="p">(</span><span class="mf">44.8</span><span class="p">,</span> <span class="mf">41.7</span><span class="p">),</span> <span class="n">QgsPointXY</span><span class="p">(</span><span class="mf">41.6</span><span class="p">,</span> <span class="mf">41.65</span><span class="p">)])</span>

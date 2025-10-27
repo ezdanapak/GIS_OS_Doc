@@ -2882,6 +2882,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2973,6 +2979,69 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Code_template/python_cycles_operators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ციკლი და ოპერატორი
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Code_template/python_math_random/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    რიცხვები
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Code_template/python_functions.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ფუნქციები
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3051,7 +3120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Python/python_functions/" class="md-nav__link">
+      <a href="../../../Python/python_functions.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4003,6 +4072,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -4400,6 +4475,69 @@
   
   <span class="md-ellipsis">
     შეცდომები და მათი მოგვარება
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyQGIS_topics/PyQGIS_Obj_delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    წაშლა
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyQGIS_topics/PyQGIS_Calc_Attrib_Expressions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    გაანგარიშებები ცხრილში
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyQGIS_topics/PyQGIS_Vector_Processing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ვექტორის გეოდამუშავება
   </span>
   
 
@@ -5781,7 +5919,7 @@
 </span></code></pre></div>
 <hr />
 <h2 id="_4">➕ ახალი ობიექტის დამატება<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtCore</span><span class="w"> </span><span class="kn">import</span> <span class="n">QVariant</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">qgis.PyQt.QtCore</span> <span class="kn">import</span> <span class="n">QVariant</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">pr</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">dataProvider</span><span class="p">()</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
@@ -5800,7 +5938,7 @@
 </span></code></pre></div>
 <hr />
 <h2 id="_5">💾 ახალი ვექტორული ფაილის შექმნა<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">QgsVectorFileWriter</span><span class="p">,</span> <span class="n">QgsFields</span><span class="p">,</span> <span class="n">QgsField</span><span class="p">,</span> <span class="n">QgsWkbTypes</span><span class="p">,</span> <span class="n">QgsCoordinateReferenceSystem</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsVectorFileWriter</span><span class="p">,</span> <span class="n">QgsFields</span><span class="p">,</span> <span class="n">QgsField</span><span class="p">,</span> <span class="n">QgsWkbTypes</span><span class="p">,</span> <span class="n">QgsCoordinateReferenceSystem</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">fn</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:/Users/Public/Documents/GIS/shapefile/new_layer.shp&quot;</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">fields</span> <span class="o">=</span> <span class="n">QgsFields</span><span class="p">()</span>

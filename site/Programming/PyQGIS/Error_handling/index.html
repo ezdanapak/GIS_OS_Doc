@@ -14,7 +14,7 @@
         <link rel="prev" href="../PyQGIS_topics/PyQGIS_Geotagged_photos/">
       
       
-        <link rel="next" href="../../Spatial_python/resources/">
+        <link rel="next" href="../PyQGIS_topics/PyQGIS_Obj_delete/">
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
@@ -2882,6 +2882,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2973,6 +2979,69 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Code_template/python_cycles_operators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ციკლი და ოპერატორი
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Code_template/python_math_random/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    რიცხვები
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Code_template/python_functions.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ფუნქციები
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3051,7 +3120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/python_functions/" class="md-nav__link">
+      <a href="../../Python/python_functions.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3882,6 +3951,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -4328,6 +4403,69 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_topics/PyQGIS_Obj_delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    წაშლა
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_topics/PyQGIS_Calc_Attrib_Expressions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    გაანგარიშებები ცხრილში
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_topics/PyQGIS_Vector_Processing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ვექტორის გეოდამუშავება
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -5610,7 +5748,7 @@ EOL means end of line, and the message means that Python reached the end of the 
 </ul>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Missing_functions_in_IDE.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">qgis</span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">qgis</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">#კოდის დანარჩენი ნაწილი თემატურად</span>
 </span></code></pre></div></td></tr></table></div>
@@ -5621,7 +5759,71 @@ EOL means end of line, and the message means that Python reached the end of the 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>სხვა შემთხვევაში პროგრამის დახურვის შემდეგ მიღებული შედეგები დაიკარგება.</p>
+<p>layers = QgsProject.instance().mapLayersByName('sadguri')</p>
 </div>
+<p>layer = layers[0]</p>
+<p>delf = layer.dataProvider().capabilities()</p>
+<p>feats = layer.getFeatures()</p>
+<p>dfeats = []</p>
+<p>კოდის ნაწილია წარმოდგენილი და თუ შეცდომას აგდებს</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>IndexError: list index out of range
+ნიშნავს რომ mapLayersByName('sadguri') სახელი შრის არ გაქვს შეცვლილი და ვერ ხვდება.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>--</p>
+<p>out = r'C:\Users\Public\GIS\PyGK\tema_4_1\Georgia_municipalities2.shp'</p>
+<p>processing.run("native:deletecolumn", {INPUT': layer,\</p>
+<p>'COLUMN':['SHAPE_Leng'],'OUTPUT':out})</p>
+<p>EOL while scanning string literal</p>
+<p>შეცდომა ნიშნავს რომ 'INPUT':  - ს აკლია ' ცალ მხარეს</p>
+<p>layer = layes[0]</p>
+<p>NameError: name 'layes' is not defined</p>
+<p>layes აკლია r    - layers</p>
+<p>proces sing.run("native:deleteduplicategeometries", {'INPUT':layer,'OUTPUT':output})</p>
+<p>invalid syntax შეცდომა proces sing.run ერთად უნდა ეწეროს processing.run</p>
+<p>სვეტი რომელსაც სკრიპტი ეძებს ატრიბუტულ ცხრილში ფიზიკურად არ არსებობს...</p>
+<p>ამ შემთხვევაში ეს არის fid სვეტი.</p>
+<p>Traceback (most recent call last):</p>
+<p>File "<input>", line 1, in <module></p>
+<p>File "<string>", line 15, in <module></p>
+<p>KeyError: 'fid'</p>
+<p>Traceback (most recent call last):</p>
+<p>File "C:\PROGRA1\QGIS331.2\apps\Python39\lib\code.py", line 90, in runcode</p>
+<div class="language-text highlight"><pre><span></span><code>exec(code, self.locals)
+</code></pre></div>
+<p>File "<input>", line 1, in <module></p>
+<p>File "<string>", line 27, in <module></p>
+<p>KeyError: 'X_coordinate' </p>
+<p>ნიშნავს რომ კოდში დაწერილი </p>
+<p>pv.addAttributes([QgsField('Area_sq_m', QVariant.Double)])</p>
+<p>სვეტის ეს სახელწოდება არის გრძელი შეიპისთვის და უნდა შემოკლდეს</p>
+<p>Traceback (most recent call last):</p>
+<p>File "C:\PROGRA~1\QGIS33~1.2\apps\Python39\lib\code.py", line 90, in runcode</p>
+<div class="language-text highlight"><pre><span></span><code>exec(code, self.locals)
+</code></pre></div>
+<p>File "<input>", line 1, in <module></p>
+<p>File "<string>", line 29, in <module></p>
+<p>File "C:\PROGRA~1/QGIS33~1.2/apps/qgis/./python\qgis\core\additions\edit.py", line 38, in <strong>enter</strong></p>
+<div class="language-text highlight"><pre><span></span><code>assert self.layer.startEditing()
+</code></pre></div>
+<p>AssertionError</p>
+<p>შრის რედაქტირება გარსიდან უკვე ჩართული გაქვს და უნდა გათიშო</p>
+<p>განმარტება</p>
+<p>'', შრის სახელწოდებაა</p>
+<p>iface.addVectorLayer(fn, '', 'ogr')</p>
+<p>NameError: name 'Region' is not defined ნიშნავს რომ [Region] ჩასმული უნდა იყოს ფრჩხილებში &gt;&gt;&gt;  ['Region']</p>
+<p>processing.run("native:dissolve", {'INPUT':layer ,'FIELD':['Region'],\</p>
+<p>'SEPARATE_DISJOINT':False,'OUTPUT':fn})</p>
+<p>NameError: name 'f' is not defined</p>
+<p>iface.addVectorLayer(f, '', 'ogr')</p>
+<p>iface.addVectorLayer(fაქ აკლია n ასო და მაგიტომ ვერ ხედავს, '', 'ogr')</p>
+<p>iface.addVectorLayer(fn, '', 'ogr')</p>
 
 
 
@@ -5674,13 +5876,13 @@ EOL means end of line, and the message means that Python reached the end of the 
         
         
           
-          <a href="../../Spatial_python/resources/" class="md-footer__link md-footer__link--next" aria-label="შემდეგი: რესურსები">
+          <a href="../PyQGIS_topics/PyQGIS_Obj_delete/" class="md-footer__link md-footer__link--next" aria-label="შემდეგი: წაშლა">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 შემდეგი
               </span>
               <div class="md-ellipsis">
-                რესურსები
+                წაშლა
               </div>
             </div>
             <div class="md-footer__button md-icon">
