@@ -217,6 +217,7 @@ nav:
           - ციკლი და ოპერატორი: Programming/Python/Code_template/python_cycles_operators.md
           - რიცხვები: Programming/Python/Code_template/python_math_random.md
           - ფუნქციები: Programming/Python/Code_template/python_functions.md
+          - ფორმატირება: Programming/Python/Code_template/python_string_formatting.md
         - ლოგიკური ოპერაციები: Programming/Python/python_logical_ops.md
         - ციკლები: Programming/Python/python_loops.md
         - მათემატიკური ფუნქციები: Programming/Python/python_math_functions.md
