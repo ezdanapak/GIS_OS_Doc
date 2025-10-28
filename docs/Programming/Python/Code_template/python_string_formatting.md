@@ -168,6 +168,3 @@ Giorgi     |  25   |   Developer
 
 ---
 
-📘 **საყვარელი რესურსები:**
-- [Python Official Docs – String Formatting](https://docs.python.org/3/library/string.html#format-string-syntax)
-- [Real Python Tutorial – F-Strings](https://realpython.com/python-f-strings/)
