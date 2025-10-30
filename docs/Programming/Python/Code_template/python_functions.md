@@ -684,7 +684,10 @@ def test_reverse_string():
 ---
 
 ## სრული ტესტის გაშვება
+
+
 ```python
+
 # ყველა ტესტის გაშვება
 def run_all_tests():
     test_greet()
@@ -706,5 +709,6 @@ def run_all_tests():
 
 
 run_all_tests()
+
 ```
 --- 
