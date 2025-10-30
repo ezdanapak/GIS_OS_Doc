@@ -685,10 +685,8 @@ def test_reverse_string():
 
 ## სრული ტესტის გაშვება
 
-
 ```python
 
-# ყველა ტესტის გაშვება
 def run_all_tests():
     test_greet()
     test_square()
@@ -706,9 +704,5 @@ def run_all_tests():
     test_min_of_three()
     test_reverse_string()
     print("\nყველა ტესტი წარმატებით გაიარა! 🎉")
-
-
 run_all_tests()
-
 ```
---- 
