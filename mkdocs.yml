@@ -324,5 +324,10 @@ nav:
       - Engine:
           - 'GEE md': './GoogleEarth/GE.md'
           - 'რესურსები': './GoogleEarth/resources.md'
+
+  - დამატებით:
+    - სასარგებლო ბმულები: Extra/Links.md
+    - თარიღები: Extra/Date.md
+
                 
             
