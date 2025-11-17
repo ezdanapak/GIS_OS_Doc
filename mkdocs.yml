@@ -219,6 +219,7 @@ nav:
           - ფუნქციები: Programming/Python/Code_template/python_functions.md
           - ტექსტი: Programming/Python/Code_template/python_string.md
           - ფორმატირება: Programming/Python/Code_template/python_string_formatting.md
+          - ფაილები: Programming/Python/Code_template/python_files.md
         - ლოგიკური ოპერაციები: Programming/Python/python_logical_ops.md
         - ციკლები: Programming/Python/python_loops.md
         - მათემატიკური ფუნქციები: Programming/Python/python_math_functions.md
