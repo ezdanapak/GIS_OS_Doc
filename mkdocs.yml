@@ -275,6 +275,7 @@ nav:
             - წაშლა: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Obj_delete.md
             - გაანგარიშებები ცხრილში : Programming/PyQGIS/PyQGIS_topics/PyQGIS_Calc_Attrib_Expressions.md
             - ვექტორის გეოდამუშავება: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Vector_Processing.md
+            - შრის ხელსაწყოები: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Layer_Tools.md
             - რასტრის გეოდამუშავება: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Processing.md
             - რასტრის სტატისტიკა: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Statistics.md
     - სივრცული პითონი:
