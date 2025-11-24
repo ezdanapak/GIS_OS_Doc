@@ -1,1 +1,1 @@
-QGIS in Mineral Exploration https://qgis-in-mineral-exploration.readthedocs.io/en/latest/
+QGIS in Mineral (Exploration)[https://qgis-in-mineral-exploration.readthedocs.io/en/latest/]
