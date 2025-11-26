@@ -220,6 +220,7 @@ nav:
           - ტექსტი: Programming/Python/Code_template/python_string.md
           - სიები: Programming/Python/Code_template/python_lists.md
           - ფორმატირება: Programming/Python/Code_template/python_string_formatting.md
+          - ფაილები: Programming/Python/Code_template/python_files.md
         - ლოგიკური ოპერაციები: Programming/Python/python_logical_ops.md
         - ციკლები: Programming/Python/python_loops.md
         - მათემატიკური ფუნქციები: Programming/Python/python_math_functions.md
@@ -276,6 +277,7 @@ nav:
             - წაშლა: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Obj_delete.md
             - გაანგარიშებები ცხრილში : Programming/PyQGIS/PyQGIS_topics/PyQGIS_Calc_Attrib_Expressions.md
             - ვექტორის გეოდამუშავება: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Vector_Processing.md
+            - შრის ხელსაწყოები: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Layer_Tools.md
             - რასტრის გეოდამუშავება: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Processing.md
             - რასტრის სტატისტიკა: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Statistics.md
     - სივრცული პითონი:
@@ -325,5 +327,11 @@ nav:
       - Engine:
           - 'GEE md': './GoogleEarth/GE.md'
           - 'რესურსები': './GoogleEarth/resources.md'
+
+  - დამატებით:
+    - სასარგებლო ბმულები: Extra/Links.md
+    - თარიღები: Extra/Date.md
+    - გამოყენება: Extra/OSuse.md
+
                 
             
