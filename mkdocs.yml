@@ -223,6 +223,8 @@ nav:
           - ფაილები: Programming/Python/Code_template/python_files.md
           - მონ.სტრუქტურები: Programming/Python/Code_template/python_data_structure.md
           - შეცდომები: Programming/Python/Code_template/python_exceptions.md
+          - კონტეინერები: Programming/Python/Code_template/python_container.md
+          - PEP8: Programming/Python/Code_template/python_pep.md
         - ლოგიკური ოპერაციები: Programming/Python/python_logical_ops.md
         - ციკლები: Programming/Python/python_loops.md
         - მათემატიკური ფუნქციები: Programming/Python/python_math_functions.md
