@@ -78,7 +78,8 @@ markdown_extensions:
   - footnotes
   - md_in_html
   - tables
-  - pymdownx.keys
+  - pymdownx.keys:
+      separator: "+"
   - toc:
       permalink: true
       separator: "_"
@@ -126,6 +127,7 @@ nav:
             - QGIS: GIS_Basic/Software/QGIS.md
             - Google Earth: GIS_Basic/Software/GoogleEarth.md
             - Geoserver: GIS_Basic/Software/Geoserver.md
+            - Additional software: GIS_Basic/Software/Additional_soft.md
         - თეორია:
           - გეოიდი & ელიფსოიდი: GIS_Basic/Theory/Base_Theory/Ellipsoid_Geoid_intro.md
           - დატუმი: GIS_Basic/Theory/Base_Theory/Datum.md

@@ -71,11 +71,16 @@ Shapefile - ის [შესახებ](https://ezdanapak.github.io/GTU-GIS/G
 === "I ეტაპი: საქაღალდის მოწყობა"
 * QGIS - ში დააინსტალირეთ ფლაგინი [HCMGIS](https://plugins.qgis.org/plugins/HCMGIS/) და 
 [QuickMapServices](https://plugins.qgis.org/plugins/quick_map_services/) საბაზისო რუკებისთვის.
-* შექმენით საქაღალდე თქვენი სახელისა და გვარის გამოყენებით. დაიცავით ზემოთ მოცემული სახელდების წესები.
+* შექმენით საქაღალდე თქვენი სახელისა და გვარის გამოყენებით. დაიცავით ზემოთ მოცემული სახელდების წესები. <br>
+<br>
+++left-control+left-shift+"N"++
+<br>
 * მის შიგნით შექმენით შემდეგი ქვე-საქაღალდეები:  
   - Project  
   - Plugins
   - shp  
+
+
 
 ```mermaid
 graph LR
@@ -84,11 +89,16 @@ graph LR
   A[FirstName_LastName_GroupNumber_Assignment_Number] --> D{shp};
 ```
 
-დააკავშირეთ QGIS (Browser ფანჯრიდან) თქვენს მთავარ საქაღალდესთან.
+დააკავშირეთ QGIS (Browser ფანჯრიდან რჩეულებში) თქვენს მთავარ საქაღალდესთან.
 
 ---
 
 === "II ეტაპი: Shapefile-ების შექმნა"
+
+- შექმენით ახალი პროექტი QGIS - ში <br>
+<br>
+++left-control+"N"++
+<br>
 
 **დამატებითი ინფორმაცია**
 
@@ -123,8 +133,9 @@ graph LR
 * ფენები პროექტში ორგანიზებულად განათავსეთ.
 
 * პროექტის კომპრესირებული ფაილი შეინახეთ სახელით: `"Digitalization_project.qgz"`.  
-პროექტის არაკომპრესირებული ფაილი შეინახეთ სახელით: `"Digitalization_project.qgs"`.
-
+პროექტის არაკომპრესირებული ფაილი შეინახეთ სახელით: `"Digitalization_project.qgs"`. <br>
+<br>
+++left-control+left-shift+"S"++
 
 ---
 
