@@ -121,7 +121,7 @@ nav:
         - შესახებ:
             - დახმარება: GIS_Basic/Additional/Help.md
             - საავტორო უფლებები: GIS_Basic/Additional/Copyright_Disclaimer.md
-            - გაფრთხილება: GIS_Basic/Additional/Warning.md
+            - გაფრთხილება: GIS_Basic/Additional/warning.md
             - კომპიუტერის მონაცემები: GIS_Basic/Theory/Computer_Requirements.md
         - პროგრამული უზრუნველყოფა:
             - QGIS: GIS_Basic/Software/QGIS.md
