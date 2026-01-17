@@ -136,6 +136,7 @@ nav:
           - გეომონაცემთა ბაზები:
             - Apache parquet: GIS_Basic/Theory/Geodatabase/Apache_parquet.md
             - Geodatabase: GIS_Basic/Theory/Geodatabase/Geodatabase.md
+          - გაანგარიშება: GIS_Basic/Theory/QGIS_area.md
           - OGC WEB:
             - XML: GIS_Basic/Theory/OGC_WEB/XML.md
             - GeoNetwork: GIS_Basic/Theory/OGC_WEB/GeoNetwork.md
