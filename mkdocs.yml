@@ -151,6 +151,7 @@ nav:
             - სტილები: GIS_Basic/Theory/QGIS/QML_SLD.md
             - ვექტორული შრის შენახვა: GIS_Basic/Theory/QGIS/Save_vector_layer.md
             - დროებითი შრე: GIS_Basic/Theory/QGIS/Scratch_layer.md
+            - გაანგარიშება: GIS_Basic/Theory/QGIS/QGIS_area.md
           - რასტრი:
             - გეორეფერენცირება: GIS_Basic/Theory/Raster/Georeferencing.md
             - რელიეფი: GIS_Basic/Theory/Raster/Terrain.md
