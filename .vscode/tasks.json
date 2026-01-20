@@ -2,14 +2,11 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Install Python Requirements",
+      "label": "Auto Setup Environment",
       "type": "shell",
-      "command": "powershell",
+      "command": "python",
       "args": [
-        "-NoProfile",
-        "-ExecutionPolicy", "Bypass",
-        "-Command",
-        "if (-not (Test-Path '.setup_done')) { Write-Host 'პირველადი კონფიგურაცია...' -ForegroundColor Cyan; python -m pip install --upgrade pip; if (Test-Path 'requirements.txt') { pip install -r requirements.txt }; New-Item -Path '.setup_done' -ItemType File | Out-Null; Write-Host 'მზად არის!' -ForegroundColor Green } else { exit }"
+        "init_project_requirements.py"
       ],
       "problemMatcher": [],
       "runOptions": {
