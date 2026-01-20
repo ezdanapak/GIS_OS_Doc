@@ -403,20 +403,22 @@ print(math_tools.factorial(6))  # 720
 
 ### Git-ის ინსტალაცია
 
-**Linux/Ubuntu:**
-```bash
-sudo apt update
-sudo apt install git
-```
+=== "Linux/Ubuntu"
+    ```bash
+    sudo apt update
+    sudo apt install git
+    ```
 
-**macOS:**
-```bash
-brew install git
-```
+=== "macOS"
+    ```bash
+    brew install git
+    ```
 
-**Windows:** ჩამოტვირთეთ [git-scm.com](https://git-scm.com)
+=== "Windows"
+    ჩამოტვირთეთ [git-scm.com](https://git-scm.com)-დან და გაუშვით ინსტალერი.
 
 **შემოწმება:**
+
 ```bash
 git --version
 ```
@@ -597,6 +599,7 @@ git pull
 
 ### ამოცანა 1: მარტივი მოდული
 შექმენით მოდული `geometry.py`, რომელიც შეიცავს ფუნქციებს:
+
 - სამკუთხედის ფართობის გამოსათვლელად
 - მართკუთხედის ფართობის გამოსათვლელად
 - წრეწირის ფართობისა და პერიმეტრის გამოსათვლელად
@@ -642,6 +645,7 @@ print(f"წრეწირის პერიმეტრი: {geometry.circle_p
 
 ### ამოცანა 2: პაკეტის შექმნა
 შექმენით პაკეტი `data_tools`, რომელიც შეიცავს:
+
 - `readers.py` - მონაცემების წაკითხვის ფუნქციები
 - `writers.py` - მონაცემების ჩაწერის ფუნქციები
 - `processors.py` - მონაცემების დამუშავების ფუნქციები
@@ -899,19 +903,6 @@ git log --oneline --graph --all
 
 # 15. ბრენჩის წაშლა
 git branch -d feature-humidity
-
-# შედეგის ნახვა
-echo "
-=== პროექტის ფაილები ==="
-ls -la
-
-echo "
-=== Git ისტორია ==="
-git log --oneline
-
-echo "
-=== Git სტატუსი ==="
-git status
 ```
 
 ---
@@ -980,12 +971,22 @@ pip list
 
 ეს უნარები საფუძველია პროფესიონალური Python დეველოპმენტისთვის და გუნდურ მუშაობაში!
 
+be1f2f32d7ad231e <br>
+4d56e9fb81edbda6 <br>
+db1e38bb0824cdba <br>
+61f5555ac130ebab <br>
+f577ca0eb349e8a2 <br>
+1b1b775211e4ad43 <br>
+06c0621276f1fab8 <br>
+a94bacfc8f503470 <br>
 
-be1f2f32d7ad231e
-4d56e9fb81edbda6
-db1e38bb0824cdba
-61f5555ac130ebab
-f577ca0eb349e8a2
-1b1b775211e4ad43
-06c0621276f1fab8
-a94bacfc8f503470
+
+=== "Linux/macOS"
+    ```bash title="Terminal"
+    ls -la
+    ```
+
+=== "Windows"
+    ```powershell title="PowerShell"
+    dir
+    ```
