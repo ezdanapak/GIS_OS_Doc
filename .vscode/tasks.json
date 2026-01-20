@@ -9,14 +9,14 @@
         "-NoProfile",
         "-ExecutionPolicy", "Bypass",
         "-Command",
-        "python -m pip install --upgrade pip; if (Test-Path 'requirements.txt') { pip install -r requirements.txt } else { Write-Host 'requirements.txt არ მოიძებნა' -ForegroundColor Yellow }"
+        "if (-not (Test-Path '.setup_done')) { Write-Host 'პირველადი კონფიგურაცია...' -ForegroundColor Cyan; python -m pip install --upgrade pip; if (Test-Path 'requirements.txt') { pip install -r requirements.txt }; New-Item -Path '.setup_done' -ItemType File | Out-Null; Write-Host 'მზად არის!' -ForegroundColor Green } else { exit }"
       ],
       "problemMatcher": [],
       "runOptions": {
         "runOn": "folderOpen"
       },
       "presentation": {
-        "echo": true,
+        "echo": false,
         "reveal": "silent",
         "focus": false,
         "panel": "shared",
