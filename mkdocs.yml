@@ -160,17 +160,17 @@ nav:
             - შეიპ-ფაილი: GIS_Basic/Theory/Vector/Shapefile.md
             - CAD: GIS_Basic/Theory/Vector/CAD.md
         - დავალებები:
-          - გეორეფერენცირება: GIS_Basic/Lab/Georeference.md
-          - დიგიტალიზაცია: GIS_Basic/Lab/Digitization.md
-          - გლობალური პოზიციონირება: GIS_Basic/Lab/GPS.md
-          - გეომონაცემთა ბაზები: GIS_Basic/Lab/Geodatabase.md
-          - დიგიტალიზაცია 1: GIS_Basic/Lab/Digitization1.md
-          - მონიშვნები: GIS_Basic/Lab/Selection.md
-          - OGC WEB: GIS_Basic/Lab/OGC_WEB.md
-          - WEB GIS: GIS_Basic/Lab/WEB_GIS.md
-          - ტოპოლოგია: GIS_Basic/Lab/Topology.md
-          - რელიეფის ანალიზი: GIS_Basic/Lab/Terrain_analysis.md
-          - რუკის კომპოზიცია: GIS_Basic/Lab/Map_composition.md
+          - გეორეფერენცირება: GIS_Basic/Lab/QGIS_Georeference.md
+          - დიგიტალიზაცია: GIS_Basic/Lab/QGIS_Digitization.md
+          - გლობალური პოზიციონირება: GIS_Basic/Lab/QGIS_GPS.md
+          - გეომონაცემთა ბაზები: GIS_Basic/Lab/QGIS_Geodatabase.md
+          - დიგიტალიზაცია 1: GIS_Basic/Lab/QGIS_Digitization1.md
+          - მონიშვნები: GIS_Basic/Lab/QGIS_Selection.md
+          - OGC WEB: GIS_Basic/Lab/QGIS_OGC_WEB.md
+          - WEB GIS: GIS_Basic/Lab/QGIS_WEB_GIS.md
+          - ტოპოლოგია: GIS_Basic/Lab/QGIS_Topology.md
+          - რელიეფის ანალიზი: GIS_Basic/Lab/QGIS_Terrain_analysis.md
+          - რუკის კომპოზიცია: GIS_Basic/Lab/QGIS_Map_composition.md
 
     - პერს.მონ. დაცვა:
       - პერსონალური მონაცემების დაცვა: Personal_Data_Protection/PDP_GIS.md
