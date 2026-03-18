@@ -114,7 +114,14 @@ mkdocs serve - Start the live-reloading docs server.
 mkdocs build - Build the documentation site.
 mkdocs -h - Print help message and exit.
 
+If you're in a hurry and don't want to mess with environment variables right now, you can almost always bypass the error by prefixing the command with python -m:
+
+PowerShell
+python -m mkdocs serve
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 
 pip freeze > requirements.txt
 pip install -r requirements.txt
 
+pip install mkdocs-jupyter --user

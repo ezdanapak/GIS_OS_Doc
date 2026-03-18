@@ -289,7 +289,8 @@ nav:
       - მონ.სტრუქტურები: Programming/Python_for_geographers/notebooks/md/02_data_structures.md
       - ვირტუალური გარემო: Programming/Python_for_geographers/Theory/Python_VENV.md
       - პითონის კლასები: Programming/Python_for_geographers/Theory/Python_classes.md
-
+    - Dev Ops:
+      - შესავალი: Dev_ops/intro.md
   - მონ.ბაზები:
       - 'PostgreSQL':
         - 'რესურსები': './Programming/Database/PostgreSQL/resources.md'
