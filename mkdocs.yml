@@ -301,6 +301,9 @@ nav:
         - შესავალი: Dev_ops/intro.md
       - 'Web Server':
         - შესავალი: Dev_ops/intro.md
+        - Http: Dev_ops/Web_server/http.md
+      - 'სხვა':
+        - curl: Dev_ops/Other/curl.md
   - მონ.ბაზები:
       - 'PostgreSQL':
         - 'რესურსები': './Programming/Database/PostgreSQL/resources.md'
