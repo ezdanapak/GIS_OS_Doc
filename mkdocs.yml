@@ -291,6 +291,16 @@ nav:
       - პითონის კლასები: Programming/Python_for_geographers/Theory/Python_classes.md
     - Dev Ops:
       - შესავალი: Dev_ops/intro.md
+      - 'QGIS':
+        - შესავალი: Dev_ops/intro.md
+      - 'Geoserver':
+        - შესავალი: Dev_ops/intro.md
+      - 'MapStore':
+        - შესავალი: Dev_ops/intro.md
+      - 'OS':
+        - შესავალი: Dev_ops/intro.md
+      - 'Web Server':
+        - შესავალი: Dev_ops/intro.md
   - მონ.ბაზები:
       - 'PostgreSQL':
         - 'რესურსები': './Programming/Database/PostgreSQL/resources.md'
