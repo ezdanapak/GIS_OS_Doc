@@ -291,6 +291,7 @@ nav:
       - პითონის კლასები: Programming/Python_for_geographers/Theory/Python_classes.md
     - Dev Ops:
       - შესავალი: Dev_ops/intro.md
+      - მოდული: Dev_ops/Other/Steps.md
       - 'QGIS':
         - შესავალი: Dev_ops/intro.md
       - 'Geoserver':
