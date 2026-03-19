@@ -35,6 +35,11 @@ GDAL [OGR](https://www.osgeo.org/projects/gdal/) <br>
 
 
 
+გატესტე კოდი
+
+<br>
+++left-control+"C"++
+<br>
 
 
 ```py title="new_shapefile_point.py" linenums="1"
