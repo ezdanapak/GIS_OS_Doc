@@ -264,6 +264,9 @@ nav:
             - QgsExpressionContext: Programming/PyQGIS/explanations/PyQGIS_QgsExpressionContext.md
             
             - Iface: Programming/PyQGIS/explanations/PyQGIS_iface.md
+         - მეთოდები:
+            - isValid: Programming/PyQGIS/PyQGIS_methods/PyQGIS_isValid.md
+            - Project instance: Programming/PyQGIS/PyQGIS_methods/PyQGIS_Project_instance.md
          - თეორია:
             - სწავლების საფეხურები: Programming/PyQGIS/Theory/Learning_stages.md
             - PyQGIS კლასები: Programming/PyQGIS/Theory/PyQGIS_classes_guide.md
