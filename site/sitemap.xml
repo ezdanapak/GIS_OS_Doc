@@ -391,12 +391,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://osdoc.qgis.ge/Non_formal_education/Lab/Quiz/</loc>
+         <loc>https://osdoc.qgis.ge/Non_formal_education/Lab/Story_maps/</loc>
          <lastmod>2026-03-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://osdoc.qgis.ge/Non_formal_education/Lab/Story_maps/</loc>
+         <loc>https://osdoc.qgis.ge/Non_formal_education/Lab/quiz/</loc>
          <lastmod>2026-03-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -546,11 +546,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/PyQGIS_topics/PyQGIS_Garbage_Collection/</loc>
-         <lastmod>2026-03-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://osdoc.qgis.ge/Programming/PyQGIS/PyQGIS_topics/PyQGIS_Geometry_Conversions/</loc>
          <lastmod>2026-03-19</lastmod>
          <changefreq>daily</changefreq>
@@ -616,6 +611,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Theory/PyQGIS_Garbage_Collection/</loc>
+         <lastmod>2026-03-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Theory/PyQGIS_Temporary_Output/</loc>
+         <lastmod>2026-03-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://osdoc.qgis.ge/Programming/PyQGIS/Theory/PyQGIS_classes_guide/</loc>
          <lastmod>2026-03-19</lastmod>
          <changefreq>daily</changefreq>
@@ -637,6 +642,11 @@
     </url>
     <url>
          <loc>https://osdoc.qgis.ge/Programming/PyQGIS/explanations/PyQGIS_QgsCoordinateReferenceSystem/</loc>
+         <lastmod>2026-03-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://osdoc.qgis.ge/Programming/PyQGIS/explanations/PyQGIS_QgsExpressionContext/</loc>
          <lastmod>2026-03-19</lastmod>
          <changefreq>daily</changefreq>
     </url>

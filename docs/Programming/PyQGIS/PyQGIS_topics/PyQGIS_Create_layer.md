@@ -35,10 +35,10 @@ GDAL [OGR](https://www.osgeo.org/projects/gdal/) <br>
 
 
 
-გატესტე კოდი
+გატესტე კოდი პირდაპირ QGIS - ის Python - ის კონსოლში, რომლის გამოძახება შეგიძლია სწრაფი ღილაკებით
 
 <br>
-++left-control+"C"++
+++left-control+left-alt+"P"++
 <br>
 
 
@@ -62,6 +62,11 @@ writer = QgsVectorFileWriter(shapefile_home, 'UTF-8', layerfield, QgsWkbTypes.Po
 del(writer)
 
 ```
+
+კოდის დაკომენტარებაში ან პირიქით დაგეხმარება ეს სწრაფი ღილაკები
+<br>
+++left-control+left-shift+":"++
+<br>
 
 <p>შესაძლებელია აქვე ჩავწეროთ მონაცემი შრეში</p>
 ```py title="new_shapefile_point_with_data.py" linenums="1"
@@ -154,13 +159,12 @@ layer = iface.addVectorLayer(fn, '', 'ogr')
 ```
 
 
-# ცხრილში ახალი სვეტის შექმნა და მონაცემის შეტანა
+## ცხრილში ახალი სვეტის შექმნა და მონაცემის შეტანა
 
-```python
-with edit არის ოპერატორი
+!!! note "with edit"
+    with edit არის ოპერატორი
+    იმისათვის რომ გაეშვას გამოხატვით გადაცემული ჩვენი კოდი საჭიროა შესაბამისი QgsExpressionContext-ის მიწოდება
 
-იმისათვის რომ გაეშვას გამოხატვით გადაცემული ჩვენი კოდი საჭიროა შესაბამისი QgsExpressionContext-ის მიწოდება
-```
 
 ## Calculate Field
 

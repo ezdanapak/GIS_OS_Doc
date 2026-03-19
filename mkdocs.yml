@@ -261,12 +261,16 @@ nav:
             - QgsCoordinateReferenceSystem: Programming/PyQGIS/explanations/PyQGIS_QgsCoordinateReferenceSystem.md
             - QgsWkbTypes: Programming/PyQGIS/explanations/PyQGIS_QgsWkbTypes.md
             - QgsVectorFileWriter: Programming/PyQGIS/explanations/PyQGIS_QgsVectorFileWriter.md
+            - QgsExpressionContext: Programming/PyQGIS/explanations/PyQGIS_QgsExpressionContext.md
+            
             - Iface: Programming/PyQGIS/explanations/PyQGIS_iface.md
          - თეორია:
             - სწავლების საფეხურები: Programming/PyQGIS/Theory/Learning_stages.md
             - PyQGIS კლასები: Programming/PyQGIS/Theory/PyQGIS_classes_guide.md
             - PyQGIS OOP: Programming/PyQGIS/Theory/PyQGIS_oop_guide.md
             - შეცდომები და მათი მოგვარება: Programming/PyQGIS/Theory/Error_handling.md
+            - ნაგვის შემკრები: Programming/PyQGIS/Theory/PyQGIS_Garbage_Collection.md
+            - Temporary Output: Programming/PyQGIS/Theory/PyQGIS_Temporary_Output.md
          - თემები:
             - თემა 11: Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic11.md
             - შრის შექმნა: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Create_layer.md
@@ -281,7 +285,6 @@ nav:
             - შრის ხელსაწყოები: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Layer_Tools.md
             - რასტრის გეოდამუშავება: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Processing.md
             - რასტრის სტატისტიკა: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Statistics.md
-            - ნაგვის შემკრები: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Garbage_Collection.md
     - სივრცული პითონი:
       - რესურსები: Programming/Spatial_python/resources.md
 
