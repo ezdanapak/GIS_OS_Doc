@@ -262,7 +262,6 @@ nav:
             - QgsWkbTypes: Programming/PyQGIS/explanations/PyQGIS_QgsWkbTypes.md
             - QgsVectorFileWriter: Programming/PyQGIS/explanations/PyQGIS_QgsVectorFileWriter.md
             - QgsExpressionContext: Programming/PyQGIS/explanations/PyQGIS_QgsExpressionContext.md
-            
             - Iface: Programming/PyQGIS/explanations/PyQGIS_iface.md
          - მეთოდები:
             - isValid: Programming/PyQGIS/PyQGIS_methods/PyQGIS_isValid.md
