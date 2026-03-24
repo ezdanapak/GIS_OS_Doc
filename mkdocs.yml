@@ -267,7 +267,7 @@ nav:
          - მეთოდები:
             - isValid: Programming/PyQGIS/PyQGIS_methods/PyQGIS_isValid.md
             - Project instance: Programming/PyQGIS/PyQGIS_methods/PyQGIS_Project_instance.md
-            - CSV TXT: Programming/PyQGIS/PyQGIS_methods/FCSVTXT.md
+            - CSV TXT: Programming/PyQGIS/PyQGIS_methods/PyQGIS_FCSVTXT.md
             - სივრცითი მონიშვნა: Programming/PyQGIS/PyQGIS_methods/PyQGIS_Spatial_Sel_Methods.md
          - თეორია:
             - სწავლების საფეხურები: Programming/PyQGIS/Theory/Learning_stages.md
