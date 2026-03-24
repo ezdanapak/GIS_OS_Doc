@@ -129,52 +129,7 @@ layer.selectByExpression('"DISTR_ENG"  =  \'Gardabani\'')
     ბრჭყალები ('') გამოიყენება ტექსტური მნიშვნელობებისთვის (სტრინგები), რადგან QGIS SQL-ში ასეა განსაზღვრული.
     \' არის ესკეიპი (escape sequence) Python-ში: რადგან მთლიანი გამოხატვა ერთ ციტატაშია ჩაკეტილი ("" ან ''), შიგნით მეორე ციტატის დასაწყებად/დასასრულებლად \' უნდა გამოიყენო, რომ Python-ნი არ შეცდეს და სწორად გაანალიზოს სტრინგი. თუ ესკეიპი არ იქნება, Python-ის პარსერი დაუშვებდა სინტაქსურ შეცდომას.
 
-
-
 ---
-## ობიექტის სივრცითი შერჩევა - Select By Location
-#დასამუშავებელია - 
-
-fn = r’D:\Location\Municipalitys.shp’
-
-fn_sel = r’D:\Location\Settlments.shp'
-
-fn_2 = r’D:\Location\ soxumi.shp’
-
-processing.run("native:selectbylocation", \
-
-	{'INPUT':fn_sel, 'PREDICATE':[0], 'INTERSECT': fn_2, 'METHOD':0})
-
-processing.run("native:selectbylocation", {'INPUT':fn_sel,'PREDICATE':[0],\
-
-    'INTERSECT':QgsProcessingFeatureSourceDefinition(fn, selectedFeaturesOnly=True, \
-
-	featureLimit=-1, geometryCheck=QgsFeatureRequest.GeometryAbortOnInvalid),'METHOD':0})
-
-
-
-
-
--- 
-
-fn = r'C:\Users\Public\GIS\PyGK\tema_3\Georgia_municipalities.shp'
-
-fn1 = r'C:\Users\Public\GIS\PyGK\tema_3\settlement.shp'
-
-
-
-processing.run("native:selectbylocation", {'INPUT':fn1,'PREDICATE':[0],'INTERSECT':QgsProcessingFeatureSourceDefinition(fn, selectedFeaturesOnly=True, featureLimit=-1, geometryCheck=QgsFeatureRequest.GeometryAbortOnInvalid),'METHOD':0})
-
-
-
-
-
-layer = iface.addVectorLayer(fn1, '', 'ogr')
-
----
-
-
-
 
 
 ## რიცხვითი ტიპის მონაცემები

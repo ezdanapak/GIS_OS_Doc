@@ -267,6 +267,8 @@ nav:
          - მეთოდები:
             - isValid: Programming/PyQGIS/PyQGIS_methods/PyQGIS_isValid.md
             - Project instance: Programming/PyQGIS/PyQGIS_methods/PyQGIS_Project_instance.md
+            - CSV TXT: Programming/PyQGIS/PyQGIS_methods/FCSVTXT.md
+            - სივრცითი მონიშვნა: Programming/PyQGIS/PyQGIS_methods/PyQGIS_Spatial_Sel_Methods.md
          - თეორია:
             - სწავლების საფეხურები: Programming/PyQGIS/Theory/Learning_stages.md
             - PyQGIS კლასები: Programming/PyQGIS/Theory/PyQGIS_classes_guide.md
@@ -275,10 +277,10 @@ nav:
             - ნაგვის შემკრები: Programming/PyQGIS/Theory/PyQGIS_Garbage_Collection.md
             - Temporary Output: Programming/PyQGIS/Theory/PyQGIS_Temporary_Output.md
          - თემები:
-            - თემა 11: Programming/PyQGIS/PyQGIS_topics/PyQGIS_topic11.md
             - შრის შექმნა: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Create_layer.md
             - გეომეტრიის ცვლილება: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Geometry_Conversions.md
-            - მონიშვნები: Programming/PyQGIS/PyQGIS_topics/PyQGIS_SQL_Spatial_Selection.md
+            - ატრიბუტული მონიშვნები: Programming/PyQGIS/PyQGIS_topics/PyQGIS_SQL_Spatial_Selection.md
+            - სივრცითი მონიშვნები:  Programming/PyQGIS/PyQGIS_topics/PyQGIS_Spatial_Selection.md
             - ტემპერატურების კონვერტაცია: Programming/PyQGIS/PyQGIS_topics/PyQGIS_temperatures.md
             - კოორდინატების კონვერტაცია: Programming/PyQGIS/PyQGIS_topics/PyQGIS_coordinates.md
             - კოორდინატებიანი ფოტოები: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Geotagged_photos.md
@@ -288,6 +290,7 @@ nav:
             - შრის ხელსაწყოები: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Layer_Tools.md
             - რასტრის გეოდამუშავება: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Processing.md
             - რასტრის სტატისტიკა: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Statistics.md
+            - რასტრი და ვექტორი: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Vector.md
     - სივრცული პითონი:
       - რესურსები: Programming/Spatial_python/resources.md
 
