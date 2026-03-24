@@ -1,318 +1,265 @@
-# თემა IV
+# თემა IV — ობიექტებისა და სვეტების წაშლა
 
-შრის ატრიბუტული ცხრილიდან სვეტის წაშლა
-შრიდან ობიექტის წაშლა
-დუბლირებული გეომეტრიების წაშლა
-დუბლირებული ცხრილური ჩანაწერების წაშლა
+შრიდან ობიექტის წაშლა · ატრიბუტული სვეტის წაშლა · დუბლირებული გეომეტრიების წაშლა · დუბლირებული ჩანაწერების წაშლა
 
 ---
 
 ## შესავალი
 
-!!! tip
-> რეკომენდაცია: სანამდე რაიმე წაშლის ოპერაციას გაუშვებთ შეინახეთ სარეზერვო ასლი (shapefile/GeoPackage ან სხვა).
+!!! tip "რეკომენდაცია"
+    სანამ წაშლის ოპერაციას გაუშვებთ — **შეინახეთ სარეზერვო ასლი** (Shapefile / GeoPackage).
+    `deleteFeatures()` და `deletecolumn` **პირდაპირ ცვლის** ფაილს და ოპერაცია **შეუქცევადია**.
 
 ---
 
-## ობიექტების ინდექსით წაშლა შრიდან
+## 1. ობიექტის წაშლა ინდექსით (ID)
 
-ამ მეთოდით პირდაპირ ვკითხულობთ `QgsVectorDataProvider` შესაძლებლობებს და ვშლით `deleteFeatures()` ID-ების მასივით.
+ყველაზე პირდაპირი მეთოდი — ID-ების სია პირდაპირ `deleteFeatures()`-ს გადაეცემა.
 
-```python
+```py title="delete_by_id.py" linenums="1"
 from qgis.core import QgsProject, QgsVectorDataProvider
 
-layers = QgsProject.instance().mapLayersByName('proeqtshi arsebuli shris saxelwodeba')
+# შრის მოძიება სახელით
+layers = QgsProject.instance().mapLayersByName('გასასუფთავებელი შრის სახელი')
 if not layers:
-    raise ValueError('Layer "proeqtshi arsebuli shris saxelwodeba" not found')
+    raise ValueError('შრე ვერ მოიძებნა')
+
 layer = layers[0]
+caps  = layer.dataProvider().capabilities()
 
-delf = layer.dataProvider().capabilities()
-
-if delf & QgsVectorDataProvider.DeleteFeatures:
-    # წაშლა ინდექსებით
-    to_delete = [0, 1, 2, 3, 4]
-    res = layer.dataProvider().deleteFeatures(to_delete)
+if caps & QgsVectorDataProvider.DeleteFeatures:
+    ids_to_delete = [0, 1, 2, 3, 4]   # ID-ების სია
+    layer.dataProvider().deleteFeatures(ids_to_delete)
     layer.triggerRepaint()
+    print(f"წაიშალა: {len(ids_to_delete)} ობიექტი")
 else:
-    print('წაშლა შეუძლებელია')
-```
----
-
-## რიცხვითი ატრიბუტების მქონე ობიექტების წაშლა შრიდან
-```python
-ვარიანტი 1
-
-layers = QgsProject.instance().mapLayersByName('sadguri')
-
-
-
-layer = layers[0]
-
-
-
-delf = layer.dataProvider().capabilities()
-
-feats = layer.getFeatures()
-
-dfeats = []
-
-
-
-if delf & QgsVectorDataProvider.DeleteFeatures:
-
-    for feat in feats:
-
-        if feat['fid'] > 16:
-
-            dfeats.append(feat.id())
-
-    df = layer.dataProvider().deleteFeatures(dfeats)
-
-    layer.triggerRepaint()
-
-
-
-ვარიანტი 2
-
-layers = QgsProject.instance().mapLayersByName('Georgia_municipalities')
-
-
-
-layer = layers[0]
-
-
-
-delf = layer.dataProvider().capabilities()
-
-feats = layer.getFeatures()
-
-dfeats = []
-
-
-
-if delf & QgsVectorDataProvider.DeleteFeatures:
-
-    for feat in feats:
-
-        if feat['OBJECTID_1'] > 19:
-
-            dfeats.append(feat.id())
-
-        elif feat['OBJECTID_1'] < 17:
-
-            dfeats.append(feat.id())
-
-    df = layer.dataProvider().deleteFeatures(dfeats)
-
-    layer.triggerRepaint()
-
-
-
-ვარიანტი 3
-
-
-
-layers = QgsProject.instance().mapLayersByName('Georgia_municipalities')
-
-layer = layers[0]
-
-delf = layer.dataProvider().capabilities()
-
-feats = layer.getFeatures()
-
-dfeats = []
-
-if delf & QgsVectorDataProvider.DeleteFeatures:
-
-    for feat in feats:
-
-        if feat['OBJECTID_1'] > 19 or feat['OBJECTID_1'] < 17:
-
-            dfeats.append(feat.id())
-
-    df = layer.dataProvider().deleteFeatures(dfeats)
-
-    layer.triggerRepaint()
-
-
-
-ვარიანტი 4
-
-
-
-layers = QgsProject.instance().mapLayersByName('Georgia_municipalities')
-
-layer = layers[0]
-
-delf = layer.dataProvider().capabilities()
-
-feats = layer.getFeatures()
-
-dfeats = []
-
-if delf & QgsVectorDataProvider.DeleteFeatures:
-
-    for feat in feats:
-
-        if feat['OBJECTID_1'] > 6 and feat['OBJECTID_1'] < 10:
-
-            dfeats.append(feat.id())
-
-    
-
-    df = layer.dataProvider().deleteFeatures(dfeats)
-
-    layer.triggerRepaint()
-
+    print("⚠ შრე არ უჭერს მხარს DeleteFeatures ოპერაციას")
 ```
 
-### ვრცელი მაგალითი (ვარიანტი 1)
-
-```python
-layers = QgsProject.instance().mapLayersByName('Georgia_municipalities')
-layer = layers[0]
-
-delf = layer.dataProvider().capabilities()
-if not (delf & QgsVectorDataProvider.DeleteFeatures):
-    raise RuntimeError('DeleteFeatures capability not available')
-
-ids_to_delete = []
-for feat in layer.getFeatures():
-    # მაგალითად წავშალოთ ები, სადაც OBJECTID_1 > 19
-    if feat['OBJECTID_1'] > 19:
-        ids_to_delete.append(feat.id())
-
-layer.dataProvider().deleteFeatures(ids_to_delete)
-layer.triggerRepaint()
-```
-
-### სხვა სინტაქსური ვარიანტები
-
-* გამოიყენეთ ლოგიკური `or` / `and` მდგომარეობები (ვარიანტი 2 და 3).
-* გამოიყენეთ შუალედური შემოწმება `if 6 < feat['OBJECTID_1'] < 10:` (ვარიანტი 4).
+> 💡 `triggerRepaint()` — QGIS-ს ატყობინებს, რომ ხელახლა გადახაზოს შრე.
+> გარეშე — ცვლილება ჩაიწერება, მაგრამ ეკრანზე ძველი სახე დარჩება.
 
 ---
 
-## ატრიბუტებით (ტექსტური) წაშლა
+## 2. ობიექტების წაშლა **რიცხვითი** ატრიბუტით
 
-ტექსტური ფილტრის მაგალითი — ვიშორებთ ობიექტებს კონკრეტული ენის/სახელის მიხედვით.
+### ვარიანტი 1 — მარტივი პირობა (`>`)
 
-```python
-ვარიანტი 1
+```py title="delete_numeric_v1.py" linenums="1"
+from qgis.core import QgsProject, QgsVectorDataProvider
 
-layers = QgsProject.instance().mapLayersByName('Georgia_municipalities')
+layer = QgsProject.instance().mapLayersByName('sadguri')[0]
+caps  = layer.dataProvider().capabilities()
+ids   = []
 
-layer = layers[0]
+if caps & QgsVectorDataProvider.DeleteFeatures:
+    for feat in layer.getFeatures():
+        if feat['fid'] > 16:          # fid > 16 — წაიშლება
+            ids.append(feat.id())
 
-delf = layer.dataProvider().capabilities()
-
-feats = layer.getFeatures()
-
-dfeats = []
-
-if delf & QgsVectorDataProvider.DeleteFeatures:
-
-    for feat in feats:
-
-        if feat['DISTR_ENG'] == "Tsalka":
-
-            dfeats.append(feat.id())
-
-    df = layer.dataProvider().deleteFeatures(dfeats)
-
+    layer.dataProvider().deleteFeatures(ids)
     layer.triggerRepaint()
+    print(f"წაიშალა: {len(ids)} ობიექტი")
+```
 
+---
 
+### ვარიანტი 2 — ორი ცალკე პირობა (`or`)
 
-ვარიანტი 2
+```py title="delete_numeric_v2.py" linenums="1"
+from qgis.core import QgsProject, QgsVectorDataProvider
 
+layer = QgsProject.instance().mapLayersByName('Georgia_municipalities')[0]
+caps  = layer.dataProvider().capabilities()
+ids   = []
 
+if caps & QgsVectorDataProvider.DeleteFeatures:
+    for feat in layer.getFeatures():
+        oid = feat['OBJECTID_1']
+        if oid > 19 or oid < 17:      # 17, 18, 19 დარჩება — დანარჩენი წაიშლება
+            ids.append(feat.id())
 
-layers = QgsProject.instance().mapLayersByName('Georgia_municipalities')
+    layer.dataProvider().deleteFeatures(ids)
+    layer.triggerRepaint()
+    print(f"წაიშალა: {len(ids)} ობიექტი")
+```
 
-layer = layers[0]
+---
 
-delf = layer.dataProvider().capabilities()
+### ვარიანტი 3 — შუალედური პირობა (`<` `<`)
 
-feats = layer.getFeatures()
+```py title="delete_numeric_v3.py" linenums="1"
+from qgis.core import QgsProject, QgsVectorDataProvider
 
-dfeats = []
+layer = QgsProject.instance().mapLayersByName('Georgia_municipalities')[0]
+caps  = layer.dataProvider().capabilities()
+ids   = []
 
-if delf & QgsVectorDataProvider.DeleteFeatures:
+if caps & QgsVectorDataProvider.DeleteFeatures:
+    for feat in layer.getFeatures():
+        # პითონის "ჯაჭვური" შედარება — იკითხება ბუნებრივად
+        if 6 < feat['OBJECTID_1'] < 10:   # 7, 8, 9 წაიშლება
+            ids.append(feat.id())
 
-    for feat in feats:
+    layer.dataProvider().deleteFeatures(ids)
+    layer.triggerRepaint()
+    print(f"წაიშალა: {len(ids)} ობიექტი")
+```
 
+> 💡 `6 < x < 10` — პითონის ექსკლუზიური სინტაქსი.
+> ეკვივალენტია `x > 6 and x < 10`-ისა, მაგრამ **უფრო იკითხება**.
+
+---
+
+## 3. ობიექტების წაშლა **ტექსტური** ატრიბუტით
+
+### ვარიანტი 1 — ზუსტი დამთხვევა (`==`)
+
+```py title="delete_text_v1.py" linenums="1"
+from qgis.core import QgsProject, QgsVectorDataProvider
+
+layer = QgsProject.instance().mapLayersByName('Georgia_municipalities')[0]
+caps  = layer.dataProvider().capabilities()
+ids   = []
+
+if caps & QgsVectorDataProvider.DeleteFeatures:
+    for feat in layer.getFeatures():
+        if feat['DISTR_ENG'] == "Tsalka":   # მხოლოდ Tsalka წაიშლება
+            ids.append(feat.id())
+
+    layer.dataProvider().deleteFeatures(ids)
+    layer.triggerRepaint()
+    print(f"წაიშალა: {len(ids)} ობიექტი")
+```
+
+---
+
+### ვარიანტი 2 — კომბინირებული პირობა (`!=` + `or`)
+
+```py title="delete_text_v2.py" linenums="1"
+from qgis.core import QgsProject, QgsVectorDataProvider
+
+layer = QgsProject.instance().mapLayersByName('Georgia_municipalities')[0]
+caps  = layer.dataProvider().capabilities()
+ids   = []
+
+if caps & QgsVectorDataProvider.DeleteFeatures:
+    for feat in layer.getFeatures():
+        # წაიშლება: ყველა, ვინც არ არის Tsalka — ან Gurjaani-ა
         if feat['DISTR_ENG'] != "Tsalka" or feat['MUNICIPAL'] == "Gurjaani":
+            ids.append(feat.id())
 
-            dfeats.append(feat.id())
-
-    df = layer.dataProvider().deleteFeatures(dfeats)
-
+    layer.dataProvider().deleteFeatures(ids)
     layer.triggerRepaint()
+    print(f"წაიშალა: {len(ids)} ობიექტი")
 ```
+
+> ⚠️ `or` **ფართო** პირობაა — გამოიყენეთ ფრთხილად.
+> მეტი კონტროლისთვის `and` ამჯობინეთ.
 
 ---
 
-## სვეტების წაშლა ატრიბუტულ ცხრილში (processing)
+## 4. სვეტის წაშლა ატრიბუტულ ცხრილიდან
 
-`processing` მოდულის `native:deletecolumn` - ით შესაძლებელია CSV/Shapefile/GeoPackage სვეტების წაშლა და ახალ ფაილში ექსპორტი.
+`native:deletecolumn` — ირჩევს სვეტ(ებ)ს და ახალ ფაილად ახდენს ექსპორტს.
 
-```python
+```py title="delete_column.py" linenums="1"
+import processing
+from qgis.core import QgsProject
+
+layer  = QgsProject.instance().mapLayersByName('Georgia_municipalities')[0]
+output = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_4\Georgia_municipalities2.shp'
+
+result = processing.run(
+    'native:deletecolumn',
+    {
+        'INPUT' : layer,
+        'COLUMN': ['SHAPE_Leng', 'SHAPE_Area'],   # სიაში — ერთი ან მეტი სვეტი
+        'OUTPUT': output
+    }
+)
+
+print("ახალი ფაილი:", result['OUTPUT'])
+```
+
+> 💡 `COLUMN` — **სია** (`list`). ერთდროულად რამდენიმე სვეტის წაშლაც შეიძლება.
+> ოპერაცია **ახალ ფაილს** ქმნის — ორიგინალი **არ იცვლება**.
+
+---
+
+## 5. დუბლირებული ატრიბუტების წაშლა
+
+`native:removeduplicatesbyattribute` — ინახავს **უნიკალურ** ჩანაწერებს, დუბლიკატებს ცალკე ფაილში ათავსებს.
+
+```py title="delete_duplicate_attributes.py" linenums="1"
 import processing
 from qgis.core import QgsProject
 
 layer = QgsProject.instance().mapLayersByName('Georgia_municipalities')[0]
-output = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_4\Georgia_municipalities2.shp'
 
-processing.run(
-    'native:deletecolumn',
+result = processing.run(
+    'native:removeduplicatesbyattribute',
     {
-        'INPUT': layer,
-        'COLUMN': ['SHAPE_Leng'],
+        'INPUT'     : layer,
+        'FIELDS'    : ['MUNICIPAL'],    # დუბლიკატი ამ სვეტის მიხედვით განისაზღვრება
+        'OUTPUT'    : r'C:\Users\Public\Documents\GK\PyQGIS\shp\test\municipalities_unique.shp',
+        'DUPLICATES': r'C:\Users\Public\Documents\GK\PyQGIS\shp\test\municipalities_duplicates.shp'
+    }
+)
+
+print("უნიკალური:", result['OUTPUT'])
+print("დუბლიკატები:", result['DUPLICATES'])
+```
+
+> 💡 `DUPLICATES` — არასავალდებულო, მაგრამ სასარგებლო: ინახავს **ამოღებულ** ობიექტებს
+> ცალკე ფაილად, შემოწმებისთვის.
+
+---
+
+## 6. დუბლირებული გეომეტრიების წაშლა
+
+`native:deleteduplicategeometries` — ერთ ადგილას **ორი ან მეტი** ერთნაირი გეომეტრიის შემთხვევაში ტოვებს მხოლოდ ერთს.
+
+```py title="delete_duplicate_geometries.py" linenums="1"
+import processing
+from qgis.core import QgsProject
+
+layer  = QgsProject.instance().mapLayersByName('Georgia_municipalities')[0]
+output = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_4\municipalities_no_dupes.shp'
+
+result = processing.run(
+    'native:deleteduplicategeometries',
+    {
+        'INPUT' : layer,
         'OUTPUT': output
     }
 )
-```
 
-> შენიშვნა: `COLUMN` არის სია იმ სვეტების სახელებისა, რომლებსაც გსურთ მოაშოროთ.
-
----
-
-## დუბლირებული ატრიბუტების წაშლა
-შრის ცხრილში მსგავსი ელემენტების პოვნა და დაფილტვრა.
-
- `native:removeduplicatesbyattribute`.
-
-```python
-processing.run(
-    'native:removeduplicatesbyattribute',
-    {
-        'INPUT': layer,
-        'FIELDS': ['MUNICIPAL'],
-        'OUTPUT': r'C:\Users\Public\Documents\GK\PyQGIS\shp\test\Georgia_municipalities_unique.shp',
-        'DUPLICATES': r'C:\Users\Public\Documents\GK\PyQGIS\shp\test\Georgia_municipalities_duplicates.shp'
-    }
-)
+print("შედეგი:", result['OUTPUT'])
 ```
 
 ---
 
-## დუბლირებული გეომეტრიების მოცილება
+## 📋 მეთოდების შეჯამება
 
-```python
-layers = QgsProject.instance().mapLayersByName('Georgia_municipalities')
-
-
-
-layer = layers[0]
-
-output = r"C:\Users\Public\Documents\GK\PyQGIS\shp\tema_4\municipalities_WD.shp'
-
-proces sing.run("native:deleteduplicategeometries", {'INPUT':layer,'OUTPUT':"output})
-```
----
-
-## უსაფრთხოების რეკომენდაციები და შენიშვნები
-
+| მეთოდი / ინსტრუმენტი | გამოყენება | შენიშვნა |
+|----------------------|-----------|----------|
+| `deleteFeatures([ids])` | ობიექტები ID-ით | **პირდაპირ ცვლის** შრეს |
+| `feat.id()` | ობიექტის შიდა ID | ატრიბუტული `fid`-ისგან განსხვავდება |
+| `triggerRepaint()` | ეკრანის განახლება | ყოველი წაშლის შემდეგ |
+| `native:deletecolumn` | სვეტის წაშლა | ახალ ფაილად ინახავს |
+| `native:removeduplicatesbyattribute` | ატრიბუტული დუბლიკატები | დუბლიკატებს ცალკე ინახავს |
+| `native:deleteduplicategeometries` | გეომეტრიული დუბლიკატები | ახალ ფაილად ინახავს |
 
 ---
+
+## ⚠️ უსაფრთხოების შეახსენებლები
+
+1. **სარეზერვო ასლი ყოველთვის** — `deleteFeatures()` შეუქცევადია
+2. **შრის ტიპი** — `deleteFeatures` მუშაობს მხოლოდ **ვექტორულ** შრეებზე
+3. **შესაძლებლობების შემოწმება** — `caps & QgsVectorDataProvider.DeleteFeatures` — ყოველთვის გადაამოწმეთ შრე უჭერს თუ არა მხარს წაშლას (მაგ: WFS read-only შრეებს — არ უჭერს)
+4. **processing ფუნქციები** — ახალ ფაილს ქმნიან და ორიგინალს **არ ცვლიან**
+
+---
+
+> **შემდეგი თემა:** ობიექტების და ატრიბუტების **შექმნა და განახლება** — `addFeatures()`, `changeAttributeValue()`.
