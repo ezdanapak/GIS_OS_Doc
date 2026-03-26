@@ -1,158 +1,323 @@
-## 🔎🔎🔎
+# PyQGIS — გავრცელებული შეცდომები და გამოსწორება
 
- 
+PyQGIS-ში მუშაობისას ზოგიერთი შეცდომა **განმეორებადია**. ეს გვერდი აღწერს ყველაზე ხშირ შეცდომებს — რას ნიშნავს თითოეული და **როგორ გამოსწორდება**.
 
-- **დირექტორია (paths)** → გამოიყენე `r"path"` ან ორმაგი `\`
+---
 
-!!!info
-    გადახედე კიდევ ერთხელ განმარტებებში "დახრილი ხაზი" იგივე "Python-ში დირექტორიების სწორად ჩაწერა" - ს.
+## 📋 სწრაფი ცნობარი
 
+| შეცდომა | მიზეზი |
+|---------|--------|
+| `EOL while scanning string literal` | ბრჭყალი ან `'` აკლია |
+| `AttributeError: QVariant has no attribute 'int'` | პატარა `i` — სწორია `Int` |
+| `NameError: name 'X' is not defined` | typo სახელში ან `['Region']` ნაცვლად `[Region]` |
+| `IndexError: list index out of range` | შრის სახელი პროექტში ვერ მოიძებნა |
+| `KeyError: 'field_name'` | სვეტი ატრიბუტულ ცხრილში არ არსებობს |
+| `AssertionError` (startEditing) | შრე რედაქტირების რეჟიმში უკვე გახსნილია |
+| `invalid syntax` | სიტყვა ან სიმბოლო გაყოფილია — ერთად უნდა იწეროს |
+| `Missing functions in IDE` | `import qgis` კოდის დასაწყისში აკლია |
 
-- **EOL while scanning string** → ფაილის დირექტორიის მისამართს აკლია ბრჭყალი `"`.  
-EOL means end of line, and the message means that Python reached the end of the line of code while processing the string on line 2. The path string needs another quotation mark to finish it. 
-- **QVariant.Int** → **AttributeError: type object 'QVariant' has no attribute 'int'** → პატარა `i` შეცდომაა, სწორია `Int`.
+---
 
-- **Missing functions in IDE** → თუ ფუნქციები არ ჩანს, მაშინ qgis მოდული უნდა შემოიტანო კოდის დასაწყისში. 
+## 🔴 EOL while scanning string literal
 
-```py title="Missing_functions_in_IDE.py" linenums="1"
-import qgis
+### რას ნიშნავს?
 
-#კოდის დანარჩენი ნაწილი თემატურად
+**EOL** = End Of Line — Python-მა სტრიქონი ბოლომდე ვერ წაიკითხა, რადგან **ბრჭყალი დაკარგულია**.
+
+### მიზეზი 1 — `'INPUT'`-ს აკლია `'` ერთ მხარეს
+
+```python
+# ❌ შეცდომა — INPUT-ს წინ აკლია '
+processing.run("native:deletecolumn", {INPUT': layer,
+    'COLUMN': ['SHAPE_Leng'],
+    'OUTPUT': out
+})
+
+# ✅ სწორია
+processing.run("native:deletecolumn", {'INPUT': layer,
+    'COLUMN': ['SHAPE_Leng'],
+    'OUTPUT': out
+})
+```
+
+### მიზეზი 2 — ფაილის ბილიკს ბოლოში `"` აკლია
+
+```python
+# ❌ შეცდომა
+fn = r'C:\Users\Public\GIS\shapefile\roads.shp   # ← ' აკლია ბოლოში
+
+# ✅ სწორია
+fn = r'C:\Users\Public\GIS\shapefile\roads.shp'
+```
+
+> 💡 **გახსოვდეს:** ყოველი გახსნილი `'` ან `"` **დახურული** უნდა იყოს.
+
+---
+
+## 🔴 AttributeError: type object 'QVariant' has no attribute 'int'
+
+### რას ნიშნავს?
+
+`QVariant`-ის ატრიბუტი `int` (პატარა ასოებით) **არ არსებობს** — Python case-sensitive ენაა.
+
+```python
+# ❌ შეცდომა — პატარა 'i'
+fields.append(QgsField('ID', QVariant.int))
+
+# ✅ სწორია — დიდი 'I'
+fields.append(QgsField('ID', QVariant.Int))
+```
+
+### სწორი მნიშვნელობები
+
+```python
+QVariant.Int        # მთელი რიცხვი
+QVariant.Double     # ათწილადი
+QVariant.String     # ტექსტი
+QVariant.Bool       # True / False
+QVariant.Date       # თარიღი
+QVariant.DateTime   # თარიღი + დრო
 ```
 
 ---
 
-- **TEMPORARY_OUTPUT** → დროებითი შედეგი, თუ გვინდა ფაილად შევინახოთ → ჩავანაცვლოთ `output`
-!!!warning
-    სხვა შემთხვევაში პროგრამის დახურვის შემდეგ მიღებული შედეგები დაიკარგება.
+## 🔴 NameError: name 'X' is not defined
 
+### მიზეზი 1 — typo ცვლადის სახელში
 
-
-    layers = QgsProject.instance().mapLayersByName('sadguri')
-
-layer = layers[0]
-
-delf = layer.dataProvider().capabilities()
-
-feats = layer.getFeatures()
-
-dfeats = []
-
-
-
-კოდის ნაწილია წარმოდგენილი და თუ შეცდომას აგდებს
-
->>>>
-IndexError: list index out of range
-ნიშნავს რომ mapLayersByName('sadguri') სახელი შრის არ გაქვს შეცვლილი და ვერ ხვდება.
-
-
---
-
-out = r'C:\Users\Public\GIS\PyGK\tema_4_1\Georgia_municipalities2.shp'
-
-processing.run("native:deletecolumn", {INPUT': layer,\
-
-
-'COLUMN':['SHAPE_Leng'],'OUTPUT':out})
-
-
-EOL while scanning string literal
-
-შეცდომა ნიშნავს რომ 'INPUT':  - ს აკლია ' ცალ მხარეს
-
-
+```python
+# ❌ შეცდომა — 'layes' (r აკლია)
 layer = layes[0]
 
+# ✅ სწორია
+layer = layers[0]
+```
 
-NameError: name 'layes' is not defined
-
-layes აკლია r    - layers
-
-
-proces sing.run("native:deleteduplicategeometries", {'INPUT':layer,'OUTPUT':output})
-
-invalid syntax შეცდომა proces sing.run ერთად უნდა ეწეროს processing.run
-
-
-სვეტი რომელსაც სკრიპტი ეძებს ატრიბუტულ ცხრილში ფიზიკურად არ არსებობს...
-
-ამ შემთხვევაში ეს არის fid სვეტი.
-
-Traceback (most recent call last):
-
-  File "<input>", line 1, in <module>
-
-  File "<string>", line 15, in <module>
-
-KeyError: 'fid'
-
-
-
-
-Traceback (most recent call last):
-
-  File "C:\PROGRA1\QGIS331.2\apps\Python39\lib\code.py", line 90, in runcode
-
-    exec(code, self.locals)
-
-  File "<input>", line 1, in <module>
-
-  File "<string>", line 27, in <module>
-
-KeyError: 'X_coordinate' 
-
-
-ნიშნავს რომ კოდში დაწერილი 
-
-pv.addAttributes([QgsField('Area_sq_m', QVariant.Double)])
-
-სვეტის ეს სახელწოდება არის გრძელი შეიპისთვის და უნდა შემოკლდეს
-
-
-
-Traceback (most recent call last):
-
-  File "C:\PROGRA~1\QGIS33~1.2\apps\Python39\lib\code.py", line 90, in runcode
-
-    exec(code, self.locals)
-
-  File "<input>", line 1, in <module>
-
-  File "<string>", line 29, in <module>
-
-  File "C:\PROGRA~1/QGIS33~1.2/apps/qgis/./python\qgis\core\additions\edit.py", line 38, in __enter__
-
-    assert self.layer.startEditing()
-
-AssertionError
-
-
-
-შრის რედაქტირება გარსიდან უკვე ჩართული გაქვს და უნდა გათიშო
-
-
-
-
-განმარტება
-
-'', შრის სახელწოდებაა
-
-iface.addVectorLayer(fn, '', 'ogr')
-
-
-
-NameError: name 'Region' is not defined ნიშნავს რომ [Region] ჩასმული უნდა იყოს ფრჩხილებში >>>  ['Region']
-
-processing.run("native:dissolve", {'INPUT':layer ,'FIELD':['Region'],\
-
-'SEPARATE_DISJOINT':False,'OUTPUT':fn})
-
-
-NameError: name 'f' is not defined
-
+```python
+# ❌ შეცდომა — 'f' (n აკლია)
 iface.addVectorLayer(f, '', 'ogr')
 
-iface.addVectorLayer(fაქ აკლია n ასო და მაგიტომ ვერ ხედავს, '', 'ogr')
-
+# ✅ სწორია
 iface.addVectorLayer(fn, '', 'ogr')
+```
+
+### მიზეზი 2 — `['Region']` ნაცვლად `[Region]`
+
+`FIELD` პარამეტრი **სტრიქონების სიას** ელოდება — ბრჭყალები სავალდებულოა:
+
+```python
+# ❌ შეცდომა — Region ბრჭყალების გარეშე, Python მას ცვლადად ეძებს
+processing.run("native:dissolve", {
+    'INPUT' : layer,
+    'FIELD' : [Region],       # ← Python: "ცვლადი Region?"
+    'OUTPUT': fn
+})
+
+# ✅ სწორია — 'Region' სტრიქონი სიაში
+processing.run("native:dissolve", {
+    'INPUT' : layer,
+    'FIELD' : ['Region'],     # ← სვეტის სახელი სტრიქონად
+    'OUTPUT': fn
+})
+```
+
+---
+
+## 🔴 IndexError: list index out of range
+
+### რას ნიშნავს?
+
+`mapLayersByName()` **ცარიელ სიას** აბრუნებს — შრე ამ სახელით პროექტში **ვერ მოიძებნა**.
+
+```python
+# ❌ შეცდომა — 'sadguri' სახელის შრე პროექტში არ არის
+layers = QgsProject.instance().mapLayersByName('sadguri')
+layer  = layers[0]   # ← IndexError: list index out of range
+```
+
+```python
+# ✅ სწორია — ჯერ შეამოწმე, შემდეგ გამოიყენე
+layers = QgsProject.instance().mapLayersByName('sadguri')
+
+if not layers:
+    print("❌ შრე 'sadguri' ვერ მოიძებნა — შეამოწმე სახელი Layers პანელში")
+else:
+    layer = layers[0]
+    print(f"✅ ნაპოვნია: {layer.name()}")
+```
+
+> 💡 **როგორ შეამოწმო სახელი?** QGIS Layers პანელში შრეს თავზე გადაატარე — ზუსტი სახელი გამოჩნდება. კოდში **სიტყვა-სიტყვით** უნდა ემთხვეოდეს (მათ შორის, დიდი/პატარა ასოებიც).
+
+---
+
+## 🔴 KeyError: 'field_name'
+
+### მიზეზი 1 — სვეტი ატრიბუტულ ცხრილში არ არსებობს
+
+```python
+# ❌ შეცდომა — 'fid' სვეტი ცხრილში არ არის
+for feat in layer.getFeatures():
+    print(feat['fid'])   # → KeyError: 'fid'
+```
+
+```python
+# ✅ გამოსწორება — ჯერ შეამოწმე სვეტები
+print([f.name() for f in layer.fields()])
+# → ['ID', 'Name', 'Area', 'Region']  ← 'fid' არ არის!
+
+# შემდეგ გამოიყენე სწორი სახელი
+for feat in layer.getFeatures():
+    print(feat['ID'])
+```
+
+### მიზეზი 2 — სვეტის სახელი ძალიან გრძელია Shapefile-ისთვის
+
+ESRI Shapefile-ი **მაქსიმუმ 10 სიმბოლოს** იძლევა სვეტის სახელში:
+
+```python
+# ❌ შეცდომა — 12 სიმბოლო, Shapefile ვერ ინახავს
+layer.dataProvider().addAttributes([
+    QgsField('X_coordinate', QVariant.Double)   # → KeyError: 'X_coordinate'
+])
+
+# ✅ სწორია — 10 სიმბოლოს ფარგლებში
+layer.dataProvider().addAttributes([
+    QgsField('X_coord', QVariant.Double)        # 7 სიმბოლო ✅
+])
+```
+
+> 💡 GeoPackage (`.gpkg`) ან GeoJSON ფორმატებს სახელის სიგრძის შეზღუდვა **არ აქვთ**.
+
+---
+
+## 🔴 AssertionError — startEditing()
+
+### რას ნიშნავს?
+
+შრე **რედაქტირების რეჟიმში** (`Edit Mode`) უკვე გახსნილია — ორჯერ ვერ გაიხსნება.
+
+```
+AssertionError
+File "edit.py", line 38, in __enter__
+    assert self.layer.startEditing()
+```
+
+### გამოსწორება
+
+```python
+# ✅ გამოსწორება A — QGIS-ში ხელით გათიშე Edit Mode (✏️ ღილაკი Toolbar-ში)
+
+# ✅ გამოსწორება B — კოდში შეამოწმე, სანამ გახსნი
+if layer.isEditable():
+    layer.rollBack()        # ან layer.commitChanges()
+
+with edit(layer):
+    # ახლა უსაფრთხოდ შეგიძლია რედაქტირება
+    layer.changeAttributeValue(feat.id(), idx, new_value)
+```
+
+> ⚠️ **QGIS-ში** Layers პანელში შრეს ✏️ პატარა ფანქრის ხატი ეკვრის თუ Edit Mode ჩართულია — **გათიშე** სანამ სკრიპტს გაუშვებ.
+
+---
+
+## 🔴 invalid syntax — Processing ფუნქციის სახელი
+
+### რას ნიშნავს?
+
+ფუნქციის სახელი გაყოფილია — Python **ვერ ცნობს** გაყოფილ სახელს.
+
+```python
+# ❌ შეცდომა — 'proces sing' გაყოფილია
+proces sing.run("native:deleteduplicategeometries", {
+    'INPUT' : layer,
+    'OUTPUT': output
+})
+
+# ✅ სწორია — ერთად
+processing.run("native:deleteduplicategeometries", {
+    'INPUT' : layer,
+    'OUTPUT': output
+})
+```
+
+---
+
+## 🔴 Missing functions in IDE
+
+### რას ნიშნავს?
+
+გარე IDE-ში (VS Code, PyCharm) `QgsVectorLayer`, `QgsProject` და სხვა კლასები **არ ჩანს**, რადგან `qgis` მოდული **შემოტანილი არ არის**.
+
+```python
+# ❌ შეცდომა — QGIS კლასები ხელმისაწვდომი არ არის
+layer = QgsVectorLayer(fn, 'Layer', 'ogr')   # → NameError
+
+# ✅ სწორია — კოდის დასაწყისში შემოიტანე
+import qgis
+from qgis.core import QgsVectorLayer, QgsProject, QgsVectorFileWriter
+
+layer = QgsVectorLayer(fn, 'Layer', 'ogr')
+```
+
+> 💡 **QGIS Python Console-ში** ეს იმპორტი **ავტომატურად** ხდება. გარე IDE-ში ხელით უნდა ჩაწერო.
+
+---
+
+## 🗂️ ფაილის ბილიკები — სწორი ჩაწერა
+
+Windows-ზე `\` სიმბოლო Python-ში **escape character**-ია — სპეციალური მნიშვნელობა აქვს.
+
+```python
+# ❌ არასწორი — \U, \P Python-ი სპეციალურ სიმბოლოდ კითხულობს
+fn = 'C:\Users\Public\GIS\points.shp'
+
+# ✅ ვარიანტი 1 — r"" raw string (რეკომენდებული)
+fn = r'C:\Users\Public\GIS\points.shp'
+
+# ✅ ვარიანტი 2 — ორმაგი backslash
+fn = 'C:\\Users\\Public\\GIS\\points.shp'
+
+# ✅ ვარიანტი 3 — forward slash (მუშაობს Windows-ზეც)
+fn = 'C:/Users/Public/GIS/points.shp'
+```
+
+> 💡 **რეკომენდაცია:** გამოიყენე `r''` (raw string) — ყველაზე კითხვადია და შეცდომები გამოირიცხება.
+
+---
+
+## 💡 `iface.addVectorLayer()` — სახელის პარამეტრი
+
+```python
+iface.addVectorLayer(fn, '', 'ogr')
+#                        ↑
+#                  ეს არის შრის სახელი QGIS-ში
+#                  '' = ცარიელი → QGIS ფაილის სახელს გამოიყენებს
+```
+
+```python
+# სახელის მითითებით
+iface.addVectorLayer(fn, 'ჩემი შრე', 'ogr')
+```
+
+---
+
+## 📌 შეჯამება — შეცდომების სქემა
+
+```
+შეცდომა მიიღე?
+      │
+      ├── EOL / SyntaxError    → ბრჭყალი ან ' აკლია
+      │
+      ├── NameError            → typo სახელში? ['Field'] ბრჭყალები?
+      │
+      ├── AttributeError       → QVariant.Int (დიდი I)?
+      │
+      ├── IndexError           → mapLayersByName() სახელი სწორია?
+      │
+      ├── KeyError             → სვეტი ცხრილში არსებობს? სახელი ≤10 სიმბოლო?
+      │
+      └── AssertionError       → Edit Mode გათიშული? isEditable() შეამოწმე
+```
+
+👉 **პირველი ნაბიჯი ყოველთვის:** შეცდომის **ბოლო სტრიქონი** წაიკითხე — იქ არის მიზეზი.
