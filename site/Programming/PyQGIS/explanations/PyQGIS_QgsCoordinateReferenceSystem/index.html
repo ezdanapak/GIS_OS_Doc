@@ -115,7 +115,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#qgscoordinatereferencesystem_qgscrs" class="md-skip">
+        <a href="#qgscoordinatereferencesystem_pyqgis-" class="md-skip">
           კონტენტზე გადასვლა
         </a>
       
@@ -2531,7 +2531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Non_formal_education/Lab/quiz/" class="md-nav__link">
+      <a href="../../../../Non_formal_education/Lab/Test.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3836,6 +3836,8 @@
       
         
       
+        
+      
     
     
     
@@ -3897,6 +3899,27 @@
   
   <span class="md-ellipsis">
     დახრილი ხაზი
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyQGIS_shapefile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    შეიპფაილი
   </span>
   
 
@@ -4127,46 +4150,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key_responsibilities" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      🔑 Key Responsibilities
+      🔑 ძირითადი დანიშნულება
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating_a_crs" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Creating a CRS
+      📦 იმპორტი
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📌 Creating a CRS">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crs-" class="md-nav__link">
+    <span class="md-ellipsis">
+      ▶️ CRS-ის შექმნა
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="▶️ CRS-ის შექმნა">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#from_epsg_code" class="md-nav__link">
+  <a href="#epsg" class="md-nav__link">
     <span class="md-ellipsis">
-      From EPSG Code
+      EPSG კოდით (რეკომენდებული)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from_proj_string" class="md-nav__link">
+  <a href="#proj" class="md-nav__link">
     <span class="md-ellipsis">
-      From PROJ String
+      PROJ სტრიქონით
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from_wkt_well-known_text" class="md-nav__link">
+  <a href="#wkt_well-known_text" class="md-nav__link">
     <span class="md-ellipsis">
-      From WKT (Well-Known Text)
+      WKT (Well-Known Text) ფორმატით
     </span>
   </a>
   
@@ -4178,45 +4210,96 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#useful_methods" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      📖 Useful Methods
+      📖 ძირითადი მეთოდები
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example_usage" class="md-nav__link">
+  <a href="#crs-_1" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ Example Usage
+      🔍 CRS-ის ინფორმაციის გამოტანა
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reprojecting_layers_to_another_crs" class="md-nav__link">
+  <a href="#qgscoordinatetransform" class="md-nav__link">
     <span class="md-ellipsis">
-      🔄 Reprojecting Layers to Another CRS
+      🔄 კოორდინატების გარდაქმნა — QgsCoordinateTransform
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes_for_students" class="md-nav__link">
+  <a href="#crs-_2" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 Notes for Students
+      🗺️ შრის გარდაქმნა სხვა CRS-ში
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#crs-_3" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 References
+      🌍 საქართველოში გამოყენებული CRS-ები
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ გავრცელებული შეცდომები
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ გავრცელებული შეცდომები">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crs-_mismatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      CRS-ის შეუსაბამობა (Mismatch)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crs-_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      CRS-ის ვალიდაცია
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 შეჯამება
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 გამოყენებული რესურსები
     </span>
   </a>
   
@@ -4336,6 +4419,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -4397,6 +4484,48 @@
   
   <span class="md-ellipsis">
     Project instance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyQGIS_methods/PyQGIS_FCSVTXT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSV TXT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyQGIS_methods/PyQGIS_Spatial_Sel_Methods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    სივრცითი მონიშვნა
   </span>
   
 
@@ -4632,6 +4761,8 @@
       
         
       
+        
+      
     
     
     
@@ -4659,27 +4790,6 @@
             თემები
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../PyQGIS_topics/PyQGIS_topic11/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    თემა 11
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -4734,7 +4844,28 @@
         
   
   <span class="md-ellipsis">
-    მონიშვნები
+    ატრიბუტული მონიშვნები
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyQGIS_topics/PyQGIS_Spatial_Selection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    სივრცითი მონიშვნები
   </span>
   
 
@@ -4924,6 +5055,27 @@
   
   <span class="md-ellipsis">
     რასტრის სტატისტიკა
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyQGIS_topics/PyQGIS_Raster_Vector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    რასტრი და ვექტორი
   </span>
   
 
@@ -5361,6 +5513,8 @@
       
         
       
+        
+      
     
     
     
@@ -5405,6 +5559,74 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8_4_2" id="__nav_3_8_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    თეორია
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_8_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            თეორია
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Dev_ops/GeoServer/Theory/Java_Heap_and_Dump_GeoServer" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java Heap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -6834,46 +7056,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key_responsibilities" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      🔑 Key Responsibilities
+      🔑 ძირითადი დანიშნულება
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating_a_crs" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Creating a CRS
+      📦 იმპორტი
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📌 Creating a CRS">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crs-" class="md-nav__link">
+    <span class="md-ellipsis">
+      ▶️ CRS-ის შექმნა
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="▶️ CRS-ის შექმნა">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#from_epsg_code" class="md-nav__link">
+  <a href="#epsg" class="md-nav__link">
     <span class="md-ellipsis">
-      From EPSG Code
+      EPSG კოდით (რეკომენდებული)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from_proj_string" class="md-nav__link">
+  <a href="#proj" class="md-nav__link">
     <span class="md-ellipsis">
-      From PROJ String
+      PROJ სტრიქონით
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from_wkt_well-known_text" class="md-nav__link">
+  <a href="#wkt_well-known_text" class="md-nav__link">
     <span class="md-ellipsis">
-      From WKT (Well-Known Text)
+      WKT (Well-Known Text) ფორმატით
     </span>
   </a>
   
@@ -6885,45 +7116,96 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#useful_methods" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      📖 Useful Methods
+      📖 ძირითადი მეთოდები
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example_usage" class="md-nav__link">
+  <a href="#crs-_1" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ Example Usage
+      🔍 CRS-ის ინფორმაციის გამოტანა
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reprojecting_layers_to_another_crs" class="md-nav__link">
+  <a href="#qgscoordinatetransform" class="md-nav__link">
     <span class="md-ellipsis">
-      🔄 Reprojecting Layers to Another CRS
+      🔄 კოორდინატების გარდაქმნა — QgsCoordinateTransform
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes_for_students" class="md-nav__link">
+  <a href="#crs-_2" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 Notes for Students
+      🗺️ შრის გარდაქმნა სხვა CRS-ში
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#crs-_3" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 References
+      🌍 საქართველოში გამოყენებული CRS-ები
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ გავრცელებული შეცდომები
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ გავრცელებული შეცდომები">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crs-_mismatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      CRS-ის შეუსაბამობა (Mismatch)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crs-_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      CRS-ის ვალიდაცია
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 შეჯამება
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 გამოყენებული რესურსები
     </span>
   </a>
   
@@ -6947,120 +7229,283 @@
   
 
 
-<h1 id="qgscoordinatereferencesystem_qgscrs">QgsCoordinateReferenceSystem (QgsCRS)<a class="headerlink" href="#qgscoordinatereferencesystem_qgscrs" title="Permanent link">&para;</a></h1>
-<p>The <code>QgsCoordinateReferenceSystem</code> (often abbreviated as <code>QgsCRS</code>) class in PyQGIS is used to represent and manipulate Coordinate Reference Systems (CRS). A CRS defines how the two-dimensional, projected map in your GIS relates to real places on the earth.</p>
+<h1 id="qgscoordinatereferencesystem_pyqgis-"><code>QgsCoordinateReferenceSystem</code> PyQGIS-ში<a class="headerlink" href="#qgscoordinatereferencesystem_pyqgis-" title="Permanent link">&para;</a></h1>
+<p><strong><code>QgsCoordinateReferenceSystem</code></strong> (მოკლედ — <code>QgsCRS</code>) არის PyQGIS-ის კლასი, რომელიც <strong>კოორდინატთა საცნობარო სისტემებს</strong> (CRS) წარმოადგენს და მართავს. CRS განსაზღვრავს, <strong>როგორ უკავშირდება</strong> ბრტყელი GIS რუკა დედამიწის რეალურ ზედაპირს.</p>
 <hr />
-<h2 id="key_responsibilities">🔑 Key Responsibilities<a class="headerlink" href="#key_responsibilities" title="Permanent link">&para;</a></h2>
+<h2 id="_1">🔑 ძირითადი დანიშნულება<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Define and store coordinate reference system information.</li>
-<li>Support for both EPSG codes and PROJ strings.</li>
-<li>Conversion between different CRS definitions.</li>
-<li>Check validity of CRS.</li>
-<li>Provide information about units, ellipsoid, and projections.</li>
+<li>CRS-ის ინფორმაციის შენახვა და მართვა</li>
+<li>EPSG კოდების და PROJ სტრიქონების მხარდაჭერა</li>
+<li>CRS-ის ვალიდაციის შემოწმება</li>
+<li>ერთეულების, ელიფსოიდის და პროექციის ინფორმაციის მიღება</li>
+<li>კოორდინატების გარდაქმნა ერთი CRS-იდან მეორეში</li>
 </ul>
 <hr />
-<h2 id="creating_a_crs">📌 Creating a CRS<a class="headerlink" href="#creating_a_crs" title="Permanent link">&para;</a></h2>
-<h3 id="from_epsg_code">From EPSG Code<a class="headerlink" href="#from_epsg_code" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">crs</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">crs</span><span class="o">.</span><span class="n">isValid</span><span class="p">())</span>  <span class="c1"># True if valid</span>
-</span></code></pre></div>
-<h3 id="from_proj_string">From PROJ String<a class="headerlink" href="#from_proj_string" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">crs</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="o">.</span><span class="n">fromProj</span><span class="p">(</span><span class="s2">&quot;+proj=longlat +datum=WGS84 +no_defs&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<h3 id="from_wkt_well-known_text">From WKT (Well-Known Text)<a class="headerlink" href="#from_wkt_well-known_text" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">wkt</span> <span class="o">=</span> <span class="s1">&#39;GEOGCS[&quot;WGS 84&quot;,DATUM[&quot;WGS_1984&quot;,...]]&#39;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">crs</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">()</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">crs</span><span class="o">.</span><span class="n">createFromWkt</span><span class="p">(</span><span class="n">wkt</span><span class="p">)</span>
+<h2 id="_2">📦 იმპორტი<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">QgsCoordinateReferenceSystem</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">QgsCoordinateTransform</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">QgsProject</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">)</span>
 </span></code></pre></div>
 <hr />
-<h2 id="useful_methods">📖 Useful Methods<a class="headerlink" href="#useful_methods" title="Permanent link">&para;</a></h2>
+<h2 id="crs-">▶️ CRS-ის შექმნა<a class="headerlink" href="#crs-" title="Permanent link">&para;</a></h2>
+<h3 id="epsg">EPSG კოდით (რეკომენდებული)<a class="headerlink" href="#epsg" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># WGS 84 — გეოგრაფიული კოორდინატები</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">crs_geo</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># WGS 84 / UTM Zone 38N — საქართველო</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">crs_utm</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s2">&quot;EPSG:32638&quot;</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">crs_utm</span><span class="o">.</span><span class="n">isValid</span><span class="p">())</span>      <span class="c1"># → True</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">crs_utm</span><span class="o">.</span><span class="n">authid</span><span class="p">())</span>       <span class="c1"># → &quot;EPSG:32638&quot;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">crs_utm</span><span class="o">.</span><span class="n">description</span><span class="p">())</span>  <span class="c1"># → &quot;WGS 84 / UTM zone 38N&quot;</span>
+</span></code></pre></div>
+<h3 id="proj">PROJ სტრიქონით<a class="headerlink" href="#proj" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">crs</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="o">.</span><span class="n">fromProj</span><span class="p">(</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="s2">&quot;+proj=longlat +datum=WGS84 +no_defs&quot;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">crs</span><span class="o">.</span><span class="n">isValid</span><span class="p">())</span>   <span class="c1"># → True</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">crs</span><span class="o">.</span><span class="n">authid</span><span class="p">())</span>    <span class="c1"># → &quot;EPSG:4326&quot;</span>
+</span></code></pre></div>
+<h3 id="wkt_well-known_text">WKT (Well-Known Text) ფორმატით<a class="headerlink" href="#wkt_well-known_text" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">wkt</span> <span class="o">=</span> <span class="s1">&#39;GEOGCS[&quot;WGS 84&quot;,DATUM[&quot;WGS_1984&quot;,SPHEROID[&quot;WGS 84&quot;,6378137,298.257]]]&#39;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">crs</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">()</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">crs</span><span class="o">.</span><span class="n">createFromWkt</span><span class="p">(</span><span class="n">wkt</span><span class="p">)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">crs</span><span class="o">.</span><span class="n">isValid</span><span class="p">())</span>   <span class="c1"># → True</span>
+</span></code></pre></div>
+<blockquote>
+<p>💡 <strong>რეკომენდაცია:</strong> ყოველთვის გამოიყენე <strong>EPSG კოდი</strong> — ყველაზე კითხვადი და სტანდარტულია. PROJ სტრიქონი ან WKT — მხოლოდ განსაკუთრებულ შემთხვევებში.</p>
+</blockquote>
+<hr />
+<h2 id="_3">📖 ძირითადი მეთოდები<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Method</th>
-<th>Description</th>
+<th>მეთოდი</th>
+<th>დანიშნულება</th>
+<th>მაგალითი</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>isValid()</code></td>
-<td>Checks if the CRS is valid</td>
+<td>CRS ვალიდურია?</td>
+<td><code>True</code> / <code>False</code></td>
 </tr>
 <tr>
 <td><code>authid()</code></td>
-<td>Returns the authority ID (e.g., "EPSG:4326")</td>
+<td>Authority ID</td>
+<td><code>"EPSG:32638"</code></td>
 </tr>
 <tr>
 <td><code>description()</code></td>
-<td>Returns a human-readable description</td>
+<td>ადამიანის-წასაკითხი სახელი</td>
+<td><code>"WGS 84 / UTM zone 38N"</code></td>
 </tr>
 <tr>
 <td><code>mapUnits()</code></td>
-<td>Returns units of measurement (e.g., degrees, meters)</td>
+<td>საზომი ერთეული</td>
+<td><code>QgsUnitTypes.DistanceMeters</code></td>
 </tr>
 <tr>
 <td><code>toWkt()</code></td>
-<td>Converts CRS to WKT format</td>
+<td>WKT ფორმატად გარდაქმნა</td>
+<td>სრული WKT სტრიქონი</td>
 </tr>
 <tr>
 <td><code>toProj()</code></td>
-<td>Returns PROJ string</td>
+<td>PROJ სტრიქონი</td>
+<td><code>"+proj=utm +zone=38..."</code></td>
 </tr>
 <tr>
 <td><code>ellipsoidAcronym()</code></td>
-<td>Returns ellipsoid name/acronym</td>
+<td>ელიფსოიდის სახელი</td>
+<td><code>"WGS84"</code></td>
+</tr>
+<tr>
+<td><code>isGeographic()</code></td>
+<td>გეოგრაფიულია? (გრადუსები)</td>
+<td><code>True</code> თუ EPSG:4326</td>
+</tr>
+<tr>
+<td><code>projectionAcronym()</code></td>
+<td>პროექციის სახელი</td>
+<td><code>"utm"</code>, <code>"longlat"</code></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="example_usage">⚙️ Example Usage<a class="headerlink" href="#example_usage" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Load CRS by EPSG code</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">crs</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s2">&quot;EPSG:32638&quot;</span><span class="p">)</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">if</span> <span class="n">crs</span><span class="o">.</span><span class="n">isValid</span><span class="p">():</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CRS is valid&quot;</span><span class="p">)</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Auth ID:&quot;</span><span class="p">,</span> <span class="n">crs</span><span class="o">.</span><span class="n">authid</span><span class="p">())</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Description:&quot;</span><span class="p">,</span> <span class="n">crs</span><span class="o">.</span><span class="n">description</span><span class="p">())</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Units:&quot;</span><span class="p">,</span> <span class="n">crs</span><span class="o">.</span><span class="n">mapUnits</span><span class="p">())</span>
+<h2 id="crs-_1">🔍 CRS-ის ინფორმაციის გამოტანა<a class="headerlink" href="#crs-_1" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">crs</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s2">&quot;EPSG:32638&quot;</span><span class="p">)</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">if</span> <span class="n">crs</span><span class="o">.</span><span class="n">isValid</span><span class="p">():</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ CRS ვალიდურია&quot;</span><span class="p">)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   Auth ID:     &quot;</span><span class="p">,</span> <span class="n">crs</span><span class="o">.</span><span class="n">authid</span><span class="p">())</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   სახელი:      &quot;</span><span class="p">,</span> <span class="n">crs</span><span class="o">.</span><span class="n">description</span><span class="p">())</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   ელიფსოიდი:  &quot;</span><span class="p">,</span> <span class="n">crs</span><span class="o">.</span><span class="n">ellipsoidAcronym</span><span class="p">())</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   პროექცია:   &quot;</span><span class="p">,</span> <span class="n">crs</span><span class="o">.</span><span class="n">projectionAcronym</span><span class="p">())</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   გეოგრაფია?: &quot;</span><span class="p">,</span> <span class="n">crs</span><span class="o">.</span><span class="n">isGeographic</span><span class="p">())</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   WKT:         &quot;</span><span class="p">,</span> <span class="n">crs</span><span class="o">.</span><span class="n">toWkt</span><span class="p">()[:</span><span class="mi">60</span><span class="p">],</span> <span class="s2">&quot;...&quot;</span><span class="p">)</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ CRS არავალიდურია&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<p>Output:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>CRS is valid
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Auth ID: EPSG:32638
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Description: WGS 84 / UTM zone 38N
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Units: Meters
-</span></code></pre></div></p>
-<hr />
-<h2 id="reprojecting_layers_to_another_crs">🔄 Reprojecting Layers to Another CRS<a class="headerlink" href="#reprojecting_layers_to_another_crs" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsProject</span><span class="p">,</span> <span class="n">QgsVectorLayer</span><span class="p">,</span> <span class="n">QgsCoordinateTransform</span><span class="p">,</span> <span class="n">QgsCoordinateReferenceSystem</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># Load a vector layer</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">layer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="s2">&quot;path/to/shapefile.shp&quot;</span><span class="p">,</span> <span class="s2">&quot;My Layer&quot;</span><span class="p">,</span> <span class="s2">&quot;ogr&quot;</span><span class="p">)</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># Define source and destination CRS</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">src_crs</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">crs</span><span class="p">()</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">dest_crs</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">)</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1"># Setup transformation</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="n">transform</span> <span class="o">=</span> <span class="n">QgsCoordinateTransform</span><span class="p">(</span><span class="n">src_crs</span><span class="p">,</span> <span class="n">dest_crs</span><span class="p">,</span> <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">())</span>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="c1"># Transform a point</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="n">point</span> <span class="o">=</span> <span class="n">QgsPointXY</span><span class="p">(</span><span class="mi">500000</span><span class="p">,</span> <span class="mi">4649776</span><span class="p">)</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="n">reprojected_point</span> <span class="o">=</span> <span class="n">transform</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reprojected point:&quot;</span><span class="p">,</span> <span class="n">reprojected_point</span><span class="p">)</span>
+<p><strong>გამოტანა:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>✅ CRS ვალიდურია
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>   Auth ID:      EPSG:32638
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>   სახელი:       WGS 84 / UTM zone 38N
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>   ელიფსოიდი:   WGS84
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>   პროექცია:    utm
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>   გეოგრაფია?:  False
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>   WKT:          PROJCRS[&quot;WGS 84 / UTM zone 38N&quot;,BASEGEOGCRS[&quot;WGS 84&quot; ...
 </span></code></pre></div>
 <hr />
-<h2 id="notes_for_students">🎯 Notes for Students<a class="headerlink" href="#notes_for_students" title="Permanent link">&para;</a></h2>
+<h2 id="qgscoordinatetransform">🔄 კოორდინატების გარდაქმნა — <code>QgsCoordinateTransform</code><a class="headerlink" href="#qgscoordinatetransform" title="Permanent link">&para;</a></h2>
+<p>ერთი CRS-იდან მეორეში <strong>წერტილის გარდაქმნა</strong>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="p">(</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="n">QgsCoordinateReferenceSystem</span><span class="p">,</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">QgsCoordinateTransform</span><span class="p">,</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">QgsPointXY</span><span class="p">,</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="n">QgsProject</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">)</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="c1"># საწყისი და სამიზნე CRS</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="n">src_crs</span>  <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s2">&quot;EPSG:32638&quot;</span><span class="p">)</span>  <span class="c1"># UTM 38N</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="n">dest_crs</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">)</span>   <span class="c1"># WGS 84</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="c1"># Transform ობიექტი</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="n">transform</span> <span class="o">=</span> <span class="n">QgsCoordinateTransform</span><span class="p">(</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>    <span class="n">src_crs</span><span class="p">,</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    <span class="n">dest_crs</span><span class="p">,</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>    <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="p">)</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="c1"># UTM კოორდინატი (თბილისი, დაახლოებით)</span>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="n">point_utm</span> <span class="o">=</span> <span class="n">QgsPointXY</span><span class="p">(</span><span class="mf">490230.0</span><span class="p">,</span> <span class="mf">4741850.0</span><span class="p">)</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="c1"># WGS 84-ში გარდაქმნა</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="n">point_geo</span> <span class="o">=</span> <span class="n">transform</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">point_utm</span><span class="p">)</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;UTM:   X=</span><span class="si">{</span><span class="n">point_utm</span><span class="o">.</span><span class="n">x</span><span class="p">()</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">,  Y=</span><span class="si">{</span><span class="n">point_utm</span><span class="o">.</span><span class="n">y</span><span class="p">()</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;WGS84: lon=</span><span class="si">{</span><span class="n">point_geo</span><span class="o">.</span><span class="n">x</span><span class="p">()</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">, lat=</span><span class="si">{</span><span class="n">point_geo</span><span class="o">.</span><span class="n">y</span><span class="p">()</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong>გამოტანა:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>UTM:   X=490230.0,  Y=4741850.0
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>WGS84: lon=44.796132, lat=42.835241
+</span></code></pre></div>
+<hr />
+<h2 id="crs-_2">🗺️ შრის გარდაქმნა სხვა CRS-ში<a class="headerlink" href="#crs-_2" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsVectorFileWriter</span><span class="p">,</span> <span class="n">QgsProject</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">layer</span> <span class="o">=</span> <span class="n">iface</span><span class="o">.</span><span class="n">activeLayer</span><span class="p">()</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1"># სამიზნე CRS</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">dest_crs</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">)</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">options</span> <span class="o">=</span> <span class="n">QgsVectorFileWriter</span><span class="o">.</span><span class="n">SaveVectorOptions</span><span class="p">()</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">options</span><span class="o">.</span><span class="n">driverName</span>   <span class="o">=</span> <span class="s2">&quot;ESRI Shapefile&quot;</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="n">options</span><span class="o">.</span><span class="n">fileEncoding</span> <span class="o">=</span> <span class="s2">&quot;UTF-8&quot;</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="n">options</span><span class="o">.</span><span class="n">ct</span> <span class="o">=</span> <span class="n">QgsCoordinateTransform</span><span class="p">(</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    <span class="n">layer</span><span class="o">.</span><span class="n">crs</span><span class="p">(),</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    <span class="n">dest_crs</span><span class="p">,</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="p">)</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="n">output_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\GIS\output_wgs84.shp&#39;</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="n">error</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">QgsVectorFileWriter</span><span class="o">.</span><span class="n">writeAsVectorFormatV3</span><span class="p">(</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>    <span class="n">layer</span><span class="p">,</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>    <span class="n">output_path</span><span class="p">,</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>    <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">transformContext</span><span class="p">(),</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>    <span class="n">options</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="p">)</span>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="k">if</span> <span class="n">error</span> <span class="o">==</span> <span class="n">QgsVectorFileWriter</span><span class="o">.</span><span class="n">NoError</span><span class="p">:</span>
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✅ შრე შეინახა WGS84-ში: </span><span class="si">{</span><span class="n">output_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ შეცდომა: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="crs-_3">🌍 საქართველოში გამოყენებული CRS-ები<a class="headerlink" href="#crs-_3" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>EPSG</th>
+<th>სახელი</th>
+<th>გამოყენება</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EPSG:4326</code></td>
+<td>WGS 84</td>
+<td>GPS, გეოგრაფიული კოორდინატები</td>
+</tr>
+<tr>
+<td><code>EPSG:32637</code></td>
+<td>WGS 84 / UTM Zone 37N</td>
+<td>დასავლეთ საქართველო</td>
+</tr>
+<tr>
+<td><code>EPSG:32638</code></td>
+<td>WGS 84 / UTM Zone 38N</td>
+<td>აღმოსავლეთ საქართველო</td>
+</tr>
+<tr>
+<td><code>EPSG:5342</code></td>
+<td>ETRS89 / UTM Zone 38N</td>
+<td>ევროპული სტანდარტი</td>
+</tr>
+<tr>
+<td><code>EPSG:28408</code></td>
+<td>Pulkovo 1942 / GK Zone 8</td>
+<td>ძველი საბჭოური რუკები</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>რეკომენდაცია საქართველოსთვის:</strong> <code>EPSG:32638</code> — WGS 84 / UTM Zone 38N. მეტრული ერთეული, სწორი ფართობისა და სიგრძის გაანგარიშებისთვის.</p>
+</blockquote>
+<hr />
+<h2 id="_4">⚠️ გავრცელებული შეცდომები<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="crs-_mismatch">CRS-ის შეუსაბამობა (Mismatch)<a class="headerlink" href="#crs-_mismatch" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">layer1</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\GIS\roads.shp&#39;</span><span class="p">,</span>    <span class="s1">&#39;Roads&#39;</span><span class="p">,</span>    <span class="s1">&#39;ogr&#39;</span><span class="p">)</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">layer2</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\GIS\buildings.shp&#39;</span><span class="p">,</span> <span class="s1">&#39;Buildings&#39;</span><span class="p">,</span> <span class="s1">&#39;ogr&#39;</span><span class="p">)</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># შეამოწმე — ემთხვევა თუ არა</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="k">if</span> <span class="n">layer1</span><span class="o">.</span><span class="n">crs</span><span class="p">()</span> <span class="o">!=</span> <span class="n">layer2</span><span class="o">.</span><span class="n">crs</span><span class="p">():</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;⚠️ CRS არ ემთხვევა!&quot;</span><span class="p">)</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Roads:     </span><span class="si">{</span><span class="n">layer1</span><span class="o">.</span><span class="n">crs</span><span class="p">()</span><span class="o">.</span><span class="n">authid</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Buildings: </span><span class="si">{</span><span class="n">layer2</span><span class="o">.</span><span class="n">crs</span><span class="p">()</span><span class="o">.</span><span class="n">authid</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   სივრცული ანალიზამდე გარდაქმენი ერთ CRS-ში&quot;</span><span class="p">)</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ CRS ემთხვევა&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="crs-_4">CRS-ის ვალიდაცია<a class="headerlink" href="#crs-_4" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">crs</span> <span class="o">=</span> <span class="n">QgsCoordinateReferenceSystem</span><span class="p">(</span><span class="s2">&quot;EPSG:99999&quot;</span><span class="p">)</span>  <span class="c1"># არარსებული კოდი</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">if</span> <span class="ow">not</span> <span class="n">crs</span><span class="o">.</span><span class="n">isValid</span><span class="p">():</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ CRS არავალიდურია — შეამოწმე EPSG კოდი&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="_5">📌 შეჯამება<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Always check CRS validity with <code>isValid()</code>.</li>
-<li>EPSG codes are the most common and recommended way to define CRS.</li>
-<li>CRS mismatches are a common source of errors in GIS projects.</li>
-<li>Understanding CRS ensures accurate distance, area, and spatial analysis.</li>
+<li><strong><code>QgsCoordinateReferenceSystem</code></strong> — CRS-ის წარმოდგენა და მართვა PyQGIS-ში</li>
+<li><strong>EPSG კოდი</strong> — ყველაზე მოხერხებული გზა CRS-ის განსაზღვრისთვის</li>
+<li><strong><code>isValid()</code></strong> — ყოველთვის შეამოწმე CRS-ის შექმნის შემდეგ</li>
+<li><strong><code>QgsCoordinateTransform</code></strong> — კოორდინატების გარდაქმნა ერთი CRS-იდან მეორეში</li>
+<li><strong>CRS შეუსაბამობა</strong> — სივრცული ანალიზის ყველაზე გავრცელებული შეცდომის წყარო</li>
+<li>საქართველოსთვის → <strong><code>EPSG:32638</code></strong> (UTM Zone 38N, მეტრები)</li>
 </ul>
+<p>👉 ნებისმიერი სივრცული ოპერაციამდე <strong>შეამოწმე CRS</strong> — ეს გარანტიას იძლევა, რომ ფართობი, სიგრძე და მდებარეობა <strong>სწორად გამოითვლება</strong>.</p>
 <hr />
-<h2 id="references">📚 References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h2 id="_6">📚 გამოყენებული რესურსები<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_projections/working_with_projections.html">QGIS Documentation - Coordinate Reference Systems</a></li>
-<li><a href="https://docs.qgis.org/latest/en/docs/pyqgis_developer_cookbook/crs.html">PyQGIS Developer Cookbook</a></li>
+<li><a href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_projections/working_with_projections.html">QGIS Documentation — CRS</a></li>
+<li><a href="https://docs.qgis.org/latest/en/docs/pyqgis_developer_cookbook/crs.html">PyQGIS Developer Cookbook — CRS</a></li>
+<li><a href="https://epsg.io">EPSG Registry</a></li>
 </ul>
 
 

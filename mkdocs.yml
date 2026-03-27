@@ -308,6 +308,8 @@ nav:
         - შესავალი: Dev_ops/intro.md
       - 'Geoserver':
         - შესავალი: Dev_ops/intro.md
+        - თეორია:
+          - Java Heap: Dev_ops/GeoServer/Theory/Java_Heap_and_Dump_GeoServer
       - 'MapStore':
         - შესავალი: Dev_ops/intro.md
       - 'OS':
