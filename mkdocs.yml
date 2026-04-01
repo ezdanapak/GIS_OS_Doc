@@ -70,6 +70,10 @@ plugins:
   #     redirect_maps:
   #       Programming/PyQGIS/Explanations/PyQGIS_OGR_library.md: Programming/PyQGIS/Explanations/PyQGIS_OGR_Library/
 
+# PWA Manifest
+extra:
+  manifest: manifest.webmanifest
+
 # Markdown Extensions (გაუციფრებული, დუბლების გარეშე)
 markdown_extensions:
   - admonition
@@ -107,10 +111,8 @@ markdown_extensions:
 # extra_css:
 #   - stylesheets/styles.css
 #   - stylesheets/extra.css
-# extra_javascript:
-#   - js/toggle-lines.js
-#   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
-#   - javascripts/tablesort.js
+extra_javascript:
+  - js/service-worker-register.js
 
 # Navigation
 nav:
