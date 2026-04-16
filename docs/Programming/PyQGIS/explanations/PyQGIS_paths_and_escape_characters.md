@@ -16,9 +16,9 @@ Python-ში ერთზე მეტი გზაა ბილიკები
 
 ### მაგალითები:
 ```py
-r"C:\Lessons\NotebookStart\Toronto.gdb\ambulances"
-"C:/Lessons/NotebookStart/Toronto.gdb/ambulances"
-"C:\\Lessons\\NotebookStart\\Toronto.gdb\\ambulances"
+r"C:\Lessons\Georgia.gpkg\ambulances"
+"C:/Lessons/Georgia.gpkg/ambulances"
+"C:\\Lessons\\Georgia.gpkg\\ambulances"
 ```
 
 ყველა ეს ჩანაწერი სწორია და **ურთიერთშენაცვლებადია**.
