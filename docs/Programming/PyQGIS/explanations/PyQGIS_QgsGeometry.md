@@ -8,8 +8,8 @@
 
 ## Key Features
 - **Geometry Creation** — წერტილების, ხაზებისა და პოლიგონების შექმნა.
-- **Geometry Transformation** — გადაადგილება, ბუფერიზაცია, მარტივება.
-- **Geometry Analysis** — შეჯახების შემოწმება, დაშორების გამოთვლა.
+- **Geometry Transformation** — გადაადგილება, ბუფერიზაცია.
+- **Geometry Analysis** — გადაფარვების შემოწმება, დაშორების გამოთვლა.
 - **Geometry Export** — სხვა ფორმატებში გადატანა (WKT, WKB).
 
 ---

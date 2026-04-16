@@ -278,6 +278,7 @@ nav:
             - შეცდომები და მათი მოგვარება: Programming/PyQGIS/Theory/Error_handling.md
             - ნაგვის შემკრები: Programming/PyQGIS/Theory/PyQGIS_Garbage_Collection.md
             - Temporary Output: Programming/PyQGIS/Theory/PyQGIS_Temporary_Output.md
+            - WKB-WKT ტიპები: Programming/PyQGIS/Theory/PyQGIS_WKB_WKT_Types.md
          - თემები:
             - შრის შექმნა: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Create_layer.md
             - გეომეტრიის ცვლილება: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Geometry_Conversions.md
