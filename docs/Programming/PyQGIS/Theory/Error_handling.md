@@ -302,6 +302,97 @@ iface.addVectorLayer(fn, 'ჩემი შრე', 'ogr')
 
 ---
 
+## 🔴 TypeError: '>=' not supported between instances of 'str' and 'int'
+
+### რას ნიშნავს?
+
+Python ცდილობს **სტრიქონი შეადაროს მთელ რიცხვს** — ეს შეუძლებელია. `>=`, `<=`, `>`, `<` ოპერატორები **ერთი ტიპის** მნიშვნელობებს შორის მუშაობს.
+
+### კოდი სადაც ხდება
+
+```python
+layers = QgsProject.instance().mapLayersByName('gis_osm_places_free_1')
+layer  = layers[0]
+
+delf  = layer.dataProvider().capabilities()
+feats = layer.getFeatures()
+dfeats = []
+
+if delf & QgsVectorDataProvider.DeleteFeatures:
+    for feat in feats:
+        if feat['osm_id'] >= 9934538919:   # ← ❌ TypeError აქ!
+            dfeats.append(feat.id())
+```
+
+### მიზეზი
+
+`feat['osm_id']` — ატრიბუტულ ცხრილში `osm_id` სვეტი **სტრიქონის** (`str`) ტიპად არის შენახული, მაგრამ `9934538919` **მთელი რიცხვია** (`int`):
+
+```python
+for feat in layer.getFeatures():
+    print(type(feat['osm_id']))
+# → <class 'str'>   ← სტრიქონი, არა int!
+
+# Python ვერ ადარებს:
+"9934538919" >= 9934538919   # ❌ TypeError
+```
+
+### სვეტის ტიპის შემოწმება
+
+```python
+for field in layer.fields():
+    if field.name() == 'osm_id':
+        print(f"სახელი: {field.name()}")
+        print(f"ტიპი:   {field.typeName()}")   # → "String" ან "Integer"
+        print(f"ტიპი:   {field.type()}")        # → 10 (String) ან 2 (Int)
+```
+
+### გამოსწორება — `int()` გარდაქმნა
+
+```python
+# ✅ str → int გარდაქმნა შედარებამდე
+if delf & QgsVectorDataProvider.DeleteFeatures:
+    for feat in feats:
+        if int(feat['osm_id']) >= 9934538919:
+            dfeats.append(feat.id())
+    df = layer.dataProvider().deleteFeatures(dfeats)
+    layer.triggerRepaint()
+```
+
+### გამოსწორება — უსაფრთხო ვარიანტი `try/except`-ით
+
+```python
+# ✅ თუ osm_id ზოგჯერ ცარიელია ან NULL-ია
+if delf & QgsVectorDataProvider.DeleteFeatures:
+    for feat in feats:
+        try:
+            osm_id = int(feat['osm_id'])
+            if osm_id >= 9934538919:
+                dfeats.append(feat.id())
+        except (ValueError, TypeError):
+            print(f"⚠️ Feature {feat.id()}: osm_id გარდაქმნა ვერ მოხდა → '{feat['osm_id']}'")
+
+    if dfeats:
+        df = layer.dataProvider().deleteFeatures(dfeats)
+        layer.triggerRepaint()
+        print(f"🗑️ წაიშალა {len(dfeats)} feature")
+    else:
+        print("ℹ️ წასაშლელი feature ვერ მოიძებნა")
+```
+
+### ტიპების შედარების ცხრილი
+
+| სვეტის ტიპი | `feat['osm_id']` | შედარება `int`-თან | გამოსწორება |
+|------------|-----------------|-------------------|------------|
+| `String` | `"9934538919"` | ❌ TypeError | `int(feat['osm_id'])` |
+| `Integer` / `Int64` | `9934538919` | ✅ მუშაობს | გარდაქმნა არ სჭირდება |
+| `Double` | `9934538919.0` | ✅ მუშაობს | `int()` სურვილისამებრ |
+| `NULL` / `None` | `None` | ❌ TypeError | `try/except` |
+
+> 💡 **OSM მონაცემებში** (`osm_id`) სვეტი ხშირად **String-ად** ინახება — ID-ები ძალიან დიდი შეიძლება იყოს. ყოველთვის შეამოწმე სვეტის ტიპი `field.typeName()`-ით სანამ შეადარებ.
+
+---
+
 ## 📌 შეჯამება — შეცდომების სქემა
 
 ```
@@ -316,6 +407,8 @@ iface.addVectorLayer(fn, 'ჩემი შრე', 'ogr')
       ├── IndexError           → mapLayersByName() სახელი სწორია?
       │
       ├── KeyError             → სვეტი ცხრილში არსებობს? სახელი ≤10 სიმბოლო?
+      │
+      ├── TypeError            → feat['სვეტი'] სტრიქონია? int() გარდაქმენი
       │
       └── AssertionError       → Edit Mode გათიშული? isEditable() შეამოწმე
 ```
