@@ -250,6 +250,7 @@ nav:
       - PyQGIS:
          - რესურსები: Programming/PyQGIS/PyQGIS_resources.md
          - განმარტებები:
+            - იერარქია: Programming/PyQGIS/explanations/PyQGIS_Class_hierarchy.md
             - OGR ბიბლიოთეკა: Programming/PyQGIS/explanations/PyQGIS_OGR_Library.md
             - დახრილი ხაზი: Programming/PyQGIS/explanations/PyQGIS_paths_and_escape_characters.md
             - შეიპფაილი: Programming/PyQGIS/explanations/PyQGIS_shapefile.md
