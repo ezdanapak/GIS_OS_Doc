@@ -275,7 +275,9 @@ nav:
          - თეორია:
             - სწავლების საფეხურები: Programming/PyQGIS/Theory/Learning_stages.md
             - PyQGIS კლასები: Programming/PyQGIS/Theory/PyQGIS_classes_guide.md
+            - PyQGIS API: Programming/PyQGIS/Theory/PyQGIS_API_guide.md
             - PyQGIS OOP: Programming/PyQGIS/Theory/PyQGIS_oop_guide.md
+            - PyQGIS ხელსაწყოების ბიბლიოთეკა: Programming/PyQGIS/Theory/PyQGIS_PT.md
             - შეცდომები და მათი მოგვარება: Programming/PyQGIS/Theory/Error_handling.md
             - ნაგვის შემკრები: Programming/PyQGIS/Theory/PyQGIS_Garbage_Collection.md
             - Temporary Output: Programming/PyQGIS/Theory/PyQGIS_Temporary_Output.md
