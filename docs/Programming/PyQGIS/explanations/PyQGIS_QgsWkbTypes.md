@@ -12,7 +12,7 @@
 
 - ახალი შრის ან ფაილის შექმნისას (`QgsVectorFileWriter`, `QgsMemoryLayer`)
 - გეომეტრიის ტიპის შემოწმებისას
-- ფეიჩერის გეომეტრიის განსაზღვრისას
+- ობიექტის გეომეტრიის განსაზღვრისას
 
 ---
 
@@ -23,7 +23,7 @@
 | `QgsWkbTypes.Point` | წერტილი | სახლი, სადგური, სხვა ობიექტი |
 | `QgsWkbTypes.LineString` | ხაზი | გზა, მდინარე, მილსადენი |
 | `QgsWkbTypes.Polygon` | პოლიგონი | მიწის ნაკვეთი, ტბა, შენობა |
-| `QgsWkbTypes.MultiPoint` | მრავალი წერტილი | ერთ feature-ში მრავალი წერტილი |
+| `QgsWkbTypes.MultiPoint` | მრავალი წერტილი | ერთ ობიექტში მრავალი წერტილი |
 | `QgsWkbTypes.MultiLineString` | მრავალი ხაზი | გზების ქსელი |
 | `QgsWkbTypes.MultiPolygon` | მრავალი პოლიგონი | კუნძულები, ანკლავები |
 | `QgsWkbTypes.NoGeometry` | გეომეტრია არ არის | მხოლოდ ატრიბუტების ცხრილი |

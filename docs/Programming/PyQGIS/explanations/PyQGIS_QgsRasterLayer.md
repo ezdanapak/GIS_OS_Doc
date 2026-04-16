@@ -10,7 +10,7 @@
 PyQGIS-ში `QgsRasterLayer` საშუალებას გაძლევს:
 
 - ჩატვირთო და აჩვენო სხვადასხვა ფორმატის რასტრები (GeoTIFF, ASCII GRID, JPEG, PNG და სხვ.)
-- იმუშაო მრავალბანდიან (multiband) მონაცემებთან.
+- იმუშაო მრავალარხიან (multiband) მონაცემებთან.
 - წაიკითხო პიქსელების მნიშვნელობები.
 - გამოიყენო სტილიზაცია (symbology).
 - შეასრულო ანალიზი Raster Processing Toolbox–ით.
@@ -58,12 +58,12 @@ print("Bands:", raster_layer.bandCount())
 
 ---
 
-### 3. კონკრეტული ბანდის ინფორმაცია
+### 3. კონკრეტული არხიდან ინფორმაცია
 
 ```python
 provider = raster_layer.dataProvider()
 
-# ბანდის სტატისტიკის გამოთვლა
+# არხის სტატისტიკის გამოთვლა
 stats = provider.bandStatistics(1)
 print("Minimum:", stats.minimumValue)
 print("Maximum:", stats.maximumValue)
@@ -137,7 +137,7 @@ raster_layer.triggerRepaint()
 
 ## ℹ️ შენიშვნები
 
-- Raster always uses **GDAL provider** PyQGIS-ში.
+- რასტრი ყოველთვის იყენებს **GDAL provider** - ს PyQGIS-ში.
 - CRS-ის დამთხვევა აუცილებელია სხვა შრეებთან სწორი გადაფარვისთვის.
 - დიდ რასტრებზე მუშაობისას შეიძლება საჭირო გახდეს **pyramids** და **tiling**.
 
@@ -145,5 +145,5 @@ raster_layer.triggerRepaint()
 
 # დასკვნა
 
-`QgsRasterLayer` არის PyQGIS-ის ძირითადი ინსტრუმენტი რასტრული მონაცემების სამართავად.  
-მისი საშუალებით შესაძლებელია როგორც მარტივი ვიზუალიზაცია, ასევე რთული გეოანალიზი Processing Toolbox-თან ერთად.
+`QgsRasterLayer` არის PyQGIS-ის ძირითადი ხელსაწყო რასტრული მონაცემების სამართავად.  
+
