@@ -2,9 +2,7 @@
 
 
 
-მასალა გამოყენებულია Openstreetmap 
-
-bmuli
+გამოყენებულია [Openstreetmap](https://download.geofabrik.de/europe/georgia.html) - ის მასალა. 
 
 - [Customizing QGIS with Python](https://docs.qgis.org/latest/en/docs/pyqgis_developer_cookbook/intro.html#customizing-qgis-with-python)  
 - [PyQGIS Developer Cookbook](https://docs.qgis.org/latest/en/docs/pyqgis_developer_cookbook/index.html)  
