@@ -52,7 +52,7 @@ layerfield.append(QgsField('ID', QVariant.Int)) #სვეტი 1
 
 layerfield.append(QgsField('Field_1', QVariant.String)) #სვეტი 2
 
-layerfield.append(QgsField('Field_2', QVariant.Double)) #სვეტი 3
+layerfield.append(QgsField('Field_2', QVariant.Double, len=10, prec=2)) #სვეტი 3
 
 writer = QgsVectorFileWriter(shapefile_home, 'UTF-8', layerfield, QgsWkbTypes.Point, \
 

@@ -272,6 +272,7 @@ nav:
             - Project instance: Programming/PyQGIS/PyQGIS_methods/PyQGIS_Project_instance.md
             - CSV TXT: Programming/PyQGIS/PyQGIS_methods/PyQGIS_FCSVTXT.md
             - სივრცითი მონიშვნა: Programming/PyQGIS/PyQGIS_methods/PyQGIS_Spatial_Sel_Methods.md
+            - ველის ინდექსი: Programming/PyQGIS/PyQGIS_methods/PyQGIS_lookupField.md
          - თეორია:
             - სწავლების საფეხურები: Programming/PyQGIS/Theory/Learning_stages.md
             - PyQGIS კლასები: Programming/PyQGIS/Theory/PyQGIS_classes_guide.md
