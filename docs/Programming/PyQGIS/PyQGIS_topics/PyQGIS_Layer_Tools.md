@@ -12,7 +12,7 @@
 
 **Python მაგალითი:**
 
-``` python
+```python
 import processing
 
 params = {
@@ -32,7 +32,7 @@ processing.run('native:exportlayersinformation', params)
 
 **Python მაგალითი:**
 
-``` python
+```python
 import processing
 
 params = {
@@ -59,7 +59,7 @@ processing.run("native:exporttospreadsheet", {'LAYERS':['C:/Users/Public/GIS/PyQ
 
 **Python მაგალითი:**
 
-``` python
+```python
 import processing
 
 params = {
@@ -87,7 +87,7 @@ iface.addVectorLayer(ext, '', 'ogr')
 
 ## რეალური სცენარი --- GIS პროექტის ავტომატური დოკუმენტირება
 
-``` python
+```python
 import processing
 
 # 1. ფენების მეტამონაცემების ექსპორტი
