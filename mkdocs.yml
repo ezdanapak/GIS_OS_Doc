@@ -299,7 +299,7 @@ nav:
             - რასტრის სტატისტიკა: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Statistics.md
             - რასტრი და ვექტორი: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Vector.md
          - Jupyter Notebook: 
-            - მოსახლეობის რაოდენობა: Programming/PyQGIS/PyQGIS_topics/jupyter/PyQGIS_Jupyter_Notebook.md
+            - მოსახლეობის რაოდენობა: Programming/PyQGIS/PyQGIS_topics/jupyter/population_density_ipyleaflet.ipynb
     - სივრცული პითონი:
       - რესურსები: Programming/Spatial_python/resources.md
 
