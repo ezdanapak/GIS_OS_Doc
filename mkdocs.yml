@@ -298,6 +298,8 @@ nav:
             - რასტრის გეოდამუშავება: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Processing.md
             - რასტრის სტატისტიკა: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Statistics.md
             - რასტრი და ვექტორი: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Vector.md
+         - Jupyter Notebook: 
+            - მოსახლეობის რაოდენობა: Programming/PyQGIS/PyQGIS_topics/jupyter/PyQGIS_Jupyter_Notebook.md
     - სივრცული პითონი:
       - რესურსები: Programming/Spatial_python/resources.md
 
