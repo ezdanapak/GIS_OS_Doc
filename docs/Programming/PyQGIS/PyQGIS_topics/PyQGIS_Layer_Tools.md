@@ -1,14 +1,13 @@
-# QGIS --- Layer Tools (ქართულად)
+# QGIS — Layer Tools (ქართულად)
 
 ## 1. ფენის ინფორმაციის ექსპორტი (Export layer(s) information)
 
-**დანიშნულება:**\
-ამ ხელსაწყოს საშუალებით მიიღება თითოეული ფენის გეომეტრიული ವ್ಯಾಪ্তის
-პოლიგონი და დამატებითი მეტამონაცემები.
+**დანიშნულება:**
+ამ ხელსაწყოს საშუალებით მიიღება თითოეული ფენის გეომეტრიული პოლიგონი და დამატებითი მეტამონაცემები.
 
-**პარამეტრები:**\
-- `LAYERS` --- ფენების სია\
-- `OUTPUT` --- გამომავალი პოლიგონის ფაილი
+**პარამეტრები:**
+- `LAYERS` — ფენების სია
+- `OUTPUT` — გამომავალი პოლიგონის ფაილი
 
 **Python მაგალითი:**
 
@@ -22,13 +21,12 @@ params = {
 processing.run('native:exportlayersinformation', params)
 ```
 
-------------------------------------------------------------------------
+---
 
 ## 2. ექსპორტი ცხრილში (Export to spreadsheet)
 
-**დანიშნულება:**\
-ერთ ან რამდენიმე ფენის ატრიბუტების ცხრილების ექსპორტი spreadsheet-ში
-(xlsx/ods). თითოეული ფენა ხდება ცალკე ფურცელი.
+**დანიშნულება:**
+ერთ ან რამდენიმე ფენის ატრიბუტების ცხრილების ექსპორტი spreadsheet-ში (xlsx/ods). თითოეული ფენა ხდება ცალკე ფურცელი.
 
 **Python მაგალითი:**
 
@@ -44,18 +42,19 @@ params = {
 }
 processing.run('native:exporttospreadsheet', params)
 ```
+
 ---
 
 ```python
 processing.run("native:exporttospreadsheet", {'LAYERS':['C:/Users/Public/GIS/PyQGIS2025_2/tema9/shp/contour.shp','Polygon?crs=EPSG:32638&field=MINX:double(0,0)&field=MINY:double(0,0)&field=MAXX:double(0,0)&field=MAXY:double(0,0)&field=CNTX:double(0,0)&field=CNTY:double(0,0)&field=AREA:double(0,0)&field=PERIM:double(0,0)&field=HEIGHT:double(0,0)&field=WIDTH:double(0,0)&uid={9e97cf70-2bcc-4e3a-b879-0bc4087c93c9}','C:/Users/Public/GIS/PyGK/Tema_9/shp/Georgia_municipalitetebi.shp','C:/Users/Public/GIS/PyGK/Tema_9/shp/Georgia_regionebi.shp','C:/Users/Public/GIS/PyGK/Tema_9/shp/Georgia_sazRvari.shp'],'USE_ALIAS':True,'FORMATTED_VALUES':True,'OUTPUT':'TEMPORARY_OUTPUT','OVERWRITE':True})
 ```
-------------------------------------------------------------------------
+
+---
 
 ## 3. ფენის ექსტენტის ამოღება (Extract layer extent)
 
-**დანიშნულება:**\
-გენერირდება პოლიგონი, რომელიც წარმოადგენს ფენის მინიმალურ შემოაღত্বის
-ოთხკუთხედს.
+**დანიშნულება:**
+გენერირდება პოლიგონი, რომელიც წარმოადგენს ფენის მინიმალურ შემომავლულ ოთხკუთხედს.
 
 **Python მაგალითი:**
 
@@ -68,24 +67,22 @@ params = {
 }
 processing.run('qgis:polygonfromlayerextent', params)
 ```
+
 ---
 
 ```python
 contour = r'C:\Users\Public\GIS\PyQGIS2025_2\tema9\shp\contour.shp'
-
 ext = r'C:\Users\Public\GIS\PyQGIS2025_2\tema9\shp\contour_extent_polygon.shp'
 
-processing.run("native:polygonfromlayerextent", \
-
-       {'INPUT':contour,'ROUND_TO':0,'OUTPUT':ext})
+processing.run("native:polygonfromlayerextent",
+       {'INPUT': contour, 'ROUND_TO': 0, 'OUTPUT': ext})
 
 iface.addVectorLayer(ext, '', 'ogr')
-
 ```
 
-------------------------------------------------------------------------
+---
 
-## რეალური სცენარი --- GIS პროექტის ავტომატური დოკუმენტირება
+## რეალური სცენარი — GIS პროექტის ავტომატური დოკუმენტირება
 
 ```python
 import processing
@@ -113,7 +110,6 @@ for lyr in ['roads', 'buildings', 'rivers']:
     })
 ```
 
-------------------------------------------------------------------------
+---
 
-დოკუმენტი მოიცავს QGIS Layer Tools-ის მოკლე, მაგრამ პრაქტიკულ საჩვენებელ
-მაგალითებს.
+დოკუმენტი მოიცავს QGIS Layer Tools-ის მოკლე, მაგრამ პრაქტიკულ საჩვენებელ მაგალითებს.
