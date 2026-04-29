@@ -204,7 +204,7 @@ nav:
       - სახელწმიფო სერვისები: Non_formal_education/Lab/Government_Services.md
       - ვირტუალური რეალობა: Non_formal_education/Lab/GEVR.md
       - ML|AI|AR|VR: Non_formal_education/Lab/MLAIAR.md
-      - ტესტები: Non_formal_education/Lab/Test.md
+      - ტესტები: Non_formal_education/Lab/quiz.md
 
     - პროგრამირება:
       - Python:
@@ -323,7 +323,7 @@ nav:
       - 'Geoserver':
         - შესავალი: Dev_ops/intro.md
         - თეორია:
-          - Java Heap: Dev_ops/GeoServer/Theory/Java_Heap_and_Dump_GeoServer
+          - Java Heap: Dev_ops/GeoServer/Theory/Java_Heap_and_Dump_GeoServer.md
       - 'MapStore':
         - შესავალი: Dev_ops/intro.md
       - 'OS':
