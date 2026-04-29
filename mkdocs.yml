@@ -65,6 +65,9 @@ theme:
 # Plugins
 plugins:
   - search
+  - mkdocs-jupyter:
+      execute: false
+      include_source: true
   # სურვილისამებრ: ძველი ბმულების რედირექტები (.md → ახალი მისამართები)
   # - redirects:
   #     redirect_maps:

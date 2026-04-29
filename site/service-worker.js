@@ -12,13 +12,14 @@ var OFFLINE_URL = './';
 
 // ==================== INSTALL ====================
 self.addEventListener('install', function (event) {
+  // skipWaiting პირდაპირ — install ჩავარდნა არ მოხდეს
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
-      return cache.add(OFFLINE_URL);
+      // catch: GitHub Pages redirect-ები cache.add()-ს ანგრევს
+      return cache.add(OFFLINE_URL).catch(function () {});
     })
   );
-  // ახალი SW დაუყოვნებლივ გახდეს აქტიური
-  self.skipWaiting();
 });
 
 // ==================== ACTIVATE ====================
