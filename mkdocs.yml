@@ -13,6 +13,7 @@ use_directory_urls: true # /page/ სტილის URL-ები (რეკო
 # Theme (Material)
 theme:
   name: material
+  custom_dir: overrides
   language: ka
   features:
     - navigation.footer
@@ -111,7 +112,8 @@ markdown_extensions:
       custom_checkbox: true
 
 # Optional assets
-# extra_css:
+extra_css:
+  - stylesheets/notebook_buttons.css
 #   - stylesheets/styles.css
 #   - stylesheets/extra.css
 extra_javascript:
