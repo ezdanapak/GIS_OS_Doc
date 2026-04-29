@@ -77,9 +77,6 @@ plugins:
 # PWA Manifest
 extra:
   manifest: manifest.webmanifest
-  analytics:
-    provider: google
-    property: G-DY2035MQC5
 
 # Markdown Extensions (გაუციფრებული, დუბლების გარეშე)
 markdown_extensions:
