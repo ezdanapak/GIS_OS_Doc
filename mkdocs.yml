@@ -302,7 +302,7 @@ nav:
             - შრის ხელსაწყოები: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Layer_Tools.md
             - რელიეფი: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_DEM.md.md
             - რასტრის სტატისტიკა: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Statistics.md
-            - რასტრი და ვექტორი: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Layout.md
+            - რუკის კომპოზიცია: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Layout.md
          - Jupyter Notebook: 
             - მოსახლეობის რაოდენობა: Programming/PyQGIS/PyQGIS_topics/jupyter/population_density_ipyleaflet.ipynb
     - სივრცული პითონი:
