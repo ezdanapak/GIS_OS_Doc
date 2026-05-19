@@ -259,3 +259,37 @@ processing.run('native:mergevectorlayers', {
 
 iface.addVectorLayer(fn, '', 'ogr')
 ```
+
+----
+
+## 🧭 **Selecting Neighbors — მეზობელი ობიექტების შერჩევა მოქმედების ღილაკით**
+
+👉 ეს სკრიპტი ამოარჩევს ობიექტებს, რომლებიც სივრცულად ეხებიან მოცემულ ობიექტს (მეზობლებს).
+
+```python
+layer_id = '[%@layer_id%]'
+fid = [% $id %]
+
+layer = QgsProject.instance().mapLayer(layer_id)
+
+def get_neighbors(fid):
+    f = layer.getFeature(fid)
+    neighbors = [
+        c.id()
+        for c in layer.getFeatures(f.geometry().boundingBox())
+        if c.geometry().intersects(f.geometry()) and c.id() != f.id()
+    ]
+    return neighbors
+
+first_degree_neighbors = get_neighbors(fid)
+second_degree_neighbors = set()
+
+for n in first_degree_neighbors:
+    neighbors = get_neighbors(n)
+    second_degree_neighbors.update(neighbors)
+
+second_degree_neighbors = second_degree_neighbors.difference(set(first_degree_neighbors))
+second_degree_neighbors.discard(fid)
+
+layer.selectByIds(list(second_degree_neighbors))
+```

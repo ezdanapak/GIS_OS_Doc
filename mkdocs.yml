@@ -300,9 +300,9 @@ nav:
             - გაანგარიშებები ცხრილში : Programming/PyQGIS/PyQGIS_topics/PyQGIS_Calc_Attrib_Expressions.md
             - ვექტორის გეოდამუშავება: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Vector_Processing.md
             - შრის ხელსაწყოები: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Layer_Tools.md
-            - რასტრის გეოდამუშავება: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Processing.md
+            - რელიეფი: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_DEM.md.md
             - რასტრის სტატისტიკა: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Statistics.md
-            - რასტრი და ვექტორი: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Vector.md
+            - რასტრი და ვექტორი: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Layout.md
          - Jupyter Notebook: 
             - მოსახლეობის რაოდენობა: Programming/PyQGIS/PyQGIS_topics/jupyter/population_density_ipyleaflet.ipynb
     - სივრცული პითონი:

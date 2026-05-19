@@ -125,6 +125,70 @@ iface.addRasterLayer(out)
 
 ---
 
+## 🎨 **Symbology — რასტრული გამოსახულების სიმბოლიზირება (ფერების მიცემა)**
+
+👉 ვიზუალურად აღსაქმელი ფერების მინიჭება მნიშვნელობების მიხედვით.
+
+```python
+rl = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_9\Raster\DEM\Georgia_slope.tif'
+ifc = iface.addRasterLayer(rl)
+
+stats = ifc.dataProvider().bandStatistics(1, QgsRasterBandStats.All)
+min = stats.minimumValue
+a = 10
+b = 25
+c = 40
+max = stats.maximumValue
+
+CS = QgsColorRampShader()
+CS.setColorRampType(QgsColorRampShader.Interpolated)
+
+lst = [
+    QgsColorRampShader.ColorRampItem(min, QColor(250, 235, 221)),
+    QgsColorRampShader.ColorRampItem(a, QColor(245, 136, 96)),
+    QgsColorRampShader.ColorRampItem(b, QColor('#cb1b4f')),
+    QgsColorRampShader.ColorRampItem(c, QColor('#611f53')),
+    QgsColorRampShader.ColorRampItem(max, QColor('#03051a'))
+]
+
+CS.setColorRampItemList(lst)
+shad = QgsRasterShader()
+shad.setRasterShaderFunction(CS)
+
+render = QgsSingleBandPseudoColorRenderer(ifc.dataProvider(), 1, shad)
+ifc.setRenderer(render)
+```
+
+---
+
+
+## 🗺️ **Reclassify by Table — რეკლასიფიცირება ცხრილის მიხედვით**
+
+👉 აღნიშნული ფუნქცია საშუალებას გვაძლევს დავაჯგუფოთ რასტრის მნიშვნელობები განსაზღვრულ დიაპაზონებში (კლასებში).
+
+```python
+rl = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_9\Raster\DEM\Georgia_slope.tif'
+out = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_9\Raster\DEM\G_Slope_Reclass.tif'
+
+processing.run(
+    'native:reclassifybytable',
+    {
+        'INPUT_RASTER': rl,
+        'RASTER_BAND': 1,
+        'TABLE': [0, 10, 1, 10, 25, 2, 25, 40, 3, 40, 55, 4],
+        'NO_DATA': 0,
+        'RANGE_BOUNDARIES': 0,
+        'NODATA_FOR_MISSING': True,
+        'DATA_TYPE': 5,
+        'OUTPUT': out
+    }
+)
+
+iface.addRasterLayer(out)
+```
+
+---
+
 📘 **შენიშვნა:**  
 `QgsRasterCalculator` საშუალებას გაძლევთ შექმნათ ახალი რასტრი სხვადასხვა მათემატიკური გამოთვლებით (მაგ. `ras@1 * 2`, `ras@1 - 100` და სხვ.).
 

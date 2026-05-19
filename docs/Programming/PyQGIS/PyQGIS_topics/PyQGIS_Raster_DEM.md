@@ -322,3 +322,29 @@ layer.triggerRepaint()
 
 ---
 
+
+## 🧮 **Volume — მოცულობის დათვლა რასტრულ გამოსახულებაზე**
+
+👉 გამოიყენება მოცულობის გამოთვლისთვის DEM ფენიდან, განსაზღვრული სიმაღლის დონეზე.
+
+```python
+rl = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_11\Raster\chiatura_dem.tif'
+
+chiatura_volume_html = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_11\HTML_stat\chiatura_dem_volume.html'
+chiatura_volume_Table = r'C:\Users\Public\Documents\GK\PyQGIS\shp\tema_11\shp\chiatura_dem_volume_table.shp'
+
+processing.run(
+    "native:rastersurfacevolume",
+    {
+        'INPUT': rl,
+        'BAND': 1,
+        'LEVEL': 0,
+        'METHOD': 0,
+        'OUTPUT_HTML_FILE': chiatura_volume_html,
+        'OUTPUT_TABLE': chiatura_volume_Table
+    }
+)
+```
+
+---
+
