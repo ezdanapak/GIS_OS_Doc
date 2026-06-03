@@ -301,7 +301,7 @@ nav:
             - გაანგარიშებები ცხრილში : Programming/PyQGIS/PyQGIS_topics/PyQGIS_Calc_Attrib_Expressions.md
             - ვექტორის გეოდამუშავება: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Vector_Processing.md
             - შრის ხელსაწყოები: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Layer_Tools.md
-            - რელიეფი: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_DEM.md.md
+            - რელიეფი: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_DEM.md
             - რასტრის სტატისტიკა: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Raster_Statistics.md
             - რუკის კომპოზიცია: Programming/PyQGIS/PyQGIS_topics/PyQGIS_Layout.md
          - Jupyter Notebook: 
