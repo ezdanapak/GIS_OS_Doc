@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">GIS OS DOC</string>
+
+    <!-- URLs -->
+    <string name="primary_url" translatable="false">https://osdoc.qgis.ge/</string>
+    <string name="offline_page_url" translatable="false">file:///android_asset/offline.html</string>
+
+    <!-- User-facing messages -->
+    <string name="no_connection">კავშირი არ არის</string>
+    <string name="ssl_error_title">უსაფრთხოების შეცდომა</string>
+    <string name="ssl_error_message">ვებ-გვერდის სერტიფიკატი არასანდოა. გსურთ მაინც გაგრძელება?</string>
+    <string name="ssl_error_continue">გაგრძელება</string>
+    <string name="ssl_error_cancel">გაუქმება</string>
+
+    <!-- Toolbar menu -->
+    <string name="menu_share">გაზიარება</string>
+    <string name="menu_bookmark_add">სანიშნეს დამატება</string>
+    <string name="menu_bookmarks">სანიშნეები</string>
+    <string name="menu_font_size">შრიფტის ზომა</string>
+
+    <!-- Bookmark messages -->
+    <string name="bookmark_saved">სანიშნე შენახულია</string>
+    <string name="no_bookmarks">სანიშნეები არ გაქვთ</string>
+
+    <!-- Font size labels -->
+    <string name="font_small">პატარა (85%)</string>
+    <string name="font_normal">ნორმალური (100%)</string>
+    <string name="font_large">დიდი (115%)</string>
+    <string name="font_xlarge">ძალიან დიდი (130%)</string>
 </resources>

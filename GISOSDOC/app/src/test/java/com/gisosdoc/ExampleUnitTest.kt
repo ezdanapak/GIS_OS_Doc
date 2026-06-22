@@ -1,4 +1,4 @@
-package com.example.gisos
+package com.gisosdoc
 
 import org.junit.Test
 

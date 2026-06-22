@@ -14,19 +14,23 @@ android {
         applicationId = "com.gisosdoc"
         minSdk = 26
         targetSdk = 36
-        versionCode = 3
-        versionName = "1.1.2"
+        versionCode = 9
+        versionName = "1.3.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+        debug {
+            isMinifyEnabled = false
         }
     }
     compileOptions {
@@ -41,8 +45,9 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.swiperefreshlayout)
+    implementation(libs.androidx.webkit)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 }

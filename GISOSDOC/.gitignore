@@ -13,5 +13,18 @@
 .externalNativeBuild
 .cxx
 local.properties
-# Release builds
-/app/release/
+
+# Build outputs
+app/build
+/app/release
+
+# Signing keys - NEVER commit
+*.jks
+*.keystore
+keystore.properties
+signing.properties
+
+# Archives / key backups
+*.rar
+*.zip
+*.7z
