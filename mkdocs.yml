@@ -77,6 +77,20 @@ plugins:
 # PWA Manifest
 extra:
   manifest: manifest.webmanifest
+  # სოციალური ქსელების ღილაკები (footer-ში)
+  social:
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/GISGEORGIA
+      name: GIS GEORGIA — Facebook
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@GISGEORGIA
+      name: GIS GEORGIA — YouTube
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/gisgeorgia/
+      name: GIS GEORGIA — LinkedIn
+    - icon: fontawesome/brands/github
+      link: https://github.com/GIS-GEORGIA
+      name: GIS GEORGIA — GitHub
 
 # Markdown Extensions (გაუციფრებული, დუბლების გარეშე)
 markdown_extensions:
