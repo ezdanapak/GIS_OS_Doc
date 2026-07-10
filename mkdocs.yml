@@ -79,6 +79,9 @@ extra:
   manifest: manifest.webmanifest
   # სოციალური ქსელების ღილაკები (footer-ში)
   social:
+    - icon: fontawesome/solid/globe
+      link: https://qgis.ge/
+      name: QGIS.ge — ვებსაიტი
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/GISGEORGIA
       name: GIS GEORGIA — Facebook
