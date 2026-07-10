@@ -166,6 +166,7 @@ nav:
             - Raster მონაცემები: GIS_Basic/Theory/Raster/Raster.md
           - ვექტორი:
             - შეიპ-ფაილი: GIS_Basic/Theory/Vector/Shapefile.md
+            - ველის ტიპები: GIS_Basic/Theory/Vector/Field_types.md
             - CAD: GIS_Basic/Theory/Vector/CAD.md
         - დავალებები:
           - გეორეფერენცირება: GIS_Basic/Lab/QGIS_Georeference.md
