@@ -3,7 +3,14 @@
 (function () {
   "use strict";
 
+  // გვერდები, სადაც ბეჭდვის ღილაკი არ გამოჩნდეს (მაგ. მთავარი გვერდი).
+  function isExcluded() {
+    var path = location.pathname.replace(/index\.html$/, "");
+    return path === "/" || path === "";
+  }
+
   function addButton() {
+    if (isExcluded()) return;
     var inner = document.querySelector(".md-content__inner");
     if (!inner || inner.querySelector(".print-page-btn")) return;
 
