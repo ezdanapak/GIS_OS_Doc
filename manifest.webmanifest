@@ -1,0 +1,16 @@
+{
+  "name": "GIS OS Docs",
+  "short_name": "GIS Docs",
+  "description": "ღია კოდის GIS ტექნოლოგიები",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e1e2e",
+  "theme_color": "#4caf50",
+  "icons": [
+    {
+      "src": "assets/Q_white.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
