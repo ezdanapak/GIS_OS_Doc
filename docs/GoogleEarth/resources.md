@@ -1,4 +1,4 @@
-## GEE Engine
+# GEE Engine
 
 === "Unordered list"
     * End-to-End Google Earth [Engine](https://courses.spatialthoughts.com/end-to-end-gee.html) by Ujaval Gandhi

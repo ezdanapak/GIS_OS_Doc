@@ -1,4 +1,4 @@
-## შრის შექმნა(ESRI Shapefile)
+# შრის შექმნა(ESRI Shapefile)
 <br>
 ოფიციალური დოკუმენტაცია <br>
 Class: [QgsWkbTypes](https://qgis.org/pyqgis/3.44/core/QgsWkbTypes.html) <br>

@@ -1,3 +1,5 @@
+# QGIS
+
 ## ჩვენ ვიყენებთ:
 
 - **QGIS (Quantum GIS)** | ვერსია. [QGIS 3.40  LTR](https://qgis.org/download/)

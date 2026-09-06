@@ -1,4 +1,4 @@
-## გეომეტრიის ცვლილება(Geometry conversions)
+# გეომეტრიის ცვლილება(Geometry conversions)
 <br>
 ოფიციალური დოკუმენტაცია <br>
 წერტილოვანი შრის ხაზში გადაყვანა - Point to Line Conversion
