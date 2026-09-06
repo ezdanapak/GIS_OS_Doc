@@ -73,6 +73,12 @@ plugins:
   # - redirects:
   #     redirect_maps:
   #       Programming/PyQGIS/Explanations/PyQGIS_OGR_library.md: Programming/PyQGIS/Explanations/PyQGIS_OGR_Library/
+  # მთლიანი დოკუმენტაციის ბეჭდვა / PDF (უნდა იყოს ბოლო plugin-ი)
+  - print-site:
+      add_to_navigation: true
+      print_page_title: "🖨️ მთლიანი დოკუმენტაცია (ბეჭდვა / PDF)"
+      add_print_site_banner: true
+      include_css: true
 
 # PWA Manifest
 extra:
@@ -132,11 +138,13 @@ markdown_extensions:
 extra_css:
   - stylesheets/notebook_buttons.css
   - stylesheets/py-runner.css
+  - stylesheets/print.css
 #   - stylesheets/styles.css
 #   - stylesheets/extra.css
 extra_javascript:
   - js/service-worker-register.js
   - js/py-runner.js
+  - js/print-button.js
 
 # Navigation
 nav:

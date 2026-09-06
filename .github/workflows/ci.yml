@@ -26,5 +26,5 @@ jobs:
           key: mkdocs-material-${{ env.cache_id }}
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material mkdocs-jupyter
+      - run: pip install mkdocs-material mkdocs-jupyter mkdocs-print-site-plugin
       - run: mkdocs gh-deploy --force
