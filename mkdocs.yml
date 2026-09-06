@@ -131,10 +131,12 @@ markdown_extensions:
 # Optional assets
 extra_css:
   - stylesheets/notebook_buttons.css
+  - stylesheets/py-runner.css
 #   - stylesheets/styles.css
 #   - stylesheets/extra.css
 extra_javascript:
   - js/service-worker-register.js
+  - js/py-runner.js
 
 # Navigation
 nav:

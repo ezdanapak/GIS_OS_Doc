@@ -1,5 +1,8 @@
 # პრაქტიკული 1
 
+!!! tip "ინტერაქტიული კოდი"
+    ქვემოთ მოცემული ამოხსნები **პირდაპირ ბრაუზერში გაეშვება** — შეცვალე კოდი და დააჭირე **▶ გაშვებას**. `input()` გახსნის შესაყვან ფანჯარას. (პირველი გაშვება ~რამდენიმე წამი — Python იტვირთება.)
+
 ## 📦 მართკუთხა პარალელეპიპედის მოცულობის გამოთვლა (Python – საბაზისო დონე)
 
 [Codewars](https://www.codewars.com/kata/58261acb22be6e2ed800003a) <br>
@@ -18,7 +21,8 @@
 
 ## 💡 ამოხსნა
 
-```python
+<div class="py-editor">
+<script type="text/x-python">
 # მნიშვნელობების შეყვანა
 length = float(input("შეიყვანე სიგრძე: "))
 width = float(input("შეიყვანე სიგანე: "))
@@ -32,7 +36,8 @@ if length <= 0 or width <= 0 or height <= 0:
     print("მოცულობა ვერ გამოითვლება! შეიყვანე დადებითი მნიშვნელობები.")
 else:
     print("პარალელეპიპედის მოცულობაა:", volume)
-```
+</script>
+</div>
 
 ---
 
@@ -49,7 +54,8 @@ else:
 
 ## 💡 ამოხსნა
 
-```python
+<div class="py-editor">
+<script type="text/x-python">
 # ორი ორნიშნა რიცხვის შეყვანა
 num1 = int(input("შეიყვანე პირველი ორნიშნა რიცხვი: "))
 num2 = int(input("შეიყვანე მეორე ორნიშნა რიცხვი: "))
@@ -65,7 +71,8 @@ result = last1 ** last2
 print("პირველი რიცხვის ბოლო ციფრია:", last1)
 print("მეორე რიცხვის ბოლო ციფრია:", last2)
 print("შედეგი (", last1, "^", last2, ") =", result)
-```
+</script>
+</div>
 
 --- 
 
@@ -81,7 +88,8 @@ print("შედეგი (", last1, "^", last2, ") =", result)
 
 ## 💡 ამოხსნა
 
-```python
+<div class="py-editor">
+<script type="text/x-python">
 # დროის შეყვანა
 time = float(input("შეიყვანე დრო საათებში: "))
 
@@ -93,7 +101,8 @@ litres = int(litres)
 
 # შედეგის ჩვენება
 print("ნათანი დალევს", litres, "ლიტრ წყალს.")
-```
+</script>
+</div>
 
 
 ---
@@ -110,7 +119,8 @@ print("ნათანი დალევს", litres, "ლიტრ წყა�
 
 ## 💡 ამოხსნა
 
-```python
+<div class="py-editor">
+<script type="text/x-python">
 # ორი ორნიშნა რიცხვის შეყვანა
 num1 = int(input("შეიყვანე პირველი ორნიშნა რიცხვი: "))
 num2 = int(input("შეიყვანე მეორე ორნიშნა რიცხვი: "))
@@ -126,4 +136,5 @@ average = (last1 + last2) / 2
 print("პირველი რიცხვის ბოლო ციფრი:", last1)
 print("მეორე რიცხვის ბოლო ციფრი:", last2)
 print("ბოლო ციფრების საშუალო არითმეტიკულია:", average)
-```
+</script>
+</div>
