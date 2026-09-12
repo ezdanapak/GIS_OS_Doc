@@ -338,6 +338,27 @@ nav:
       - მონ.სტრუქტურები: Programming/Python_for_geographers/notebooks/md/02_data_structures.md
       - ვირტუალური გარემო: Programming/Python_for_geographers/Theory/Python_VENV.md
       - პითონის კლასები: Programming/Python_for_geographers/Theory/Python_classes.md
+    - Linux გეოგრაფებისთვის:
+      - შესავალი: Linux/intro.md
+      - სასერტიფიკატო ამოცანები: Linux/objectives.md
+      - 00 — მომზადება: Linux/00_Setup/index.md
+      - 01 — ბრძანების ველი: Linux/01_Shell/index.md
+      - 02 — ფაილები:
+        - Linux/02_Files/index.md
+        - ფაილების ძებნა — find: Linux/02_Files/find.md
+      - 03 — ტექსტი: Linux/03_Text/index.md
+      - 04 — მომხმარებლები: Linux/04_Users/index.md
+      - 05 — პაკეტები: Linux/05_Packages/index.md
+      - 06 — სისტემა: Linux/06_System/index.md
+      - 07 — დისკები: Linux/07_Storage/index.md
+      - 08 — ქსელი: Linux/08_Network/index.md
+      - 09 — სკრიპტირება: Linux/09_Scripting/index.md
+      - 10 — უსაფრთხოება: Linux/10_Security/index.md
+      - 11 — კონტეინერები: Linux/11_Containers/index.md
+      - 12 — GIS ბოლო მილი: Linux/12_GIS/index.md
+      - ლაბორატორიები:
+        - Linux/Lab/index.md
+        - ლაბი 02 — ფაილები: Linux/Lab/lab_02_files.md
     - Dev Ops:
       - შესავალი: Dev_ops/intro.md
       - მოდული: Dev_ops/Other/Steps.md
