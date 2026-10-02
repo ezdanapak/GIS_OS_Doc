@@ -85,6 +85,36 @@ fc.setAttributes([1, 'text', 25])  #(ID, 'ტექსტი ამ უჯრი
 writer.addFeature(fc) #დაემატოს შრეს ობიექტი
 ```
 
+!!! warning "`del(writer)`-ის ადგილი"
+    ობიექტის დამატების კოდი უნდა მოვათავსოთ `writer`-ის შექმნის **შემდეგ** და `del(writer)`-მდე. `del(writer)` ხურავს ფაილს და მონაცემებს დისკზე წერს, ამიტომ მის შემდეგ `writer.addFeature(fc)` უკვე აღარ იმუშავებს.
+
+სრული თანმიმდევრობა ერთ სკრიპტში:
+
+```py title="new_shapefile_point_full.py" linenums="1"
+shapefile_home = r'C:\Users\Public\Documents\GIS\shapefile\saxli.shp'
+
+layerfield = QgsFields()
+layerfield.append(QgsField('ID', QVariant.Int))
+layerfield.append(QgsField('Field_1', QVariant.String))
+layerfield.append(QgsField('Field_2', QVariant.Double, len=10, prec=2))
+
+# 1. writer იქმნება
+writer = QgsVectorFileWriter(shapefile_home, 'UTF-8', layerfield, QgsWkbTypes.Point, \
+               QgsCoordinateReferenceSystem('EPSG:32638'), 'ESRI Shapefile')
+
+# 2. ობიექტი ემატება writer-ს
+fc = QgsFeature()
+fc.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(357965.61, 4683353.56)))
+fc.setAttributes([1, 'text', 25])
+writer.addFeature(fc)
+
+# 3. ბოლოს writer იხურება
+del(writer)
+
+# 4. შრე ემატება QGIS პროექტს
+layer = iface.addVectorLayer(shapefile_home, '', 'ogr')
+```
+
 ## შრის დამატება QGIS პროექტის გარემოში
 
 ```py title="shapefile_point.py" linenums="1"
@@ -159,64 +189,146 @@ layer = iface.addVectorLayer(fn, '', 'ogr')
 ```
 
 
-## ცხრილში ახალი სვეტის შექმნა და მონაცემის შეტანა
+!!! info "`XY.index(i)` თუ `enumerate`?"
+    ზემოთ ციკლში ID-ს `XY.index(i)` გვიბრუნებს. ის სიაში ეძებს ელემენტს და აბრუნებს მის ადგილს. ეს მუშაობს, მაგრამ თუ სიაში ორი ერთნაირი წერტილია, ორივეს ერთი და იგივე ID მიენიჭება, ამას გარდა ყოველ ჯერზე სიას თავიდან ეძებს.
+    მარტივი ალტერნატივაა `enumerate`, რომელიც თვითონ გვაძლევს ნომერს და ელემენტს:
 
-!!! note "with edit"
-    with edit არის ოპერატორი
-    იმისათვის რომ გაეშვას გამოხატვით გადაცემული ჩვენი კოდი საჭიროა შესაბამისი QgsExpressionContext-ის მიწოდება
+    ```py
+    for n, (x, y) in enumerate(XY, start=1):
+        fc = QgsFeature()
+        fc.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(x, y)))
+        fc.setAttributes([n, 'lake'])   # n = 1, 2, 3 ...
+        writer.addFeature(fc)
+    ```
+
+    `start=1` ნიშნავს, რომ დათვლა 1-დან დაიწყება (ნაგულისხმევად 0-დანაა).
 
 
-## Calculate Field
+## შრის შექმნა ფუნქციით (გაუმჯობესებული ვერსია)
 
-```python
-layers = QgsProject.instance().mapLayersByName('Rivers')
-layer = layers[0]
+ზემოთ მოცემული სკრიპტები ყოველ ჯერზე ხელით გვაიძულებს გეომეტრიის, ველების და გზის გადაწერას. ქვემოთ მოცემული ფუნქცია:
 
-pv = layer.dataProvider()
-pv.addAttributes([QgsField('Type', QVariant.String)])
-# QVariant.String-ის ნაცვლად თუ QVariant.Int-ს გამოვიყენებთ
+- მუშაობს **ნებისმიერ გეომეტრიაზე** (`Point`, `LineString`, `Polygon`, `Multi...`)
+- მუშაობს **Shapefile-ზეც და GeoPackage-ზეც** (გაფართოების მიხედვით ირჩევს დრაივერს)
+- ამოწმებს, არსებობს თუ არა ფაილი და საქაღალდე, ხოლო შეცდომისას გვიბრუნებს გასაგებ შეტყობინებას
+- ველებს იღებს მარტივი სიიდან და **ყველა ობიექტს ერთად ამატებს**
+- ბოლოს ამატებს შრეს პროექტში
 
-layer.updateFields()
+```py title="create_layer_function.py" linenums="1"
+import os
+from qgis.core import (
+    QgsVectorFileWriter, QgsFields, QgsField, QgsFeature, QgsGeometry,
+    QgsPointXY, QgsCoordinateReferenceSystem, QgsProject, QgsVectorLayer, QgsWkbTypes
+)
+from qgis.PyQt.QtCore import QVariant
 
-cntx = QgsExpressionContext()
-cntx.appendScopes(QgsExpressionContextUtils.globalProjectLayerScopes(layer))
+# ველის ტიპები სტრიქონით, რომ ყოველ ჯერზე QVariant არ დაგვჭირდეს
+FIELD_TYPES = {
+    'int': QVariant.Int,
+    'str': QVariant.String,
+    'float': QVariant.Double,
+    'date': QVariant.Date,
+}
 
-with edit(layer):
-    for i in layer.getFeatures():
-        cntx.setFeature(i)
-        i['Type'] = 'mdinare'
-        # აქ უკვე ეს ფრჩხილები აღარ გვჭირდება, რიცხვები წავა სვეტში ტექსტის ნაცვლად
-        layer.updateFeature(i)
+# გაფართოება -> OGR დრაივერი
+DRIVERS = {'.shp': 'ESRI Shapefile', '.gpkg': 'GPKG', '.geojson': 'GeoJSON'}
+
+
+def create_layer(path, geom_type, epsg, fields, features=None,
+                 overwrite=False, add_to_project=True):
+    """
+    path        - ფაილის სრული გზა (.shp / .gpkg / .geojson)
+    geom_type   - QgsWkbTypes.Point, QgsWkbTypes.LineString, QgsWkbTypes.Polygon ...
+    epsg        - მაგ. 32638
+    fields      - [('ID', 'int'), ('Name', 'str'), ('Area', 'float')]
+    features    - [(geometry, [ატრიბუტები]), ...]  (არასავალდებულო)
+    overwrite   - თუ ფაილი უკვე არსებობს, გადაეწეროს თუ არა
+    """
+    folder, ext = os.path.dirname(path), os.path.splitext(path)[1].lower()
+
+    if ext not in DRIVERS:
+        raise ValueError(f'მხარდაუჭერელი ფორმატი: {ext}')
+    if not os.path.isdir(folder):
+        os.makedirs(folder)          # საქაღალდე თუ არ არსებობს, შეიქმნას
+    if os.path.exists(path) and not overwrite:
+        raise FileExistsError(f'ფაილი უკვე არსებობს: {path}')
+
+    crs = QgsCoordinateReferenceSystem(f'EPSG:{epsg}')
+    if not crs.isValid():
+        raise ValueError(f'არასწორი EPSG კოდი: {epsg}')
+
+    qfields = QgsFields()
+    for name, ftype in fields:
+        qfields.append(QgsField(name, FIELD_TYPES[ftype]))
+
+    options = QgsVectorFileWriter.SaveVectorOptions()
+    options.driverName = DRIVERS[ext]
+    options.fileEncoding = 'UTF-8'
+    options.actionOnExistingFile = QgsVectorFileWriter.CreateOrOverwriteFile
+
+    writer = QgsVectorFileWriter.create(
+        path, qfields, geom_type, crs,
+        QgsProject.instance().transformContext(), options
+    )
+    if writer.hasError() != QgsVectorFileWriter.NoError:
+        raise RuntimeError(writer.errorMessage())
+
+    for geom, attrs in (features or []):
+        fc = QgsFeature(qfields)
+        fc.setGeometry(geom)
+        fc.setAttributes(attrs)
+        writer.addFeature(fc)
+
+    del writer   # ფაილი იხურება და მონაცემები იწერება დისკზე
+
+    layer = QgsVectorLayer(path, os.path.splitext(os.path.basename(path))[0], 'ogr')
+    if add_to_project and layer.isValid():
+        QgsProject.instance().addMapLayer(layer)
+    return layer
 ```
 
----
+### გამოყენების მაგალითები
 
-# ცხრილში ახალი სვეტების შექმნა და მონაცემების შეტანა
+**წერტილოვანი შრე მონაცემებით**
 
-## Calculate Fields
+```py title="example_points.py" linenums="1"
+pts = [(356671.0049, 4679923.0988), (356672.2015, 4679929.5719)]
 
-```python
-layers = QgsProject.instance().mapLayersByName('Rivers')
-layer = layers[0]
+features = [
+    (QgsGeometry.fromPointXY(QgsPointXY(x, y)), [i, 'lake'])
+    for i, (x, y) in enumerate(pts, start=1)
+]
 
-pv = layer.dataProvider()
-pv.addAttributes([
-    QgsField('Type', QVariant.String),
-    QgsField('Type_Eng', QVariant.String)
-])
-
-layer.updateFields()
-
-cntx = QgsExpressionContext()
-cntx.appendScopes(QgsExpressionContextUtils.globalProjectLayerScopes(layer))
-
-with edit(layer):
-    for i in layer.getFeatures():
-        cntx.setFeature(i)
-        i['Type'] = 'mdinare'
-        i['Type_Eng'] = 'River'
-        layer.updateFeature(i)
+layer = create_layer(
+    r'C:\Users\Public\Documents\GIS\shapefile\lakes.shp',
+    QgsWkbTypes.Point, 32638,
+    fields=[('ID', 'int'), ('Category', 'str')],
+    features=features,
+    overwrite=True
+)
 ```
+
+**ცარიელი პოლიგონური შრე GeoPackage-ში (მონაცემებს მერე ხელით დავხატავთ)**
+
+```py title="example_polygon_gpkg.py" linenums="1"
+layer = create_layer(
+    r'C:\Users\Public\Documents\GIS\parcels.gpkg',
+    QgsWkbTypes.Polygon, 32638,
+    fields=[('ID', 'int'), ('Owner', 'str'), ('Area_m2', 'float')],
+    overwrite=True
+)
+```
+
+!!! tip "რატომ GeoPackage?"
+    Shapefile-ს აქვს შეზღუდვები: ველის სახელი მაქსიმუმ 10 სიმბოლო, ტექსტი 254 სიმბოლომდე, ერთი შრე 3–7 ფაილისგან შედგება. `.gpkg` ამ პრობლემებს არ შეიცავს, ამიტომ ახალი პროექტებისთვის ის უკეთესი არჩევანია.
+
+!!! note "QVariant-ის შესახებ"
+    QGIS 3.38+ ვერსიებიდან `QVariant.Int` და მსგავსი ტიპები ჩანაცვლებულია `QMetaType.Type.Int` ტიპით. ძველი ვარიანტი ჯერ კიდევ მუშაობს, მაგრამ შესაძლოა გაფრთხილება გამოიტანოს.
+
+## ველების დამატება არსებულ შრეში
+
+არსებულ შრეში ახალი სვეტების დამატება და მათი გამოთვლა იხილეთ გვერდზე
+[ატრიბუტული ცხრილის გამოთვლები](PyQGIS_Calc_Attrib_Expressions.md).
 
 ## ℹ️ განმარტებები – PyQGIS კომპონენტები
 
