@@ -325,6 +325,64 @@ layer = create_layer(
 !!! note "QVariant-ის შესახებ"
     QGIS 3.38+ ვერსიებიდან `QVariant.Int` და მსგავსი ტიპები ჩანაცვლებულია `QMetaType.Type.Int` ტიპით. ძველი ვარიანტი ჯერ კიდევ მუშაობს, მაგრამ შესაძლოა გაფრთხილება გამოიტანოს.
 
+## წერტილოვანი შრის შექმნა CSV ფაილიდან
+
+ხშირად კოორდინატები ცხრილშია (მაგ. GPS-ით აღებული წერტილები). ქვემოთ მოცემული სკრიპტი კითხულობს CSV-ს და ზემოთ აღწერილ `create_layer()` ფუნქციას იყენებს შრის შესაქმნელად.
+
+CSV ფაილის მაგალითი (`points.csv`, პირველი სტრიქონი სათაურია):
+
+```text
+ID,Name,X,Y
+1,Ტბა 1,356671.0049,4679923.0988
+2,Ტბა 2,356672.2015,4679929.5719
+3,წყარო,356676.9835,4679938.1332
+```
+
+```py title="create_layer_from_csv.py" linenums="1"
+import csv
+
+csv_path = r'C:\Users\Public\Documents\GIS\points.csv'
+out_path = r'C:\Users\Public\Documents\GIS\shapefile\points.gpkg'
+
+features = []
+
+# utf-8-sig ხსნის Excel-ის მიერ შენახულ UTF-8 ფაილებსაც (BOM-ით)
+with open(csv_path, newline='', encoding='utf-8-sig') as f:
+    for n, row in enumerate(csv.DictReader(f), start=2):  # 1-ლი სტრიქონი სათაურია
+        try:
+            x = float(row['X'].replace(',', '.'))
+            y = float(row['Y'].replace(',', '.'))
+            attrs = [int(row['ID']), row['Name']]
+        except (KeyError, ValueError) as e:
+            print(f'სტრიქონი {n} გამოტოვებულია: {e}')   # არასწორი სტრიქონი არ გვაჩერებს
+            continue
+
+        features.append((QgsGeometry.fromPointXY(QgsPointXY(x, y)), attrs))
+
+layer = create_layer(
+    out_path,
+    QgsWkbTypes.Point, 32638,
+    fields=[('ID', 'int'), ('Name', 'str')],
+    features=features,
+    overwrite=True
+)
+
+print(f'დაემატა {len(features)} ობიექტი')
+```
+
+!!! note "რას უნდა მიექცეს ყურადღება"
+    - კოორდინატების სვეტების სახელები (`X`, `Y`) და EPSG კოდი (`32638`) უნდა ემთხვეოდეს თქვენს მონაცემებს. გეოგრაფიულ კოორდინატებზე (გრძედი/განედი) გამოიყენეთ `4326`.
+    - თუ CSV წერტილით-მძიმით (`;`) არის გამოყოფილი, `DictReader`-ს დაამატეთ `delimiter=';'`.
+    - ფუნქცია `create_layer()` უნდა იყოს უკვე გაშვებული იმავე კონსოლში.
+
+!!! tip "სწრაფი ალტერნატივა"
+    თუ შრის ფაილად შენახვა არ გვჭირდება, QGIS-ს შეუძლია CSV პირდაპირ წერტილებად გახსნას:
+    ```py
+    uri = 'file:///C:/Users/Public/Documents/GIS/points.csv?delimiter=,&xField=X&yField=Y&crs=EPSG:32638'
+    layer = QgsVectorLayer(uri, 'points', 'delimitedtext')
+    QgsProject.instance().addMapLayer(layer)
+    ```
+
 ## ველების დამატება არსებულ შრეში
 
 არსებულ შრეში ახალი სვეტების დამატება და მათი გამოთვლა იხილეთ გვერდზე
