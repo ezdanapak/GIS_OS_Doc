@@ -133,17 +133,20 @@ extra_css:
   - stylesheets/notebook_buttons.css
   - stylesheets/py-runner.css
   - stylesheets/print.css
+  - stylesheets/quizhub.css
 #   - stylesheets/styles.css
 #   - stylesheets/extra.css
 extra_javascript:
   - js/service-worker-register.js
   - js/py-runner.js
   - js/print-button.js
+  - js/quizhub.js
 
 # Navigation
 nav:
   - მთავარი: index.md
   - შესახებ: about.md
+  - ქვიზები: Quiz/index.md
   - დოკუმენტაცია:
     - GIS საბაზისო:
         - შესახებ:
