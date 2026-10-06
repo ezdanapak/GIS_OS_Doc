@@ -1,6 +1,6 @@
 # ქვიზები / Quizzes
 
-<div id="quizhub" data-base="data/" data-subjects="gis">
+<div id="quizhub" data-base="data/" data-subjects="gis,pyqgis">
   <noscript>ქვიზისთვის საჭიროა JavaScript / JavaScript is required.</noscript>
 </div>
 

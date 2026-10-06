@@ -17,7 +17,7 @@
       correct: "სწორი", wrong: "არასწორი", yourAnswer: "შენი პასუხი", rightAnswer: "სწორი პასუხი",
       skipped: "გამოტოვებული", retry: "თავიდან", retryWrong: "მხოლოდ შეცდომების გამეორება",
       reset: "პასუხების განულება", resetAll: "მთელი პროგრესის წაშლა", confirmReset: "დარწმუნებული ხარ? პროგრესი წაიშლება.",
-      shuffle: "პასუხების არევა", mix: "შერეული (ყველა ვერსიიდან)", mixDesc: "შემთხვევითი 20 კითხვა", back: "უკან",
+      shuffle: "პასუხების არევა", mix: "შერეული (ყველა ნაწილიდან)", mixDesc: "შემთხვევითი 20 კითხვა", back: "უკან",
       attempts: "ცდა", done: "შესრულებულია", cleared: "განულებულია", subjects: "საგნები",
       kbd: "კლავიშები: 1–3 არჩევა, Enter — შემდეგი, ← წინა", exam: "გამოცდის რეჟიმი (პასუხი ბოლოს ჩანს)",
       loadErr: "მონაცემები ვერ ჩაიტვირთა",
@@ -28,7 +28,7 @@
       correct: "Correct", wrong: "Wrong", yourAnswer: "Your answer", rightAnswer: "Correct answer",
       skipped: "Skipped", retry: "Retry", retryWrong: "Retry mistakes only",
       reset: "Reset answers", resetAll: "Clear all progress", confirmReset: "Are you sure? Progress will be erased.",
-      shuffle: "Shuffle answers", mix: "Mixed (all versions)", mixDesc: "20 random questions", back: "Back",
+      shuffle: "Shuffle answers", mix: "Mixed (all parts)", mixDesc: "20 random questions", back: "Back",
       attempts: "attempts", done: "Completed", cleared: "Reset", subjects: "Subjects",
       kbd: "Keys: 1–3 choose, Enter — next, ← previous", exam: "Exam mode (answers shown at the end)",
       loadErr: "Could not load data",
@@ -80,6 +80,8 @@
     return out;
   }
   function prog(sid, qid) { return S.progress[sid + "." + qid] || { best: null, attempts: 0, wrong: [], total: 0 }; }
+
+  function subj0(id) { return window.QUIZ_SUBJECTS.filter(function (s) { return s.id === id; })[0]; }
 
   function loadScript(src) {
     return new Promise(function (res, rej) {
@@ -272,7 +274,7 @@
     Promise.all(names.filter(function (n) { return !window.QUIZ_SUBJECTS.some(function (s) { return s.id === n; }); })
       .map(function (n) { return loadScript(base + n + ".js"); }))
       .then(function () {
-        SUBJECTS = window.QUIZ_SUBJECTS.filter(function (s) { return names.indexOf(s.id) >= 0; });
+        SUBJECTS = names.map(function (n) { return subj0(n); }).filter(Boolean);
         render();
       })
       .catch(function () { root.replaceChildren(el("p", {}, I18N[S.lang].loadErr)); });
