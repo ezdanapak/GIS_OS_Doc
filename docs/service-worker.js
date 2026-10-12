@@ -50,6 +50,13 @@ self.addEventListener('fetch', function (event) {
   // chrome-extension და სხვა non-http სქემები გამოვტოვოთ
   if (!event.request.url.startsWith('http')) return;
 
+  // მხოლოდ საიტი და Google Fonts (ფონტები ოფლაინშიც რომ გამოჩნდეს)
+  var url = new URL(event.request.url);
+  var allowed = url.origin === self.location.origin ||
+    url.hostname === 'fonts.googleapis.com' ||
+    url.hostname === 'fonts.gstatic.com';
+  if (!allowed) return;
+
   event.respondWith(
     caches.match(event.request).then(function (cachedResponse) {
       // Cache-ში პასუხი იქნება — დავაბრუნოთ, ფონში განვაახლოთ
