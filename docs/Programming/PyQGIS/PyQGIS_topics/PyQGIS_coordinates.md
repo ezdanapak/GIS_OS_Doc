@@ -1,472 +1,210 @@
 # კოორდინატების კონვერტაცია - Coordinate conversion
 
+კოორდინატები ხშირად გვხვდება ორ ფორმატში:
 
+- **DMS** - Degrees, Minutes, Seconds (გრადუსები, წუთები, წამები)
+- **DD** - Decimal Degrees (მეათედი გრადუსები)
 
+ამ გვერდზე ნახავ ორივე მიმართულებით კონვერტაციის ფუნქციებს, ტექსტიდან კოორდინატის ამოკითხვას, სიის დამუშავებას და QGIS-ში გამოყენებას.
 
-### გრადუსები მინუტები სეკუნდებიდან > მეათედ გრადუსებში
-Degrees, Minutes, Seconds > Decimal Degrees 
-
-Kotia Cave, Chiatura-Perevisa-Sveri-Tvalueti-Gezruli, Georgia. <br>
-კოორდინატები [Google Earth - იდან](https://www.google.com/maps/place/42%C2%B012'47.8%22N+43%C2%B019'27.7%22E/@42.2058273,43.2713168,21099m/data=!3m1!1e3!4m4!3m3!8m2!3d42.213286!4d43.324367?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D) <br>
-42°12'47.83"N 43°19'27.72"E > 42.213286° 43.324367° 
-
-```py title="DMS_DD.py" linenums="1" hl_lines="7 8"
-
-def transformation(deg, min, sec):
-
-    result = deg + min/60 + sec/3600
-
-    return result
-
-print(transformation(42, 12, 47.83))
-print(transformation(43, 19, 27.72))
-
-#შედეგი: 42.21328611111112 43.32436666666667
-```
-
-### მეათედი გრადუსებიდან > გრადუსები მინუტები სეკუნდებზე
-Decimal Degrees > Degrees, Minutes, Seconds
-
-```py title="DD_DMS.py" linenums="1" hl_lines""
-def reverse_transform(decimal_deg):
-
-    degrees = int(decimal_deg)
-
-    decimal_min = (decimal_deg - degrees) * 60
-
-    minutes = int(decimal_min)
-
-    seconds = (decimal_min - minutes) * 60
-    
-    return degrees, minutes, seconds
-
-print(reverse_transform(41.688554))
-print(reverse_transform(44.693789))
-
-#შედეგი 
-(41, 41, 18.794400000012388)
-(44, 41, 37.64040000000875)
-```
-
-გრადუსები მინუტები სეკუნდები, მეათედ მინუტებზე
-
-გასარჩევია
-
-def dms_to_dd(d, m, s):
-
-    """Converts degrees, minutes, and seconds to decimal degrees."""
-
-    dd = d + m/60 + s/3600
-
-    return dd
-
-
-
-def convert_coordinates(coordinates):
-
-    """Converts a list of coordinates from DMS to DD format."""
-
-    decimal_coordinates = []
-
-    for coord in coordinates:
-
-        d, m, s = coord
-
-        dd = dms_to_dd(d, m, s)
-
-        decimal_coordinates.append(dd)
-
-    return decimal_coordinates
-
-
-
-# List of coordinates in DMS format: (degrees, minutes, seconds)
-
-coordinates_dms = [
-
-    (45, 30, 15),
-
-    (60, 20, 10),
-
-    (30, 15, 45)
-
-]
-
-
-
-# Convert coordinates to DD format
-
-decimal_coordinates = convert_coordinates(coordinates_dms)
-
-print(decimal_coordinates)
-
-
-
-
-
-
-
-
-
-
-
-print(transformation(45, 31, 14.306))
-
-print(transformation(45, 31, 14.697))
-
-print(transformation(45, 31, 14.660))
-
-print(transformation(45, 31, 14.699))
-
-print(transformation(45, 31, 14.510))
-
-print(transformation(45, 31, 14.333))
-
-print(transformation(45, 31, 14.296))
-
-print(transformation(45, 31, 14.041))
-
-print(transformation(45, 31, 14.079))
-
-print(transformation(45, 31, 14.040))
-
-print(transformation(45, 31, 14.229))
-
-print(transformation(45, 31, 14.268))
-
-
-
-print('N')
-
-
-
-print(transformation(41, 57, 18.654))
-
-print(transformation(41, 57, 18.513))
-
-print(transformation(41, 57, 18.454))
-
-print(transformation(41, 57, 18.440))
-
-print(transformation(41, 57, 18.148))
-
-print(transformation(41, 57, 18.211))
-
-print(transformation(41, 57, 18.153))
-
-print(transformation(41, 57, 18.244))
-
-print(transformation(41, 57, 18.303))
-
-print(transformation(41, 57, 18.317))
-
-print(transformation(41, 57, 18.609))
-
-print(transformation(41, 57, 18.595))
-
-
-
-
-
-def dms_to_dd(d, m, s):
-
-    """Converts degrees, minutes, and seconds to decimal degrees."""
-
-    dd = d + m/60 + s/3600
-
-    return dd
-
-
-
-def convert_coordinates(coordinates):
-
-    """Converts a list of coordinates from DMS to DD format."""
-
-    decimal_coordinates = []
-
-    for coord in coordinates:
-
-        d, m, s = coord
-
-        dd = dms_to_dd(d, m, s)
-
-        decimal_coordinates.append(dd)
-
-    return decimal_coordinates
-
-
-
-# List of coordinates in DMS format: (degrees, minutes, seconds)
-
-coordinates_dms_north = [
-
-    (45, 31, 14.306),
-
-    (45, 31, 14.697),
-
-    (45, 31, 14.660),
-
-    (45, 31, 14.699),
-
-    (45, 31, 14.510),
-
-    (45, 31, 14.333),
-
-    (45, 31, 14.296),
-
-    (45, 31, 14.041),
-
-    (45, 31, 14.079),
-
-    (45, 31, 14.040),
-
-    (45, 31, 14.229),
-
-    (45, 31, 14.268)
-
-]
-
-
-
-coordinates_dms_south = [
-
-    (41, 57, 18.654),
-
-    (41, 57, 18.513),
-
-    (41, 57, 18.454),
-
-    (41, 57, 18.440),
-
-    (41, 57, 18.148),
-
-    (41, 57, 18.211),
-
-    (41, 57, 18.153),
-
-    (41, 57, 18.244),
-
-    (41, 57, 18.303),
-
-    (41, 57, 18.317),
-
-    (41, 57, 18.609),
-
-    (41, 57, 18.595)
-
-]
-
-
-
-# Convert coordinates to DD format
-
-decimal_coordinates_north = convert_coordinates(coordinates_dms_north)
-
-decimal_coordinates_south = convert_coordinates(coordinates_dms_south)
-
-
-
-# Save coordinates to a text file
-
-with open("converted_coordinates.txt", "w") as file:
-
-    file.write("North Coordinates:\n")
-
-    for coord in decimal_coordinates_north:
-
-        file.write(f"{coord}\n")
-
-    
-
-    file.write("\nSouth Coordinates:\n")
-
-    for coord in decimal_coordinates_south:
-
-        file.write(f"{coord}\n")
-
-
-
-print("Coordinates have been saved to 'converted_coordinates.txt' file.")
-
-
-# 📍 კოორდინატების კონვერტაცია — Coordinate Conversion
-
-კოორდინატები ხშირად გვხვდება ორ ფორმატში:  
-- **DMS** — Degrees, Minutes, Seconds (გრადუსები, წუთები, წამები)  
-- **DD** — Decimal Degrees (მეათედი გრადუსები)
-
-ქვემოთ ნახავ კონვერტაციის ფორმულებს, Python მაგალითებს და QGIS-ში სამუშაო ლაბორატორიულ ინსტრუქციას.
+!!! note "კოორდინატების თანმიმდევრობა"
+    ყოველთვის გაითვალისწინე თანმიმდევრობა. ადამიანი ამბობს "განედი, გრძედი" (lat, lon), ხოლო QGIS-ში `QgsPointXY(x, y)` ნიშნავს **`QgsPointXY(გრძედი, განედი)`**.
 
 ---
 
-## 1) DMS → DD (გრადუსები/წუთები/წამებიდან მეათედ გრადუსებზე)
+## 1) DMS → DD
 
-**ფორმულა:**  
+**ფორმულა:**
+
 \[
 \text{DD} = d + \frac{m}{60} + \frac{s}{3600}
-\]  
-> შენიშვნა: სამხრეთ/დასავლეთ ნახევარსფეროებისთვის DD უნდა იყოს უარყოფითი (N/E = +, S/W = −).
+\]
 
-**მაგალითი (Kotia Cave, Chiatura-Perevisa-Sveri-Tvalueti-Gezruli, Georgia):**  
-კოორდინატები [Google Earth-იდან](https://www.google.com/maps/place/42%C2%B012'47.8%22N+43%C2%B019'27.7%22E/@42.2058273,43.2713168,21099m/data=!3m1!1e3!4m4!3m3!8m2!3d42.213286!4d43.324367?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D)  
-`42°12'47.83"N 43°19'27.72"E` → `42.213286° , 43.324367°`
+სამხრეთ და დასავლეთ ნახევარსფეროში DD უარყოფითია (N/E = +, S/W = −).
 
-```py title="DMS_DD.py" linenums="1"
+**მაგალითი:** Kotia Cave, Chiatura-Perevisa-Sveri-Tvalueti-Gezruli, Georgia. <br>
+კოორდინატები [Google Earth-იდან](https://www.google.com/maps/place/42%C2%B012'47.8%22N+43%C2%B019'27.7%22E/@42.2058273,43.2713168,21099m/data=!3m1!1e3!4m4!3m3!8m2!3d42.213286!4d43.324367?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D) <br>
+`42°12'47.83"N 43°19'27.72"E` > `42.213286° 43.324367°`
+
+```py title="dms_to_dd.py" linenums="1"
 def dms_to_dd(deg, minutes, seconds, ref=None):
-    """Converts DMS to decimal degrees. ref: 'N','S','E','W' (optional)"""
-    dd = deg + minutes/60 + seconds/3600
-    if ref in ('S', 'W'):
+    """DMS -> DD. ref: 'N', 'S', 'E' ან 'W' (არასავალდებულო)"""
+    dd = abs(deg) + minutes / 60 + seconds / 3600
+    if ref in ('S', 'W') or deg < 0:
         dd = -dd
     return dd
 
-# მაგალითი
-print(dms_to_dd(42, 12, 47.83, 'N'))  # 42.213286...
-print(dms_to_dd(43, 19, 27.72, 'E'))  # 43.324367...
+print(dms_to_dd(42, 12, 47.83, 'N'))
+print(dms_to_dd(43, 19, 27.72, 'E'))
+
+# შედეგი: 42.21328611111112
+#         43.32436666666667
 ```
 
 ---
 
-## 2) DD → DMS (მეათედი გრადუსებიდან გრადუსები/წუთები/წამებზე)
+## 2) DD → DMS
 
-```py title="DD_DMS.py" linenums="1"
-def dd_to_dms(decimal_deg):
-    """Converts decimal degrees to (degrees, minutes, seconds)."""
-    sign = -1 if decimal_deg < 0 else 1
-    decimal_deg = abs(decimal_deg)
+```py title="dd_to_dms.py" linenums="1"
+def dd_to_dms(dd, precision=2):
+    """DD -> (გრადუსი, წუთი, წამი). ნიშანი გრადუსს ეძლევა."""
+    sign = -1 if dd < 0 else 1
 
-    degrees = int(decimal_deg)
-    decimal_min = (decimal_deg - degrees) * 60
-    minutes = int(decimal_min)
-    seconds = (decimal_min - minutes) * 60
+    # ჯერ ყველაფერს წამებში გადავიყვანთ და ვამრგვალებთ,
+    # რომ წამებში 60.0 არ მივიღოთ
+    total = round(abs(dd) * 3600, precision)
+    minutes_total, seconds = divmod(total, 60)
+    degrees, minutes = divmod(int(minutes_total), 60)
 
-    return sign * degrees, minutes, seconds
+    return sign * degrees, minutes, round(seconds, precision)
 
 print(dd_to_dms(41.688554))
 print(dd_to_dms(44.693789))
-# შედეგი:
-# (41, 41, 18.7944...)
-# (44, 41, 37.6404...)
+print(dd_to_dms(-12.5))
+
+# შედეგი: (41, 41, 18.79)
+#         (44, 41, 37.64)
+#         (-12, 30, 0.0)
 ```
+
+!!! warning "წამების დამრგვალება"
+    თუ ჯერ გრადუსებს, მერე წუთებს და ბოლოს წამებს ცალ-ცალკე დავთვლით, დამრგვალებისას შეიძლება მივიღოთ `59.99999` ან `60.0` წამი. ამიტომ ზემოთ ფუნქცია ჯერ ყველაფერს წამებში გადაიყვანს და მხოლოდ მერე ყოფს.
 
 ---
 
-## 3) სიის კონვერტაცია (Batch) — DMS → DD
+## 3) DMS ტექსტიდან DD
 
-```py title="convert_list_dms_to_dd.py" linenums="1"
-def dms_to_dd(d, m, s):
-    return d + m/60 + s/3600
+Google Maps-დან ან დოკუმენტიდან კოორდინატი ხშირად ტექსტად გვაქვს, მაგალითად `42°12'47.83"N`. რეგულარული გამოსახულებით შეგვიძლია პირდაპირ გადავიყვანოთ DD-ში.
 
-def convert_coordinates(dms_list):
-    return [dms_to_dd(d, m, s) for (d, m, s) in dms_list]
+```py title="parse_dms.py" linenums="1"
+import re
 
-# მაგალითი
-coordinates_dms = [
-    (45, 30, 15),
-    (60, 20, 10),
-    (30, 15, 45),
+DMS_PATTERN = re.compile(
+    r"""(?P<deg>\d+)\s*[°ºd]\s*
+        (?P<min>\d+)\s*['′m]\s*
+        (?P<sec>\d+(?:[.,]\d+)?)\s*(?:["″s]|'')?\s*
+        (?P<ref>[NSEW])?""",
+    re.IGNORECASE | re.VERBOSE
+)
+
+def parse_dms(text):
+    """'42°12'47.83"N' -> 42.213286..."""
+    m = DMS_PATTERN.search(text)
+    if not m:
+        raise ValueError(f'ფორმატი ვერ ამოვიცანი: {text}')
+
+    ref = m.group('ref').upper() if m.group('ref') else None
+    return dms_to_dd(int(m.group('deg')),
+                     int(m.group('min')),
+                     float(m.group('sec').replace(',', '.')),
+                     ref)
+
+print(parse_dms('''42°12'47.83"N'''))
+print(parse_dms('''43°19'27.72"E'''))
+print(parse_dms('''12°30'0"W'''))
+
+# შედეგი: 42.21328611111112
+#         43.32436666666667
+#         -12.5
+```
+
+`parse_dms()` იყენებს პირველ განყოფილებაში აღწერილ `dms_to_dd()` ფუნქციას, ამიტომ ორივე ერთ სესიაში გაუშვი.
+
+---
+
+## 4) სიის კონვერტაცია და CSV-ში შენახვა
+
+ერთი წერტილის ნაცვლად ხშირად მთელი სია გვაქვს. ქვემოთ ყოველი წერტილი ინახება სახელით, განედით და გრძედით. შედეგი ისე იწერება, რომ QGIS-მა პირდაპირ გახსნას.
+
+```py title="batch_convert_to_csv.py" linenums="1"
+import csv
+
+# (სახელი, განედი(d, m, s), გრძედი(d, m, s))
+points_dms = [
+    ('Kotia Cave', (42, 12, 47.83), (43, 19, 27.72)),
+    ('Tbilisi',    (41, 41, 55.00), (44, 47, 59.00)),
+    ('Batumi',     (41, 38, 55.00), (41, 38, 24.00)),
 ]
-print(convert_coordinates(coordinates_dms))
+
+rows = []
+for name, lat, lon in points_dms:
+    rows.append({
+        'Name': name,
+        'lat': round(dms_to_dd(*lat, 'N'), 6),
+        'lon': round(dms_to_dd(*lon, 'E'), 6),
+    })
+
+with open('converted_coordinates.csv', 'w', newline='', encoding='utf-8') as f:
+    writer = csv.DictWriter(f, fieldnames=['Name', 'lat', 'lon'])
+    writer.writeheader()
+    writer.writerows(rows)
+
+print(f'შენახულია {len(rows)} წერტილი: converted_coordinates.csv')
+```
+
+შედეგი `converted_coordinates.csv`:
+
+```text
+Name,lat,lon
+Kotia Cave,42.213286,43.324367
+Tbilisi,41.698611,44.799722
+Batumi,41.648611,41.64
 ```
 
 ---
 
-## 4) ორი სუბსეტის კონვერტაცია + ფაილში შენახვა
+## 5) QGIS-ში გამოყენება
 
-```py title="batch_convert_and_save.py" linenums="1"
-def dms_to_dd(d, m, s):
-    return d + m/60 + s/3600
+### CSV-ის გახსნა წერტილებად
 
-def convert_coordinates(dms_list):
-    return [dms_to_dd(d, m, s) for (d, m, s) in dms_list]
+```py title="csv_to_layer.py" linenums="1"
+uri = ('file:///C:/Users/Public/Documents/GIS/converted_coordinates.csv'
+       '?delimiter=,&xField=lon&yField=lat&crs=EPSG:4326')
 
-coordinates_dms_north = [
-    (45, 31, 14.306),
-    (45, 31, 14.697),
-    (45, 31, 14.660),
-    (45, 31, 14.699),
-    (45, 31, 14.510),
-    (45, 31, 14.333),
-]
-
-coordinates_dms_south = [
-    (41, 57, 18.654),
-    (41, 57, 18.513),
-    (41, 57, 18.454),
-    (41, 57, 18.440),
-    (41, 57, 18.148),
-    (41, 57, 18.211),
-]
-
-north_dd = convert_coordinates(coordinates_dms_north)
-south_dd = convert_coordinates(coordinates_dms_south)
-
-with open("converted_coordinates.txt", "w", encoding="utf-8") as f:
-    f.write("North Coordinates (DD):\n")
-    for val in north_dd:
-        f.write(f"{val}\n")
-    f.write("\nSouth Coordinates (DD):\n")
-    for val in south_dd:
-        f.write(f"{val}\n")
-print("Coordinates have been saved to 'converted_coordinates.txt'.")
+layer = QgsVectorLayer(uri, 'converted_points', 'delimitedtext')
+QgsProject.instance().addMapLayer(layer)
 ```
 
----
+თუ შრე ფაილად გვინდა (Shapefile ან GeoPackage), იხილე [შრის შექმნა CSV-დან](PyQGIS_Create_layer.md).
 
-## 5) სწრაფი სერვისული ფუნქციები
+### გადაყვანა სხვა საკოორდინატო სისტემაში
 
-```py title="utils_coords.py" linenums="1"
-def dms_to_dd(d, m, s, ref=None):
-    dd = d + m/60 + s/3600
-    if ref in ('S', 'W'):
-        dd = -dd
-    return dd
+გეოგრაფიული კოორდინატები (`EPSG:4326`) საქართველოში ხშირად უნდა გადავიყვანოთ პროექციულ სისტემაში, მაგალითად `EPSG:32638` (UTM 38N).
 
-def dd_to_dms(dd):
-    sign = -1 if dd < 0 else 1
-    dd = abs(dd)
-    deg = int(dd)
-    rem = (dd - deg) * 60
-    minu = int(rem)
-    sec = (rem - minu) * 60
-    return sign * deg, minu, sec
+```py title="transform_point.py" linenums="1"
+src = QgsCoordinateReferenceSystem('EPSG:4326')
+dst = QgsCoordinateReferenceSystem('EPSG:32638')
+
+transform = QgsCoordinateTransform(src, dst, QgsProject.instance())
+
+lon, lat = 43.324367, 42.213286
+point = transform.transform(QgsPointXY(lon, lat))   # x = გრძედი, y = განედი
+
+print(round(point.x(), 2), round(point.y(), 2))
 ```
 
----
+### Field Calculator-ში
 
-# 🧑‍🏫 QGIS ლაბორატორიული ინსტრუქცია
+QGIS-ს DD → DMS გარდასაქმნელად ჩაშენებული ფუნქცია აქვს:
 
-## ნაბიჯები
+```sql
+-- განედი DMS ფორმატში
+to_dms(y($geometry), 'y', 2)
 
-1. **QGIS გახსნა** → `Vector → Geometry Tools → Add Geometry Attributes` (ან *Processing Toolbox*).  
-2. **Field Calculator**–ში DD სვეტიდან შეგიძლია გამოყვანო lon/lat.  
-   ```sql
-   x($geometry)   -- longitude
-   y($geometry)   -- latitude
-   ```  
-3. თუ გაქვს `.csv` DD ფორმატით: `Layer → Add Layer → Add Delimited Text Layer`.  
+-- გრძედი DMS ფორმატში
+to_dms(x($geometry), 'x', 2)
 
----
-
-## Python (QGIS Console)
-
-```py
-from math import floor
-
-def dd_to_dms(dd):
-    sign = -1 if dd < 0 else 1
-    dd = abs(dd)
-    deg = floor(dd)
-    minutes_full = (dd - deg) * 60
-    minu = floor(minutes_full)
-    sec = (minutes_full - minu) * 60
-    return sign*deg, minu, sec
-
-print(dd_to_dms(42.213286))
+-- მეათედი გრადუსები
+x($geometry)   -- longitude
+y($geometry)   -- latitude
 ```
 
+!!! info "შენიშვნა"
+    ფუნქცია `to_dms()` მუშაობს გეოგრაფიულ კოორდინატებზე. თუ შრე პროექციულ სისტემაშია, ჯერ გადაიყვანე `transform($geometry, 'EPSG:32638', 'EPSG:4326')`-ით.
+
 ---
 
-## 🗺️ Mermaid დიაგრამა
+## 🗺️ დიაგრამა
 
 ```mermaid
 flowchart TD
@@ -488,10 +226,10 @@ flowchart TD
 
 ---
 
-# ✅ Exercise (სტუდენტებისთვის)
+## ✅ დავალება
 
-**დავალება:**  
-1. მოძებნეთ თქვენი სკოლის ადგილის კოორდინატები Google Maps-დან (DMS ფორმატში).  
-2. გადაიყვანეთ **DD ფორმატში** Python სკრიპტის გამოყენებით.  
-3. შეიტანეთ CSV-ში `lat, lon` სვეტებით.  
-4. ჩატვირთეთ QGIS-ში `Add Delimited Text Layer` საშუალებით და შეამოწმეთ რუკაზე.
+1. მოძებნე შენი სკოლის კოორდინატები Google Maps-ზე (DMS ფორმატში).
+2. გადაიყვანე **DD ფორმატში** `parse_dms()` ფუნქციით.
+3. ჩაწერე CSV-ში `Name, lat, lon` სვეტებით.
+4. ჩატვირთე QGIS-ში `Add Delimited Text Layer`-ით ან `csv_to_layer.py` სკრიპტით და შეამოწმე რუკაზე.
+5. **დამატებით:** გადაიყვანე წერტილი `EPSG:32638`-ში და შეადარე მიღებული X, Y მნიშვნელობები QGIS-ის `Identify` ხელსაწყოს შედეგს.
