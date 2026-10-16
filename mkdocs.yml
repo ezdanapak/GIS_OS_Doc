@@ -378,6 +378,8 @@ nav:
       - 'Web Server':
         - შესავალი: Dev_ops/intro.md
         - Http: Dev_ops/Web_server/http.md
+      - 'Cloud':
+        - ღრუბლოვანი გამოთვლები GIS-ში: Dev_ops/Cloud/cloud-computing-gis.md
       - 'სხვა':
         - curl: Dev_ops/Other/curl.md
   - მონ.ბაზები:
